@@ -1,6 +1,6 @@
 ﻿Public Module Theme1
-    Public ReadOnly DarkSage As Color = ColorTranslator.FromHtml("#9AB17A")
-    Public ReadOnly LightGreen As Color = ColorTranslator.FromHtml("#C3CC9B")
-    Public ReadOnly SandCream As Color = ColorTranslator.FromHtml("#E4DFB5")
-    Public ReadOnly WarmAlmond As Color = ColorTranslator.FromHtml("#FBE8CE")
+    Public ReadOnly AccentPink As Color = ColorTranslator.FromHtml("#FFC7C7")
+    Public ReadOnly LightBlush As Color = ColorTranslator.FromHtml("#FFE2E2")
+    Public ReadOnly AppBackground As Color = ColorTranslator.FromHtml("#F6F6F6")
+    Public ReadOnly SlateDark As Color = ColorTranslator.FromHtml("#8785A2")
 End Module
