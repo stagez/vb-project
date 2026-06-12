@@ -11,7 +11,7 @@
     <AssemblyName>NHIS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -150,6 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_assorted-colorful-pharmaceutical-capsules-and-dietary_81288216.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total-shape-yn8KzjHGtak-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
