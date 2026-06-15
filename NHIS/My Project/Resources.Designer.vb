@@ -63,6 +63,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property account_box_100dp_0000F5_FILL0_wght400_GRAD0_opsz48() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("account_box_100dp_0000F5_FILL0_wght400_GRAD0_opsz48", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property account_box_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("account_box_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property account_circle_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("account_circle_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20", resourceCulture)
