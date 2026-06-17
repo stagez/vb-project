@@ -12,7 +12,7 @@
         If txtUsername.Text = "admin" And txtPassword.Text = "admin" Then
             MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Hide()
-            frmDashboard.Show()
+            MDIMain.Show()
         Else
             lblWrongCredentials.Visible = True
             txtPassword.Clear()
