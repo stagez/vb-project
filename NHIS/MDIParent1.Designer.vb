@@ -128,13 +128,13 @@ Partial Class MDIMain
         'RegisterProviderToolStripMenuItem
         '
         Me.RegisterProviderToolStripMenuItem.Name = "RegisterProviderToolStripMenuItem"
-        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.RegisterProviderToolStripMenuItem.Text = "Register Provider"
         '
         'ViewProvidersToolStripMenuItem
         '
         Me.ViewProvidersToolStripMenuItem.Name = "ViewProvidersToolStripMenuItem"
-        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ViewProvidersToolStripMenuItem.Text = "View Providers"
         '
         'ClaimsToolStripMenuItem
@@ -353,7 +353,9 @@ Partial Class MDIMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.Name = "MDIMain"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
