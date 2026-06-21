@@ -1,8 +1,17 @@
 ﻿Imports System.Windows.Forms
 
-Public Class MDIMain
+Public Class frmMain
 
-    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub LoadForm(frm As Form)
+        pnlContent.Controls.Clear()
+        frm.TopLevel = False
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.Dock = DockStyle.Fill
+        pnlContent.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Create a new instance of the child form.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Make it a child of this MDI form before showing it.
@@ -14,7 +23,7 @@ Public Class MDIMain
         ChildForm.Show()
     End Sub
 
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs)
         Dim OpenFileDialog As New OpenFileDialog
         OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         OpenFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
@@ -24,7 +33,7 @@ Public Class MDIMain
         End If
     End Sub
 
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Dim SaveFileDialog As New SaveFileDialog
         SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         SaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
@@ -36,15 +45,15 @@ Public Class MDIMain
     End Sub
 
 
-    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.Close()
     End Sub
 
-    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub CutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Use My.Computer.Clipboard to insert the selected text or images into the clipboard
     End Sub
 
-    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub CopyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Use My.Computer.Clipboard to insert the selected text or images into the clipboard
     End Sub
 
@@ -52,23 +61,23 @@ Public Class MDIMain
         'Use My.Computer.Clipboard.GetText() or My.Computer.Clipboard.GetData to retrieve information from the clipboard.
     End Sub
 
-    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
 
-    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.TileVertical)
     End Sub
 
-    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.TileHorizontal)
     End Sub
 
-    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.ArrangeIcons)
     End Sub
 
-    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Close all child forms of the parent.
         For Each ChildForm As Form In Me.MdiChildren
             ChildForm.Close()
@@ -78,10 +87,11 @@ Public Class MDIMain
     Private m_ChildFormNumber As Integer
 
     Private Sub MDIMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim frm As New frmDashboard
-        frm.Dock = DockStyle.Fill
-        frm.MdiParent = Me
-        frm.Show()
+        'Dim frm As New frmDashboard
+        'frm.Dock = DockStyle.Fill
+        'frm.MdiParent = Me
+        'frm.Show()
+        LoadForm(New frmDashboard())
     End Sub
 
     Private Sub RegisterProviderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProviderToolStripMenuItem.Click
@@ -89,10 +99,7 @@ Public Class MDIMain
             f.Close()
         Next
 
-        Dim frm As New frmRegisterProvider
-        frm.MdiParent = Me
-        frm.Dock = DockStyle.Fill
-        frm.Show()
+        LoadForm(New frmRegisterProvider())
     End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
@@ -104,5 +111,56 @@ Public Class MDIMain
         Dim frm As New frmViewProviders
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
+        LoadForm(New frmDashboard())
+    End Sub
+
+    Private Sub tsHome_Click(sender As Object, e As EventArgs) Handles tsHome.Click
+        LoadForm(New frmDashboard())
+    End Sub
+
+    Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
+        LoadForm(New frmClaim())
+    End Sub
+
+    Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click
+        LoadForm(New frmViewClaims())
+    End Sub
+
+    Private Sub tsProviders_Click(sender As Object, e As EventArgs) Handles tsProviders.Click
+        LoadForm(New frmViewProviders())
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Dim result = MessageBox.Show(
+            "Are you sure you want to exit?",
+            "Confirm Exit", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            )
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' Don't ask again if Application.Exit() was already called
+        If e.CloseReason = CloseReason.ApplicationExitCall Then Return
+
+        Dim result = MessageBox.Show(
+            "Are you sure you want to exit?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        )
+
+        If result = DialogResult.No Then
+            e.Cancel = True  ' stops the form from closing
+        End If
+    End Sub
+
+    Private Sub AddUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddUserToolStripMenuItem.Click
+        LoadForm(New frmAddUser())
     End Sub
 End Class

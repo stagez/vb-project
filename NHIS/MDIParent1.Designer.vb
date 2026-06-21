@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MDIMain
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,10 +24,10 @@ Partial Class MDIMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDIMain))
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.pnlContent = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,16 +54,21 @@ Partial Class MDIMain
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton()
+        Me.tsHome = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsNewClaim = New System.Windows.Forms.ToolStripButton()
+        Me.tsViewClaims = New System.Windows.Forms.ToolStripButton()
+        Me.tsProviders = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsApprove = New System.Windows.Forms.ToolStripButton()
+        Me.tsReject = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsSave = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsReports = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsPrint = New System.Windows.Forms.ToolStripButton()
+        Me.tsLogOut = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -72,9 +77,9 @@ Partial Class MDIMain
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 591)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(632, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(1026, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -84,12 +89,22 @@ Partial Class MDIMain
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'pnlContent
+        '
+        Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlContent.Location = New System.Drawing.Point(0, 49)
+        Me.pnlContent.Name = "pnlContent"
+        Me.pnlContent.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
+        Me.pnlContent.Size = New System.Drawing.Size(1026, 542)
+        Me.pnlContent.TabIndex = 12
+        Me.ToolTip.SetToolTip(Me.pnlContent, "Reports")
+        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ProviderToolStripMenuItem, Me.ClaimsToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.UserManagementToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(632, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1026, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -102,20 +117,23 @@ Partial Class MDIMain
         '
         'DashboardToolStripMenuItem
         '
+        Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'LogoutToolStripMenuItem
         '
+        Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
+        Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ProviderToolStripMenuItem
@@ -128,13 +146,13 @@ Partial Class MDIMain
         'RegisterProviderToolStripMenuItem
         '
         Me.RegisterProviderToolStripMenuItem.Name = "RegisterProviderToolStripMenuItem"
-        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.RegisterProviderToolStripMenuItem.Text = "Register Provider"
         '
         'ViewProvidersToolStripMenuItem
         '
         Me.ViewProvidersToolStripMenuItem.Name = "ViewProvidersToolStripMenuItem"
-        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ViewProvidersToolStripMenuItem.Text = "View Providers"
         '
         'ClaimsToolStripMenuItem
@@ -146,6 +164,7 @@ Partial Class MDIMain
         '
         'ClaimsToolStripMenuItem1
         '
+        Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
         Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
         Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
         Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
@@ -171,12 +190,14 @@ Partial Class MDIMain
         '
         'ApproveClaimsToolStripMenuItem
         '
+        Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
         Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
         Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.ApproveClaimsToolStripMenuItem.Text = "Approve Claims"
         '
         'RejectedClaimsToolStripMenuItem
         '
+        Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
         Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
         Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
@@ -221,14 +242,16 @@ Partial Class MDIMain
         '
         'AddUserToolStripMenuItem
         '
+        Me.AddUserToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_user_48
         Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
-        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddUserToolStripMenuItem.Text = "Add User"
         '
         'ManageUsersToolStripMenuItem
         '
+        Me.ManageUsersToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_manage_48
         Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
         '
         'HelpToolStripMenuItem
@@ -240,119 +263,146 @@ Partial Class MDIMain
         '
         'AboutSystemToolStripMenuItem
         '
+        Me.AboutSystemToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_about_48
         Me.AboutSystemToolStripMenuItem.Name = "AboutSystemToolStripMenuItem"
         Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AboutSystemToolStripMenuItem.Text = "About System"
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsHome, Me.ToolStripSeparator1, Me.tsNewClaim, Me.tsViewClaims, Me.tsProviders, Me.ToolStripSeparator2, Me.tsApprove, Me.tsReject, Me.ToolStripSeparator3, Me.tsSave, Me.ToolStripSeparator4, Me.tsReports, Me.ToolStripSeparator5, Me.tsPrint, Me.tsLogOut})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(632, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1026, 25)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'tsHome
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.tsHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsHome.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
+        Me.tsHome.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsHome.Name = "tsHome"
+        Me.tsHome.Size = New System.Drawing.Size(23, 22)
+        Me.tsHome.Text = "Dashboard"
         '
-        'ToolStripButton2
+        'ToolStripSeparator1
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripButton3
+        'tsNewClaim
         '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
+        Me.tsNewClaim.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsNewClaim.Image = Global.NHIS.My.Resources.Resources.icons8_add_48__1_
+        Me.tsNewClaim.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsNewClaim.Name = "tsNewClaim"
+        Me.tsNewClaim.Size = New System.Drawing.Size(23, 22)
+        Me.tsNewClaim.Text = "Add New Claim"
         '
-        'ToolStripButton4
+        'tsViewClaims
         '
-        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton4.Text = "ToolStripButton4"
+        Me.tsViewClaims.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsViewClaims.Image = Global.NHIS.My.Resources.Resources.icons8_view_48__1_
+        Me.tsViewClaims.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsViewClaims.Name = "tsViewClaims"
+        Me.tsViewClaims.Size = New System.Drawing.Size(23, 22)
+        Me.tsViewClaims.Text = "View Claims"
         '
-        'ToolStripButton5
+        'tsProviders
         '
-        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton5.Text = "ToolStripButton5"
+        Me.tsProviders.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsProviders.Image = Global.NHIS.My.Resources.Resources.icons8_list_48
+        Me.tsProviders.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsProviders.Name = "tsProviders"
+        Me.tsProviders.Size = New System.Drawing.Size(23, 22)
+        Me.tsProviders.Text = "Providers"
         '
-        'ToolStripButton6
+        'ToolStripSeparator2
         '
-        Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
-        Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton6.Text = "ToolStripButton6"
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripButton7
+        'tsApprove
         '
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton7.Text = "ToolStripButton7"
+        Me.tsApprove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsApprove.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
+        Me.tsApprove.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsApprove.Name = "tsApprove"
+        Me.tsApprove.Size = New System.Drawing.Size(23, 22)
+        Me.tsApprove.Text = "Approve"
         '
-        'ToolStripButton8
+        'tsReject
         '
-        Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
-        Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton8.Name = "ToolStripButton8"
-        Me.ToolStripButton8.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton8.Text = "ToolStripButton8"
+        Me.tsReject.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsReject.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
+        Me.tsReject.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsReject.Name = "tsReject"
+        Me.tsReject.Size = New System.Drawing.Size(23, 22)
+        Me.tsReject.Text = "Reject"
         '
-        'ToolStripButton9
+        'ToolStripSeparator3
         '
-        Me.ToolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton9.Image = CType(resources.GetObject("ToolStripButton9.Image"), System.Drawing.Image)
-        Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton9.Name = "ToolStripButton9"
-        Me.ToolStripButton9.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton9.Text = "ToolStripButton9"
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripButton10
+        'tsSave
         '
-        Me.ToolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton10.Image = CType(resources.GetObject("ToolStripButton10.Image"), System.Drawing.Image)
-        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton10.Name = "ToolStripButton10"
-        Me.ToolStripButton10.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton10.Text = "ToolStripButton10"
+        Me.tsSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsSave.Image = Global.NHIS.My.Resources.Resources.icons8_save_48__1_
+        Me.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSave.Name = "tsSave"
+        Me.tsSave.Size = New System.Drawing.Size(23, 22)
+        Me.tsSave.Text = "Save"
         '
-        'MDIMain
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'tsReports
+        '
+        Me.tsReports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsReports.Image = Global.NHIS.My.Resources.Resources.icons8_pie_chart_48
+        Me.tsReports.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsReports.Name = "tsReports"
+        Me.tsReports.Size = New System.Drawing.Size(23, 22)
+        Me.tsReports.Text = "Reports"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
+        'tsPrint
+        '
+        Me.tsPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsPrint.Image = Global.NHIS.My.Resources.Resources.icons8_print_48__1_
+        Me.tsPrint.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsPrint.Name = "tsPrint"
+        Me.tsPrint.Size = New System.Drawing.Size(23, 22)
+        Me.tsPrint.Text = "Save"
+        '
+        'tsLogOut
+        '
+        Me.tsLogOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsLogOut.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
+        Me.tsLogOut.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsLogOut.Name = "tsLogOut"
+        Me.tsLogOut.Size = New System.Drawing.Size(23, 22)
+        Me.tsLogOut.Text = "Log out"
+        '
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 453)
+        Me.ClientSize = New System.Drawing.Size(1026, 613)
+        Me.Controls.Add(Me.pnlContent)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
-        Me.Name = "MDIMain"
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -395,14 +445,20 @@ Partial Class MDIMain
     Friend WithEvents ManageUsersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutSystemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripButton1 As ToolStripButton
-    Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents ToolStripButton3 As ToolStripButton
-    Friend WithEvents ToolStripButton4 As ToolStripButton
-    Friend WithEvents ToolStripButton5 As ToolStripButton
-    Friend WithEvents ToolStripButton6 As ToolStripButton
-    Friend WithEvents ToolStripButton7 As ToolStripButton
-    Friend WithEvents ToolStripButton8 As ToolStripButton
-    Friend WithEvents ToolStripButton9 As ToolStripButton
-    Friend WithEvents ToolStripButton10 As ToolStripButton
+    Friend WithEvents tsHome As ToolStripButton
+    Friend WithEvents tsNewClaim As ToolStripButton
+    Friend WithEvents tsViewClaims As ToolStripButton
+    Friend WithEvents tsProviders As ToolStripButton
+    Friend WithEvents tsApprove As ToolStripButton
+    Friend WithEvents tsReject As ToolStripButton
+    Friend WithEvents tsReports As ToolStripButton
+    Friend WithEvents tsPrint As ToolStripButton
+    Friend WithEvents tsSave As ToolStripButton
+    Friend WithEvents tsLogOut As ToolStripButton
+    Friend WithEvents pnlContent As Panel
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
 End Class

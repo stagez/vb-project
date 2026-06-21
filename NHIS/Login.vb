@@ -34,7 +34,7 @@
         Else
             ' Simulate credential check (replace with real authentication logic)
             If txtUsername.Text = "admin" And txtPassword.Text = "admin" Then
-                MDIMain.Show()
+                frmMain.Show()
                 Me.Hide()
             Else
                 lblWrongCredentials.Text = "Invalid username or password."

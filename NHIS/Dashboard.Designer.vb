@@ -28,7 +28,7 @@ Partial Class frmDashboard
         Me.lblTotalCount = New System.Windows.Forms.Label()
         Me.lblTotalClaimsTitle = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlCards = New System.Windows.Forms.Panel()
         Me.lblPendingCount = New System.Windows.Forms.Label()
         Me.lblPendingTitle = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -49,7 +49,7 @@ Partial Class frmDashboard
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.pnlTotal.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnlCards.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgvClaims, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,15 +64,15 @@ Partial Class frmDashboard
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.pnlTotal, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel2, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.pnlCards, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 3, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(40, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(933, 130)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(853, 130)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'pnlTotal
@@ -86,18 +86,18 @@ Partial Class frmDashboard
         Me.pnlTotal.Margin = New System.Windows.Forms.Padding(0, 0, 12, 0)
         Me.pnlTotal.Name = "pnlTotal"
         Me.pnlTotal.Padding = New System.Windows.Forms.Padding(16)
-        Me.pnlTotal.Size = New System.Drawing.Size(221, 130)
+        Me.pnlTotal.Size = New System.Drawing.Size(201, 130)
         Me.pnlTotal.TabIndex = 0
         '
         'lblTotalCount
         '
         Me.lblTotalCount.AutoSize = True
         Me.lblTotalCount.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblTotalCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCount.Font = New System.Drawing.Font("Segoe UI", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblTotalCount.Location = New System.Drawing.Point(22, 44)
         Me.lblTotalCount.Name = "lblTotalCount"
-        Me.lblTotalCount.Size = New System.Drawing.Size(34, 47)
+        Me.lblTotalCount.Size = New System.Drawing.Size(42, 59)
         Me.lblTotalCount.TabIndex = 2
         Me.lblTotalCount.Text = "-"
         Me.lblTotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -108,7 +108,7 @@ Partial Class frmDashboard
         Me.lblTotalClaimsTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblTotalClaimsTitle.Location = New System.Drawing.Point(22, 16)
         Me.lblTotalClaimsTitle.Name = "lblTotalClaimsTitle"
-        Me.lblTotalClaimsTitle.Size = New System.Drawing.Size(183, 28)
+        Me.lblTotalClaimsTitle.Size = New System.Drawing.Size(163, 28)
         Me.lblTotalClaimsTitle.TabIndex = 1
         Me.lblTotalClaimsTitle.Text = "Total Claims"
         Me.lblTotalClaimsTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -122,29 +122,29 @@ Partial Class frmDashboard
         Me.Panel1.Size = New System.Drawing.Size(6, 98)
         Me.Panel1.TabIndex = 0
         '
-        'Panel2
+        'pnlCards
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.lblPendingCount)
-        Me.Panel2.Controls.Add(Me.lblPendingTitle)
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(233, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(0, 0, 12, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel2.Size = New System.Drawing.Size(221, 130)
-        Me.Panel2.TabIndex = 1
+        Me.pnlCards.BackColor = System.Drawing.Color.White
+        Me.pnlCards.Controls.Add(Me.lblPendingCount)
+        Me.pnlCards.Controls.Add(Me.lblPendingTitle)
+        Me.pnlCards.Controls.Add(Me.Panel5)
+        Me.pnlCards.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlCards.Location = New System.Drawing.Point(213, 0)
+        Me.pnlCards.Margin = New System.Windows.Forms.Padding(0, 0, 12, 0)
+        Me.pnlCards.Name = "pnlCards"
+        Me.pnlCards.Padding = New System.Windows.Forms.Padding(16)
+        Me.pnlCards.Size = New System.Drawing.Size(201, 130)
+        Me.pnlCards.TabIndex = 1
         '
         'lblPendingCount
         '
         Me.lblPendingCount.AutoSize = True
         Me.lblPendingCount.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblPendingCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPendingCount.Font = New System.Drawing.Font("Segoe UI", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPendingCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblPendingCount.Location = New System.Drawing.Point(22, 44)
         Me.lblPendingCount.Name = "lblPendingCount"
-        Me.lblPendingCount.Size = New System.Drawing.Size(34, 47)
+        Me.lblPendingCount.Size = New System.Drawing.Size(42, 59)
         Me.lblPendingCount.TabIndex = 2
         Me.lblPendingCount.Text = "-"
         Me.lblPendingCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -155,7 +155,7 @@ Partial Class frmDashboard
         Me.lblPendingTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblPendingTitle.Location = New System.Drawing.Point(22, 16)
         Me.lblPendingTitle.Name = "lblPendingTitle"
-        Me.lblPendingTitle.Size = New System.Drawing.Size(183, 28)
+        Me.lblPendingTitle.Size = New System.Drawing.Size(163, 28)
         Me.lblPendingTitle.TabIndex = 1
         Me.lblPendingTitle.Text = "Pending"
         Me.lblPendingTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -176,22 +176,22 @@ Partial Class frmDashboard
         Me.Panel3.Controls.Add(Me.lblApprovedTitle)
         Me.Panel3.Controls.Add(Me.Panel6)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(466, 0)
+        Me.Panel3.Location = New System.Drawing.Point(426, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0, 0, 12, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel3.Size = New System.Drawing.Size(221, 130)
+        Me.Panel3.Size = New System.Drawing.Size(201, 130)
         Me.Panel3.TabIndex = 2
         '
         'lblApprovedCount
         '
         Me.lblApprovedCount.AutoSize = True
         Me.lblApprovedCount.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblApprovedCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApprovedCount.Font = New System.Drawing.Font("Segoe UI", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApprovedCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblApprovedCount.Location = New System.Drawing.Point(22, 44)
         Me.lblApprovedCount.Name = "lblApprovedCount"
-        Me.lblApprovedCount.Size = New System.Drawing.Size(34, 47)
+        Me.lblApprovedCount.Size = New System.Drawing.Size(42, 59)
         Me.lblApprovedCount.TabIndex = 2
         Me.lblApprovedCount.Text = "-"
         Me.lblApprovedCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -202,7 +202,7 @@ Partial Class frmDashboard
         Me.lblApprovedTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblApprovedTitle.Location = New System.Drawing.Point(22, 16)
         Me.lblApprovedTitle.Name = "lblApprovedTitle"
-        Me.lblApprovedTitle.Size = New System.Drawing.Size(183, 28)
+        Me.lblApprovedTitle.Size = New System.Drawing.Size(163, 28)
         Me.lblApprovedTitle.TabIndex = 1
         Me.lblApprovedTitle.Text = "Approved"
         Me.lblApprovedTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -223,22 +223,22 @@ Partial Class frmDashboard
         Me.Panel4.Controls.Add(Me.lblRejectedTitle)
         Me.Panel4.Controls.Add(Me.Panel7)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(699, 0)
+        Me.Panel4.Location = New System.Drawing.Point(639, 0)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(0, 0, 12, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel4.Size = New System.Drawing.Size(222, 130)
+        Me.Panel4.Size = New System.Drawing.Size(202, 130)
         Me.Panel4.TabIndex = 3
         '
         'lblRejectedCount
         '
         Me.lblRejectedCount.AutoSize = True
         Me.lblRejectedCount.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblRejectedCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRejectedCount.Font = New System.Drawing.Font("Segoe UI", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRejectedCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblRejectedCount.Location = New System.Drawing.Point(22, 44)
         Me.lblRejectedCount.Name = "lblRejectedCount"
-        Me.lblRejectedCount.Size = New System.Drawing.Size(34, 47)
+        Me.lblRejectedCount.Size = New System.Drawing.Size(42, 59)
         Me.lblRejectedCount.TabIndex = 2
         Me.lblRejectedCount.Text = "-"
         Me.lblRejectedCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -249,7 +249,7 @@ Partial Class frmDashboard
         Me.lblRejectedTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblRejectedTitle.Location = New System.Drawing.Point(22, 16)
         Me.lblRejectedTitle.Name = "lblRejectedTitle"
-        Me.lblRejectedTitle.Size = New System.Drawing.Size(184, 28)
+        Me.lblRejectedTitle.Size = New System.Drawing.Size(164, 28)
         Me.lblRejectedTitle.TabIndex = 1
         Me.lblRejectedTitle.Text = "Rejected"
         Me.lblRejectedTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -269,7 +269,7 @@ Partial Class frmDashboard
         Me.lblRecentTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.lblRecentTitle.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRecentTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.lblRecentTitle.Location = New System.Drawing.Point(0, 130)
+        Me.lblRecentTitle.Location = New System.Drawing.Point(40, 154)
         Me.lblRecentTitle.Name = "lblRecentTitle"
         Me.lblRecentTitle.Size = New System.Drawing.Size(107, 20)
         Me.lblRecentTitle.TabIndex = 1
@@ -279,6 +279,7 @@ Partial Class frmDashboard
         'dgvClaims
         '
         Me.dgvClaims.AllowUserToAddRows = False
+        Me.dgvClaims.AllowUserToDeleteRows = False
         Me.dgvClaims.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClaims.BackgroundColor = System.Drawing.Color.White
         Me.dgvClaims.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -294,12 +295,12 @@ Partial Class frmDashboard
         Me.dgvClaims.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus})
         Me.dgvClaims.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvClaims.EnableHeadersVisualStyles = False
-        Me.dgvClaims.Location = New System.Drawing.Point(0, 150)
+        Me.dgvClaims.Location = New System.Drawing.Point(40, 174)
         Me.dgvClaims.Name = "dgvClaims"
         Me.dgvClaims.ReadOnly = True
         Me.dgvClaims.RowHeadersVisible = False
         Me.dgvClaims.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClaims.Size = New System.Drawing.Size(933, 369)
+        Me.dgvClaims.Size = New System.Drawing.Size(853, 321)
         Me.dgvClaims.TabIndex = 2
         '
         'colClaimID
@@ -336,7 +337,7 @@ Partial Class frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 519)
         Me.ControlBox = False
         Me.Controls.Add(Me.dgvClaims)
@@ -348,14 +349,15 @@ Partial Class frmDashboard
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmDashboard"
+        Me.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.pnlTotal.ResumeLayout(False)
         Me.pnlTotal.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.pnlCards.ResumeLayout(False)
+        Me.pnlCards.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -368,7 +370,7 @@ Partial Class frmDashboard
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents pnlTotal As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlCards As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel1 As Panel
