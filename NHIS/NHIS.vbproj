@@ -11,7 +11,7 @@
     <AssemblyName>NHIS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -86,6 +86,36 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAddUser.Designer.vb">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClaimsSubmition.Designer.vb">
+      <DependentUpon>frmClaimsSubmition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClaimsSubmition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterMember.Designer.vb">
+      <DependentUpon>frmRegisterMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewMembers.Designer.vb">
+      <DependentUpon>frmViewMembers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewMembers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewProviders.Designer.vb">
+      <DependentUpon>frmViewProviders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewProviders.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClaimsSubmition.resx">
+      <DependentUpon>frmClaimsSubmition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterMember.resx">
+      <DependentUpon>frmRegisterMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewMembers.resx">
+      <DependentUpon>frmViewMembers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewProviders.resx">
+      <DependentUpon>frmViewProviders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

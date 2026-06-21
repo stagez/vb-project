@@ -94,4 +94,15 @@ Public Class MDIMain
         frm.Dock = DockStyle.Fill
         frm.Show()
     End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        frmLogin.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub ViewProvidersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewProvidersToolStripMenuItem.Click
+        Dim frm As New frmViewProviders
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class
