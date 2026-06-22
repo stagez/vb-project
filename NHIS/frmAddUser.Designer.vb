@@ -23,10 +23,13 @@ Partial Class frmAddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlOuter = New System.Windows.Forms.Panel()
-        Me.lblStrength = New System.Windows.Forms.Label()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.lblProfileSmall = New System.Windows.Forms.Label()
         Me.lblProfileLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblStrength = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -41,11 +44,8 @@ Partial Class frmAddUser
         Me.pnlStrength = New System.Windows.Forms.Panel()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnUpload = New System.Windows.Forms.Button()
-        Me.pbAvatar = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.Cancel = New System.Windows.Forms.Button()
+        Me.pbAvatar = New System.Windows.Forms.PictureBox()
         Me.pnlOuter.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.pbAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,14 +71,46 @@ Partial Class frmAddUser
         Me.pnlOuter.Size = New System.Drawing.Size(617, 451)
         Me.pnlOuter.TabIndex = 0
         '
-        'lblStrength
+        'Cancel
         '
-        Me.lblStrength.AutoSize = True
-        Me.lblStrength.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStrength.Location = New System.Drawing.Point(3, 212)
-        Me.lblStrength.Name = "lblStrength"
-        Me.lblStrength.Size = New System.Drawing.Size(0, 13)
-        Me.lblStrength.TabIndex = 8
+        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(420, 397)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(75, 32)
+        Me.Cancel.TabIndex = 8
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(327, 397)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 32)
+        Me.btnClear.TabIndex = 8
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(234, 397)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 32)
+        Me.btnSave.TabIndex = 8
+        Me.btnSave.Text = "Save User"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'lblProfileSmall
         '
@@ -137,6 +169,15 @@ Partial Class frmAddUser
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(391, 304)
         Me.TableLayoutPanel1.TabIndex = 4
         '
+        'lblStrength
+        '
+        Me.lblStrength.AutoSize = True
+        Me.lblStrength.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStrength.Location = New System.Drawing.Point(3, 212)
+        Me.lblStrength.Name = "lblStrength"
+        Me.lblStrength.Size = New System.Drawing.Size(0, 13)
+        Me.lblStrength.TabIndex = 8
+        '
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(2, 96)
@@ -177,7 +218,7 @@ Partial Class frmAddUser
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(202, 0)
+        Me.Label4.Location = New System.Drawing.Point(201, 0)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(30, 15)
@@ -197,7 +238,7 @@ Partial Class frmAddUser
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(202, 75)
+        Me.Label2.Location = New System.Drawing.Point(201, 75)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 15)
@@ -218,7 +259,7 @@ Partial Class frmAddUser
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Administrator", "Claims Officer", "Provider"})
-        Me.ComboBox1.Location = New System.Drawing.Point(202, 20)
+        Me.ComboBox1.Location = New System.Drawing.Point(201, 20)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(134, 23)
@@ -226,7 +267,7 @@ Partial Class frmAddUser
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(202, 96)
+        Me.TextBox3.Location = New System.Drawing.Point(201, 96)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(134, 23)
@@ -267,17 +308,6 @@ Partial Class frmAddUser
         Me.btnUpload.Text = "Upload Picture"
         Me.btnUpload.UseVisualStyleBackColor = True
         '
-        'pbAvatar
-        '
-        Me.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbAvatar.Location = New System.Drawing.Point(37, 92)
-        Me.pbAvatar.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbAvatar.Name = "pbAvatar"
-        Me.pbAvatar.Size = New System.Drawing.Size(110, 110)
-        Me.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbAvatar.TabIndex = 2
-        Me.pbAvatar.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -289,46 +319,16 @@ Partial Class frmAddUser
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ACCOUNT SETTINGS"
         '
-        'btnSave
+        'pbAvatar
         '
-        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(234, 397)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 32)
-        Me.btnSave.TabIndex = 8
-        Me.btnSave.Text = "Save User"
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'btnClear
-        '
-        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(327, 397)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 32)
-        Me.btnClear.TabIndex = 8
-        Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = True
-        '
-        'Cancel
-        '
-        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cancel.Location = New System.Drawing.Point(420, 397)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(75, 32)
-        Me.Cancel.TabIndex = 8
-        Me.Cancel.Text = "Cancel"
-        Me.Cancel.UseVisualStyleBackColor = True
+        Me.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbAvatar.Location = New System.Drawing.Point(37, 92)
+        Me.pbAvatar.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbAvatar.Name = "pbAvatar"
+        Me.pbAvatar.Size = New System.Drawing.Size(110, 110)
+        Me.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbAvatar.TabIndex = 2
+        Me.pbAvatar.TabStop = False
         '
         'frmAddUser
         '

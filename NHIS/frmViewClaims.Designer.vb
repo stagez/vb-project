@@ -24,13 +24,13 @@ Partial Class frmViewClaims
     Private Sub InitializeComponent()
         Me.lblReviewClaims = New System.Windows.Forms.Label()
         Me.dgvReviewClaims = New System.Windows.Forms.DataGridView()
-        Me.pnlReviewClaims = New System.Windows.Forms.Panel()
         Me.colClaimNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colProvider = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colMember = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colServiceDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pnlReviewClaims = New System.Windows.Forms.Panel()
         CType(Me.dgvReviewClaims, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlReviewClaims.SuspendLayout()
         Me.SuspendLayout()
@@ -38,9 +38,10 @@ Partial Class frmViewClaims
         'lblReviewClaims
         '
         Me.lblReviewClaims.AutoSize = True
-        Me.lblReviewClaims.Location = New System.Drawing.Point(313, 27)
+        Me.lblReviewClaims.Location = New System.Drawing.Point(209, 18)
+        Me.lblReviewClaims.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblReviewClaims.Name = "lblReviewClaims"
-        Me.lblReviewClaims.Size = New System.Drawing.Size(111, 20)
+        Me.lblReviewClaims.Size = New System.Drawing.Size(76, 13)
         Me.lblReviewClaims.TabIndex = 0
         Me.lblReviewClaims.Text = "Claims Review"
         '
@@ -50,19 +51,11 @@ Partial Class frmViewClaims
         Me.dgvReviewClaims.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimNumber, Me.colProvider, Me.colMember, Me.colServiceDate, Me.colAmount, Me.colStatus})
         Me.dgvReviewClaims.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvReviewClaims.Location = New System.Drawing.Point(0, 0)
+        Me.dgvReviewClaims.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvReviewClaims.Name = "dgvReviewClaims"
         Me.dgvReviewClaims.RowTemplate.Height = 28
-        Me.dgvReviewClaims.Size = New System.Drawing.Size(800, 283)
+        Me.dgvReviewClaims.Size = New System.Drawing.Size(837, 184)
         Me.dgvReviewClaims.TabIndex = 1
-        '
-        'pnlReviewClaims
-        '
-        Me.pnlReviewClaims.Controls.Add(Me.dgvReviewClaims)
-        Me.pnlReviewClaims.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlReviewClaims.Location = New System.Drawing.Point(0, 167)
-        Me.pnlReviewClaims.Name = "pnlReviewClaims"
-        Me.pnlReviewClaims.Size = New System.Drawing.Size(800, 283)
-        Me.pnlReviewClaims.TabIndex = 2
         '
         'colClaimNumber
         '
@@ -94,13 +87,24 @@ Partial Class frmViewClaims
         Me.colStatus.HeaderText = "Status"
         Me.colStatus.Name = "colStatus"
         '
+        'pnlReviewClaims
+        '
+        Me.pnlReviewClaims.Controls.Add(Me.dgvReviewClaims)
+        Me.pnlReviewClaims.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlReviewClaims.Location = New System.Drawing.Point(0, 268)
+        Me.pnlReviewClaims.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlReviewClaims.Name = "pnlReviewClaims"
+        Me.pnlReviewClaims.Size = New System.Drawing.Size(837, 184)
+        Me.pnlReviewClaims.TabIndex = 2
+        '
         'frmViewClaims
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(837, 452)
         Me.Controls.Add(Me.pnlReviewClaims)
         Me.Controls.Add(Me.lblReviewClaims)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmViewClaims"
         Me.Text = "frmViewClaims"
         CType(Me.dgvReviewClaims, System.ComponentModel.ISupportInitialize).EndInit()

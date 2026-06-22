@@ -24,51 +24,52 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnlContent = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProviderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegisterProviderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewProvidersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClaimsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubmitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ApproveClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RejectedClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailyReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ApprovedClaimsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RejectedClaimsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.tsHome = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsHome = New System.Windows.Forms.ToolStripButton()
         Me.tsNewClaim = New System.Windows.Forms.ToolStripButton()
         Me.tsViewClaims = New System.Windows.Forms.ToolStripButton()
         Me.tsProviders = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsApprove = New System.Windows.Forms.ToolStripButton()
         Me.tsReject = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsSave = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsReports = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsPrint = New System.Windows.Forms.ToolStripButton()
         Me.tsLogOut = New System.Windows.Forms.ToolStripButton()
+        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClaimsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApproveClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RejectedClaimsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutSystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -115,27 +116,6 @@ Partial Class frmMain
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'DashboardToolStripMenuItem
-        '
-        Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
-        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DashboardToolStripMenuItem.Text = "Dashboard"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
         'ProviderToolStripMenuItem
         '
         Me.ProviderToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegisterProviderToolStripMenuItem, Me.ViewProvidersToolStripMenuItem})
@@ -162,13 +142,6 @@ Partial Class frmMain
         Me.ClaimsToolStripMenuItem.Size = New System.Drawing.Size(124, 20)
         Me.ClaimsToolStripMenuItem.Text = "Claim Management"
         '
-        'ClaimsToolStripMenuItem1
-        '
-        Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
-        Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
-        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
-        Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
-        '
         'SubmitToolStripMenuItem
         '
         Me.SubmitToolStripMenuItem.Name = "SubmitToolStripMenuItem"
@@ -187,20 +160,6 @@ Partial Class frmMain
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ViewToolStripMenuItem.Text = "Approval"
-        '
-        'ApproveClaimsToolStripMenuItem
-        '
-        Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
-        Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
-        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.ApproveClaimsToolStripMenuItem.Text = "Approve Claims"
-        '
-        'RejectedClaimsToolStripMenuItem
-        '
-        Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
-        Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
-        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
-        Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
         '
         'ReportsToolStripMenuItem
         '
@@ -240,33 +199,12 @@ Partial Class frmMain
         Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(116, 20)
         Me.UserManagementToolStripMenuItem.Text = "User Management"
         '
-        'AddUserToolStripMenuItem
-        '
-        Me.AddUserToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_user_48
-        Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
-        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AddUserToolStripMenuItem.Text = "Add User"
-        '
-        'ManageUsersToolStripMenuItem
-        '
-        Me.ManageUsersToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_manage_48
-        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
-        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutSystemToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutSystemToolStripMenuItem
-        '
-        Me.AboutSystemToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_about_48
-        Me.AboutSystemToolStripMenuItem.Name = "AboutSystemToolStripMenuItem"
-        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.AboutSystemToolStripMenuItem.Text = "About System"
         '
         'ToolStrip1
         '
@@ -277,6 +215,31 @@ Partial Class frmMain
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
         'tsHome
         '
         Me.tsHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -285,11 +248,6 @@ Partial Class frmMain
         Me.tsHome.Name = "tsHome"
         Me.tsHome.Size = New System.Drawing.Size(23, 22)
         Me.tsHome.Text = "Dashboard"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'tsNewClaim
         '
@@ -318,11 +276,6 @@ Partial Class frmMain
         Me.tsProviders.Size = New System.Drawing.Size(23, 22)
         Me.tsProviders.Text = "Providers"
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
         'tsApprove
         '
         Me.tsApprove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -341,11 +294,6 @@ Partial Class frmMain
         Me.tsReject.Size = New System.Drawing.Size(23, 22)
         Me.tsReject.Text = "Reject"
         '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
-        '
         'tsSave
         '
         Me.tsSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -355,11 +303,6 @@ Partial Class frmMain
         Me.tsSave.Size = New System.Drawing.Size(23, 22)
         Me.tsSave.Text = "Save"
         '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
-        '
         'tsReports
         '
         Me.tsReports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -368,11 +311,6 @@ Partial Class frmMain
         Me.tsReports.Name = "tsReports"
         Me.tsReports.Size = New System.Drawing.Size(23, 22)
         Me.tsReports.Text = "Reports"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
         '
         'tsPrint
         '
@@ -392,6 +330,69 @@ Partial Class frmMain
         Me.tsLogOut.Size = New System.Drawing.Size(23, 22)
         Me.tsLogOut.Text = "Log out"
         '
+        'DashboardToolStripMenuItem
+        '
+        Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
+        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.DashboardToolStripMenuItem.Text = "Dashboard"
+        '
+        'LogoutToolStripMenuItem
+        '
+        Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'ClaimsToolStripMenuItem1
+        '
+        Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
+        Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
+        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
+        Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
+        '
+        'ApproveClaimsToolStripMenuItem
+        '
+        Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
+        Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
+        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.ApproveClaimsToolStripMenuItem.Text = "Approve Claims"
+        '
+        'RejectedClaimsToolStripMenuItem
+        '
+        Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
+        Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
+        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
+        '
+        'AddUserToolStripMenuItem
+        '
+        Me.AddUserToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_user_48
+        Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
+        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddUserToolStripMenuItem.Text = "Add User"
+        '
+        'ManageUsersToolStripMenuItem
+        '
+        Me.ManageUsersToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_manage_48
+        Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
+        '
+        'AboutSystemToolStripMenuItem
+        '
+        Me.AboutSystemToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_about_48
+        Me.AboutSystemToolStripMenuItem.Name = "AboutSystemToolStripMenuItem"
+        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutSystemToolStripMenuItem.Text = "About System"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -401,10 +402,11 @@ Partial Class frmMain
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Main"
+        Me.Text = "NHIS"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()

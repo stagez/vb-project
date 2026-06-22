@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property circle() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("circle", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Component_2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Component 2", resourceCulture)
@@ -166,6 +176,16 @@ Namespace My.Resources
         Friend ReadOnly Property icons8_check_mark_48() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8-check-mark-48", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_check_mark_480() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8-check-mark-480", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

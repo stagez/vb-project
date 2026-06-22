@@ -24,17 +24,23 @@ Partial Class frmRegisterProvider
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lblLincenceInfo = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.lblRegion = New System.Windows.Forms.Label()
@@ -45,6 +51,8 @@ Partial Class frmRegisterProvider
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.lblProviderType = New System.Windows.Forms.Label()
@@ -54,12 +62,16 @@ Partial Class frmRegisterProvider
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Panel16 = New System.Windows.Forms.Panel()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -74,31 +86,19 @@ Partial Class frmRegisterProvider
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.lblLincenceInfo = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.Panel16 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel13.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel13.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -126,6 +126,32 @@ Partial Class frmRegisterProvider
         Me.TabPage2.Text = "Provider Details"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.lblLincenceInfo)
+        Me.Panel4.Controls.Add(Me.TextBox6)
+        Me.Panel4.Controls.Add(Me.Panel11)
+        Me.Panel4.Controls.Add(Me.Label15)
+        Me.Panel4.Controls.Add(Me.TextBox14)
+        Me.Panel4.Controls.Add(Me.Label13)
+        Me.Panel4.Location = New System.Drawing.Point(9, 495)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(16)
+        Me.Panel4.Size = New System.Drawing.Size(688, 105)
+        Me.Panel4.TabIndex = 8
+        '
+        'lblLincenceInfo
+        '
+        Me.lblLincenceInfo.AutoSize = True
+        Me.lblLincenceInfo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblLincenceInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblLincenceInfo.Location = New System.Drawing.Point(16, 17)
+        Me.lblLincenceInfo.Name = "lblLincenceInfo"
+        Me.lblLincenceInfo.Size = New System.Drawing.Size(78, 15)
+        Me.lblLincenceInfo.TabIndex = 0
+        Me.lblLincenceInfo.Text = "Lincence Info"
+        '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -134,22 +160,14 @@ Partial Class frmRegisterProvider
         Me.TextBox6.Size = New System.Drawing.Size(121, 22)
         Me.TextBox6.TabIndex = 3
         '
-        'TextBox9
+        'Panel11
         '
-        Me.TextBox9.Location = New System.Drawing.Point(699, 19)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(121, 23)
-        Me.TextBox9.TabIndex = 3
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(35, 60)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(100, 15)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Lincense Number"
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel11.Location = New System.Drawing.Point(16, 16)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(656, 1)
+        Me.Panel11.TabIndex = 7
         '
         'Label15
         '
@@ -160,6 +178,24 @@ Partial Class frmRegisterProvider
         Me.Label15.Size = New System.Drawing.Size(130, 15)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "NHIS Accreditation No."
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox14.Location = New System.Drawing.Point(479, 53)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox14.TabIndex = 3
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(35, 60)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(100, 15)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Lincense Number"
         '
         'Panel3
         '
@@ -176,6 +212,22 @@ Partial Class frmRegisterProvider
         Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel3.Size = New System.Drawing.Size(692, 103)
         Me.Panel3.TabIndex = 0
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel10.Location = New System.Drawing.Point(16, 29)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(660, 1)
+        Me.Panel10.TabIndex = 7
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(699, 19)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(121, 23)
+        Me.TextBox9.TabIndex = 3
         '
         'Label10
         '
@@ -243,6 +295,15 @@ Partial Class frmRegisterProvider
         Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel2.Size = New System.Drawing.Size(692, 169)
         Me.Panel2.TabIndex = 0
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel9.Location = New System.Drawing.Point(16, 29)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(660, 1)
+        Me.Panel9.TabIndex = 7
         '
         'Label8
         '
@@ -347,6 +408,25 @@ Partial Class frmRegisterProvider
         Me.Panel1.Size = New System.Drawing.Size(692, 150)
         Me.Panel1.TabIndex = 0
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Panel12)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(16, 29)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(660, 1)
+        Me.Panel8.TabIndex = 7
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel12.Location = New System.Drawing.Point(0, 0)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(660, 1)
+        Me.Panel12.TabIndex = 8
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -441,6 +521,25 @@ Partial Class frmRegisterProvider
         Me.Panel6.Size = New System.Drawing.Size(681, 193)
         Me.Panel6.TabIndex = 0
         '
+        'Panel15
+        '
+        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel15.Controls.Add(Me.Panel16)
+        Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel15.Location = New System.Drawing.Point(16, 29)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(649, 1)
+        Me.Panel15.TabIndex = 9
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel16.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel16.Location = New System.Drawing.Point(0, 0)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(649, 1)
+        Me.Panel16.TabIndex = 8
+        '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
@@ -506,6 +605,24 @@ Partial Class frmRegisterProvider
         Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(681, 206)
         Me.Panel5.TabIndex = 0
+        '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel13.Controls.Add(Me.Panel14)
+        Me.Panel13.Location = New System.Drawing.Point(21, 32)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(660, 1)
+        Me.Panel13.TabIndex = 9
+        '
+        'Panel14
+        '
+        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel14.Location = New System.Drawing.Point(0, 0)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(660, 1)
+        Me.Panel14.TabIndex = 8
         '
         'TextBox12
         '
@@ -669,123 +786,6 @@ Partial Class frmRegisterProvider
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.Panel12)
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(16, 29)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(660, 1)
-        Me.Panel8.TabIndex = 7
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel9.Location = New System.Drawing.Point(16, 29)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(660, 1)
-        Me.Panel9.TabIndex = 7
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel10.Location = New System.Drawing.Point(16, 29)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(660, 1)
-        Me.Panel10.TabIndex = 7
-        '
-        'Panel11
-        '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel11.Location = New System.Drawing.Point(16, 16)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(656, 1)
-        Me.Panel11.TabIndex = 7
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.Controls.Add(Me.lblLincenceInfo)
-        Me.Panel4.Controls.Add(Me.TextBox6)
-        Me.Panel4.Controls.Add(Me.Panel11)
-        Me.Panel4.Controls.Add(Me.Label15)
-        Me.Panel4.Controls.Add(Me.TextBox14)
-        Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(9, 495)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel4.Size = New System.Drawing.Size(688, 105)
-        Me.Panel4.TabIndex = 8
-        '
-        'lblLincenceInfo
-        '
-        Me.lblLincenceInfo.AutoSize = True
-        Me.lblLincenceInfo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblLincenceInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.lblLincenceInfo.Location = New System.Drawing.Point(16, 17)
-        Me.lblLincenceInfo.Name = "lblLincenceInfo"
-        Me.lblLincenceInfo.Size = New System.Drawing.Size(78, 15)
-        Me.lblLincenceInfo.TabIndex = 0
-        Me.lblLincenceInfo.Text = "Lincence Info"
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(479, 53)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox14.TabIndex = 3
-        '
-        'Panel12
-        '
-        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel12.Location = New System.Drawing.Point(0, 0)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(660, 1)
-        Me.Panel12.TabIndex = 8
-        '
-        'Panel13
-        '
-        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel13.Controls.Add(Me.Panel14)
-        Me.Panel13.Location = New System.Drawing.Point(21, 32)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(660, 1)
-        Me.Panel13.TabIndex = 9
-        '
-        'Panel14
-        '
-        Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel14.Location = New System.Drawing.Point(0, 0)
-        Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(660, 1)
-        Me.Panel14.TabIndex = 8
-        '
-        'Panel15
-        '
-        Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel15.Controls.Add(Me.Panel16)
-        Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel15.Location = New System.Drawing.Point(16, 29)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(649, 1)
-        Me.Panel15.TabIndex = 9
-        '
-        'Panel16
-        '
-        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel16.Location = New System.Drawing.Point(0, 0)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(649, 1)
-        Me.Panel16.TabIndex = 8
-        '
         'frmRegisterProvider
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -803,23 +803,23 @@ Partial Class frmRegisterProvider
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        Me.Panel15.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.Panel13.ResumeLayout(False)
-        Me.Panel15.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

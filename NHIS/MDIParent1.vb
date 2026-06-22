@@ -8,7 +8,13 @@ Public Class frmMain
         frm.FormBorderStyle = FormBorderStyle.None
         frm.Dock = DockStyle.Fill
         pnlContent.Controls.Add(frm)
+        CentreForm(frm, pnlContent)
         frm.Show()
+    End Sub
+
+    Private Sub CentreForm(frm As Form, container As Panel)
+        frm.Left = (container.Width - frm.Width) \ 2
+        frm.Top = (container.Height - frm.Height) \ 2
     End Sub
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
@@ -162,5 +168,9 @@ Public Class frmMain
 
     Private Sub AddUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddUserToolStripMenuItem.Click
         LoadForm(New frmAddUser())
+    End Sub
+
+    Private Sub AboutSystemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutSystemToolStripMenuItem.Click
+        LoadForm(New frmAbout())
     End Sub
 End Class

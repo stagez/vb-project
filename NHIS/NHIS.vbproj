@@ -187,6 +187,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +338,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-about-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-mark-480.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
