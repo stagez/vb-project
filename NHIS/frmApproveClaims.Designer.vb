@@ -30,12 +30,11 @@ Partial Class frmApproveClaims
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblProviderType = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtProviderName = New System.Windows.Forms.TextBox()
+        Me.txtProviderType = New System.Windows.Forms.TextBox()
+        Me.txtProviderID = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -48,7 +47,7 @@ Partial Class frmApproveClaims
         Me.Label20 = New System.Windows.Forms.Label()
         Me.lblAmount = New System.Windows.Forms.Label()
         Me.pnlClaimDetails = New System.Windows.Forms.Panel()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpDateSubmitted = New System.Windows.Forms.DateTimePicker()
         Me.lblDiagnosisCode = New System.Windows.Forms.Label()
         Me.lblClaimID = New System.Windows.Forms.Label()
         Me.txtProcedure = New System.Windows.Forms.TextBox()
@@ -61,13 +60,12 @@ Partial Class frmApproveClaims
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtContactNumber = New System.Windows.Forms.Label()
         Me.lblDateOfBirth = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.txtNHISNumber = New System.Windows.Forms.TextBox()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.dtpDateOfBirth = New System.Windows.Forms.TextBox()
         Me.lblGender = New System.Windows.Forms.Label()
         Me.txtPatientName = New System.Windows.Forms.TextBox()
         Me.lblNHISNumber = New System.Windows.Forms.Label()
@@ -81,6 +79,8 @@ Partial Class frmApproveClaims
         Me.btnReject = New System.Windows.Forms.Button()
         Me.btnApprove = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
+        Me.txtRegion = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -134,15 +134,15 @@ Partial Class frmApproveClaims
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
+        Me.Panel5.Controls.Add(Me.txtRegion)
         Me.Panel5.Controls.Add(Me.Panel8)
         Me.Panel5.Controls.Add(Me.Label7)
         Me.Panel5.Controls.Add(Me.lblProviderType)
-        Me.Panel5.Controls.Add(Me.TextBox6)
+        Me.Panel5.Controls.Add(Me.txtDistrict)
         Me.Panel5.Controls.Add(Me.TextBox5)
-        Me.Panel5.Controls.Add(Me.TextBox4)
-        Me.Panel5.Controls.Add(Me.TextBox2)
-        Me.Panel5.Controls.Add(Me.TextBox3)
-        Me.Panel5.Controls.Add(Me.TextBox1)
+        Me.Panel5.Controls.Add(Me.txtProviderName)
+        Me.Panel5.Controls.Add(Me.txtProviderType)
+        Me.Panel5.Controls.Add(Me.txtProviderID)
         Me.Panel5.Controls.Add(Me.Label6)
         Me.Panel5.Controls.Add(Me.Label5)
         Me.Panel5.Controls.Add(Me.Label4)
@@ -195,58 +195,49 @@ Partial Class frmApproveClaims
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
-        'TextBox6
+        'txtDistrict
         '
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(29, 199)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox6.TabIndex = 3
+        Me.txtDistrict.Enabled = False
+        Me.txtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDistrict.Location = New System.Drawing.Point(29, 199)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(181, 22)
+        Me.txtDistrict.TabIndex = 3
         '
         'TextBox5
         '
         Me.TextBox5.Enabled = False
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(268, 199)
+        Me.TextBox5.Location = New System.Drawing.Point(324, 199)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(181, 22)
         Me.TextBox5.TabIndex = 3
         '
-        'TextBox4
+        'txtProviderName
         '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(268, 132)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox4.TabIndex = 3
+        Me.txtProviderName.Enabled = False
+        Me.txtProviderName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProviderName.Location = New System.Drawing.Point(324, 68)
+        Me.txtProviderName.Name = "txtProviderName"
+        Me.txtProviderName.Size = New System.Drawing.Size(181, 22)
+        Me.txtProviderName.TabIndex = 3
         '
-        'TextBox2
+        'txtProviderType
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(268, 68)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.txtProviderType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProviderType.Location = New System.Drawing.Point(29, 132)
+        Me.txtProviderType.Name = "txtProviderType"
+        Me.txtProviderType.Size = New System.Drawing.Size(181, 22)
+        Me.txtProviderType.TabIndex = 3
         '
-        'TextBox3
+        'txtProviderID
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(29, 132)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 3
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(29, 68)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.txtProviderID.Enabled = False
+        Me.txtProviderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProviderID.Location = New System.Drawing.Point(29, 68)
+        Me.txtProviderID.Name = "txtProviderID"
+        Me.txtProviderID.Size = New System.Drawing.Size(181, 22)
+        Me.txtProviderID.TabIndex = 3
         '
         'Label6
         '
@@ -254,35 +245,35 @@ Partial Class frmApproveClaims
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(26, 181)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(86, 15)
+        Me.Label6.Size = New System.Drawing.Size(44, 15)
         Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Provider Name"
+        Me.Label6.Text = "District"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(265, 181)
+        Me.Label5.Location = New System.Drawing.Point(321, 181)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 15)
+        Me.Label5.Size = New System.Drawing.Size(41, 15)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Provider Name"
+        Me.Label5.Text = "Phone"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(265, 114)
+        Me.Label4.Location = New System.Drawing.Point(321, 114)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 15)
+        Me.Label4.Size = New System.Drawing.Size(44, 15)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Provider Name"
+        Me.Label4.Text = "Region"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(265, 50)
+        Me.Label2.Location = New System.Drawing.Point(321, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 15)
         Me.Label2.TabIndex = 1
@@ -367,7 +358,7 @@ Partial Class frmApproveClaims
         'pnlClaimDetails
         '
         Me.pnlClaimDetails.BackColor = System.Drawing.Color.White
-        Me.pnlClaimDetails.Controls.Add(Me.DateTimePicker2)
+        Me.pnlClaimDetails.Controls.Add(Me.dtpDateSubmitted)
         Me.pnlClaimDetails.Controls.Add(Me.lblDiagnosisCode)
         Me.pnlClaimDetails.Controls.Add(Me.lblClaimID)
         Me.pnlClaimDetails.Controls.Add(Me.txtProcedure)
@@ -383,14 +374,14 @@ Partial Class frmApproveClaims
         Me.pnlClaimDetails.Size = New System.Drawing.Size(590, 206)
         Me.pnlClaimDetails.TabIndex = 0
         '
-        'DateTimePicker2
+        'dtpDateSubmitted
         '
-        Me.DateTimePicker2.Enabled = False
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(261, 69)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 23)
-        Me.DateTimePicker2.TabIndex = 22
+        Me.dtpDateSubmitted.Enabled = False
+        Me.dtpDateSubmitted.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDateSubmitted.Location = New System.Drawing.Point(261, 69)
+        Me.dtpDateSubmitted.Name = "dtpDateSubmitted"
+        Me.dtpDateSubmitted.Size = New System.Drawing.Size(100, 23)
+        Me.dtpDateSubmitted.TabIndex = 22
         '
         'lblDiagnosisCode
         '
@@ -505,13 +496,13 @@ Partial Class frmApproveClaims
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.Label17)
+        Me.Panel3.Controls.Add(Me.cboGender)
+        Me.Panel3.Controls.Add(Me.txtContactNumber)
         Me.Panel3.Controls.Add(Me.lblDateOfBirth)
         Me.Panel3.Controls.Add(Me.lblName)
-        Me.Panel3.Controls.Add(Me.TextBox10)
-        Me.Panel3.Controls.Add(Me.TextBox12)
+        Me.Panel3.Controls.Add(Me.txtNHISNumber)
         Me.Panel3.Controls.Add(Me.TextBox15)
-        Me.Panel3.Controls.Add(Me.TextBox13)
+        Me.Panel3.Controls.Add(Me.dtpDateOfBirth)
         Me.Panel3.Controls.Add(Me.lblGender)
         Me.Panel3.Controls.Add(Me.txtPatientName)
         Me.Panel3.Controls.Add(Me.lblNHISNumber)
@@ -523,15 +514,15 @@ Partial Class frmApproveClaims
         Me.Panel3.Size = New System.Drawing.Size(587, 235)
         Me.Panel3.TabIndex = 1
         '
-        'Label17
+        'txtContactNumber
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(21, 176)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(73, 15)
-        Me.Label17.TabIndex = 21
-        Me.Label17.Text = "Date of Birth"
+        Me.txtContactNumber.AutoSize = True
+        Me.txtContactNumber.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.txtContactNumber.Location = New System.Drawing.Point(21, 176)
+        Me.txtContactNumber.Name = "txtContactNumber"
+        Me.txtContactNumber.Size = New System.Drawing.Size(73, 15)
+        Me.txtContactNumber.TabIndex = 21
+        Me.txtContactNumber.Text = "Date of Birth"
         '
         'lblDateOfBirth
         '
@@ -553,23 +544,14 @@ Partial Class frmApproveClaims
         Me.lblName.TabIndex = 21
         Me.lblName.Text = "Patient Name"
         '
-        'TextBox10
+        'txtNHISNumber
         '
-        Me.TextBox10.Enabled = False
-        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(261, 136)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox10.TabIndex = 17
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Enabled = False
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(261, 69)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox12.TabIndex = 17
+        Me.txtNHISNumber.Enabled = False
+        Me.txtNHISNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNHISNumber.Location = New System.Drawing.Point(261, 69)
+        Me.txtNHISNumber.Name = "txtNHISNumber"
+        Me.txtNHISNumber.Size = New System.Drawing.Size(100, 22)
+        Me.txtNHISNumber.TabIndex = 17
         '
         'TextBox15
         '
@@ -580,14 +562,14 @@ Partial Class frmApproveClaims
         Me.TextBox15.Size = New System.Drawing.Size(100, 22)
         Me.TextBox15.TabIndex = 19
         '
-        'TextBox13
+        'dtpDateOfBirth
         '
-        Me.TextBox13.Enabled = False
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(22, 136)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox13.TabIndex = 19
+        Me.dtpDateOfBirth.Enabled = False
+        Me.dtpDateOfBirth.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpDateOfBirth.Location = New System.Drawing.Point(22, 136)
+        Me.dtpDateOfBirth.Name = "dtpDateOfBirth"
+        Me.dtpDateOfBirth.Size = New System.Drawing.Size(100, 22)
+        Me.dtpDateOfBirth.TabIndex = 19
         '
         'lblGender
         '
@@ -665,7 +647,7 @@ Partial Class frmApproveClaims
         '
         Me.Label21.AutoSize = True
         Me.Label21.ForeColor = System.Drawing.Color.MediumPurple
-        Me.Label21.Location = New System.Drawing.Point(211, 18)
+        Me.Label21.Location = New System.Drawing.Point(183, 23)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(85, 13)
         Me.Label21.TabIndex = 14
@@ -736,6 +718,25 @@ Partial Class frmApproveClaims
         Me.Label18.TabIndex = 14
         Me.Label18.Text = "Claim ID"
         '
+        'cboGender
+        '
+        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.cboGender.Location = New System.Drawing.Point(261, 135)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(100, 23)
+        Me.cboGender.TabIndex = 22
+        '
+        'txtRegion
+        '
+        Me.txtRegion.FormattingEnabled = True
+        Me.txtRegion.Items.AddRange(New Object() {"Ahafo Region", "Ashanti Region", "Bono East Region"})
+        Me.txtRegion.Location = New System.Drawing.Point(324, 132)
+        Me.txtRegion.Name = "txtRegion"
+        Me.txtRegion.Size = New System.Drawing.Size(181, 23)
+        Me.txtRegion.TabIndex = 8
+        '
         'frmApproveClaims
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -776,8 +777,8 @@ Partial Class frmApproveClaims
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents lblProviderType As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtProviderName As TextBox
+    Friend WithEvents txtProviderID As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TabPage3 As TabPage
@@ -792,10 +793,9 @@ Partial Class frmApproveClaims
     Friend WithEvents btnClose As Button
     Friend WithEvents btnReject As Button
     Friend WithEvents btnApprove As Button
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtDistrict As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtProviderType As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -811,13 +811,12 @@ Partial Class frmApproveClaims
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label19 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label17 As Label
+    Friend WithEvents txtContactNumber As Label
     Friend WithEvents lblDateOfBirth As Label
     Friend WithEvents lblName As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents txtNHISNumber As TextBox
     Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents dtpDateOfBirth As TextBox
     Friend WithEvents lblGender As Label
     Friend WithEvents txtPatientName As TextBox
     Friend WithEvents lblNHISNumber As Label
@@ -826,5 +825,7 @@ Partial Class frmApproveClaims
     Friend WithEvents Label16 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents dtpDateSubmitted As DateTimePicker
+    Friend WithEvents cboGender As ComboBox
+    Friend WithEvents txtRegion As ComboBox
 End Class

@@ -32,19 +32,17 @@ Partial Class SplashScreen1
         '
         Me.lblLoading.AutoSize = True
         Me.lblLoading.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoading.Location = New System.Drawing.Point(49, 382)
-        Me.lblLoading.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLoading.Location = New System.Drawing.Point(33, 248)
         Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(83, 28)
+        Me.lblLoading.Size = New System.Drawing.Size(58, 19)
         Me.lblLoading.TabIndex = 0
         Me.lblLoading.Text = "Loading"
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(42, 415)
-        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ProgressBar1.Location = New System.Drawing.Point(28, 270)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(458, 24)
+        Me.ProgressBar1.Size = New System.Drawing.Size(305, 16)
         Me.ProgressBar1.TabIndex = 1
         '
         'Timer1
@@ -52,17 +50,16 @@ Partial Class SplashScreen1
         '
         'SplashScreen1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.NHIS.My.Resources.Resources.Splashscreen
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(559, 450)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(373, 310)
         Me.ControlBox = False
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.lblLoading)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SplashScreen1"

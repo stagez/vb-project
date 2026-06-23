@@ -104,10 +104,10 @@
     <Compile Include="frmApproveClaims.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClaimsSubmition.Designer.vb">
-      <DependentUpon>frmClaimsSubmition.vb</DependentUpon>
+    <Compile Include="frmClaimsSubmission.Designer.vb">
+      <DependentUpon>frmClaimsSubmission.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmClaimsSubmition.vb">
+    <Compile Include="frmClaimsSubmission.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRegisterMember.Designer.vb">
@@ -140,12 +140,6 @@
     </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmClaim.Designer.vb">
-      <DependentUpon>frmClaim.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmClaim.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIParent1.Designer.vb">
@@ -197,8 +191,8 @@
     <EmbeddedResource Include="frmApproveClaims.resx">
       <DependentUpon>frmApproveClaims.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClaimsSubmition.resx">
-      <DependentUpon>frmClaimsSubmition.vb</DependentUpon>
+    <EmbeddedResource Include="frmClaimsSubmission.resx">
+      <DependentUpon>frmClaimsSubmission.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterMember.resx">
       <DependentUpon>frmRegisterMember.vb</DependentUpon>
@@ -214,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmClaim.resx">
-      <DependentUpon>frmClaim.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>
