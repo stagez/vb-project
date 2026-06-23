@@ -49,8 +49,8 @@
 
     Public Function isValidPhone(phone As String) As Boolean
         If String.IsNullOrWhiteSpace(phone) Then Return False
-        Dim cleaned = phone.Trim().Replace(" ", "").Replace("-", "")
-        Return System.Text.RegularExpressions.Regex.IsMatch(cleaned, "^(\+233|0)(2[034567]|5[045679])\d{7}$")
+        Dim cleaned = System.Text.RegularExpressions.Regex.Replace(phone.Trim(), "[\s\-\(\)]", "")
+        Return System.Text.RegularExpressions.Regex.IsMatch(cleaned, "^\+?\d{7,15}$")
     End Function
 
     Public Function isRequired(value As String) As Boolean
