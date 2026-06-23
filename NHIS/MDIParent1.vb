@@ -155,7 +155,7 @@ Public Class frmMain
     End Sub
 
     Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
-        LoadForm(New frmClaim())
+        LoadForm(New frmClaimsSubmission())
     End Sub
 
     Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click

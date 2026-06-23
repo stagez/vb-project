@@ -86,6 +86,10 @@ Partial Class frmRegisterProvider
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -99,6 +103,7 @@ Partial Class frmRegisterProvider
         Me.Panel5.SuspendLayout()
         Me.Panel13.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel17.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -106,10 +111,11 @@ Partial Class frmRegisterProvider
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(44, 85)
+        Me.TabControl1.Location = New System.Drawing.Point(169, -213)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(713, 689)
+        Me.TabControl1.Size = New System.Drawing.Size(1070, 1060)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage2
@@ -118,10 +124,11 @@ Partial Class frmRegisterProvider
         Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Controls.Add(Me.Panel2)
         Me.TabPage2.Controls.Add(Me.Panel1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(705, 661)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage2.Size = New System.Drawing.Size(1062, 1022)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Provider Details"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -135,10 +142,11 @@ Partial Class frmRegisterProvider
         Me.Panel4.Controls.Add(Me.Label15)
         Me.Panel4.Controls.Add(Me.TextBox14)
         Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(9, 495)
+        Me.Panel4.Location = New System.Drawing.Point(14, 762)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel4.Size = New System.Drawing.Size(688, 105)
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel4.Size = New System.Drawing.Size(1032, 162)
         Me.Panel4.TabIndex = 8
         '
         'lblLincenceInfo
@@ -146,54 +154,60 @@ Partial Class frmRegisterProvider
         Me.lblLincenceInfo.AutoSize = True
         Me.lblLincenceInfo.Dock = System.Windows.Forms.DockStyle.Top
         Me.lblLincenceInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.lblLincenceInfo.Location = New System.Drawing.Point(16, 17)
+        Me.lblLincenceInfo.Location = New System.Drawing.Point(24, 27)
+        Me.lblLincenceInfo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLincenceInfo.Name = "lblLincenceInfo"
-        Me.lblLincenceInfo.Size = New System.Drawing.Size(78, 15)
+        Me.lblLincenceInfo.Size = New System.Drawing.Size(115, 25)
         Me.lblLincenceInfo.TabIndex = 0
         Me.lblLincenceInfo.Text = "Lincence Info"
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(159, 53)
+        Me.TextBox6.Location = New System.Drawing.Point(238, 82)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox6.Size = New System.Drawing.Size(180, 29)
         Me.TextBox6.TabIndex = 3
         '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel11.Location = New System.Drawing.Point(16, 16)
+        Me.Panel11.Location = New System.Drawing.Point(24, 25)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(656, 1)
+        Me.Panel11.Size = New System.Drawing.Size(984, 2)
         Me.Panel11.TabIndex = 7
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(319, 60)
+        Me.Label15.Location = New System.Drawing.Point(478, 92)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(130, 15)
+        Me.Label15.Size = New System.Drawing.Size(195, 25)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "NHIS Accreditation No."
         '
         'TextBox14
         '
         Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(479, 53)
+        Me.TextBox14.Location = New System.Drawing.Point(718, 82)
+        Me.TextBox14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox14.Size = New System.Drawing.Size(180, 29)
         Me.TextBox14.TabIndex = 3
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(35, 60)
+        Me.Label13.Location = New System.Drawing.Point(52, 92)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(100, 15)
+        Me.Label13.Size = New System.Drawing.Size(148, 25)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Lincense Number"
         '
@@ -207,26 +221,29 @@ Partial Class frmRegisterProvider
         Me.Panel3.Controls.Add(Me.TextBox8)
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.Label14)
-        Me.Panel3.Location = New System.Drawing.Point(7, 351)
+        Me.Panel3.Location = New System.Drawing.Point(10, 540)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel3.Size = New System.Drawing.Size(692, 103)
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel3.Size = New System.Drawing.Size(1038, 158)
         Me.Panel3.TabIndex = 0
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel10.Location = New System.Drawing.Point(16, 29)
+        Me.Panel10.Location = New System.Drawing.Point(24, 48)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(660, 1)
+        Me.Panel10.Size = New System.Drawing.Size(990, 2)
         Me.Panel10.TabIndex = 7
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(699, 19)
+        Me.TextBox9.Location = New System.Drawing.Point(1048, 29)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(121, 23)
+        Me.TextBox9.Size = New System.Drawing.Size(180, 31)
         Me.TextBox9.TabIndex = 3
         '
         'Label10
@@ -235,35 +252,39 @@ Partial Class frmRegisterProvider
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(16, 16)
+        Me.Label10.Location = New System.Drawing.Point(24, 25)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 13)
+        Me.Label10.Size = New System.Drawing.Size(72, 23)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Contact"
         '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(148, 41)
+        Me.TextBox7.Location = New System.Drawing.Point(222, 63)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox7.Size = New System.Drawing.Size(180, 29)
         Me.TextBox7.TabIndex = 3
         '
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(481, 41)
+        Me.TextBox8.Location = New System.Drawing.Point(722, 63)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox8.Size = New System.Drawing.Size(180, 29)
         Me.TextBox8.TabIndex = 3
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(37, 64)
+        Me.Label12.Location = New System.Drawing.Point(56, 98)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(41, 15)
+        Me.Label12.Size = New System.Drawing.Size(62, 25)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Phone"
         '
@@ -271,9 +292,10 @@ Partial Class frmRegisterProvider
         '
         Me.Label14.AutoSize = True
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(325, 64)
+        Me.Label14.Location = New System.Drawing.Point(488, 98)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(36, 15)
+        Me.Label14.Size = New System.Drawing.Size(54, 25)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Email"
         '
@@ -290,19 +312,21 @@ Partial Class frmRegisterProvider
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Location = New System.Drawing.Point(9, 162)
+        Me.Panel2.Location = New System.Drawing.Point(14, 249)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel2.Size = New System.Drawing.Size(692, 169)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel2.Size = New System.Drawing.Size(1038, 260)
         Me.Panel2.TabIndex = 0
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel9.Location = New System.Drawing.Point(16, 29)
+        Me.Panel9.Location = New System.Drawing.Point(24, 48)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(660, 1)
+        Me.Panel9.Size = New System.Drawing.Size(990, 2)
         Me.Panel9.TabIndex = 7
         '
         'Label8
@@ -311,9 +335,10 @@ Partial Class frmRegisterProvider
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(16, 16)
+        Me.Label8.Location = New System.Drawing.Point(24, 25)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(52, 13)
+        Me.Label8.Size = New System.Drawing.Size(78, 23)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Location"
         '
@@ -321,9 +346,10 @@ Partial Class frmRegisterProvider
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(146, 45)
+        Me.ComboBox2.Location = New System.Drawing.Point(219, 69)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox2.Size = New System.Drawing.Size(180, 32)
         Me.ComboBox2.TabIndex = 5
         '
         'lblRegion
@@ -331,43 +357,48 @@ Partial Class frmRegisterProvider
         Me.lblRegion.AutoSize = True
         Me.lblRegion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblRegion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblRegion.Location = New System.Drawing.Point(31, 64)
+        Me.lblRegion.Location = New System.Drawing.Point(46, 98)
+        Me.lblRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRegion.Name = "lblRegion"
-        Me.lblRegion.Size = New System.Drawing.Size(44, 15)
+        Me.lblRegion.Size = New System.Drawing.Size(67, 25)
         Me.lblRegion.TabIndex = 4
         Me.lblRegion.Text = "Region"
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(146, 127)
+        Me.TextBox3.Location = New System.Drawing.Point(219, 195)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(180, 29)
         Me.TextBox3.TabIndex = 3
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(479, 46)
+        Me.TextBox5.Location = New System.Drawing.Point(718, 71)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(180, 29)
         Me.TextBox5.TabIndex = 3
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(146, 89)
+        Me.TextBox4.Location = New System.Drawing.Point(219, 137)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(121, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(180, 29)
         Me.TextBox4.TabIndex = 3
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(319, 53)
+        Me.Label9.Location = New System.Drawing.Point(478, 82)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 15)
+        Me.Label9.Size = New System.Drawing.Size(114, 25)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "GPS Address"
         '
@@ -375,9 +406,10 @@ Partial Class frmRegisterProvider
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(32, 134)
+        Me.Label5.Location = New System.Drawing.Point(48, 206)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 15)
+        Me.Label5.Size = New System.Drawing.Size(90, 25)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "City/Town"
         '
@@ -385,9 +417,10 @@ Partial Class frmRegisterProvider
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(32, 105)
+        Me.Label6.Location = New System.Drawing.Point(48, 162)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(44, 15)
+        Me.Label6.Size = New System.Drawing.Size(67, 25)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "District"
         '
@@ -402,10 +435,11 @@ Partial Class frmRegisterProvider
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(6, 6)
+        Me.Panel1.Location = New System.Drawing.Point(9, 9)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel1.Size = New System.Drawing.Size(692, 150)
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel1.Size = New System.Drawing.Size(1038, 231)
         Me.Panel1.TabIndex = 0
         '
         'Panel8
@@ -413,9 +447,10 @@ Partial Class frmRegisterProvider
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel8.Controls.Add(Me.Panel12)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(16, 29)
+        Me.Panel8.Location = New System.Drawing.Point(24, 48)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(660, 1)
+        Me.Panel8.Size = New System.Drawing.Size(990, 2)
         Me.Panel8.TabIndex = 7
         '
         'Panel12
@@ -423,8 +458,9 @@ Partial Class frmRegisterProvider
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel12.Location = New System.Drawing.Point(0, 0)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(660, 1)
+        Me.Panel12.Size = New System.Drawing.Size(990, 2)
         Me.Panel12.TabIndex = 8
         '
         'Label7
@@ -433,9 +469,10 @@ Partial Class frmRegisterProvider
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(16, 16)
+        Me.Label7.Location = New System.Drawing.Point(24, 25)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 13)
+        Me.Label7.Size = New System.Drawing.Size(118, 23)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Identification"
         '
@@ -443,44 +480,49 @@ Partial Class frmRegisterProvider
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(482, 68)
+        Me.ComboBox1.Location = New System.Drawing.Point(723, 105)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(180, 32)
         Me.ComboBox1.TabIndex = 5
         '
         'lblProviderType
         '
         Me.lblProviderType.AutoSize = True
         Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblProviderType.Location = New System.Drawing.Point(322, 76)
+        Me.lblProviderType.Location = New System.Drawing.Point(483, 117)
+        Me.lblProviderType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(120, 25)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(149, 114)
+        Me.TextBox2.Location = New System.Drawing.Point(224, 175)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(148, 29)
         Me.TextBox2.TabIndex = 3
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(149, 69)
+        Me.TextBox1.Location = New System.Drawing.Point(224, 106)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(148, 29)
         Me.TextBox1.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(32, 121)
+        Me.Label2.Location = New System.Drawing.Point(48, 186)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 15)
+        Me.Label2.Size = New System.Drawing.Size(130, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Provider Name"
         '
@@ -488,9 +530,10 @@ Partial Class frmRegisterProvider
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(28, 77)
+        Me.Label1.Location = New System.Drawing.Point(42, 118)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 15)
+        Me.Label1.Size = New System.Drawing.Size(101, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Provider ID"
         '
@@ -498,10 +541,11 @@ Partial Class frmRegisterProvider
         '
         Me.TabPage3.Controls.Add(Me.Panel6)
         Me.TabPage3.Controls.Add(Me.Panel5)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(705, 661)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage3.Size = New System.Drawing.Size(1062, 1022)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Account and Status"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -515,10 +559,11 @@ Partial Class frmRegisterProvider
         Me.Panel6.Controls.Add(Me.TextBox13)
         Me.Panel6.Controls.Add(Me.Label22)
         Me.Panel6.Controls.Add(Me.Label23)
-        Me.Panel6.Location = New System.Drawing.Point(6, 217)
+        Me.Panel6.Location = New System.Drawing.Point(9, 334)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel6.Size = New System.Drawing.Size(681, 193)
+        Me.Panel6.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel6.Size = New System.Drawing.Size(1022, 297)
         Me.Panel6.TabIndex = 0
         '
         'Panel15
@@ -526,9 +571,10 @@ Partial Class frmRegisterProvider
         Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel15.Controls.Add(Me.Panel16)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel15.Location = New System.Drawing.Point(16, 29)
+        Me.Panel15.Location = New System.Drawing.Point(24, 46)
+        Me.Panel15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(649, 1)
+        Me.Panel15.Size = New System.Drawing.Size(974, 2)
         Me.Panel15.TabIndex = 9
         '
         'Panel16
@@ -536,16 +582,18 @@ Partial Class frmRegisterProvider
         Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel16.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel16.Location = New System.Drawing.Point(0, 0)
+        Me.Panel16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(649, 1)
+        Me.Panel16.Size = New System.Drawing.Size(974, 2)
         Me.Panel16.TabIndex = 8
         '
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(204, 123)
+        Me.ComboBox4.Location = New System.Drawing.Point(306, 189)
+        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(189, 23)
+        Me.ComboBox4.Size = New System.Drawing.Size(282, 33)
         Me.ComboBox4.TabIndex = 4
         '
         'Label20
@@ -554,17 +602,19 @@ Partial Class frmRegisterProvider
         Me.Label20.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(16, 16)
+        Me.Label20.Location = New System.Drawing.Point(24, 25)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(65, 13)
+        Me.Label20.Size = New System.Drawing.Size(95, 21)
         Me.Label20.TabIndex = 3
         Me.Label20.Text = "Role Status"
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(204, 59)
+        Me.TextBox13.Location = New System.Drawing.Point(306, 91)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(189, 23)
+        Me.TextBox13.Size = New System.Drawing.Size(282, 31)
         Me.TextBox13.TabIndex = 4
         '
         'Label22
@@ -572,9 +622,10 @@ Partial Class frmRegisterProvider
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label22.Location = New System.Drawing.Point(80, 131)
+        Me.Label22.Location = New System.Drawing.Point(120, 202)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(39, 15)
+        Me.Label22.Size = New System.Drawing.Size(56, 23)
         Me.Label22.TabIndex = 1
         Me.Label22.Text = "Status"
         '
@@ -583,9 +634,10 @@ Partial Class frmRegisterProvider
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(80, 67)
+        Me.Label23.Location = New System.Drawing.Point(120, 103)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(30, 15)
+        Me.Label23.Size = New System.Drawing.Size(43, 23)
         Me.Label23.TabIndex = 0
         Me.Label23.Text = "Role"
         '
@@ -600,19 +652,21 @@ Partial Class frmRegisterProvider
         Me.Panel5.Controls.Add(Me.Label18)
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.Label16)
-        Me.Panel5.Location = New System.Drawing.Point(6, 5)
+        Me.Panel5.Location = New System.Drawing.Point(9, 8)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
-        Me.Panel5.Size = New System.Drawing.Size(681, 206)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
+        Me.Panel5.Size = New System.Drawing.Size(1022, 317)
         Me.Panel5.TabIndex = 0
         '
         'Panel13
         '
         Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel13.Controls.Add(Me.Panel14)
-        Me.Panel13.Location = New System.Drawing.Point(21, 32)
+        Me.Panel13.Location = New System.Drawing.Point(32, 49)
+        Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(660, 1)
+        Me.Panel13.Size = New System.Drawing.Size(990, 2)
         Me.Panel13.TabIndex = 9
         '
         'Panel14
@@ -620,31 +674,35 @@ Partial Class frmRegisterProvider
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel14.Location = New System.Drawing.Point(0, 0)
+        Me.Panel14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(660, 1)
+        Me.Panel14.Size = New System.Drawing.Size(990, 2)
         Me.Panel14.TabIndex = 8
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(204, 139)
+        Me.TextBox12.Location = New System.Drawing.Point(306, 214)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(189, 23)
+        Me.TextBox12.Size = New System.Drawing.Size(282, 31)
         Me.TextBox12.TabIndex = 4
         Me.TextBox12.UseSystemPasswordChar = True
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(204, 98)
+        Me.TextBox11.Location = New System.Drawing.Point(306, 151)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(189, 23)
+        Me.TextBox11.Size = New System.Drawing.Size(282, 31)
         Me.TextBox11.TabIndex = 4
         Me.TextBox11.UseSystemPasswordChar = True
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(204, 55)
+        Me.TextBox10.Location = New System.Drawing.Point(306, 85)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(189, 23)
+        Me.TextBox10.Size = New System.Drawing.Size(282, 31)
         Me.TextBox10.TabIndex = 4
         '
         'Label19
@@ -653,9 +711,10 @@ Partial Class frmRegisterProvider
         Me.Label19.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label19.Location = New System.Drawing.Point(16, 16)
+        Me.Label19.Location = New System.Drawing.Point(24, 25)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(98, 13)
+        Me.Label19.Size = New System.Drawing.Size(143, 21)
         Me.Label19.TabIndex = 3
         Me.Label19.Text = "Login Credentials"
         '
@@ -664,9 +723,10 @@ Partial Class frmRegisterProvider
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(68, 147)
+        Me.Label18.Location = New System.Drawing.Point(102, 226)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(108, 15)
+        Me.Label18.Size = New System.Drawing.Size(152, 23)
         Me.Label18.TabIndex = 2
         Me.Label18.Text = "Comfirm password"
         '
@@ -675,9 +735,10 @@ Partial Class frmRegisterProvider
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(68, 106)
+        Me.Label17.Location = New System.Drawing.Point(102, 163)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(57, 15)
+        Me.Label17.Size = New System.Drawing.Size(80, 23)
         Me.Label17.TabIndex = 1
         Me.Label17.Text = "Password"
         '
@@ -686,9 +747,10 @@ Partial Class frmRegisterProvider
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(68, 63)
+        Me.Label16.Location = New System.Drawing.Point(102, 97)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(60, 15)
+        Me.Label16.Size = New System.Drawing.Size(87, 23)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Username"
         '
@@ -696,9 +758,10 @@ Partial Class frmRegisterProvider
         '
         Me.lblRegisterHealthCareProvider.AutoSize = True
         Me.lblRegisterHealthCareProvider.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegisterHealthCareProvider.Location = New System.Drawing.Point(255, 31)
+        Me.lblRegisterHealthCareProvider.Location = New System.Drawing.Point(501, -290)
+        Me.lblRegisterHealthCareProvider.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRegisterHealthCareProvider.Name = "lblRegisterHealthCareProvider"
-        Me.lblRegisterHealthCareProvider.Size = New System.Drawing.Size(358, 30)
+        Me.lblRegisterHealthCareProvider.Size = New System.Drawing.Size(546, 45)
         Me.lblRegisterHealthCareProvider.TabIndex = 1
         Me.lblRegisterHealthCareProvider.Text = "REGISTER HEALTHCARE PROVIDER"
         '
@@ -709,9 +772,10 @@ Partial Class frmRegisterProvider
         Me.Panel7.Controls.Add(Me.Button3)
         Me.Panel7.Controls.Add(Me.Button2)
         Me.Panel7.Controls.Add(Me.Button1)
-        Me.Panel7.Location = New System.Drawing.Point(44, 801)
+        Me.Panel7.Location = New System.Drawing.Point(66, 1232)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(701, 58)
+        Me.Panel7.Size = New System.Drawing.Size(1052, 89)
         Me.Panel7.TabIndex = 2
         '
         'Button5
@@ -721,9 +785,10 @@ Partial Class frmRegisterProvider
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(503, 17)
+        Me.Button5.Location = New System.Drawing.Point(754, 26)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 32)
+        Me.Button5.Size = New System.Drawing.Size(112, 49)
         Me.Button5.TabIndex = 0
         Me.Button5.Text = "Close"
         Me.Button5.UseVisualStyleBackColor = False
@@ -735,9 +800,10 @@ Partial Class frmRegisterProvider
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(375, 17)
+        Me.Button4.Location = New System.Drawing.Point(562, 26)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 32)
+        Me.Button4.Size = New System.Drawing.Size(112, 49)
         Me.Button4.TabIndex = 0
         Me.Button4.Text = "Clear"
         Me.Button4.UseVisualStyleBackColor = False
@@ -749,9 +815,10 @@ Partial Class frmRegisterProvider
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(260, 14)
+        Me.Button3.Location = New System.Drawing.Point(390, 22)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 32)
+        Me.Button3.Size = New System.Drawing.Size(112, 49)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = False
@@ -764,9 +831,10 @@ Partial Class frmRegisterProvider
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(148, 14)
+        Me.Button2.Location = New System.Drawing.Point(222, 22)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 32)
+        Me.Button2.Size = New System.Drawing.Size(112, 49)
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "Update"
         Me.Button2.UseVisualStyleBackColor = False
@@ -779,24 +847,83 @@ Partial Class frmRegisterProvider
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(37, 14)
+        Me.Button1.Location = New System.Drawing.Point(56, 22)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 32)
+        Me.Button1.Size = New System.Drawing.Size(112, 49)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Save"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Panel17
+        '
+        Me.Panel17.AutoScroll = True
+        Me.Panel17.Controls.Add(Me.Cancel)
+        Me.Panel17.Controls.Add(Me.btnClear)
+        Me.Panel17.Controls.Add(Me.btnSave)
+        Me.Panel17.Controls.Add(Me.lblRegisterHealthCareProvider)
+        Me.Panel17.Controls.Add(Me.TabControl1)
+        Me.Panel17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel17.Location = New System.Drawing.Point(0, 0)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(1548, 1321)
+        Me.Panel17.TabIndex = 3
+        '
+        'Cancel
+        '
+        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(1125, 888)
+        Me.Cancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(112, 49)
+        Me.Cancel.TabIndex = 12
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(985, 888)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(112, 49)
+        Me.btnClear.TabIndex = 13
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(820, 888)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(138, 49)
+        Me.btnSave.TabIndex = 14
+        Me.btnSave.Text = "Register"
+        Me.btnSave.UseVisualStyleBackColor = False
+        '
         'frmRegisterProvider
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1049, 788)
+        Me.ClientSize = New System.Drawing.Size(1574, 1026)
+        Me.Controls.Add(Me.Panel17)
         Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.lblRegisterHealthCareProvider)
-        Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmRegisterProvider"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Register Provider"
@@ -820,8 +947,9 @@ Partial Class frmRegisterProvider
         Me.Panel5.PerformLayout()
         Me.Panel13.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -889,4 +1017,8 @@ Partial Class frmRegisterProvider
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel14 As Panel
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents Cancel As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnSave As Button
 End Class
