@@ -57,6 +57,33 @@
         Return Not String.IsNullOrWhiteSpace(value)
     End Function
 
+    Public Function isValidCombo(combo As ComboBox) As Boolean
+        Return combo IsNot Nothing AndAlso combo.SelectedIndex <> -1 AndAlso Not String.IsNullOrWhiteSpace(combo.Text)
+    End Function
+
+    Public Function isValidDate(dtp As DateTimePicker, Optional minDate As Date? = Nothing, Optional maxDate As Date? = Nothing) As Boolean
+        If dtp Is Nothing Then Return False
+        Dim value = dtp.Value.Date
+        If minDate.HasValue AndAlso value < minDate.Value.Date Then Return False
+        If maxDate.HasValue AndAlso value > maxDate.Value.Date Then Return False
+        Return True
+    End Function
+
+    Public Function isFormComplete(container As Control) As Boolean
+        For Each ctrl As Control In container.Controls
+            If TypeOf ctrl Is TextBox Then
+                If Not isRequired(DirectCast(ctrl, TextBox).Text) Then Return False
+            ElseIf TypeOf ctrl Is ComboBox Then
+                If Not isValidCombo(DirectCast(ctrl, ComboBox)) Then Return False
+            ElseIf TypeOf ctrl Is DateTimePicker Then
+                If Not isValidDate(DirectCast(ctrl, DateTimePicker)) Then Return False
+            ElseIf ctrl.Controls.Count > 0 Then
+                If Not isFormComplete(ctrl) Then Return False
+            End If
+        Next
+        Return True
+    End Function
+
     Public Sub ClearForm(container As Control)
         For Each ctrl As Control In container.Controls
             If TypeOf ctrl Is TextBox Then
