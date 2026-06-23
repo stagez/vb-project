@@ -26,40 +26,40 @@ Partial Class frmRegisterMember
         Me.lblRegisterMember = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.cboRelationship1 = New System.Windows.Forms.ComboBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lblEmergency = New System.Windows.Forms.Label()
+        Me.lblRelatinship = New System.Windows.Forms.Label()
         Me.txtContactName = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.lblPhone = New System.Windows.Forms.Label()
         Me.txtEPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.txtRelationship = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.btnSave = New System.Windows.Forms.Button()
+        Me.lblContactName = New System.Windows.Forms.Label()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCityTown = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblContactLocation = New System.Windows.Forms.Label()
+        Me.lblRegion = New System.Windows.Forms.Label()
         Me.txtCity = New System.Windows.Forms.TextBox()
         Me.txtRegion = New System.Windows.Forms.TextBox()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblDistrict = New System.Windows.Forms.Label()
+        Me.lblPhoneNumber = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblNationality = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblNHISDetails = New System.Windows.Forms.Label()
+        Me.lblCardExpiryDate = New System.Windows.Forms.Label()
         Me.cboMembershipType = New System.Windows.Forms.ComboBox()
         Me.txtNationality = New System.Windows.Forms.TextBox()
         Me.txtNHISNumber = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblMembershipType = New System.Windows.Forms.Label()
         Me.lblNHIS = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dtpDOB = New System.Windows.Forms.DateTimePicker()
@@ -68,11 +68,11 @@ Partial Class frmRegisterMember
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cboGender = New System.Windows.Forms.ComboBox()
-        Me.lblProviderType = New System.Windows.Forms.Label()
+        Me.lblFullName = New System.Windows.Forms.Label()
         Me.txtFullName = New System.Windows.Forms.TextBox()
         Me.txtPatientID = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblDOB = New System.Windows.Forms.Label()
+        Me.lblPatientID = New System.Windows.Forms.Label()
         Me.pnlMain.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -90,25 +90,23 @@ Partial Class frmRegisterMember
         Me.pnlMain.Controls.Add(Me.lblRegisterMember)
         Me.pnlMain.Controls.Add(Me.btnClear)
         Me.pnlMain.Controls.Add(Me.Panel9)
-        Me.pnlMain.Controls.Add(Me.btnSave)
+        Me.pnlMain.Controls.Add(Me.btnRegister)
         Me.pnlMain.Controls.Add(Me.Panel5)
         Me.pnlMain.Controls.Add(Me.Panel1)
         Me.pnlMain.Controls.Add(Me.Panel2)
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(0, 0)
-        Me.pnlMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(1474, 1026)
+        Me.pnlMain.Size = New System.Drawing.Size(924, 512)
         Me.pnlMain.TabIndex = 1
         '
         'lblRegisterMember
         '
         Me.lblRegisterMember.AutoSize = True
         Me.lblRegisterMember.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegisterMember.Location = New System.Drawing.Point(23, 41)
-        Me.lblRegisterMember.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRegisterMember.Location = New System.Drawing.Point(15, 27)
         Me.lblRegisterMember.Name = "lblRegisterMember"
-        Me.lblRegisterMember.Size = New System.Drawing.Size(349, 54)
+        Me.lblRegisterMember.Size = New System.Drawing.Size(239, 37)
         Me.lblRegisterMember.TabIndex = 18
         Me.lblRegisterMember.Text = "Register Member"
         '
@@ -118,10 +116,9 @@ Partial Class frmRegisterMember
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(813, 1146)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnClear.Location = New System.Drawing.Point(542, 745)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(112, 49)
+        Me.btnClear.Size = New System.Drawing.Size(75, 32)
         Me.btnClear.TabIndex = 10
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -129,30 +126,38 @@ Partial Class frmRegisterMember
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.White
+        Me.Panel9.Controls.Add(Me.cboRelationship1)
         Me.Panel9.Controls.Add(Me.Panel10)
-        Me.Panel9.Controls.Add(Me.Label16)
-        Me.Panel9.Controls.Add(Me.Label17)
+        Me.Panel9.Controls.Add(Me.lblEmergency)
+        Me.Panel9.Controls.Add(Me.lblRelatinship)
         Me.Panel9.Controls.Add(Me.txtContactName)
-        Me.Panel9.Controls.Add(Me.Label18)
+        Me.Panel9.Controls.Add(Me.lblPhone)
         Me.Panel9.Controls.Add(Me.txtEPhoneNumber)
-        Me.Panel9.Controls.Add(Me.txtRelationship)
-        Me.Panel9.Controls.Add(Me.Label19)
-        Me.Panel9.Location = New System.Drawing.Point(30, 897)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel9.Controls.Add(Me.lblContactName)
+        Me.Panel9.Location = New System.Drawing.Point(20, 583)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
-        Me.Panel9.Size = New System.Drawing.Size(1038, 231)
+        Me.Panel9.Padding = New System.Windows.Forms.Padding(16)
+        Me.Panel9.Size = New System.Drawing.Size(692, 150)
         Me.Panel9.TabIndex = 17
+        '
+        'cboRelationship1
+        '
+        Me.cboRelationship1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRelationship1.FormattingEnabled = True
+        Me.cboRelationship1.Items.AddRange(New Object() {"Father", "Mother", "Siblings", "Others"})
+        Me.cboRelationship1.Location = New System.Drawing.Point(476, 71)
+        Me.cboRelationship1.Name = "cboRelationship1"
+        Me.cboRelationship1.Size = New System.Drawing.Size(121, 21)
+        Me.cboRelationship1.TabIndex = 16
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel10.Controls.Add(Me.Panel11)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel10.Location = New System.Drawing.Point(24, 48)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel10.Location = New System.Drawing.Point(16, 29)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(990, 2)
+        Me.Panel10.Size = New System.Drawing.Size(660, 1)
         Me.Panel10.TabIndex = 7
         '
         'Panel11
@@ -160,149 +165,128 @@ Partial Class frmRegisterMember
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
-        Me.Panel11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(990, 2)
+        Me.Panel11.Size = New System.Drawing.Size(660, 1)
         Me.Panel11.TabIndex = 8
         '
-        'Label16
+        'lblEmergency
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(24, 25)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(165, 23)
-        Me.Label16.TabIndex = 6
-        Me.Label16.Text = "Emergency Contact"
+        Me.lblEmergency.AutoSize = True
+        Me.lblEmergency.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblEmergency.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmergency.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblEmergency.Location = New System.Drawing.Point(16, 16)
+        Me.lblEmergency.Name = "lblEmergency"
+        Me.lblEmergency.Size = New System.Drawing.Size(107, 13)
+        Me.lblEmergency.TabIndex = 6
+        Me.lblEmergency.Text = "Emergency Contact"
         '
-        'Label17
+        'lblRelatinship
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(483, 117)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(97, 20)
-        Me.Label17.TabIndex = 4
-        Me.Label17.Text = "Relationship"
+        Me.lblRelatinship.AutoSize = True
+        Me.lblRelatinship.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblRelatinship.Location = New System.Drawing.Point(322, 76)
+        Me.lblRelatinship.Name = "lblRelatinship"
+        Me.lblRelatinship.Size = New System.Drawing.Size(65, 13)
+        Me.lblRelatinship.TabIndex = 4
+        Me.lblRelatinship.Text = "Relationship"
         '
         'txtContactName
         '
         Me.txtContactName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContactName.Location = New System.Drawing.Point(224, 106)
-        Me.txtContactName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtContactName.Location = New System.Drawing.Point(149, 69)
         Me.txtContactName.Name = "txtContactName"
-        Me.txtContactName.Size = New System.Drawing.Size(148, 29)
+        Me.txtContactName.Size = New System.Drawing.Size(100, 22)
         Me.txtContactName.TabIndex = 13
         '
-        'Label18
+        'lblPhone
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(48, 186)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(115, 20)
-        Me.Label18.TabIndex = 1
-        Me.Label18.Text = "Phone Number"
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblPhone.Location = New System.Drawing.Point(32, 121)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(78, 13)
+        Me.lblPhone.TabIndex = 1
+        Me.lblPhone.Text = "Phone Number"
         '
         'txtEPhoneNumber
         '
         Me.txtEPhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEPhoneNumber.Location = New System.Drawing.Point(222, 178)
-        Me.txtEPhoneNumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtEPhoneNumber.Location = New System.Drawing.Point(148, 116)
         Me.txtEPhoneNumber.Name = "txtEPhoneNumber"
-        Me.txtEPhoneNumber.Size = New System.Drawing.Size(148, 29)
+        Me.txtEPhoneNumber.Size = New System.Drawing.Size(100, 22)
         Me.txtEPhoneNumber.TabIndex = 15
         '
-        'txtRelationship
+        'lblContactName
         '
-        Me.txtRelationship.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRelationship.Location = New System.Drawing.Point(711, 103)
-        Me.txtRelationship.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtRelationship.Name = "txtRelationship"
-        Me.txtRelationship.Size = New System.Drawing.Size(180, 29)
-        Me.txtRelationship.TabIndex = 14
+        Me.lblContactName.AutoSize = True
+        Me.lblContactName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblContactName.Location = New System.Drawing.Point(28, 77)
+        Me.lblContactName.Name = "lblContactName"
+        Me.lblContactName.Size = New System.Drawing.Size(75, 13)
+        Me.lblContactName.TabIndex = 0
+        Me.lblContactName.Text = "Contact Name"
         '
-        'Label19
+        'btnRegister
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label19.Location = New System.Drawing.Point(42, 118)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(111, 20)
-        Me.Label19.TabIndex = 0
-        Me.Label19.Text = "Contact Name"
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(674, 1146)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(112, 49)
-        Me.btnSave.TabIndex = 11
-        Me.btnSave.Text = "Save User"
-        Me.btnSave.UseVisualStyleBackColor = False
+        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegister.FlatAppearance.BorderSize = 0
+        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRegister.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.ForeColor = System.Drawing.Color.White
+        Me.btnRegister.Location = New System.Drawing.Point(449, 745)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(75, 32)
+        Me.btnRegister.TabIndex = 11
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.UseVisualStyleBackColor = False
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.DateTimePicker4)
-        Me.Panel5.Controls.Add(Me.Label1)
+        Me.Panel5.Controls.Add(Me.lblCityTown)
         Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Controls.Add(Me.Label2)
-        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.lblContactLocation)
+        Me.Panel5.Controls.Add(Me.lblRegion)
         Me.Panel5.Controls.Add(Me.txtCity)
         Me.Panel5.Controls.Add(Me.txtRegion)
         Me.Panel5.Controls.Add(Me.txtDistrict)
         Me.Panel5.Controls.Add(Me.txtPhoneNumber)
-        Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(32, 632)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel5.Controls.Add(Me.lblDistrict)
+        Me.Panel5.Controls.Add(Me.lblPhoneNumber)
+        Me.Panel5.Location = New System.Drawing.Point(21, 411)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
-        Me.Panel5.Size = New System.Drawing.Size(1038, 231)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
+        Me.Panel5.Size = New System.Drawing.Size(692, 150)
         Me.Panel5.TabIndex = 17
         '
         'DateTimePicker4
         '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(710, -152)
-        Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(473, -99)
         Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(181, 26)
+        Me.DateTimePicker4.Size = New System.Drawing.Size(122, 20)
         Me.DateTimePicker4.TabIndex = 9
         '
-        'Label1
+        'lblCityTown
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(483, 186)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "City/Town"
+        Me.lblCityTown.AutoSize = True
+        Me.lblCityTown.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblCityTown.Location = New System.Drawing.Point(322, 121)
+        Me.lblCityTown.Name = "lblCityTown"
+        Me.lblCityTown.Size = New System.Drawing.Size(56, 13)
+        Me.lblCityTown.TabIndex = 8
+        Me.lblCityTown.Text = "City/Town"
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(24, 48)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel6.Location = New System.Drawing.Point(16, 29)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(990, 2)
+        Me.Panel6.Size = New System.Drawing.Size(660, 1)
         Me.Panel6.TabIndex = 7
         '
         'Panel7
@@ -310,143 +294,130 @@ Partial Class frmRegisterMember
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 0)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(990, 2)
+        Me.Panel7.Size = New System.Drawing.Size(660, 1)
         Me.Panel7.TabIndex = 8
         '
-        'Label2
+        'lblContactLocation
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(24, 25)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 23)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Contact & Location"
+        Me.lblContactLocation.AutoSize = True
+        Me.lblContactLocation.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblContactLocation.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContactLocation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblContactLocation.Location = New System.Drawing.Point(16, 16)
+        Me.lblContactLocation.Name = "lblContactLocation"
+        Me.lblContactLocation.Size = New System.Drawing.Size(98, 13)
+        Me.lblContactLocation.TabIndex = 6
+        Me.lblContactLocation.Text = "Contact & Location"
         '
-        'Label3
+        'lblRegion
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(483, 117)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 20)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Region"
+        Me.lblRegion.AutoSize = True
+        Me.lblRegion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblRegion.Location = New System.Drawing.Point(322, 76)
+        Me.lblRegion.Name = "lblRegion"
+        Me.lblRegion.Size = New System.Drawing.Size(41, 13)
+        Me.lblRegion.TabIndex = 4
+        Me.lblRegion.Text = "Region"
         '
         'txtCity
         '
         Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(710, 186)
-        Me.txtCity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCity.Location = New System.Drawing.Point(473, 121)
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(180, 29)
+        Me.txtCity.Size = New System.Drawing.Size(121, 22)
         Me.txtCity.TabIndex = 12
         '
         'txtRegion
         '
         Me.txtRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRegion.Location = New System.Drawing.Point(714, 103)
-        Me.txtRegion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtRegion.Location = New System.Drawing.Point(476, 67)
         Me.txtRegion.Name = "txtRegion"
-        Me.txtRegion.Size = New System.Drawing.Size(180, 29)
+        Me.txtRegion.Size = New System.Drawing.Size(121, 22)
         Me.txtRegion.TabIndex = 10
         '
         'txtDistrict
         '
         Me.txtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDistrict.Location = New System.Drawing.Point(220, 178)
-        Me.txtDistrict.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtDistrict.Location = New System.Drawing.Point(147, 116)
         Me.txtDistrict.Name = "txtDistrict"
-        Me.txtDistrict.Size = New System.Drawing.Size(148, 29)
+        Me.txtDistrict.Size = New System.Drawing.Size(100, 22)
         Me.txtDistrict.TabIndex = 11
         '
         'txtPhoneNumber
         '
         Me.txtPhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(224, 106)
-        Me.txtPhoneNumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(149, 69)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(148, 29)
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(100, 22)
         Me.txtPhoneNumber.TabIndex = 9
         '
-        'Label4
+        'lblDistrict
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(48, 186)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 20)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "District"
+        Me.lblDistrict.AutoSize = True
+        Me.lblDistrict.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblDistrict.Location = New System.Drawing.Point(32, 121)
+        Me.lblDistrict.Name = "lblDistrict"
+        Me.lblDistrict.Size = New System.Drawing.Size(39, 13)
+        Me.lblDistrict.TabIndex = 1
+        Me.lblDistrict.Text = "District"
         '
-        'Label5
+        'lblPhoneNumber
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(42, 118)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(115, 20)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Phone Number"
+        Me.lblPhoneNumber.AutoSize = True
+        Me.lblPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblPhoneNumber.Location = New System.Drawing.Point(28, 77)
+        Me.lblPhoneNumber.Name = "lblPhoneNumber"
+        Me.lblPhoneNumber.Size = New System.Drawing.Size(78, 13)
+        Me.lblPhoneNumber.TabIndex = 0
+        Me.lblPhoneNumber.Text = "Phone Number"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.DateTimePicker2)
-        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.lblNationality)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Label12)
-        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.lblNHISDetails)
+        Me.Panel1.Controls.Add(Me.lblCardExpiryDate)
         Me.Panel1.Controls.Add(Me.cboMembershipType)
         Me.Panel1.Controls.Add(Me.txtNationality)
         Me.Panel1.Controls.Add(Me.txtNHISNumber)
-        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.lblMembershipType)
         Me.Panel1.Controls.Add(Me.lblNHIS)
-        Me.Panel1.Location = New System.Drawing.Point(30, 372)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel1.Location = New System.Drawing.Point(20, 242)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
-        Me.Panel1.Size = New System.Drawing.Size(1038, 231)
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(16)
+        Me.Panel1.Size = New System.Drawing.Size(692, 150)
         Me.Panel1.TabIndex = 17
         '
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(711, 117)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(474, 76)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(181, 26)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(122, 20)
         Me.DateTimePicker2.TabIndex = 6
         Me.DateTimePicker2.Value = New Date(2026, 6, 23, 0, 58, 42, 0)
         '
-        'Label11
+        'lblNationality
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(483, 186)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(82, 20)
-        Me.Label11.TabIndex = 8
-        Me.Label11.Text = "Nationality"
+        Me.lblNationality.AutoSize = True
+        Me.lblNationality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblNationality.Location = New System.Drawing.Point(322, 121)
+        Me.lblNationality.Name = "lblNationality"
+        Me.lblNationality.Size = New System.Drawing.Size(56, 13)
+        Me.lblNationality.TabIndex = 8
+        Me.lblNationality.Text = "Nationality"
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(24, 48)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel3.Location = New System.Drawing.Point(16, 29)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(990, 2)
+        Me.Panel3.Size = New System.Drawing.Size(660, 1)
         Me.Panel3.TabIndex = 7
         '
         'Panel4
@@ -454,82 +425,74 @@ Partial Class frmRegisterMember
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(990, 2)
+        Me.Panel4.Size = New System.Drawing.Size(660, 1)
         Me.Panel4.TabIndex = 8
         '
-        'Label12
+        'lblNHISDetails
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(24, 25)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(111, 23)
-        Me.Label12.TabIndex = 6
-        Me.Label12.Text = "NHIS Details"
+        Me.lblNHISDetails.AutoSize = True
+        Me.lblNHISDetails.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblNHISDetails.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISDetails.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblNHISDetails.Location = New System.Drawing.Point(16, 16)
+        Me.lblNHISDetails.Name = "lblNHISDetails"
+        Me.lblNHISDetails.Size = New System.Drawing.Size(71, 13)
+        Me.lblNHISDetails.TabIndex = 6
+        Me.lblNHISDetails.Text = "NHIS Details"
         '
-        'Label13
+        'lblCardExpiryDate
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(483, 117)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(128, 20)
-        Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Card Expiry Date"
+        Me.lblCardExpiryDate.AutoSize = True
+        Me.lblCardExpiryDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblCardExpiryDate.Location = New System.Drawing.Point(322, 76)
+        Me.lblCardExpiryDate.Name = "lblCardExpiryDate"
+        Me.lblCardExpiryDate.Size = New System.Drawing.Size(86, 13)
+        Me.lblCardExpiryDate.TabIndex = 4
+        Me.lblCardExpiryDate.Text = "Card Expiry Date"
         '
         'cboMembershipType
         '
         Me.cboMembershipType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboMembershipType.FormattingEnabled = True
-        Me.cboMembershipType.Location = New System.Drawing.Point(226, 186)
-        Me.cboMembershipType.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cboMembershipType.Location = New System.Drawing.Point(151, 121)
         Me.cboMembershipType.Name = "cboMembershipType"
-        Me.cboMembershipType.Size = New System.Drawing.Size(180, 32)
+        Me.cboMembershipType.Size = New System.Drawing.Size(121, 24)
         Me.cboMembershipType.TabIndex = 7
         '
         'txtNationality
         '
         Me.txtNationality.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNationality.Location = New System.Drawing.Point(714, 178)
-        Me.txtNationality.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNationality.Location = New System.Drawing.Point(476, 116)
         Me.txtNationality.Name = "txtNationality"
-        Me.txtNationality.Size = New System.Drawing.Size(180, 29)
+        Me.txtNationality.Size = New System.Drawing.Size(121, 22)
         Me.txtNationality.TabIndex = 8
         '
         'txtNHISNumber
         '
         Me.txtNHISNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNHISNumber.Location = New System.Drawing.Point(224, 106)
-        Me.txtNHISNumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNHISNumber.Location = New System.Drawing.Point(149, 69)
         Me.txtNHISNumber.Name = "txtNHISNumber"
-        Me.txtNHISNumber.Size = New System.Drawing.Size(148, 29)
+        Me.txtNHISNumber.Size = New System.Drawing.Size(100, 22)
         Me.txtNHISNumber.TabIndex = 5
         '
-        'Label14
+        'lblMembershipType
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(48, 186)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(134, 20)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "Membership Type"
+        Me.lblMembershipType.AutoSize = True
+        Me.lblMembershipType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblMembershipType.Location = New System.Drawing.Point(32, 121)
+        Me.lblMembershipType.Name = "lblMembershipType"
+        Me.lblMembershipType.Size = New System.Drawing.Size(91, 13)
+        Me.lblMembershipType.TabIndex = 1
+        Me.lblMembershipType.Text = "Membership Type"
         '
         'lblNHIS
         '
         Me.lblNHIS.AutoSize = True
         Me.lblNHIS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblNHIS.Location = New System.Drawing.Point(42, 118)
-        Me.lblNHIS.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNHIS.Location = New System.Drawing.Point(28, 77)
         Me.lblNHIS.Name = "lblNHIS"
-        Me.lblNHIS.Size = New System.Drawing.Size(108, 20)
+        Me.lblNHIS.Size = New System.Drawing.Size(73, 13)
         Me.lblNHIS.TabIndex = 0
         Me.lblNHIS.Text = "NHIS Number"
         '
@@ -541,34 +504,31 @@ Partial Class frmRegisterMember
         Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.cboGender)
-        Me.Panel2.Controls.Add(Me.lblProviderType)
+        Me.Panel2.Controls.Add(Me.lblFullName)
         Me.Panel2.Controls.Add(Me.txtFullName)
         Me.Panel2.Controls.Add(Me.txtPatientID)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Location = New System.Drawing.Point(30, 118)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel2.Controls.Add(Me.lblDOB)
+        Me.Panel2.Controls.Add(Me.lblPatientID)
+        Me.Panel2.Location = New System.Drawing.Point(20, 77)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(24, 25, 24, 25)
-        Me.Panel2.Size = New System.Drawing.Size(1038, 231)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
+        Me.Panel2.Size = New System.Drawing.Size(692, 150)
         Me.Panel2.TabIndex = 17
         '
         'dtpDOB
         '
-        Me.dtpDOB.Location = New System.Drawing.Point(224, 186)
-        Me.dtpDOB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtpDOB.Location = New System.Drawing.Point(149, 121)
         Me.dtpDOB.Name = "dtpDOB"
-        Me.dtpDOB.Size = New System.Drawing.Size(181, 26)
+        Me.dtpDOB.Size = New System.Drawing.Size(122, 20)
         Me.dtpDOB.TabIndex = 3
         '
         'lblGender
         '
         Me.lblGender.AutoSize = True
         Me.lblGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblGender.Location = New System.Drawing.Point(483, 186)
-        Me.lblGender.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblGender.Location = New System.Drawing.Point(322, 121)
         Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(63, 20)
+        Me.lblGender.Size = New System.Drawing.Size(42, 13)
         Me.lblGender.TabIndex = 8
         Me.lblGender.Text = "Gender"
         '
@@ -577,10 +537,9 @@ Partial Class frmRegisterMember
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel8.Controls.Add(Me.Panel12)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(24, 48)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel8.Location = New System.Drawing.Point(16, 29)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(990, 2)
+        Me.Panel8.Size = New System.Drawing.Size(660, 1)
         Me.Panel8.TabIndex = 7
         '
         'Panel12
@@ -588,9 +547,8 @@ Partial Class frmRegisterMember
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel12.Location = New System.Drawing.Point(0, 0)
-        Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(990, 2)
+        Me.Panel12.Size = New System.Drawing.Size(660, 1)
         Me.Panel12.TabIndex = 8
         '
         'Label7
@@ -599,10 +557,9 @@ Partial Class frmRegisterMember
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(24, 25)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(16, 16)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(136, 23)
+        Me.Label7.Size = New System.Drawing.Size(90, 13)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personal Details"
         '
@@ -612,73 +569,66 @@ Partial Class frmRegisterMember
         Me.cboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(714, 165)
-        Me.cboGender.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cboGender.Location = New System.Drawing.Point(476, 107)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(180, 32)
+        Me.cboGender.Size = New System.Drawing.Size(121, 24)
         Me.cboGender.TabIndex = 4
         '
-        'lblProviderType
+        'lblFullName
         '
-        Me.lblProviderType.AutoSize = True
-        Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblProviderType.Location = New System.Drawing.Point(483, 117)
-        Me.lblProviderType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(80, 20)
-        Me.lblProviderType.TabIndex = 4
-        Me.lblProviderType.Text = "Full Name"
+        Me.lblFullName.AutoSize = True
+        Me.lblFullName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblFullName.Location = New System.Drawing.Point(322, 76)
+        Me.lblFullName.Name = "lblFullName"
+        Me.lblFullName.Size = New System.Drawing.Size(54, 13)
+        Me.lblFullName.TabIndex = 4
+        Me.lblFullName.Text = "Full Name"
         '
         'txtFullName
         '
         Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullName.Location = New System.Drawing.Point(714, 103)
-        Me.txtFullName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtFullName.Location = New System.Drawing.Point(476, 67)
         Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.Size = New System.Drawing.Size(180, 29)
+        Me.txtFullName.Size = New System.Drawing.Size(121, 22)
         Me.txtFullName.TabIndex = 2
         '
         'txtPatientID
         '
         Me.txtPatientID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPatientID.Location = New System.Drawing.Point(222, 105)
-        Me.txtPatientID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPatientID.Location = New System.Drawing.Point(148, 68)
         Me.txtPatientID.Name = "txtPatientID"
-        Me.txtPatientID.Size = New System.Drawing.Size(148, 29)
+        Me.txtPatientID.Size = New System.Drawing.Size(100, 22)
         Me.txtPatientID.TabIndex = 1
         '
-        'Label8
+        'lblDOB
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(48, 186)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(99, 20)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "Date of Birth"
+        Me.lblDOB.AutoSize = True
+        Me.lblDOB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblDOB.Location = New System.Drawing.Point(32, 121)
+        Me.lblDOB.Name = "lblDOB"
+        Me.lblDOB.Size = New System.Drawing.Size(66, 13)
+        Me.lblDOB.TabIndex = 1
+        Me.lblDOB.Text = "Date of Birth"
         '
-        'Label9
+        'lblPatientID
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(42, 118)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 20)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Patient ID"
+        Me.lblPatientID.AutoSize = True
+        Me.lblPatientID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblPatientID.Location = New System.Drawing.Point(28, 77)
+        Me.lblPatientID.Name = "lblPatientID"
+        Me.lblPatientID.Size = New System.Drawing.Size(54, 13)
+        Me.lblPatientID.TabIndex = 0
+        Me.lblPatientID.Text = "Patient ID"
         '
         'frmRegisterMember
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1474, 1026)
+        Me.ClientSize = New System.Drawing.Size(924, 512)
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmRegisterMember"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -708,38 +658,37 @@ Partial Class frmRegisterMember
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
+    Friend WithEvents lblEmergency As Label
+    Friend WithEvents lblRelatinship As Label
     Friend WithEvents txtContactName As TextBox
-    Friend WithEvents Label18 As Label
+    Friend WithEvents lblPhone As Label
     Friend WithEvents txtEPhoneNumber As TextBox
-    Friend WithEvents txtRelationship As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents btnSave As Button
+    Friend WithEvents lblContactName As Label
+    Friend WithEvents btnRegister As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCityTown As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblContactLocation As Label
+    Friend WithEvents lblRegion As Label
     Friend WithEvents txtCity As TextBox
     Friend WithEvents txtRegion As TextBox
     Friend WithEvents txtDistrict As TextBox
     Friend WithEvents txtPhoneNumber As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblDistrict As Label
+    Friend WithEvents lblPhoneNumber As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lblNationality As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents lblNHISDetails As Label
+    Friend WithEvents lblCardExpiryDate As Label
     Friend WithEvents cboMembershipType As ComboBox
     Friend WithEvents txtNationality As TextBox
     Friend WithEvents txtNHISNumber As TextBox
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lblMembershipType As Label
     Friend WithEvents lblNHIS As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents dtpDOB As DateTimePicker
@@ -748,9 +697,10 @@ Partial Class frmRegisterMember
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents cboGender As ComboBox
-    Friend WithEvents lblProviderType As Label
+    Friend WithEvents lblFullName As Label
     Friend WithEvents txtFullName As TextBox
     Friend WithEvents txtPatientID As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblDOB As Label
+    Friend WithEvents lblPatientID As Label
+    Friend WithEvents cboRelationship1 As ComboBox
 End Class

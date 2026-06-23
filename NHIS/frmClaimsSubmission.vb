@@ -28,14 +28,6 @@
         End If
     End Sub
 
-    Private Sub frmClaimsSubmission_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtRegion2.TextChanged
-
-    End Sub
-
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
     End Sub
