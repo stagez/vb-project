@@ -57,5 +57,34 @@
         Return Not String.IsNullOrWhiteSpace(value)
     End Function
 
+    Public Sub ClearForm(container As Control)
+        For Each ctrl As Control In container.Controls
+            If TypeOf ctrl Is TextBox Then
+                DirectCast(ctrl, TextBox).Clear()
+
+            ElseIf TypeOf ctrl Is ComboBox Then
+                DirectCast(ctrl, ComboBox).SelectedIndex = -1
+
+            ElseIf TypeOf ctrl Is DateTimePicker Then
+                DirectCast(ctrl, DateTimePicker).Value = DateTime.Today
+
+            ElseIf TypeOf ctrl Is CheckBox Then
+                DirectCast(ctrl, CheckBox).Checked = False
+
+            ElseIf TypeOf ctrl Is RadioButton Then
+                DirectCast(ctrl, RadioButton).Checked = False
+
+            ElseIf TypeOf ctrl Is RichTextBox Then
+                DirectCast(ctrl, RichTextBox).Clear()
+
+            ElseIf TypeOf ctrl Is PictureBox Then
+                DirectCast(ctrl, PictureBox).Image = Nothing
+
+            ElseIf ctrl.Controls.Count > 0 Then
+                ClearForm(ctrl)
+            End If
+        Next
+    End Sub
+
 
 End Module
