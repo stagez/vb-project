@@ -23,27 +23,28 @@ Partial Class frmRegisterMember
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.lblRegisterPatient = New System.Windows.Forms.Label()
+        Me.lblRegisterMember = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtContactName = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtEPhoneNumber = New System.Windows.Forms.TextBox()
+        Me.txtRelationship = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
+        Me.txtRegion = New System.Windows.Forms.TextBox()
+        Me.txtDistrict = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -53,24 +54,23 @@ Partial Class frmRegisterMember
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.cboMembershipType = New System.Windows.Forms.ComboBox()
+        Me.txtNationality = New System.Windows.Forms.TextBox()
+        Me.txtNHISNumber = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblNHIS = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dtpDOB = New System.Windows.Forms.DateTimePicker()
+        Me.lblGender = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.lblProviderType = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFullName = New System.Windows.Forms.TextBox()
+        Me.txtPatientID = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.pnlMain.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -84,26 +84,27 @@ Partial Class frmRegisterMember
         '
         'pnlMain
         '
+        Me.pnlMain.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlMain.AutoScroll = True
-        Me.pnlMain.Controls.Add(Me.lblRegisterPatient)
+        Me.pnlMain.Controls.Add(Me.lblRegisterMember)
         Me.pnlMain.Controls.Add(Me.Panel9)
         Me.pnlMain.Controls.Add(Me.Panel5)
         Me.pnlMain.Controls.Add(Me.Panel1)
         Me.pnlMain.Controls.Add(Me.Panel2)
-        Me.pnlMain.Location = New System.Drawing.Point(75, 12)
+        Me.pnlMain.Location = New System.Drawing.Point(68, 25)
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(759, 807)
         Me.pnlMain.TabIndex = 0
         '
-        'lblRegisterPatient
+        'lblRegisterMember
         '
-        Me.lblRegisterPatient.AutoSize = True
-        Me.lblRegisterPatient.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegisterPatient.Location = New System.Drawing.Point(303, 45)
-        Me.lblRegisterPatient.Name = "lblRegisterPatient"
-        Me.lblRegisterPatient.Size = New System.Drawing.Size(222, 37)
-        Me.lblRegisterPatient.TabIndex = 18
-        Me.lblRegisterPatient.Text = "Register Patient"
+        Me.lblRegisterMember.AutoSize = True
+        Me.lblRegisterMember.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegisterMember.Location = New System.Drawing.Point(227, 11)
+        Me.lblRegisterMember.Name = "lblRegisterMember"
+        Me.lblRegisterMember.Size = New System.Drawing.Size(239, 37)
+        Me.lblRegisterMember.TabIndex = 18
+        Me.lblRegisterMember.Text = "Register Member"
         '
         'Panel9
         '
@@ -111,12 +112,12 @@ Partial Class frmRegisterMember
         Me.Panel9.Controls.Add(Me.Panel10)
         Me.Panel9.Controls.Add(Me.Label16)
         Me.Panel9.Controls.Add(Me.Label17)
-        Me.Panel9.Controls.Add(Me.ComboBox5)
-        Me.Panel9.Controls.Add(Me.TextBox8)
+        Me.Panel9.Controls.Add(Me.txtContactName)
         Me.Panel9.Controls.Add(Me.Label18)
-        Me.Panel9.Controls.Add(Me.TextBox9)
+        Me.Panel9.Controls.Add(Me.txtEPhoneNumber)
+        Me.Panel9.Controls.Add(Me.txtRelationship)
         Me.Panel9.Controls.Add(Me.Label19)
-        Me.Panel9.Location = New System.Drawing.Point(20, 625)
+        Me.Panel9.Location = New System.Drawing.Point(20, 583)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel9.Size = New System.Drawing.Size(692, 150)
@@ -163,22 +164,13 @@ Partial Class frmRegisterMember
         Me.Label17.TabIndex = 4
         Me.Label17.Text = "Relationship"
         '
-        'ComboBox5
+        'txtContactName
         '
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(475, 65)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox5.TabIndex = 5
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(149, 69)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox8.TabIndex = 3
+        Me.txtContactName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContactName.Location = New System.Drawing.Point(149, 69)
+        Me.txtContactName.Name = "txtContactName"
+        Me.txtContactName.Size = New System.Drawing.Size(100, 22)
+        Me.txtContactName.TabIndex = 13
         '
         'Label18
         '
@@ -190,13 +182,21 @@ Partial Class frmRegisterMember
         Me.Label18.TabIndex = 1
         Me.Label18.Text = "Phone Number"
         '
-        'TextBox9
+        'txtEPhoneNumber
         '
-        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(148, 116)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox9.TabIndex = 3
+        Me.txtEPhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEPhoneNumber.Location = New System.Drawing.Point(148, 116)
+        Me.txtEPhoneNumber.Name = "txtEPhoneNumber"
+        Me.txtEPhoneNumber.Size = New System.Drawing.Size(100, 22)
+        Me.txtEPhoneNumber.TabIndex = 15
+        '
+        'txtRelationship
+        '
+        Me.txtRelationship.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRelationship.Location = New System.Drawing.Point(474, 67)
+        Me.txtRelationship.Name = "txtRelationship"
+        Me.txtRelationship.Size = New System.Drawing.Size(121, 22)
+        Me.txtRelationship.TabIndex = 14
         '
         'Label19
         '
@@ -212,28 +212,28 @@ Partial Class frmRegisterMember
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.DateTimePicker4)
-        Me.Panel5.Controls.Add(Me.DateTimePicker3)
         Me.Panel5.Controls.Add(Me.Label1)
         Me.Panel5.Controls.Add(Me.Panel6)
         Me.Panel5.Controls.Add(Me.Label2)
-        Me.Panel5.Controls.Add(Me.ComboBox3)
         Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Controls.Add(Me.TextBox5)
-        Me.Panel5.Controls.Add(Me.TextBox6)
+        Me.Panel5.Controls.Add(Me.txtCity)
+        Me.Panel5.Controls.Add(Me.txtRegion)
+        Me.Panel5.Controls.Add(Me.txtDistrict)
+        Me.Panel5.Controls.Add(Me.txtPhoneNumber)
         Me.Panel5.Controls.Add(Me.Label4)
         Me.Panel5.Controls.Add(Me.Label5)
-        Me.Panel5.Location = New System.Drawing.Point(21, 453)
+        Me.Panel5.Location = New System.Drawing.Point(21, 411)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(692, 150)
         Me.Panel5.TabIndex = 17
         '
-        'DateTimePicker3
+        'DateTimePicker4
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(149, 121)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(122, 20)
-        Me.DateTimePicker3.TabIndex = 9
+        Me.DateTimePicker4.Location = New System.Drawing.Point(473, -99)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(122, 20)
+        Me.DateTimePicker4.TabIndex = 9
         '
         'Label1
         '
@@ -276,15 +276,6 @@ Partial Class frmRegisterMember
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Contact & Location"
         '
-        'ComboBox3
-        '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(476, 107)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox3.TabIndex = 5
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -295,21 +286,37 @@ Partial Class frmRegisterMember
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Region"
         '
-        'TextBox5
+        'txtCity
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(476, 67)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox5.TabIndex = 3
+        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Location = New System.Drawing.Point(473, 121)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.Size = New System.Drawing.Size(121, 22)
+        Me.txtCity.TabIndex = 12
         '
-        'TextBox6
+        'txtRegion
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(149, 69)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox6.TabIndex = 3
+        Me.txtRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRegion.Location = New System.Drawing.Point(476, 67)
+        Me.txtRegion.Name = "txtRegion"
+        Me.txtRegion.Size = New System.Drawing.Size(121, 22)
+        Me.txtRegion.TabIndex = 10
+        '
+        'txtDistrict
+        '
+        Me.txtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDistrict.Location = New System.Drawing.Point(147, 116)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(100, 22)
+        Me.txtDistrict.TabIndex = 11
+        '
+        'txtPhoneNumber
+        '
+        Me.txtPhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(149, 69)
+        Me.txtPhoneNumber.Name = "txtPhoneNumber"
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(100, 22)
+        Me.txtPhoneNumber.TabIndex = 9
         '
         'Label4
         '
@@ -339,12 +346,12 @@ Partial Class frmRegisterMember
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.ComboBox2)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.cboMembershipType)
+        Me.Panel1.Controls.Add(Me.txtNationality)
+        Me.Panel1.Controls.Add(Me.txtNHISNumber)
         Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Location = New System.Drawing.Point(20, 284)
+        Me.Panel1.Controls.Add(Me.lblNHIS)
+        Me.Panel1.Location = New System.Drawing.Point(20, 242)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel1.Size = New System.Drawing.Size(692, 150)
@@ -352,10 +359,12 @@ Partial Class frmRegisterMember
         '
         'DateTimePicker2
         '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker2.Location = New System.Drawing.Point(474, 76)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(122, 20)
-        Me.DateTimePicker2.TabIndex = 9
+        Me.DateTimePicker2.TabIndex = 6
+        Me.DateTimePicker2.Value = New Date(2026, 6, 23, 0, 58, 42, 0)
         '
         'Label11
         '
@@ -408,21 +417,30 @@ Partial Class frmRegisterMember
         Me.Label13.TabIndex = 4
         Me.Label13.Text = "Card Expiry Date"
         '
-        'TextBox3
+        'cboMembershipType
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(476, 116)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox3.TabIndex = 3
+        Me.cboMembershipType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboMembershipType.FormattingEnabled = True
+        Me.cboMembershipType.Location = New System.Drawing.Point(151, 121)
+        Me.cboMembershipType.Name = "cboMembershipType"
+        Me.cboMembershipType.Size = New System.Drawing.Size(121, 24)
+        Me.cboMembershipType.TabIndex = 7
         '
-        'TextBox4
+        'txtNationality
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(149, 69)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox4.TabIndex = 3
+        Me.txtNationality.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNationality.Location = New System.Drawing.Point(476, 116)
+        Me.txtNationality.Name = "txtNationality"
+        Me.txtNationality.Size = New System.Drawing.Size(121, 22)
+        Me.txtNationality.TabIndex = 8
+        '
+        'txtNHISNumber
+        '
+        Me.txtNHISNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNHISNumber.Location = New System.Drawing.Point(149, 69)
+        Me.txtNHISNumber.Name = "txtNHISNumber"
+        Me.txtNHISNumber.Size = New System.Drawing.Size(100, 22)
+        Me.txtNHISNumber.TabIndex = 5
         '
         'Label14
         '
@@ -434,51 +452,51 @@ Partial Class frmRegisterMember
         Me.Label14.TabIndex = 1
         Me.Label14.Text = "Membership Type"
         '
-        'Label15
+        'lblNHIS
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(28, 77)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(73, 13)
-        Me.Label15.TabIndex = 0
-        Me.Label15.Text = "NHIS Number"
+        Me.lblNHIS.AutoSize = True
+        Me.lblNHIS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblNHIS.Location = New System.Drawing.Point(28, 77)
+        Me.lblNHIS.Name = "lblNHIS"
+        Me.lblNHIS.Size = New System.Drawing.Size(73, 13)
+        Me.lblNHIS.TabIndex = 0
+        Me.lblNHIS.Text = "NHIS Number"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.DateTimePicker1)
-        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.dtpDOB)
+        Me.Panel2.Controls.Add(Me.lblGender)
         Me.Panel2.Controls.Add(Me.Panel8)
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.cboGender)
         Me.Panel2.Controls.Add(Me.lblProviderType)
-        Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.txtFullName)
+        Me.Panel2.Controls.Add(Me.txtPatientID)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Location = New System.Drawing.Point(20, 119)
+        Me.Panel2.Location = New System.Drawing.Point(20, 77)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel2.Size = New System.Drawing.Size(692, 150)
         Me.Panel2.TabIndex = 17
         '
-        'DateTimePicker1
+        'dtpDOB
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(149, 121)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.dtpDOB.Location = New System.Drawing.Point(149, 121)
+        Me.dtpDOB.Name = "dtpDOB"
+        Me.dtpDOB.Size = New System.Drawing.Size(122, 20)
+        Me.dtpDOB.TabIndex = 3
         '
-        'Label10
+        'lblGender
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(322, 121)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(42, 13)
-        Me.Label10.TabIndex = 8
-        Me.Label10.Text = "Gender"
+        Me.lblGender.AutoSize = True
+        Me.lblGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblGender.Location = New System.Drawing.Point(322, 121)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(42, 13)
+        Me.lblGender.TabIndex = 8
+        Me.lblGender.Text = "Gender"
         '
         'Panel8
         '
@@ -511,14 +529,16 @@ Partial Class frmRegisterMember
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personal Details"
         '
-        'ComboBox1
+        'cboGender
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(476, 107)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 5
+        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.cboGender.Location = New System.Drawing.Point(476, 107)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(121, 24)
+        Me.cboGender.TabIndex = 4
         '
         'lblProviderType
         '
@@ -530,21 +550,21 @@ Partial Class frmRegisterMember
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Full Name"
         '
-        'TextBox2
+        'txtFullName
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(476, 67)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(121, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.Location = New System.Drawing.Point(476, 67)
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.Size = New System.Drawing.Size(121, 22)
+        Me.txtFullName.TabIndex = 2
         '
-        'TextBox1
+        'txtPatientID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(149, 69)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.txtPatientID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPatientID.Location = New System.Drawing.Point(148, 68)
+        Me.txtPatientID.Name = "txtPatientID"
+        Me.txtPatientID.Size = New System.Drawing.Size(100, 22)
+        Me.txtPatientID.TabIndex = 1
         '
         'Label8
         '
@@ -566,30 +586,20 @@ Partial Class frmRegisterMember
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Patient ID"
         '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(473, -99)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(122, 20)
-        Me.DateTimePicker4.TabIndex = 9
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(151, 121)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 5
-        '
         'frmRegisterMember
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(915, 831)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(897, 749)
+        Me.ControlBox = False
         Me.Controls.Add(Me.pnlMain)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegisterMember"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmRegisterMember"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
         Me.Panel9.ResumeLayout(False)
@@ -609,27 +619,25 @@ Partial Class frmRegisterMember
     End Sub
 
     Friend WithEvents pnlMain As Panel
-    Friend WithEvents lblRegisterPatient As Label
+    Friend WithEvents lblRegisterMember As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lblGender As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboGender As ComboBox
     Friend WithEvents lblProviderType As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPatientID As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtRegion As TextBox
+    Friend WithEvents txtPhoneNumber As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel1 As Panel
@@ -639,22 +647,25 @@ Partial Class frmRegisterMember
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtNationality As TextBox
+    Friend WithEvents txtNHISNumber As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents lblNHIS As Label
+    Friend WithEvents dtpDOB As DateTimePicker
+    Friend WithEvents txtFullName As TextBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents cboRelationship As ComboBox
+    Friend WithEvents txtContactName As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtEPhoneNumber As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cboMembershipType As ComboBox
+    Friend WithEvents txtDistrict As TextBox
+    Friend WithEvents txtCity As TextBox
+    Friend WithEvents txtRelationship As TextBox
 End Class

@@ -1,6 +1,22 @@
 ﻿Imports System.Windows.Forms
 
 Public Class frmMain
+    Private Async Sub ShakeControl(ctrl As Control)
+        Dim originalLeft = ctrl.Left
+        Dim originalBack = ctrl.BackColor
+
+        ctrl.BackColor = Color.FromArgb(255, 220, 220) ' light red tint
+
+        Dim moves = {-6, 6, -5, 5, -3, 3, -1, 1}
+        For Each offset In moves
+            ctrl.Left = originalLeft + offset
+            Await Task.Delay(30)
+        Next
+
+        ctrl.Left = originalLeft
+        Await Task.Delay(300)
+        ctrl.BackColor = originalBack
+    End Sub
 
     Private Sub LoadForm(frm As Form)
         pnlContent.Controls.Clear()
@@ -98,6 +114,7 @@ Public Class frmMain
         'frm.MdiParent = Me
         'frm.Show()
         LoadForm(New frmDashboard())
+
     End Sub
 
     Private Sub RegisterProviderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProviderToolStripMenuItem.Click
@@ -109,8 +126,18 @@ Public Class frmMain
     End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
-        frmLogin.Show()
-        Me.Close()
+        Dim result = MessageBox.Show(
+            "Are you sure you want to logout?",
+            "Confirm Logout",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        )
+
+        If result = DialogResult.Yes Then
+            frmLogin.Show()
+            Me.Hide()
+        End If
+
     End Sub
 
     Private Sub ViewProvidersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewProvidersToolStripMenuItem.Click
@@ -163,6 +190,8 @@ Public Class frmMain
 
         If result = DialogResult.No Then
             e.Cancel = True  ' stops the form from closing
+        Else
+            Application.Exit()
         End If
     End Sub
 
@@ -171,6 +200,14 @@ Public Class frmMain
     End Sub
 
     Private Sub AboutSystemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutSystemToolStripMenuItem.Click
-        LoadForm(New frmAbout())
+        Dim f As New frmAbout()
+        f.ShowDialog()
+    End Sub
+
+    Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
+        pnlContent.Visible = False
+        Dim frm As New frmRegisterMember
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 End Class

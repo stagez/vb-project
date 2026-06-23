@@ -377,7 +377,7 @@ Partial Class frmRegisterProvider
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(32, 134)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 15)
+        Me.Label5.Size = New System.Drawing.Size(61, 15)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "City/Town"
         '
@@ -454,7 +454,7 @@ Partial Class frmRegisterProvider
         Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblProviderType.Location = New System.Drawing.Point(322, 76)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(79, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
@@ -792,7 +792,7 @@ Partial Class frmRegisterProvider
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1032, 871)
+        Me.ClientSize = New System.Drawing.Size(1049, 788)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.lblRegisterHealthCareProvider)
         Me.Controls.Add(Me.TabControl1)

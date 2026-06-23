@@ -61,4 +61,49 @@
             End If
         End Using
     End Sub
+
+    Private Sub txtEmail_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
+        If Not isValidEmail(txtEmail.Text) Then
+            ShakeControl(txtEmail)
+            txtEmail.Focus()
+        End If
+    End Sub
+
+    Private Sub txtName_Leave(sender As Object, e As EventArgs) Handles txtName.Leave
+        If Not isValidName(txtName.Text) Then
+            ShakeControl(txtName)
+            txtName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPassword_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave
+        If Not isRequired(txtPassword.Text) Then
+            ShakeControl(txtPassword)
+            txtPassword.Focus()
+
+        End If
+    End Sub
+
+    Private Sub txtRepeatPassword_Leave(sender As Object, e As EventArgs) Handles txtRepeatPassword.Leave
+        If Not isRequired(txtRepeatPassword.Text) Then
+            ShakeControl(txtRepeatPassword)
+            txtRepeatPassword.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPhone_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
+        If Not isValidPhone(txtPhone.Text) Then
+            ShakeControl(txtPhone)
+            txtPhone.Focus()
+        End If
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        MessageBox.Show(
+            "Saved Successfully!",
+            "Saved",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information
+        )
+    End Sub
 End Class

@@ -48,10 +48,10 @@ Partial Class frmApproveClaims
         Me.Label20 = New System.Windows.Forms.Label()
         Me.lblAmount = New System.Windows.Forms.Label()
         Me.pnlClaimDetails = New System.Windows.Forms.Panel()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.lblDiagnosisCode = New System.Windows.Forms.Label()
         Me.lblClaimID = New System.Windows.Forms.Label()
         Me.txtProcedure = New System.Windows.Forms.TextBox()
-        Me.txtDateSubmitted = New System.Windows.Forms.TextBox()
         Me.txtDiagnosisCode = New System.Windows.Forms.TextBox()
         Me.lblProcedure = New System.Windows.Forms.Label()
         Me.txtClaimID = New System.Windows.Forms.TextBox()
@@ -75,12 +75,12 @@ Partial Class frmApproveClaims
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnReject = New System.Windows.Forms.Button()
         Me.btnApprove = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -112,11 +112,12 @@ Partial Class frmApproveClaims
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Enabled = False
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(48, 27)
+        Me.TabControl1.Location = New System.Drawing.Point(48, 42)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(607, 405)
+        Me.TabControl1.Size = New System.Drawing.Size(607, 458)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage2
@@ -125,7 +126,7 @@ Partial Class frmApproveClaims
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(599, 377)
+        Me.TabPage2.Size = New System.Drawing.Size(599, 430)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Provider Information"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -190,20 +191,22 @@ Partial Class frmApproveClaims
         Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblProviderType.Location = New System.Drawing.Point(26, 114)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(79, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
         'TextBox6
         '
+        Me.TextBox6.Enabled = False
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(39, 199)
+        Me.TextBox6.Location = New System.Drawing.Point(29, 199)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 22)
         Me.TextBox6.TabIndex = 3
         '
         'TextBox5
         '
+        Me.TextBox5.Enabled = False
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(268, 199)
         Me.TextBox5.Name = "TextBox5"
@@ -212,6 +215,7 @@ Partial Class frmApproveClaims
         '
         'TextBox4
         '
+        Me.TextBox4.Enabled = False
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(268, 132)
         Me.TextBox4.Name = "TextBox4"
@@ -220,6 +224,7 @@ Partial Class frmApproveClaims
         '
         'TextBox2
         '
+        Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(268, 68)
         Me.TextBox2.Name = "TextBox2"
@@ -236,6 +241,7 @@ Partial Class frmApproveClaims
         '
         'TextBox1
         '
+        Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(29, 68)
         Me.TextBox1.Name = "TextBox1"
@@ -299,7 +305,7 @@ Partial Class frmApproveClaims
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(599, 377)
+        Me.TabPage3.Size = New System.Drawing.Size(599, 430)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Claim Information"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -361,10 +367,10 @@ Partial Class frmApproveClaims
         'pnlClaimDetails
         '
         Me.pnlClaimDetails.BackColor = System.Drawing.Color.White
+        Me.pnlClaimDetails.Controls.Add(Me.DateTimePicker2)
         Me.pnlClaimDetails.Controls.Add(Me.lblDiagnosisCode)
         Me.pnlClaimDetails.Controls.Add(Me.lblClaimID)
         Me.pnlClaimDetails.Controls.Add(Me.txtProcedure)
-        Me.pnlClaimDetails.Controls.Add(Me.txtDateSubmitted)
         Me.pnlClaimDetails.Controls.Add(Me.txtDiagnosisCode)
         Me.pnlClaimDetails.Controls.Add(Me.lblProcedure)
         Me.pnlClaimDetails.Controls.Add(Me.txtClaimID)
@@ -376,6 +382,15 @@ Partial Class frmApproveClaims
         Me.pnlClaimDetails.Padding = New System.Windows.Forms.Padding(16)
         Me.pnlClaimDetails.Size = New System.Drawing.Size(590, 206)
         Me.pnlClaimDetails.TabIndex = 0
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Enabled = False
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(261, 69)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(100, 23)
+        Me.DateTimePicker2.TabIndex = 22
         '
         'lblDiagnosisCode
         '
@@ -399,27 +414,22 @@ Partial Class frmApproveClaims
         '
         'txtProcedure
         '
+        Me.txtProcedure.Enabled = False
         Me.txtProcedure.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProcedure.Location = New System.Drawing.Point(261, 136)
         Me.txtProcedure.Name = "txtProcedure"
         Me.txtProcedure.Size = New System.Drawing.Size(100, 22)
         Me.txtProcedure.TabIndex = 17
         '
-        'txtDateSubmitted
-        '
-        Me.txtDateSubmitted.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDateSubmitted.Location = New System.Drawing.Point(261, 69)
-        Me.txtDateSubmitted.Name = "txtDateSubmitted"
-        Me.txtDateSubmitted.Size = New System.Drawing.Size(100, 22)
-        Me.txtDateSubmitted.TabIndex = 17
-        '
         'txtDiagnosisCode
         '
+        Me.txtDiagnosisCode.Enabled = False
         Me.txtDiagnosisCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiagnosisCode.Location = New System.Drawing.Point(22, 136)
         Me.txtDiagnosisCode.Name = "txtDiagnosisCode"
         Me.txtDiagnosisCode.Size = New System.Drawing.Size(100, 22)
         Me.txtDiagnosisCode.TabIndex = 19
+        Me.txtDiagnosisCode.Text = "P1004 "
         '
         'lblProcedure
         '
@@ -433,11 +443,13 @@ Partial Class frmApproveClaims
         '
         'txtClaimID
         '
+        Me.txtClaimID.Enabled = False
         Me.txtClaimID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtClaimID.Location = New System.Drawing.Point(22, 69)
         Me.txtClaimID.Name = "txtClaimID"
         Me.txtClaimID.Size = New System.Drawing.Size(100, 22)
         Me.txtClaimID.TabIndex = 19
+        Me.txtClaimID.Text = "CL005"
         '
         'lblDateSubmitted
         '
@@ -485,7 +497,7 @@ Partial Class frmApproveClaims
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(599, 377)
+        Me.TabPage1.Size = New System.Drawing.Size(599, 430)
         Me.TabPage1.TabIndex = 3
         Me.TabPage1.Text = "Member Information"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -543,6 +555,7 @@ Partial Class frmApproveClaims
         '
         'TextBox10
         '
+        Me.TextBox10.Enabled = False
         Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.Location = New System.Drawing.Point(261, 136)
         Me.TextBox10.Name = "TextBox10"
@@ -551,6 +564,7 @@ Partial Class frmApproveClaims
         '
         'TextBox12
         '
+        Me.TextBox12.Enabled = False
         Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox12.Location = New System.Drawing.Point(261, 69)
         Me.TextBox12.Name = "TextBox12"
@@ -559,6 +573,7 @@ Partial Class frmApproveClaims
         '
         'TextBox15
         '
+        Me.TextBox15.Enabled = False
         Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox15.Location = New System.Drawing.Point(23, 194)
         Me.TextBox15.Name = "TextBox15"
@@ -567,6 +582,7 @@ Partial Class frmApproveClaims
         '
         'TextBox13
         '
+        Me.TextBox13.Enabled = False
         Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox13.Location = New System.Drawing.Point(22, 136)
         Me.TextBox13.Name = "TextBox13"
@@ -585,6 +601,7 @@ Partial Class frmApproveClaims
         '
         'txtPatientName
         '
+        Me.txtPatientName.Enabled = False
         Me.txtPatientName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatientName.Location = New System.Drawing.Point(22, 69)
         Me.txtPatientName.Name = "txtPatientName"
@@ -633,23 +650,36 @@ Partial Class frmApproveClaims
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label21)
         Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.TabControl1)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(180, 125)
+        Me.Panel1.Location = New System.Drawing.Point(11, 11)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(703, 562)
+        Me.Panel1.Size = New System.Drawing.Size(703, 579)
         Me.Panel1.TabIndex = 0
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.MediumPurple
+        Me.Label21.Location = New System.Drawing.Point(211, 18)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(85, 13)
+        Me.Label21.TabIndex = 14
+        Me.Label21.Text = "Pending Review"
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel2.Controls.Add(Me.btnClose)
         Me.Panel2.Controls.Add(Me.btnReject)
         Me.Panel2.Controls.Add(Me.btnApprove)
-        Me.Panel2.Location = New System.Drawing.Point(59, 434)
+        Me.Panel2.Location = New System.Drawing.Point(48, 498)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(592, 58)
+        Me.Panel2.Size = New System.Drawing.Size(607, 68)
         Me.Panel2.TabIndex = 3
         '
         'btnClose
@@ -700,29 +730,17 @@ Partial Class frmApproveClaims
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(177, 88)
+        Me.Label18.Location = New System.Drawing.Point(55, 18)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(77, 20)
         Me.Label18.TabIndex = 14
         Me.Label18.Text = "Claim ID"
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.ForeColor = System.Drawing.Color.MediumPurple
-        Me.Label21.Location = New System.Drawing.Point(319, 92)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(85, 13)
-        Me.Label21.TabIndex = 14
-        Me.Label21.Text = "Pending Review"
-        '
         'frmApproveClaims
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1083, 806)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label18)
+        Me.ClientSize = New System.Drawing.Size(731, 603)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmApproveClaims"
@@ -747,7 +765,6 @@ Partial Class frmApproveClaims
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -786,7 +803,6 @@ Partial Class frmApproveClaims
     Friend WithEvents lblDiagnosisCode As Label
     Friend WithEvents lblClaimID As Label
     Friend WithEvents txtProcedure As TextBox
-    Friend WithEvents txtDateSubmitted As TextBox
     Friend WithEvents txtDiagnosisCode As TextBox
     Friend WithEvents lblProcedure As Label
     Friend WithEvents txtClaimID As TextBox
@@ -810,4 +826,5 @@ Partial Class frmApproveClaims
     Friend WithEvents Label16 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label21 As Label
+    Friend WithEvents DateTimePicker2 As DateTimePicker
 End Class
