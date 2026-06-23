@@ -23,6 +23,8 @@ Partial Class frmRegisterMember
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.lblRegisterMember = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -34,6 +36,7 @@ Partial Class frmRegisterMember
         Me.txtEPhoneNumber = New System.Windows.Forms.TextBox()
         Me.txtRelationship = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -86,15 +89,44 @@ Partial Class frmRegisterMember
         '
         Me.pnlMain.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlMain.AutoScroll = True
+        Me.pnlMain.Controls.Add(Me.Cancel)
+        Me.pnlMain.Controls.Add(Me.btnClear)
         Me.pnlMain.Controls.Add(Me.lblRegisterMember)
         Me.pnlMain.Controls.Add(Me.Panel9)
+        Me.pnlMain.Controls.Add(Me.btnSave)
         Me.pnlMain.Controls.Add(Me.Panel5)
         Me.pnlMain.Controls.Add(Me.Panel1)
         Me.pnlMain.Controls.Add(Me.Panel2)
-        Me.pnlMain.Location = New System.Drawing.Point(68, 25)
+        Me.pnlMain.Location = New System.Drawing.Point(25, 45)
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(759, 807)
         Me.pnlMain.TabIndex = 0
+        '
+        'Cancel
+        '
+        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cancel.Location = New System.Drawing.Point(635, 745)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(75, 32)
+        Me.Cancel.TabIndex = 9
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(542, 745)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 32)
+        Me.btnClear.TabIndex = 10
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
         'lblRegisterMember
         '
@@ -207,6 +239,21 @@ Partial Class frmRegisterMember
         Me.Label19.Size = New System.Drawing.Size(75, 13)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Contact Name"
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(449, 745)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 32)
+        Me.btnSave.TabIndex = 11
+        Me.btnSave.Text = "Save User"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'Panel5
         '
@@ -591,7 +638,7 @@ Partial Class frmRegisterMember
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(897, 749)
+        Me.ClientSize = New System.Drawing.Size(810, 788)
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -668,4 +715,7 @@ Partial Class frmRegisterMember
     Friend WithEvents txtDistrict As TextBox
     Friend WithEvents txtCity As TextBox
     Friend WithEvents txtRelationship As TextBox
+    Friend WithEvents Cancel As Button
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnSave As Button
 End Class

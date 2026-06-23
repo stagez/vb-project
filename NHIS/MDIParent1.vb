@@ -155,7 +155,7 @@ Public Class frmMain
     End Sub
 
     Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
-        LoadForm(New frmClaimsSubmission())
+        LoadForm(New frmClaimsSubmission)
     End Sub
 
     Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click
@@ -209,5 +209,9 @@ Public Class frmMain
         Dim frm As New frmRegisterMember
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
+        LoadForm(New frmClaimsSubmission)
     End Sub
 End Class
