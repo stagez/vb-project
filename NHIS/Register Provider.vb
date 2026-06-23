@@ -76,38 +76,38 @@
         End If
     End Sub
 
-    Private Sub TextBox10_Leave(sender As Object, e As EventArgs) Handles TextBox10.Leave
-        If Not isRequired(TextBox10.Text) Then
-            ShakeControl(TextBox10)
-            TextBox10.Focus()
+    Private Sub TextBox10_Leave(sender As Object, e As EventArgs) Handles txtUsername.Leave
+        If Not isRequired(txtUsername.Text) Then
+            ShakeControl(txtUsername)
+            txtUsername.Focus()
         End If
     End Sub
 
-    Private Sub TextBox11_Leave(sender As Object, e As EventArgs) Handles TextBox11.Leave
-        If Not isRequired(TextBox11.Text) Then
-            ShakeControl(TextBox11)
-            TextBox11.Focus()
+    Private Sub TextBox11_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave
+        If Not isRequired(txtPassword.Text) Then
+            ShakeControl(txtPassword)
+            txtPassword.Focus()
         End If
     End Sub
 
-    Private Sub TextBox12_Leave(sender As Object, e As EventArgs) Handles TextBox12.Leave
-        If Not isRequired(TextBox12.Text) Then
-            ShakeControl(TextBox12)
-            TextBox12.Focus()
+    Private Sub TextBox12_Leave(sender As Object, e As EventArgs) Handles txtComfirmPassword.Leave
+        If Not isRequired(txtComfirmPassword.Text) Then
+            ShakeControl(txtComfirmPassword)
+            txtComfirmPassword.Focus()
         End If
     End Sub
 
-    Private Sub TextBox13_Leave(sender As Object, e As EventArgs) Handles TextBox13.Leave
-        If Not isRequired(TextBox13.Text) Then
-            ShakeControl(TextBox13)
-            TextBox13.Focus()
+    Private Sub TextBox13_Leave(sender As Object, e As EventArgs) Handles txtRole.Leave
+        If Not isRequired(txtRole.Text) Then
+            ShakeControl(txtRole)
+            txtRole.Focus()
         End If
     End Sub
 
-    Private Sub ComboBox4_Leave(sender As Object, e As EventArgs) Handles ComboBox4.Leave
-        If Not isRequired(ComboBox4.Text) Then
-            ShakeControl(ComboBox4)
-            ComboBox4.Focus()
+    Private Sub ComboBox4_Leave(sender As Object, e As EventArgs) Handles cboStatus.Leave
+        If Not isRequired(cboStatus.Text) Then
+            ShakeControl(cboStatus)
+            cboStatus.Focus()
         End If
     End Sub
 

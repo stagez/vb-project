@@ -64,21 +64,21 @@ Partial Class frmRegisterProvider
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.lblRoleStatus = New System.Windows.Forms.Label()
+        Me.txtRole = New System.Windows.Forms.TextBox()
+        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.lblRole = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtComfirmPassword = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.lblLoginCredentials = New System.Windows.Forms.Label()
+        Me.lblComfirmPassword = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblRegisterHealthCareProvider = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -90,6 +90,7 @@ Partial Class frmRegisterProvider
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.lblRegisterProvider = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -111,7 +112,7 @@ Partial Class frmRegisterProvider
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(205, 125)
+        Me.TabControl1.Location = New System.Drawing.Point(239, 127)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -554,11 +555,11 @@ Partial Class frmRegisterProvider
         '
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Controls.Add(Me.Panel15)
-        Me.Panel6.Controls.Add(Me.ComboBox4)
-        Me.Panel6.Controls.Add(Me.Label20)
-        Me.Panel6.Controls.Add(Me.TextBox13)
-        Me.Panel6.Controls.Add(Me.Label22)
-        Me.Panel6.Controls.Add(Me.Label23)
+        Me.Panel6.Controls.Add(Me.cboStatus)
+        Me.Panel6.Controls.Add(Me.lblRoleStatus)
+        Me.Panel6.Controls.Add(Me.txtRole)
+        Me.Panel6.Controls.Add(Me.lblStatus)
+        Me.Panel6.Controls.Add(Me.lblRole)
         Me.Panel6.Location = New System.Drawing.Point(9, 334)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
@@ -587,71 +588,71 @@ Partial Class frmRegisterProvider
         Me.Panel16.Size = New System.Drawing.Size(974, 2)
         Me.Panel16.TabIndex = 8
         '
-        'ComboBox4
+        'cboStatus
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(306, 189)
-        Me.ComboBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(282, 33)
-        Me.ComboBox4.TabIndex = 4
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Location = New System.Drawing.Point(306, 189)
+        Me.cboStatus.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(282, 33)
+        Me.cboStatus.TabIndex = 4
         '
-        'Label20
+        'lblRoleStatus
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(24, 25)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(95, 21)
-        Me.Label20.TabIndex = 3
-        Me.Label20.Text = "Role Status"
+        Me.lblRoleStatus.AutoSize = True
+        Me.lblRoleStatus.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblRoleStatus.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRoleStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblRoleStatus.Location = New System.Drawing.Point(24, 25)
+        Me.lblRoleStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRoleStatus.Name = "lblRoleStatus"
+        Me.lblRoleStatus.Size = New System.Drawing.Size(128, 21)
+        Me.lblRoleStatus.TabIndex = 3
+        Me.lblRoleStatus.Text = "Role and Status"
         '
-        'TextBox13
+        'txtRole
         '
-        Me.TextBox13.Location = New System.Drawing.Point(306, 91)
-        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(282, 31)
-        Me.TextBox13.TabIndex = 4
+        Me.txtRole.Location = New System.Drawing.Point(306, 91)
+        Me.txtRole.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtRole.Name = "txtRole"
+        Me.txtRole.Size = New System.Drawing.Size(282, 31)
+        Me.txtRole.TabIndex = 4
         '
-        'Label22
+        'lblStatus
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label22.Location = New System.Drawing.Point(120, 202)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(56, 23)
-        Me.Label22.TabIndex = 1
-        Me.Label22.Text = "Status"
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblStatus.Location = New System.Drawing.Point(120, 202)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(56, 23)
+        Me.lblStatus.TabIndex = 1
+        Me.lblStatus.Text = "Status"
         '
-        'Label23
+        'lblRole
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(120, 103)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(43, 23)
-        Me.Label23.TabIndex = 0
-        Me.Label23.Text = "Role"
+        Me.lblRole.AutoSize = True
+        Me.lblRole.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblRole.Location = New System.Drawing.Point(120, 103)
+        Me.lblRole.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRole.Name = "lblRole"
+        Me.lblRole.Size = New System.Drawing.Size(43, 23)
+        Me.lblRole.TabIndex = 0
+        Me.lblRole.Text = "Role"
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.Panel13)
-        Me.Panel5.Controls.Add(Me.TextBox12)
-        Me.Panel5.Controls.Add(Me.TextBox11)
-        Me.Panel5.Controls.Add(Me.TextBox10)
-        Me.Panel5.Controls.Add(Me.Label19)
-        Me.Panel5.Controls.Add(Me.Label18)
-        Me.Panel5.Controls.Add(Me.Label17)
-        Me.Panel5.Controls.Add(Me.Label16)
+        Me.Panel5.Controls.Add(Me.txtComfirmPassword)
+        Me.Panel5.Controls.Add(Me.txtPassword)
+        Me.Panel5.Controls.Add(Me.txtUsername)
+        Me.Panel5.Controls.Add(Me.lblLoginCredentials)
+        Me.Panel5.Controls.Add(Me.lblComfirmPassword)
+        Me.Panel5.Controls.Add(Me.lblPassword)
+        Me.Panel5.Controls.Add(Me.lblUsername)
         Me.Panel5.Location = New System.Drawing.Point(9, 8)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
@@ -679,80 +680,80 @@ Partial Class frmRegisterProvider
         Me.Panel14.Size = New System.Drawing.Size(990, 2)
         Me.Panel14.TabIndex = 8
         '
-        'TextBox12
+        'txtComfirmPassword
         '
-        Me.TextBox12.Location = New System.Drawing.Point(306, 214)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(282, 31)
-        Me.TextBox12.TabIndex = 4
-        Me.TextBox12.UseSystemPasswordChar = True
+        Me.txtComfirmPassword.Location = New System.Drawing.Point(306, 214)
+        Me.txtComfirmPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtComfirmPassword.Name = "txtComfirmPassword"
+        Me.txtComfirmPassword.Size = New System.Drawing.Size(282, 31)
+        Me.txtComfirmPassword.TabIndex = 4
+        Me.txtComfirmPassword.UseSystemPasswordChar = True
         '
-        'TextBox11
+        'txtPassword
         '
-        Me.TextBox11.Location = New System.Drawing.Point(306, 151)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(282, 31)
-        Me.TextBox11.TabIndex = 4
-        Me.TextBox11.UseSystemPasswordChar = True
+        Me.txtPassword.Location = New System.Drawing.Point(306, 151)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(282, 31)
+        Me.txtPassword.TabIndex = 4
+        Me.txtPassword.UseSystemPasswordChar = True
         '
-        'TextBox10
+        'txtUsername
         '
-        Me.TextBox10.Location = New System.Drawing.Point(306, 85)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(282, 31)
-        Me.TextBox10.TabIndex = 4
+        Me.txtUsername.Location = New System.Drawing.Point(306, 85)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(282, 31)
+        Me.txtUsername.TabIndex = 4
         '
-        'Label19
+        'lblLoginCredentials
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label19.Location = New System.Drawing.Point(24, 25)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(143, 21)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Login Credentials"
+        Me.lblLoginCredentials.AutoSize = True
+        Me.lblLoginCredentials.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblLoginCredentials.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLoginCredentials.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblLoginCredentials.Location = New System.Drawing.Point(24, 25)
+        Me.lblLoginCredentials.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLoginCredentials.Name = "lblLoginCredentials"
+        Me.lblLoginCredentials.Size = New System.Drawing.Size(143, 21)
+        Me.lblLoginCredentials.TabIndex = 3
+        Me.lblLoginCredentials.Text = "Login Credentials"
         '
-        'Label18
+        'lblComfirmPassword
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label18.Location = New System.Drawing.Point(102, 226)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(152, 23)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Comfirm password"
+        Me.lblComfirmPassword.AutoSize = True
+        Me.lblComfirmPassword.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblComfirmPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblComfirmPassword.Location = New System.Drawing.Point(102, 226)
+        Me.lblComfirmPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblComfirmPassword.Name = "lblComfirmPassword"
+        Me.lblComfirmPassword.Size = New System.Drawing.Size(152, 23)
+        Me.lblComfirmPassword.TabIndex = 2
+        Me.lblComfirmPassword.Text = "Comfirm password"
         '
-        'Label17
+        'lblPassword
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(102, 163)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(80, 23)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Password"
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblPassword.Location = New System.Drawing.Point(102, 163)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(80, 23)
+        Me.lblPassword.TabIndex = 1
+        Me.lblPassword.Text = "Password"
         '
-        'Label16
+        'lblUsername
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(102, 97)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(87, 23)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "Username"
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblUsername.Location = New System.Drawing.Point(102, 97)
+        Me.lblUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(87, 23)
+        Me.lblUsername.TabIndex = 0
+        Me.lblUsername.Text = "Username"
         '
         'lblRegisterHealthCareProvider
         '
@@ -858,6 +859,7 @@ Partial Class frmRegisterProvider
         'Panel17
         '
         Me.Panel17.AutoScroll = True
+        Me.Panel17.Controls.Add(Me.lblRegisterProvider)
         Me.Panel17.Controls.Add(Me.btnCancel)
         Me.Panel17.Controls.Add(Me.btnClear)
         Me.Panel17.Controls.Add(Me.btnSave)
@@ -913,6 +915,16 @@ Partial Class frmRegisterProvider
         Me.btnSave.TabIndex = 17
         Me.btnSave.Text = "Register"
         Me.btnSave.UseVisualStyleBackColor = False
+        '
+        'lblRegisterProvider
+        '
+        Me.lblRegisterProvider.AutoSize = True
+        Me.lblRegisterProvider.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegisterProvider.Location = New System.Drawing.Point(629, 76)
+        Me.lblRegisterProvider.Name = "lblRegisterProvider"
+        Me.lblRegisterProvider.Size = New System.Drawing.Size(290, 38)
+        Me.lblRegisterProvider.TabIndex = 19
+        Me.lblRegisterProvider.Text = "REGISTER PROVIDER"
         '
         'frmRegisterProvider
         '
@@ -987,19 +999,19 @@ Partial Class frmRegisterProvider
     Friend WithEvents Label15 As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents lblComfirmPassword As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents lblLoginCredentials As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtComfirmPassword As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents lblRoleStatus As Label
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents lblRole As Label
+    Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents txtRole As TextBox
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
@@ -1022,4 +1034,5 @@ Partial Class frmRegisterProvider
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
+    Friend WithEvents lblRegisterProvider As Label
 End Class
