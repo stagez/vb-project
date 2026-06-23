@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmRegisterProvider
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmRegisterProvider
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -87,7 +87,7 @@ Partial Class frmRegisterProvider
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Cancel = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
@@ -111,7 +111,7 @@ Partial Class frmRegisterProvider
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(169, -213)
+        Me.TabControl1.Location = New System.Drawing.Point(205, 125)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -858,7 +858,7 @@ Partial Class frmRegisterProvider
         'Panel17
         '
         Me.Panel17.AutoScroll = True
-        Me.Panel17.Controls.Add(Me.Cancel)
+        Me.Panel17.Controls.Add(Me.btnCancel)
         Me.Panel17.Controls.Add(Me.btnClear)
         Me.Panel17.Controls.Add(Me.btnSave)
         Me.Panel17.Controls.Add(Me.lblRegisterHealthCareProvider)
@@ -869,19 +869,20 @@ Partial Class frmRegisterProvider
         Me.Panel17.Size = New System.Drawing.Size(1548, 1321)
         Me.Panel17.TabIndex = 3
         '
-        'Cancel
+        'btnCancel
         '
-        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cancel.Location = New System.Drawing.Point(1125, 888)
-        Me.Cancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(112, 49)
-        Me.Cancel.TabIndex = 12
-        Me.Cancel.Text = "Cancel"
-        Me.Cancel.UseVisualStyleBackColor = True
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnCancel.Location = New System.Drawing.Point(1163, 1225)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(112, 49)
+        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnClear
         '
@@ -889,11 +890,11 @@ Partial Class frmRegisterProvider
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(985, 888)
+        Me.btnClear.Location = New System.Drawing.Point(1021, 1224)
         Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(112, 49)
-        Me.btnClear.TabIndex = 13
+        Me.btnClear.TabIndex = 16
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
@@ -905,11 +906,11 @@ Partial Class frmRegisterProvider
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(820, 888)
+        Me.btnSave.Location = New System.Drawing.Point(856, 1221)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(138, 49)
-        Me.btnSave.TabIndex = 14
+        Me.btnSave.TabIndex = 17
         Me.btnSave.Text = "Register"
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -1018,7 +1019,7 @@ Partial Class frmRegisterProvider
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Panel17 As Panel
-    Friend WithEvents Cancel As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
 End Class
