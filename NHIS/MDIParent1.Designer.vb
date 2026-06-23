@@ -183,19 +183,19 @@ Partial Class frmMain
         '
         Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
         Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
-        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
+        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
         '
         'SubmitToolStripMenuItem
         '
         Me.SubmitToolStripMenuItem.Name = "SubmitToolStripMenuItem"
-        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SubmitToolStripMenuItem.Text = "View Claims"
         '
         'SearchClaimsToolStripMenuItem
         '
         Me.SearchClaimsToolStripMenuItem.Name = "SearchClaimsToolStripMenuItem"
-        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SearchClaimsToolStripMenuItem.Text = "Search Claims"
         '
         'ViewToolStripMenuItem
@@ -282,7 +282,7 @@ Partial Class frmMain
         '
         Me.AboutSystemToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_about_48
         Me.AboutSystemToolStripMenuItem.Name = "AboutSystemToolStripMenuItem"
-        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AboutSystemToolStripMenuItem.Text = "About System"
         '
         'ToolStrip1

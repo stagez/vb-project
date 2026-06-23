@@ -26,12 +26,13 @@ Partial Class frmApproveClaims
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.txtRegion = New System.Windows.Forms.ComboBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblProviderType = New System.Windows.Forms.Label()
         Me.txtDistrict = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.txtProviderName = New System.Windows.Forms.TextBox()
         Me.txtProviderType = New System.Windows.Forms.TextBox()
         Me.txtProviderID = New System.Windows.Forms.TextBox()
@@ -60,6 +61,7 @@ Partial Class frmApproveClaims
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cboGender = New System.Windows.Forms.ComboBox()
         Me.txtContactNumber = New System.Windows.Forms.Label()
         Me.lblDateOfBirth = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
@@ -79,8 +81,6 @@ Partial Class frmApproveClaims
         Me.btnReject = New System.Windows.Forms.Button()
         Me.btnApprove = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.cboGender = New System.Windows.Forms.ComboBox()
-        Me.txtRegion = New System.Windows.Forms.ComboBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -139,7 +139,7 @@ Partial Class frmApproveClaims
         Me.Panel5.Controls.Add(Me.Label7)
         Me.Panel5.Controls.Add(Me.lblProviderType)
         Me.Panel5.Controls.Add(Me.txtDistrict)
-        Me.Panel5.Controls.Add(Me.TextBox5)
+        Me.Panel5.Controls.Add(Me.txtPhone)
         Me.Panel5.Controls.Add(Me.txtProviderName)
         Me.Panel5.Controls.Add(Me.txtProviderType)
         Me.Panel5.Controls.Add(Me.txtProviderID)
@@ -153,6 +153,15 @@ Partial Class frmApproveClaims
         Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(540, 273)
         Me.Panel5.TabIndex = 0
+        '
+        'txtRegion
+        '
+        Me.txtRegion.FormattingEnabled = True
+        Me.txtRegion.Items.AddRange(New Object() {"Ahafo Region", "Ashanti Region", "Bono East Region"})
+        Me.txtRegion.Location = New System.Drawing.Point(324, 132)
+        Me.txtRegion.Name = "txtRegion"
+        Me.txtRegion.Size = New System.Drawing.Size(181, 23)
+        Me.txtRegion.TabIndex = 8
         '
         'Panel8
         '
@@ -204,14 +213,14 @@ Partial Class frmApproveClaims
         Me.txtDistrict.Size = New System.Drawing.Size(181, 22)
         Me.txtDistrict.TabIndex = 3
         '
-        'TextBox5
+        'txtPhone
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(324, 199)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(181, 22)
-        Me.TextBox5.TabIndex = 3
+        Me.txtPhone.Enabled = False
+        Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(324, 199)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(181, 22)
+        Me.txtPhone.TabIndex = 3
         '
         'txtProviderName
         '
@@ -420,7 +429,6 @@ Partial Class frmApproveClaims
         Me.txtDiagnosisCode.Name = "txtDiagnosisCode"
         Me.txtDiagnosisCode.Size = New System.Drawing.Size(100, 22)
         Me.txtDiagnosisCode.TabIndex = 19
-        Me.txtDiagnosisCode.Text = "P1004 "
         '
         'lblProcedure
         '
@@ -440,7 +448,6 @@ Partial Class frmApproveClaims
         Me.txtClaimID.Name = "txtClaimID"
         Me.txtClaimID.Size = New System.Drawing.Size(100, 22)
         Me.txtClaimID.TabIndex = 19
-        Me.txtClaimID.Text = "CL005"
         '
         'lblDateSubmitted
         '
@@ -513,6 +520,16 @@ Partial Class frmApproveClaims
         Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel3.Size = New System.Drawing.Size(587, 235)
         Me.Panel3.TabIndex = 1
+        '
+        'cboGender
+        '
+        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboGender.FormattingEnabled = True
+        Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.cboGender.Location = New System.Drawing.Point(261, 135)
+        Me.cboGender.Name = "cboGender"
+        Me.cboGender.Size = New System.Drawing.Size(100, 23)
+        Me.cboGender.TabIndex = 22
         '
         'txtContactNumber
         '
@@ -718,25 +735,6 @@ Partial Class frmApproveClaims
         Me.Label18.TabIndex = 14
         Me.Label18.Text = "Claim ID"
         '
-        'cboGender
-        '
-        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboGender.FormattingEnabled = True
-        Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(261, 135)
-        Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(100, 23)
-        Me.cboGender.TabIndex = 22
-        '
-        'txtRegion
-        '
-        Me.txtRegion.FormattingEnabled = True
-        Me.txtRegion.Items.AddRange(New Object() {"Ahafo Region", "Ashanti Region", "Bono East Region"})
-        Me.txtRegion.Location = New System.Drawing.Point(324, 132)
-        Me.txtRegion.Name = "txtRegion"
-        Me.txtRegion.Size = New System.Drawing.Size(181, 23)
-        Me.txtRegion.TabIndex = 8
-        '
         'frmApproveClaims
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -794,7 +792,7 @@ Partial Class frmApproveClaims
     Friend WithEvents btnReject As Button
     Friend WithEvents btnApprove As Button
     Friend WithEvents txtDistrict As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPhone As TextBox
     Friend WithEvents txtProviderType As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label

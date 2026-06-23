@@ -23,7 +23,7 @@ Partial Class frmAddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlOuter = New System.Windows.Forms.Panel()
-        Me.Cancel = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.lblProfileSmall = New System.Windows.Forms.Label()
@@ -55,7 +55,7 @@ Partial Class frmAddUser
         '
         Me.pnlOuter.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlOuter.BackColor = System.Drawing.Color.White
-        Me.pnlOuter.Controls.Add(Me.Cancel)
+        Me.pnlOuter.Controls.Add(Me.btnCancel)
         Me.pnlOuter.Controls.Add(Me.btnClear)
         Me.pnlOuter.Controls.Add(Me.btnSave)
         Me.pnlOuter.Controls.Add(Me.lblProfileSmall)
@@ -72,18 +72,18 @@ Partial Class frmAddUser
         Me.pnlOuter.Size = New System.Drawing.Size(617, 451)
         Me.pnlOuter.TabIndex = 0
         '
-        'Cancel
+        'btnCancel
         '
-        Me.Cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cancel.Location = New System.Drawing.Point(420, 397)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(75, 32)
-        Me.Cancel.TabIndex = 8
-        Me.Cancel.Text = "Cancel"
-        Me.Cancel.UseVisualStyleBackColor = True
+        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(511, 400)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 32)
+        Me.btnCancel.TabIndex = 8
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnClear
         '
@@ -91,7 +91,7 @@ Partial Class frmAddUser
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(327, 397)
+        Me.btnClear.Location = New System.Drawing.Point(418, 400)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 32)
         Me.btnClear.TabIndex = 8
@@ -106,7 +106,7 @@ Partial Class frmAddUser
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(234, 397)
+        Me.btnSave.Location = New System.Drawing.Point(325, 400)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 32)
         Me.btnSave.TabIndex = 8
@@ -374,7 +374,7 @@ Partial Class frmAddUser
     Friend WithEvents pnlStrength As Panel
     Friend WithEvents txtRepeatPassword As TextBox
     Friend WithEvents lblStrength As Label
-    Friend WithEvents Cancel As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
 End Class

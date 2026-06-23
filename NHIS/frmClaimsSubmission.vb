@@ -39,4 +39,49 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
     End Sub
+
+    Private Sub frmClaimSubmission_Paint(sender As Object, e As PaintEventArgs) Handles frmClaimSubmission.Paint
+
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        MessageBox.Show("Claims submitted successfully!", "Submit Claim", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub txtPatientFullName_Leave(sender As Object, e As EventArgs) Handles txtPatientFullName.Leave
+        If Not isValidName(txtPatientFullName.Text) Then
+            ShakeControl(txtPatientFullName)
+            txtPatientFullName.Focus()
+        End If
+    End Sub
+
+    Private Sub dtpDateOfBirth_Leave(sender As Object, e As EventArgs) Handles dtpDateOfBirth.Leave
+        If Not isValidDOB(dtpDateOfBirth.Text) Then
+            ShakeControl(dtpDateOfBirth)
+            dtpDateOfBirth.Focus()
+        End If
+    End Sub
+
+    Private Sub txtProviderID_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
+        If Not isRequired(txtProviderID.Text) Then
+            ShakeControl(txtProviderID)
+            txtProviderID.Focus()
+        End If
+    End Sub
+
+    Private Sub txtProviderName_Leave(sender As Object, e As EventArgs) Handles txtProviderName.Leave
+        If Not isRequired(txtProviderName.Text) Then
+            ShakeControl(txtProviderName)
+            txtProviderName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtRegion2_Leave(sender As Object, e As EventArgs) Handles txtRegion2.Leave
+        If Not isRequired(txtRegion2.Text) Then
+            ShakeControl(txtRegion2)
+            txtRegion2.Focus()
+        End If
+    End Sub
+
+
 End Class

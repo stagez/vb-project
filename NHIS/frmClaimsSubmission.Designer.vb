@@ -22,7 +22,7 @@ Partial Class frmClaimsSubmission
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tcClaimSubmission = New System.Windows.Forms.TabControl()
         Me.tpPatientProvider = New System.Windows.Forms.TabPage()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.cboProviderType = New System.Windows.Forms.ComboBox()
@@ -56,9 +56,15 @@ Partial Class frmClaimsSubmission
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tpServiceDetails = New System.Windows.Forms.TabPage()
         Me.pnlClaimDetails = New System.Windows.Forms.Panel()
+        Me.cboProcedureType = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.dtpDateSubmitted = New System.Windows.Forms.DateTimePicker()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblProcedureServiceType = New System.Windows.Forms.Label()
         Me.lblDiagnosisCode = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtWardDepartment = New System.Windows.Forms.TextBox()
+        Me.txtDiagnosisDescription = New System.Windows.Forms.TextBox()
         Me.txtDiagnosisCode = New System.Windows.Forms.TextBox()
         Me.lblWardDepartment = New System.Windows.Forms.Label()
         Me.lblDateSubmitted = New System.Windows.Forms.Label()
@@ -67,11 +73,11 @@ Partial Class frmClaimsSubmission
         Me.Label19 = New System.Windows.Forms.Label()
         Me.tpFinancial = New System.Windows.Forms.TabPage()
         Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lblAdditionalNotes = New System.Windows.Forms.Label()
         Me.txtAdditionalNotes = New System.Windows.Forms.TextBox()
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.Panel20 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.lblRemarks = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtAmountClaimed = New System.Windows.Forms.Label()
         Me.txtApprovedAmount = New System.Windows.Forms.TextBox()
@@ -79,27 +85,23 @@ Partial Class frmClaimsSubmission
         Me.lblNHISNumber = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lblAmount = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlClaimID = New System.Windows.Forms.Panel()
         Me.lblClaimIDBadge = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlDateSubmited = New System.Windows.Forms.Panel()
         Me.lblDateSubmittedBadge = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.pnlStatus = New System.Windows.Forms.Panel()
         Me.lblStatusBadge = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.txtDiagnosisDescription = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.cboProcedureType = New System.Windows.Forms.ComboBox()
-        Me.lblProcedureServiceType = New System.Windows.Forms.Label()
+        Me.frmClaimSubmission = New System.Windows.Forms.Panel()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.TabControl1.SuspendLayout()
+        Me.tcClaimSubmission.SuspendLayout()
         Me.tpPatientProvider.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -114,24 +116,23 @@ Partial Class frmClaimsSubmission
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel17.SuspendLayout()
+        Me.pnlClaimID.SuspendLayout()
+        Me.pnlDateSubmited.SuspendLayout()
+        Me.pnlStatus.SuspendLayout()
+        Me.frmClaimSubmission.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'tcClaimSubmission
         '
-        Me.TabControl1.Controls.Add(Me.tpPatientProvider)
-        Me.TabControl1.Controls.Add(Me.tpServiceDetails)
-        Me.TabControl1.Controls.Add(Me.tpFinancial)
-        Me.TabControl1.Enabled = False
-        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(81, 167)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(607, 458)
-        Me.TabControl1.TabIndex = 3
+        Me.tcClaimSubmission.Controls.Add(Me.tpPatientProvider)
+        Me.tcClaimSubmission.Controls.Add(Me.tpServiceDetails)
+        Me.tcClaimSubmission.Controls.Add(Me.tpFinancial)
+        Me.tcClaimSubmission.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tcClaimSubmission.Location = New System.Drawing.Point(81, 167)
+        Me.tcClaimSubmission.Name = "tcClaimSubmission"
+        Me.tcClaimSubmission.SelectedIndex = 0
+        Me.tcClaimSubmission.Size = New System.Drawing.Size(607, 458)
+        Me.tcClaimSubmission.TabIndex = 3
         '
         'tpPatientProvider
         '
@@ -170,6 +171,7 @@ Partial Class frmClaimsSubmission
         '
         'cboProviderType
         '
+        Me.cboProviderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboProviderType.FormattingEnabled = True
         Me.cboProviderType.Items.AddRange(New Object() {"Hospital", "Clinic", "Pharmacy"})
         Me.cboProviderType.Location = New System.Drawing.Point(29, 131)
@@ -238,7 +240,6 @@ Partial Class frmClaimsSubmission
         '
         'txtRegion2
         '
-        Me.txtRegion2.Enabled = False
         Me.txtRegion2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRegion2.Location = New System.Drawing.Point(268, 132)
         Me.txtRegion2.Name = "txtRegion2"
@@ -247,7 +248,6 @@ Partial Class frmClaimsSubmission
         '
         'txtProviderName
         '
-        Me.txtProviderName.Enabled = False
         Me.txtProviderName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProviderName.Location = New System.Drawing.Point(268, 68)
         Me.txtProviderName.Name = "txtProviderName"
@@ -256,7 +256,6 @@ Partial Class frmClaimsSubmission
         '
         'txtProviderID
         '
-        Me.txtProviderID.Enabled = False
         Me.txtProviderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProviderID.Location = New System.Drawing.Point(29, 68)
         Me.txtProviderID.Name = "txtProviderID"
@@ -384,7 +383,6 @@ Partial Class frmClaimsSubmission
         '
         'txtNHISNumber
         '
-        Me.txtNHISNumber.Enabled = False
         Me.txtNHISNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNHISNumber.Location = New System.Drawing.Point(261, 69)
         Me.txtNHISNumber.Name = "txtNHISNumber"
@@ -393,7 +391,6 @@ Partial Class frmClaimsSubmission
         '
         'dtpDateOfBirth
         '
-        Me.dtpDateOfBirth.Enabled = False
         Me.dtpDateOfBirth.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpDateOfBirth.Location = New System.Drawing.Point(22, 136)
         Me.dtpDateOfBirth.Name = "dtpDateOfBirth"
@@ -412,7 +409,6 @@ Partial Class frmClaimsSubmission
         '
         'txtPatientFullName
         '
-        Me.txtPatientFullName.Enabled = False
         Me.txtPatientFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatientFullName.Location = New System.Drawing.Point(22, 69)
         Me.txtPatientFullName.Name = "txtPatientFullName"
@@ -474,10 +470,12 @@ Partial Class frmClaimsSubmission
         '
         Me.pnlClaimDetails.BackColor = System.Drawing.Color.White
         Me.pnlClaimDetails.Controls.Add(Me.cboProcedureType)
+        Me.pnlClaimDetails.Controls.Add(Me.DateTimePicker1)
         Me.pnlClaimDetails.Controls.Add(Me.dtpDateSubmitted)
         Me.pnlClaimDetails.Controls.Add(Me.Label20)
         Me.pnlClaimDetails.Controls.Add(Me.lblProcedureServiceType)
         Me.pnlClaimDetails.Controls.Add(Me.lblDiagnosisCode)
+        Me.pnlClaimDetails.Controls.Add(Me.TextBox1)
         Me.pnlClaimDetails.Controls.Add(Me.txtWardDepartment)
         Me.pnlClaimDetails.Controls.Add(Me.txtDiagnosisDescription)
         Me.pnlClaimDetails.Controls.Add(Me.txtDiagnosisCode)
@@ -491,6 +489,24 @@ Partial Class frmClaimsSubmission
         Me.pnlClaimDetails.Size = New System.Drawing.Size(587, 278)
         Me.pnlClaimDetails.TabIndex = 0
         '
+        'cboProcedureType
+        '
+        Me.cboProcedureType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProcedureType.FormattingEnabled = True
+        Me.cboProcedureType.Items.AddRange(New Object() {"Inpatient Care", "Outpatient Consultation", "Surgery", "Laboratory", "Pharmacy", "Dental", "Optical"})
+        Me.cboProcedureType.Location = New System.Drawing.Point(19, 217)
+        Me.cboProcedureType.Name = "cboProcedureType"
+        Me.cboProcedureType.Size = New System.Drawing.Size(214, 23)
+        Me.cboProcedureType.TabIndex = 23
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(28, 71)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(211, 23)
+        Me.DateTimePicker1.TabIndex = 22
+        '
         'dtpDateSubmitted
         '
         Me.dtpDateSubmitted.Enabled = False
@@ -499,6 +515,26 @@ Partial Class frmClaimsSubmission
         Me.dtpDateSubmitted.Name = "dtpDateSubmitted"
         Me.dtpDateSubmitted.Size = New System.Drawing.Size(211, 23)
         Me.dtpDateSubmitted.TabIndex = 22
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.Label20.Location = New System.Drawing.Point(310, 118)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(121, 15)
+        Me.Label20.TabIndex = 21
+        Me.Label20.Text = "Diagnosis Description"
+        '
+        'lblProcedureServiceType
+        '
+        Me.lblProcedureServiceType.AutoSize = True
+        Me.lblProcedureServiceType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblProcedureServiceType.Location = New System.Drawing.Point(19, 199)
+        Me.lblProcedureServiceType.Name = "lblProcedureServiceType"
+        Me.lblProcedureServiceType.Size = New System.Drawing.Size(130, 15)
+        Me.lblProcedureServiceType.TabIndex = 21
+        Me.lblProcedureServiceType.Text = "Procedure/Service Type"
         '
         'lblDiagnosisCode
         '
@@ -510,18 +546,35 @@ Partial Class frmClaimsSubmission
         Me.lblDiagnosisCode.TabIndex = 21
         Me.lblDiagnosisCode.Text = "Diagnosis Code"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(315, 136)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(222, 22)
+        Me.TextBox1.TabIndex = 19
+        Me.TextBox1.Text = "P1004 "
+        '
         'txtWardDepartment
         '
-        Me.txtWardDepartment.Enabled = False
         Me.txtWardDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtWardDepartment.Location = New System.Drawing.Point(312, 71)
         Me.txtWardDepartment.Name = "txtWardDepartment"
         Me.txtWardDepartment.Size = New System.Drawing.Size(222, 22)
         Me.txtWardDepartment.TabIndex = 17
         '
+        'txtDiagnosisDescription
+        '
+        Me.txtDiagnosisDescription.Enabled = False
+        Me.txtDiagnosisDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDiagnosisDescription.Location = New System.Drawing.Point(312, 136)
+        Me.txtDiagnosisDescription.Name = "txtDiagnosisDescription"
+        Me.txtDiagnosisDescription.Size = New System.Drawing.Size(222, 22)
+        Me.txtDiagnosisDescription.TabIndex = 19
+        Me.txtDiagnosisDescription.Text = "P1004 "
+        '
         'txtDiagnosisCode
         '
-        Me.txtDiagnosisCode.Enabled = False
         Me.txtDiagnosisCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiagnosisCode.Location = New System.Drawing.Point(22, 136)
         Me.txtDiagnosisCode.Name = "txtDiagnosisCode"
@@ -594,25 +647,25 @@ Partial Class frmClaimsSubmission
         'Panel18
         '
         Me.Panel18.BackColor = System.Drawing.Color.White
-        Me.Panel18.Controls.Add(Me.Label23)
+        Me.Panel18.Controls.Add(Me.lblAdditionalNotes)
         Me.Panel18.Controls.Add(Me.txtAdditionalNotes)
         Me.Panel18.Controls.Add(Me.Panel19)
-        Me.Panel18.Controls.Add(Me.Label25)
+        Me.Panel18.Controls.Add(Me.lblRemarks)
         Me.Panel18.Location = New System.Drawing.Point(6, 155)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel18.Size = New System.Drawing.Size(587, 190)
         Me.Panel18.TabIndex = 22
         '
-        'Label23
+        'lblAdditionalNotes
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(19, 51)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(96, 15)
-        Me.Label23.TabIndex = 21
-        Me.Label23.Text = "Additional Notes"
+        Me.lblAdditionalNotes.AutoSize = True
+        Me.lblAdditionalNotes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.lblAdditionalNotes.Location = New System.Drawing.Point(19, 51)
+        Me.lblAdditionalNotes.Name = "lblAdditionalNotes"
+        Me.lblAdditionalNotes.Size = New System.Drawing.Size(96, 15)
+        Me.lblAdditionalNotes.TabIndex = 21
+        Me.lblAdditionalNotes.Text = "Additional Notes"
         '
         'txtAdditionalNotes
         '
@@ -643,17 +696,17 @@ Partial Class frmClaimsSubmission
         Me.Panel20.Size = New System.Drawing.Size(660, 1)
         Me.Panel20.TabIndex = 8
         '
-        'Label25
+        'lblRemarks
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label25.Location = New System.Drawing.Point(16, 16)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(51, 13)
-        Me.Label25.TabIndex = 3
-        Me.Label25.Text = "Remarks"
+        Me.lblRemarks.AutoSize = True
+        Me.lblRemarks.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblRemarks.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRemarks.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblRemarks.Location = New System.Drawing.Point(16, 16)
+        Me.lblRemarks.Name = "lblRemarks"
+        Me.lblRemarks.Size = New System.Drawing.Size(51, 13)
+        Me.lblRemarks.TabIndex = 3
+        Me.lblRemarks.Text = "Remarks"
         '
         'Panel3
         '
@@ -663,7 +716,7 @@ Partial Class frmClaimsSubmission
         Me.Panel3.Controls.Add(Me.txtPatientName)
         Me.Panel3.Controls.Add(Me.lblNHISNumber)
         Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Controls.Add(Me.Label16)
+        Me.Panel3.Controls.Add(Me.lblAmount)
         Me.Panel3.Location = New System.Drawing.Point(7, 6)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
@@ -682,7 +735,6 @@ Partial Class frmClaimsSubmission
         '
         'txtApprovedAmount
         '
-        Me.txtApprovedAmount.Enabled = False
         Me.txtApprovedAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApprovedAmount.Location = New System.Drawing.Point(331, 69)
         Me.txtApprovedAmount.Name = "txtApprovedAmount"
@@ -725,38 +777,38 @@ Partial Class frmClaimsSubmission
         Me.Panel9.Size = New System.Drawing.Size(660, 1)
         Me.Panel9.TabIndex = 8
         '
-        'Label16
+        'lblAmount
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(16, 16)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(50, 13)
-        Me.Label16.TabIndex = 3
-        Me.Label16.Text = "Amount"
+        Me.lblAmount.AutoSize = True
+        Me.lblAmount.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblAmount.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAmount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblAmount.Location = New System.Drawing.Point(16, 16)
+        Me.lblAmount.Name = "lblAmount"
+        Me.lblAmount.Size = New System.Drawing.Size(50, 13)
+        Me.lblAmount.TabIndex = 3
+        Me.lblAmount.Text = "Amount"
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel2)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel6)
+        Me.FlowLayoutPanel1.Controls.Add(Me.pnlClaimID)
+        Me.FlowLayoutPanel1.Controls.Add(Me.pnlDateSubmited)
+        Me.FlowLayoutPanel1.Controls.Add(Me.pnlStatus)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(81, 60)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(603, 86)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
-        'Panel1
+        'pnlClaimID
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.lblClaimIDBadge)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(10)
-        Me.Panel1.Size = New System.Drawing.Size(200, 83)
-        Me.Panel1.TabIndex = 6
+        Me.pnlClaimID.BackColor = System.Drawing.Color.White
+        Me.pnlClaimID.Controls.Add(Me.lblClaimIDBadge)
+        Me.pnlClaimID.Controls.Add(Me.Label8)
+        Me.pnlClaimID.Location = New System.Drawing.Point(3, 3)
+        Me.pnlClaimID.Name = "pnlClaimID"
+        Me.pnlClaimID.Padding = New System.Windows.Forms.Padding(10)
+        Me.pnlClaimID.Size = New System.Drawing.Size(200, 83)
+        Me.pnlClaimID.TabIndex = 6
         '
         'lblClaimIDBadge
         '
@@ -777,16 +829,16 @@ Partial Class frmClaimsSubmission
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Claim ID"
         '
-        'Panel2
+        'pnlDateSubmited
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.lblDateSubmittedBadge)
-        Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Location = New System.Drawing.Point(209, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(10)
-        Me.Panel2.Size = New System.Drawing.Size(182, 83)
-        Me.Panel2.TabIndex = 7
+        Me.pnlDateSubmited.BackColor = System.Drawing.Color.White
+        Me.pnlDateSubmited.Controls.Add(Me.lblDateSubmittedBadge)
+        Me.pnlDateSubmited.Controls.Add(Me.Label9)
+        Me.pnlDateSubmited.Location = New System.Drawing.Point(209, 3)
+        Me.pnlDateSubmited.Name = "pnlDateSubmited"
+        Me.pnlDateSubmited.Padding = New System.Windows.Forms.Padding(10)
+        Me.pnlDateSubmited.Size = New System.Drawing.Size(182, 83)
+        Me.pnlDateSubmited.TabIndex = 7
         '
         'lblDateSubmittedBadge
         '
@@ -807,16 +859,16 @@ Partial Class frmClaimsSubmission
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Date Submitted"
         '
-        'Panel6
+        'pnlStatus
         '
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Controls.Add(Me.lblStatusBadge)
-        Me.Panel6.Controls.Add(Me.Label10)
-        Me.Panel6.Location = New System.Drawing.Point(397, 3)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Padding = New System.Windows.Forms.Padding(10)
-        Me.Panel6.Size = New System.Drawing.Size(200, 83)
-        Me.Panel6.TabIndex = 7
+        Me.pnlStatus.BackColor = System.Drawing.Color.White
+        Me.pnlStatus.Controls.Add(Me.lblStatusBadge)
+        Me.pnlStatus.Controls.Add(Me.Label10)
+        Me.pnlStatus.Location = New System.Drawing.Point(397, 3)
+        Me.pnlStatus.Name = "pnlStatus"
+        Me.pnlStatus.Padding = New System.Windows.Forms.Padding(10)
+        Me.pnlStatus.Size = New System.Drawing.Size(200, 83)
+        Me.pnlStatus.TabIndex = 7
         '
         'lblStatusBadge
         '
@@ -846,60 +898,20 @@ Partial Class frmClaimsSubmission
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "NEW CLAIM SUBMISSION"
         '
-        'Panel17
+        'frmClaimSubmission
         '
-        Me.Panel17.AutoScroll = True
-        Me.Panel17.Controls.Add(Me.Cancel)
-        Me.Panel17.Controls.Add(Me.btnClear)
-        Me.Panel17.Controls.Add(Me.Label1)
-        Me.Panel17.Controls.Add(Me.TabControl1)
-        Me.Panel17.Controls.Add(Me.btnSave)
-        Me.Panel17.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Panel17.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel17.Location = New System.Drawing.Point(0, 0)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(755, 720)
-        Me.Panel17.TabIndex = 6
-        '
-        'txtDiagnosisDescription
-        '
-        Me.txtDiagnosisDescription.Enabled = False
-        Me.txtDiagnosisDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiagnosisDescription.Location = New System.Drawing.Point(312, 136)
-        Me.txtDiagnosisDescription.Name = "txtDiagnosisDescription"
-        Me.txtDiagnosisDescription.Size = New System.Drawing.Size(222, 22)
-        Me.txtDiagnosisDescription.TabIndex = 19
-        Me.txtDiagnosisDescription.Text = "P1004 "
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.Label20.Location = New System.Drawing.Point(310, 118)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(121, 15)
-        Me.Label20.TabIndex = 21
-        Me.Label20.Text = "Diagnosis Description"
-        '
-        'cboProcedureType
-        '
-        Me.cboProcedureType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboProcedureType.FormattingEnabled = True
-        Me.cboProcedureType.Items.AddRange(New Object() {"Inpatient Care", "Outpatient Consultation", "Surgery", "Laboratory", "Pharmacy", "Dental", "Optical"})
-        Me.cboProcedureType.Location = New System.Drawing.Point(19, 217)
-        Me.cboProcedureType.Name = "cboProcedureType"
-        Me.cboProcedureType.Size = New System.Drawing.Size(214, 23)
-        Me.cboProcedureType.TabIndex = 23
-        '
-        'lblProcedureServiceType
-        '
-        Me.lblProcedureServiceType.AutoSize = True
-        Me.lblProcedureServiceType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblProcedureServiceType.Location = New System.Drawing.Point(19, 199)
-        Me.lblProcedureServiceType.Name = "lblProcedureServiceType"
-        Me.lblProcedureServiceType.Size = New System.Drawing.Size(130, 15)
-        Me.lblProcedureServiceType.TabIndex = 21
-        Me.lblProcedureServiceType.Text = "Procedure/Service Type"
+        Me.frmClaimSubmission.AutoScroll = True
+        Me.frmClaimSubmission.Controls.Add(Me.Cancel)
+        Me.frmClaimSubmission.Controls.Add(Me.btnClear)
+        Me.frmClaimSubmission.Controls.Add(Me.Label1)
+        Me.frmClaimSubmission.Controls.Add(Me.tcClaimSubmission)
+        Me.frmClaimSubmission.Controls.Add(Me.btnSave)
+        Me.frmClaimSubmission.Controls.Add(Me.FlowLayoutPanel1)
+        Me.frmClaimSubmission.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.frmClaimSubmission.Location = New System.Drawing.Point(0, 0)
+        Me.frmClaimSubmission.Name = "frmClaimSubmission"
+        Me.frmClaimSubmission.Size = New System.Drawing.Size(755, 720)
+        Me.frmClaimSubmission.TabIndex = 6
         '
         'Cancel
         '
@@ -947,10 +959,10 @@ Partial Class frmClaimsSubmission
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(755, 720)
-        Me.Controls.Add(Me.Panel17)
+        Me.Controls.Add(Me.frmClaimSubmission)
         Me.Name = "frmClaimsSubmission"
         Me.Text = "frmClaimsSubmition"
-        Me.TabControl1.ResumeLayout(False)
+        Me.tcClaimSubmission.ResumeLayout(False)
         Me.tpPatientProvider.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
@@ -970,19 +982,19 @@ Partial Class frmClaimsSubmission
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
+        Me.pnlClaimID.ResumeLayout(False)
+        Me.pnlClaimID.PerformLayout()
+        Me.pnlDateSubmited.ResumeLayout(False)
+        Me.pnlDateSubmited.PerformLayout()
+        Me.pnlStatus.ResumeLayout(False)
+        Me.pnlStatus.PerformLayout()
+        Me.frmClaimSubmission.ResumeLayout(False)
+        Me.frmClaimSubmission.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tcClaimSubmission As TabControl
     Friend WithEvents tpPatientProvider As TabPage
     Friend WithEvents tpServiceDetails As TabPage
     Friend WithEvents pnlClaimDetails As Panel
@@ -1003,11 +1015,11 @@ Partial Class frmClaimsSubmission
     Friend WithEvents lblNHISNumber As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lblAmount As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel6 As Panel
+    Friend WithEvents pnlClaimID As Panel
+    Friend WithEvents pnlDateSubmited As Panel
+    Friend WithEvents pnlStatus As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents lblClaimIDBadge As Label
     Friend WithEvents Label8 As Label
@@ -1045,13 +1057,13 @@ Partial Class frmClaimsSubmission
     Friend WithEvents Label18 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents Panel17 As Panel
+    Friend WithEvents frmClaimSubmission As Panel
     Friend WithEvents Panel18 As Panel
-    Friend WithEvents Label23 As Label
+    Friend WithEvents lblAdditionalNotes As Label
     Friend WithEvents txtAdditionalNotes As TextBox
     Friend WithEvents Panel19 As Panel
     Friend WithEvents Panel20 As Panel
-    Friend WithEvents Label25 As Label
+    Friend WithEvents lblRemarks As Label
     Friend WithEvents cboProcedureType As ComboBox
     Friend WithEvents Label20 As Label
     Friend WithEvents lblProcedureServiceType As Label
@@ -1059,4 +1071,6 @@ Partial Class frmClaimsSubmission
     Friend WithEvents Cancel As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox1 As TextBox
 End Class
