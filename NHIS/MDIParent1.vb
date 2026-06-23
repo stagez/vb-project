@@ -205,10 +205,11 @@ Public Class frmMain
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        pnlContent.Visible = False
-        Dim frm As New frmRegisterMember
-        frm.MdiParent = Me
-        frm.Show()
+        'pnlContent.Visible = False
+        'Dim frm As New frmRegisterMember
+        'frm.MdiParent = Me
+        'frm.Show()
+        LoadForm(New frmRegisterMember)
     End Sub
 
     Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
