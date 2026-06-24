@@ -22,49 +22,37 @@ Partial Class frmViewMembers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pnlMain = New System.Windows.Forms.Panel()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblViewMembers = New System.Windows.Forms.Label()
         Me.btnRefresh = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dvgViewMembers = New System.Windows.Forms.DataGridView()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.colMemberID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFullname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNHISNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colMembershipType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colGender = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colPhoneNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colRegion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pnlMain.SuspendLayout()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvViewMembers = New System.Windows.Forms.DataGridView()
+        Me.colClaimID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colProvider = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colRegio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.dvgViewMembers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pnlMain
-        '
-        Me.pnlMain.Controls.Add(Me.lblViewMembers)
-        Me.pnlMain.Controls.Add(Me.btnRefresh)
-        Me.pnlMain.Controls.Add(Me.Panel1)
-        Me.pnlMain.Controls.Add(Me.txtSearch)
-        Me.pnlMain.Location = New System.Drawing.Point(51, 18)
-        Me.pnlMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(1072, 655)
-        Me.pnlMain.TabIndex = 0
         '
         'lblViewMembers
         '
         Me.lblViewMembers.AutoSize = True
-        Me.lblViewMembers.Location = New System.Drawing.Point(34, 22)
+        Me.lblViewMembers.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblViewMembers.Location = New System.Drawing.Point(17, 2)
         Me.lblViewMembers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblViewMembers.Name = "lblViewMembers"
-        Me.lblViewMembers.Size = New System.Drawing.Size(105, 20)
+        Me.lblViewMembers.Size = New System.Drawing.Size(212, 38)
         Me.lblViewMembers.TabIndex = 3
-        Me.lblViewMembers.Text = "View Member"
+        Me.lblViewMembers.Text = "View Members"
         '
         'btnRefresh
         '
-        Me.btnRefresh.Location = New System.Drawing.Point(676, 22)
+        Me.btnRefresh.Location = New System.Drawing.Point(587, 8)
         Me.btnRefresh.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(124, 38)
@@ -72,97 +60,121 @@ Partial Class frmViewMembers
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.dvgViewMembers)
-        Me.Panel1.Location = New System.Drawing.Point(39, 192)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(998, 354)
-        Me.Panel1.TabIndex = 0
-        '
-        'dvgViewMembers
-        '
-        Me.dvgViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgViewMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colMemberID, Me.colFullname, Me.colNHISNumber, Me.colMembershipType, Me.colGender, Me.colPhoneNumber, Me.colRegion})
-        Me.dvgViewMembers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dvgViewMembers.Location = New System.Drawing.Point(0, 0)
-        Me.dvgViewMembers.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dvgViewMembers.Name = "dvgViewMembers"
-        Me.dvgViewMembers.Size = New System.Drawing.Size(998, 354)
-        Me.dvgViewMembers.TabIndex = 0
-        '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(810, 26)
+        Me.txtSearch.Location = New System.Drawing.Point(799, 14)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(224, 26)
         Me.txtSearch.TabIndex = 1
         '
-        'colMemberID
+        'Panel1
         '
-        Me.colMemberID.HeaderText = "MemberID"
-        Me.colMemberID.Name = "colMemberID"
+        Me.Panel1.Controls.Add(Me.btnRefresh)
+        Me.Panel1.Controls.Add(Me.txtSearch)
+        Me.Panel1.Controls.Add(Me.lblViewMembers)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(40, 24)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1003, 96)
+        Me.Panel1.TabIndex = 5
         '
-        'colFullname
+        'dgvViewMembers
         '
-        Me.colFullname.HeaderText = "Full Name"
-        Me.colFullname.Name = "colFullname"
+        Me.dgvViewMembers.AllowUserToAddRows = False
+        Me.dgvViewMembers.AllowUserToDeleteRows = False
+        Me.dgvViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvViewMembers.BackgroundColor = System.Drawing.Color.White
+        Me.dgvViewMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvViewMembers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvViewMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus, Me.colPhone, Me.colRegio})
+        Me.dgvViewMembers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvViewMembers.EnableHeadersVisualStyles = False
+        Me.dgvViewMembers.Location = New System.Drawing.Point(40, 120)
+        Me.dgvViewMembers.Name = "dgvViewMembers"
+        Me.dgvViewMembers.ReadOnly = True
+        Me.dgvViewMembers.RowHeadersVisible = False
+        Me.dgvViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvViewMembers.Size = New System.Drawing.Size(1003, 529)
+        Me.dgvViewMembers.TabIndex = 6
         '
-        'colNHISNumber
+        'colClaimID
         '
-        Me.colNHISNumber.HeaderText = "NHIS Number"
-        Me.colNHISNumber.Name = "colNHISNumber"
+        Me.colClaimID.HeaderText = "Member ID"
+        Me.colClaimID.Name = "colClaimID"
+        Me.colClaimID.ReadOnly = True
         '
-        'colMembershipType
+        'colProvider
         '
-        Me.colMembershipType.HeaderText = "Membership Type"
-        Me.colMembershipType.Name = "colMembershipType"
+        Me.colProvider.HeaderText = "Full Name"
+        Me.colProvider.Name = "colProvider"
+        Me.colProvider.ReadOnly = True
         '
-        'colGender
+        'colDate
         '
-        Me.colGender.HeaderText = "Gender"
-        Me.colGender.Name = "colGender"
+        Me.colDate.HeaderText = "NHIS Number"
+        Me.colDate.Name = "colDate"
+        Me.colDate.ReadOnly = True
         '
-        'colPhoneNumber
+        'colAmount
         '
-        Me.colPhoneNumber.HeaderText = "Phone Number"
-        Me.colPhoneNumber.Name = "colPhoneNumber"
+        Me.colAmount.HeaderText = "Membership Type"
+        Me.colAmount.Name = "colAmount"
+        Me.colAmount.ReadOnly = True
         '
-        'colRegion
+        'colStatus
         '
-        Me.colRegion.HeaderText = "Region"
-        Me.colRegion.Name = "colRegion"
+        Me.colStatus.HeaderText = "Gender"
+        Me.colStatus.Name = "colStatus"
+        Me.colStatus.ReadOnly = True
+        '
+        'colPhone
+        '
+        Me.colPhone.HeaderText = "Phone Number"
+        Me.colPhone.Name = "colPhone"
+        Me.colPhone.ReadOnly = True
+        '
+        'colRegio
+        '
+        Me.colRegio.HeaderText = "Region"
+        Me.colRegio.Name = "colRegio"
+        Me.colRegio.ReadOnly = True
         '
         'frmViewMembers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1200, 692)
-        Me.Controls.Add(Me.pnlMain)
+        Me.ClientSize = New System.Drawing.Size(1083, 673)
+        Me.Controls.Add(Me.dgvViewMembers)
+        Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmViewMembers"
+        Me.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
         Me.Text = "frmViewMembers"
-        Me.pnlMain.ResumeLayout(False)
-        Me.pnlMain.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.dvgViewMembers, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.PerformLayout()
+        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnlMain As Panel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents dvgViewMembers As DataGridView
     Friend WithEvents lblViewMembers As Label
     Friend WithEvents btnRefresh As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents colMemberID As DataGridViewTextBoxColumn
-    Friend WithEvents colFullname As DataGridViewTextBoxColumn
-    Friend WithEvents colNHISNumber As DataGridViewTextBoxColumn
-    Friend WithEvents colMembershipType As DataGridViewTextBoxColumn
-    Friend WithEvents colGender As DataGridViewTextBoxColumn
-    Friend WithEvents colPhoneNumber As DataGridViewTextBoxColumn
-    Friend WithEvents colRegion As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents dgvViewMembers As DataGridView
+    Friend WithEvents colClaimID As DataGridViewTextBoxColumn
+    Friend WithEvents colProvider As DataGridViewTextBoxColumn
+    Friend WithEvents colDate As DataGridViewTextBoxColumn
+    Friend WithEvents colAmount As DataGridViewTextBoxColumn
+    Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents colPhone As DataGridViewTextBoxColumn
+    Friend WithEvents colRegio As DataGridViewTextBoxColumn
 End Class

@@ -22,56 +22,32 @@ Partial Class frmViewProviders
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.dgvViewProviders = New System.Windows.Forms.DataGridView()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblSearch = New System.Windows.Forms.Label()
         Me.lblProvidersTitle = New System.Windows.Forms.Label()
-        Me.colProviderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colProviderName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colProviderType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colPhonneNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colProviderLocation = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvViewMembers = New System.Windows.Forms.DataGridView()
+        Me.colClaimID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colProvider = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colRegio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlMain.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.dgvViewProviders, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlMain
         '
-        Me.pnlMain.Controls.Add(Me.Panel2)
         Me.pnlMain.Controls.Add(Me.txtSearch)
         Me.pnlMain.Controls.Add(Me.lblSearch)
         Me.pnlMain.Controls.Add(Me.lblProvidersTitle)
-        Me.pnlMain.Location = New System.Drawing.Point(18, 18)
+        Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlMain.Location = New System.Drawing.Point(40, 24)
         Me.pnlMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(1164, 655)
+        Me.pnlMain.Size = New System.Drawing.Size(1120, 125)
         Me.pnlMain.TabIndex = 0
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.dgvViewProviders)
-        Me.Panel2.Location = New System.Drawing.Point(54, 143)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1065, 480)
-        Me.Panel2.TabIndex = 3
-        '
-        'dgvViewProviders
-        '
-        Me.dgvViewProviders.AllowUserToDeleteRows = False
-        Me.dgvViewProviders.AllowUserToResizeColumns = False
-        Me.dgvViewProviders.AllowUserToResizeRows = False
-        Me.dgvViewProviders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvViewProviders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colProviderID, Me.colProviderName, Me.colProviderType, Me.colPhonneNumber, Me.colProviderLocation})
-        Me.dgvViewProviders.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvViewProviders.Location = New System.Drawing.Point(0, 0)
-        Me.dgvViewProviders.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dgvViewProviders.Name = "dgvViewProviders"
-        Me.dgvViewProviders.Size = New System.Drawing.Size(1065, 480)
-        Me.dgvViewProviders.TabIndex = 0
         '
         'txtSearch
         '
@@ -95,51 +71,84 @@ Partial Class frmViewProviders
         '
         Me.lblProvidersTitle.AutoSize = True
         Me.lblProvidersTitle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProvidersTitle.Location = New System.Drawing.Point(70, 35)
+        Me.lblProvidersTitle.Location = New System.Drawing.Point(23, 29)
         Me.lblProvidersTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblProvidersTitle.Name = "lblProvidersTitle"
         Me.lblProvidersTitle.Size = New System.Drawing.Size(148, 40)
         Me.lblProvidersTitle.TabIndex = 0
         Me.lblProvidersTitle.Text = "Providers"
         '
-        'colProviderID
+        'dgvViewMembers
         '
-        Me.colProviderID.HeaderText = "Provider ID"
-        Me.colProviderID.Name = "colProviderID"
+        Me.dgvViewMembers.AllowUserToAddRows = False
+        Me.dgvViewMembers.AllowUserToDeleteRows = False
+        Me.dgvViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvViewMembers.BackgroundColor = System.Drawing.Color.White
+        Me.dgvViewMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvViewMembers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvViewMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colPhone, Me.colRegio})
+        Me.dgvViewMembers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvViewMembers.EnableHeadersVisualStyles = False
+        Me.dgvViewMembers.Location = New System.Drawing.Point(40, 149)
+        Me.dgvViewMembers.Name = "dgvViewMembers"
+        Me.dgvViewMembers.ReadOnly = True
+        Me.dgvViewMembers.RowHeadersVisible = False
+        Me.dgvViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvViewMembers.Size = New System.Drawing.Size(1120, 519)
+        Me.dgvViewMembers.TabIndex = 7
         '
-        'colProviderName
+        'colClaimID
         '
-        Me.colProviderName.HeaderText = "Provider Name"
-        Me.colProviderName.Name = "colProviderName"
+        Me.colClaimID.HeaderText = "Provider ID"
+        Me.colClaimID.Name = "colClaimID"
+        Me.colClaimID.ReadOnly = True
         '
-        'colProviderType
+        'colProvider
         '
-        Me.colProviderType.HeaderText = "Provider Type"
-        Me.colProviderType.Name = "colProviderType"
+        Me.colProvider.HeaderText = "Provider Name"
+        Me.colProvider.Name = "colProvider"
+        Me.colProvider.ReadOnly = True
         '
-        'colPhonneNumber
+        'colDate
         '
-        Me.colPhonneNumber.HeaderText = "Phone Number"
-        Me.colPhonneNumber.Name = "colPhonneNumber"
+        Me.colDate.HeaderText = "Provider Type"
+        Me.colDate.Name = "colDate"
+        Me.colDate.ReadOnly = True
         '
-        'colProviderLocation
+        'colPhone
         '
-        Me.colProviderLocation.HeaderText = "Provider Location"
-        Me.colProviderLocation.Name = "colProviderLocation"
+        Me.colPhone.HeaderText = "Phone Number"
+        Me.colPhone.Name = "colPhone"
+        Me.colPhone.ReadOnly = True
+        '
+        'colRegio
+        '
+        Me.colRegio.HeaderText = "Provider Location"
+        Me.colRegio.Name = "colRegio"
+        Me.colRegio.ReadOnly = True
         '
         'frmViewProviders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1200, 692)
+        Me.Controls.Add(Me.dgvViewMembers)
         Me.Controls.Add(Me.pnlMain)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmViewProviders"
+        Me.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
         Me.Text = "frmViewProviders"
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.dgvViewProviders, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -147,12 +156,11 @@ Partial Class frmViewProviders
     Friend WithEvents pnlMain As Panel
     Friend WithEvents lblSearch As Label
     Friend WithEvents lblProvidersTitle As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents dgvViewProviders As DataGridView
-    Friend WithEvents colProviderID As DataGridViewTextBoxColumn
-    Friend WithEvents colProviderName As DataGridViewTextBoxColumn
-    Friend WithEvents colProviderType As DataGridViewTextBoxColumn
-    Friend WithEvents colPhonneNumber As DataGridViewTextBoxColumn
-    Friend WithEvents colProviderLocation As DataGridViewTextBoxColumn
+    Friend WithEvents dgvViewMembers As DataGridView
+    Friend WithEvents colClaimID As DataGridViewTextBoxColumn
+    Friend WithEvents colProvider As DataGridViewTextBoxColumn
+    Friend WithEvents colDate As DataGridViewTextBoxColumn
+    Friend WithEvents colPhone As DataGridViewTextBoxColumn
+    Friend WithEvents colRegio As DataGridViewTextBoxColumn
 End Class
