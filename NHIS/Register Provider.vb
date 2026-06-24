@@ -1,78 +1,78 @@
 ﻿Public Class frmRegisterProvider
-    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
-        If Not isRequired(TextBox1.Text) Then
-            ShakeControl(TextBox1)
-            TextBox1.Focus()
+    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
+        If Not isRequired(txtProviderID.Text) Then
+            ShakeControl(txtProviderID)
+            txtProviderID.Focus()
         End If
     End Sub
 
-    Private Sub TextBox2_Leave(sender As Object, e As EventArgs) Handles TextBox2.Leave
-        If Not isValidName(TextBox2.Text) Then
-            ShakeControl(TextBox2)
-            TextBox2.Focus()
+    Private Sub TextBox2_Leave(sender As Object, e As EventArgs) Handles txtProviderName.Leave
+        If Not isValidName(txtProviderName.Text) Then
+            ShakeControl(txtProviderName)
+            txtProviderName.Focus()
         End If
     End Sub
 
-    Private Sub ComboBox1_Leave(sender As Object, e As EventArgs) Handles ComboBox1.Leave
-        If Not isRequired(ComboBox1.Text) Then
-            ShakeControl(ComboBox1)
-            ComboBox1.Focus()
+    Private Sub ComboBox1_Leave(sender As Object, e As EventArgs) Handles cboProviderType.Leave
+        If Not isRequired(cboProviderType.Text) Then
+            ShakeControl(cboProviderType)
+            cboProviderType.Focus()
         End If
     End Sub
 
-    Private Sub TextBox6_Leave(sender As Object, e As EventArgs) Handles TextBox6.Leave
-        If Not isRequired(TextBox6.Text) Then
-            ShakeControl(TextBox6)
-            TextBox6.Focus()
+    Private Sub TextBox6_Leave(sender As Object, e As EventArgs) Handles txtLincense.Leave
+        If Not isRequired(txtLincense.Text) Then
+            ShakeControl(txtLincense)
+            txtLincense.Focus()
         End If
     End Sub
 
-    Private Sub TextBox14_Leave(sender As Object, e As EventArgs) Handles TextBox14.Leave
-        If Not isRequired(TextBox14.Text) Then
-            ShakeControl(TextBox14)
-            TextBox14.Focus()
+    Private Sub TextBox14_Leave(sender As Object, e As EventArgs) Handles txtNHISAccreditation.Leave
+        If Not isRequired(txtNHISAccreditation.Text) Then
+            ShakeControl(txtNHISAccreditation)
+            txtNHISAccreditation.Focus()
         End If
     End Sub
 
-    Private Sub ComboBox2_Leave(sender As Object, e As EventArgs) Handles ComboBox2.Leave
-        If Not isRequired(ComboBox2.Text) Then
-            ShakeControl(ComboBox2)
-            ComboBox2.Focus()
+    Private Sub ComboBox2_Leave(sender As Object, e As EventArgs) Handles cboRegion.Leave
+        If Not isRequired(cboRegion.Text) Then
+            ShakeControl(cboRegion)
+            cboRegion.Focus()
         End If
     End Sub
 
-    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles TextBox4.Leave
-        If Not isRequired(TextBox4.Text) Then
-            ShakeControl(TextBox4)
-            TextBox4.Focus()
+    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles txtDistrict.Leave
+        If Not isRequired(txtDistrict.Text) Then
+            ShakeControl(txtDistrict)
+            txtDistrict.Focus()
         End If
     End Sub
 
-    Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
-        If Not isRequired(TextBox3.Text) Then
-            ShakeControl(TextBox3)
-            TextBox3.Focus()
+    Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles txtCityTown.Leave
+        If Not isRequired(txtCityTown.Text) Then
+            ShakeControl(txtCityTown)
+            txtCityTown.Focus()
         End If
     End Sub
 
-    Private Sub TextBox5_Leave(sender As Object, e As EventArgs) Handles TextBox5.Leave
-        If Not isRequired(TextBox5.Text) Then
-            ShakeControl(TextBox5)
-            TextBox5.Focus()
+    Private Sub TextBox5_Leave(sender As Object, e As EventArgs) Handles txtGPSAddress.Leave
+        If Not isRequired(txtGPSAddress.Text) Then
+            ShakeControl(txtGPSAddress)
+            txtGPSAddress.Focus()
         End If
     End Sub
 
-    Private Sub TextBox7_Leave(sender As Object, e As EventArgs) Handles TextBox7.Leave
-        If Not isValidPhone(TextBox7.Text) Then
-            ShakeControl(TextBox7)
-            TextBox7.Focus()
+    Private Sub TextBox7_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
+        If Not isValidPhone(txtPhone.Text) Then
+            ShakeControl(txtPhone)
+            txtPhone.Focus()
         End If
     End Sub
 
-    Private Sub TextBox8_Leave(sender As Object, e As EventArgs) Handles TextBox8.Leave
-        If Not isValidEmail(TextBox8.Text) Then
-            ShakeControl(TextBox8)
-            TextBox8.Focus()
+    Private Sub TextBox8_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
+        If Not isValidEmail(txtEmail.Text) Then
+            ShakeControl(txtEmail)
+            txtEmail.Focus()
         End If
     End Sub
 

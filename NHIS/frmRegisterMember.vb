@@ -25,9 +25,9 @@
     End Sub
 
     Private Sub txtEPhoneNumber_Leave(sender As Object, e As EventArgs)
-        If Not isValidPhone(txtEPhoneNumber.Text) Then
-            ShakeControl(txtEPhoneNumber)
-            txtEPhoneNumber.Focus()
+        If Not isValidPhone(txtEPhoneNumber1.Text) Then
+            ShakeControl(txtEPhoneNumber1)
+            txtEPhoneNumber1.Focus()
         End If
     End Sub
 
@@ -53,6 +53,100 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs)
+        ClearForm(Me)
+    End Sub
+
+    Private Sub txtContactName_Leave_1(sender As Object, e As EventArgs) Handles txtContactName.Leave
+        If Not isValidName(txtContactName.Text) Then
+            ShakeControl(txtContactName)
+            txtContactName.Focus()
+        End If
+    End Sub
+
+
+    Private Sub txtCity_Leave(sender As Object, e As EventArgs) Handles txtCity.Leave
+        If Not isRequired(txtCity.Text) Then
+            ShakeControl(txtCity)
+            txtCity.Focus()
+
+        End If
+    End Sub
+
+    Private Sub txtDistrict_Leave_1(sender As Object, e As EventArgs) Handles txtDistrict.Leave
+        If Not isRequired(txtDistrict.Text) Then
+            ShakeControl(txtDistrict)
+            txtDistrict.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPhoneNumber_Leave(sender As Object, e As EventArgs) Handles txtPhoneNumber.Leave
+        If Not isValidPhone(txtPhoneNumber.Text) Then
+            ShakeControl(txtPhoneNumber)
+            txtPhoneNumber.Focus()
+        End If
+    End Sub
+
+    Private Sub txtNationality_Leave(sender As Object, e As EventArgs) Handles txtNationality.Leave
+        If Not isValidPhone(txtNationality.Text) Then
+            ShakeControl(txtNationality)
+            txtNationality.Focus()
+        End If
+    End Sub
+
+    Private Sub txtNHISNumber_Leave(sender As Object, e As EventArgs) Handles txtNHISNumber.Leave
+        If Not isValidPhone(txtNHISNumber.Text) Then
+            ShakeControl(txtNHISNumber)
+            txtNHISNumber.Focus()
+        End If
+    End Sub
+
+    Private Sub txtPatientID_Leave_1(sender As Object, e As EventArgs) Handles txtPatientID.Leave
+        If Not isValidPhone(txtPatientID.Text) Then
+            ShakeControl(txtPatientID)
+            txtPatientID.Focus()
+        End If
+    End Sub
+
+    Private Sub txtFullName_Leave(sender As Object, e As EventArgs) Handles txtFullName.Leave
+        If Not isValidPhone(txtFullName.Text) Then
+            ShakeControl(txtFullName)
+            txtFullName.Focus()
+        End If
+    End Sub
+
+    Private Sub txtEPhoneNumber1_Leave(sender As Object, e As EventArgs) Handles txtEPhoneNumber1.Leave
+        If Not isValidPhone(txtEPhoneNumber1.Text) Then
+            ShakeControl(txtEPhoneNumber1)
+            txtEPhoneNumber1.Focus()
+        End If
+    End Sub
+
+    Private Sub cboMembershipType_Leave(sender As Object, e As EventArgs) Handles cboMembershipType.Leave
+        If Not isValidCombo(cboMembershipType) Then
+            ShakeControl(cboMembershipType)
+            cboMembershipType.Focus()
+        End If
+    End Sub
+
+    Private Sub cboGender_Leave(sender As Object, e As EventArgs) Handles cboGender.Leave
+        If Not isValidCombo(cboGender) Then
+            ShakeControl(cboGender)
+            cboGender.Focus()
+        End If
+    End Sub
+
+    Private Sub cboRelationship1_Leave(sender As Object, e As EventArgs) Handles cboRelationship1.Leave
+        If Not isValidCombo(cboRelationship) Then
+            ShakeControl(cboRelationship)
+            cboRelationship.Focus()
+        End If
+    End Sub
+
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
     End Sub
 End Class
