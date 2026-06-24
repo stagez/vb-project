@@ -25,29 +25,29 @@ Partial Class frmAbout
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblAbout = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl20262027 = New System.Windows.Forms.Label()
+        Me.lblAcademicYear = New System.Windows.Forms.Label()
+        Me.lblICT = New System.Windows.Forms.Label()
+        Me.lblDepartment = New System.Windows.Forms.Label()
+        Me.lblUniversityOfEducationWinneba = New System.Windows.Forms.Label()
+        Me.lblInstitution = New System.Windows.Forms.Label()
+        Me.lblPascalEmmanuelEricJuan = New System.Windows.Forms.Label()
+        Me.lblDevelopedBy = New System.Windows.Forms.Label()
+        Me.llblNHISClaimsAbout5 = New System.Windows.Forms.Label()
+        Me.lblNHISClaimsAbout4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPrivacyPolicy = New System.Windows.Forms.Button()
+        Me.btnReportAnIssue = New System.Windows.Forms.Button()
+        Me.btnUserGuide = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblNHISClaimsAbout3 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblNHISClaimsAbout2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblNHISClaimsAbout1 = New System.Windows.Forms.Label()
+        Me.lblNHISClaimsAbout = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -82,129 +82,129 @@ Partial Class frmAbout
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.Label15)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.Label13)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label12)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.lbl20262027)
+        Me.Panel3.Controls.Add(Me.lblAcademicYear)
+        Me.Panel3.Controls.Add(Me.lblICT)
+        Me.Panel3.Controls.Add(Me.lblDepartment)
+        Me.Panel3.Controls.Add(Me.lblUniversityOfEducationWinneba)
+        Me.Panel3.Controls.Add(Me.lblInstitution)
+        Me.Panel3.Controls.Add(Me.lblPascalEmmanuelEricJuan)
+        Me.Panel3.Controls.Add(Me.lblDevelopedBy)
+        Me.Panel3.Controls.Add(Me.llblNHISClaimsAbout5)
+        Me.Panel3.Controls.Add(Me.lblNHISClaimsAbout4)
         Me.Panel3.Location = New System.Drawing.Point(20, 349)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(721, 168)
         Me.Panel3.TabIndex = 0
         '
-        'Label15
+        'lbl20262027
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(117, 136)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(66, 13)
-        Me.Label15.TabIndex = 2
-        Me.Label15.Text = "2024 / 2025"
+        Me.lbl20262027.AutoSize = True
+        Me.lbl20262027.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl20262027.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lbl20262027.Location = New System.Drawing.Point(117, 136)
+        Me.lbl20262027.Name = "lbl20262027"
+        Me.lbl20262027.Size = New System.Drawing.Size(66, 13)
+        Me.lbl20262027.TabIndex = 2
+        Me.lbl20262027.Text = "2026 / 2027"
         '
-        'Label10
+        'lblAcademicYear
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(40, 135)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(81, 13)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Academic Year:"
+        Me.lblAcademicYear.AutoSize = True
+        Me.lblAcademicYear.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAcademicYear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblAcademicYear.Location = New System.Drawing.Point(40, 135)
+        Me.lblAcademicYear.Name = "lblAcademicYear"
+        Me.lblAcademicYear.Size = New System.Drawing.Size(81, 13)
+        Me.lblAcademicYear.TabIndex = 2
+        Me.lblAcademicYear.Text = "Academic Year:"
         '
-        'Label13
+        'lblICT
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(110, 113)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(23, 13)
-        Me.Label13.TabIndex = 1
-        Me.Label13.Text = "ICT"
+        Me.lblICT.AutoSize = True
+        Me.lblICT.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblICT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblICT.Location = New System.Drawing.Point(110, 113)
+        Me.lblICT.Name = "lblICT"
+        Me.lblICT.Size = New System.Drawing.Size(23, 13)
+        Me.lblICT.TabIndex = 1
+        Me.lblICT.Text = "ICT"
         '
-        'Label9
+        'lblDepartment
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(41, 112)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(71, 13)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Department:"
+        Me.lblDepartment.AutoSize = True
+        Me.lblDepartment.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDepartment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblDepartment.Location = New System.Drawing.Point(41, 112)
+        Me.lblDepartment.Name = "lblDepartment"
+        Me.lblDepartment.Size = New System.Drawing.Size(71, 13)
+        Me.lblDepartment.TabIndex = 1
+        Me.lblDepartment.Text = "Department:"
         '
-        'Label12
+        'lblUniversityOfEducationWinneba
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(105, 93)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(181, 13)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "University of Education, Winneba"
+        Me.lblUniversityOfEducationWinneba.AutoSize = True
+        Me.lblUniversityOfEducationWinneba.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUniversityOfEducationWinneba.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblUniversityOfEducationWinneba.Location = New System.Drawing.Point(105, 93)
+        Me.lblUniversityOfEducationWinneba.Name = "lblUniversityOfEducationWinneba"
+        Me.lblUniversityOfEducationWinneba.Size = New System.Drawing.Size(181, 13)
+        Me.lblUniversityOfEducationWinneba.TabIndex = 0
+        Me.lblUniversityOfEducationWinneba.Text = "University of Education, Winneba"
         '
-        'Label8
+        'lblInstitution
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(40, 92)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 13)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Institution:"
+        Me.lblInstitution.AutoSize = True
+        Me.lblInstitution.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstitution.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblInstitution.Location = New System.Drawing.Point(40, 92)
+        Me.lblInstitution.Name = "lblInstitution"
+        Me.lblInstitution.Size = New System.Drawing.Size(64, 13)
+        Me.lblInstitution.TabIndex = 0
+        Me.lblInstitution.Text = "Institution:"
         '
-        'Label11
+        'lblPascalEmmanuelEricJuan
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(119, 72)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(180, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Pascal, Juan, Emmanuel, Eric (G9)"
+        Me.lblPascalEmmanuelEricJuan.AutoSize = True
+        Me.lblPascalEmmanuelEricJuan.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPascalEmmanuelEricJuan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblPascalEmmanuelEricJuan.Location = New System.Drawing.Point(119, 72)
+        Me.lblPascalEmmanuelEricJuan.Name = "lblPascalEmmanuelEricJuan"
+        Me.lblPascalEmmanuelEricJuan.Size = New System.Drawing.Size(180, 13)
+        Me.lblPascalEmmanuelEricJuan.TabIndex = 0
+        Me.lblPascalEmmanuelEricJuan.Text = "Pascal, Juan, Emmanuel, Eric (G9)"
         '
-        'Label7
+        'lblDevelopedBy
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(40, 71)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 13)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Developed by:"
+        Me.lblDevelopedBy.AutoSize = True
+        Me.lblDevelopedBy.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDevelopedBy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(132, Byte), Integer))
+        Me.lblDevelopedBy.Location = New System.Drawing.Point(40, 71)
+        Me.lblDevelopedBy.Name = "lblDevelopedBy"
+        Me.lblDevelopedBy.Size = New System.Drawing.Size(80, 13)
+        Me.lblDevelopedBy.TabIndex = 0
+        Me.lblDevelopedBy.Text = "Developed by:"
         '
-        'Label6
+        'llblNHISClaimsAbout5
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(40, 40)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 13)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "© 2026 · All rights reserved"
+        Me.llblNHISClaimsAbout5.AutoSize = True
+        Me.llblNHISClaimsAbout5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llblNHISClaimsAbout5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.llblNHISClaimsAbout5.Location = New System.Drawing.Point(40, 40)
+        Me.llblNHISClaimsAbout5.Name = "llblNHISClaimsAbout5"
+        Me.llblNHISClaimsAbout5.Size = New System.Drawing.Size(145, 13)
+        Me.llblNHISClaimsAbout5.TabIndex = 0
+        Me.llblNHISClaimsAbout5.Text = "© 2026 · All rights reserved"
         '
-        'Label3
+        'lblNHISClaimsAbout4
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(40, 20)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(215, 17)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "NHIS Claims Management System"
+        Me.lblNHISClaimsAbout4.AutoSize = True
+        Me.lblNHISClaimsAbout4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISClaimsAbout4.Location = New System.Drawing.Point(40, 20)
+        Me.lblNHISClaimsAbout4.Name = "lblNHISClaimsAbout4"
+        Me.lblNHISClaimsAbout4.Size = New System.Drawing.Size(215, 17)
+        Me.lblNHISClaimsAbout4.TabIndex = 0
+        Me.lblNHISClaimsAbout4.Text = "NHIS Claims Management System"
         '
         'Panel2
         '
@@ -219,80 +219,80 @@ Partial Class frmAbout
         '
         'Panel6
         '
-        Me.Panel6.Controls.Add(Me.Button3)
-        Me.Panel6.Controls.Add(Me.Button2)
-        Me.Panel6.Controls.Add(Me.Button1)
+        Me.Panel6.Controls.Add(Me.btnPrivacyPolicy)
+        Me.Panel6.Controls.Add(Me.btnReportAnIssue)
+        Me.Panel6.Controls.Add(Me.btnUserGuide)
         Me.Panel6.Location = New System.Drawing.Point(39, 177)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(651, 122)
         Me.Panel6.TabIndex = 6
         '
-        'Button3
+        'btnPrivacyPolicy
         '
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(0, 78)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(651, 39)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Privacy Policy"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnPrivacyPolicy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrivacyPolicy.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPrivacyPolicy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnPrivacyPolicy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnPrivacyPolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrivacyPolicy.Location = New System.Drawing.Point(0, 78)
+        Me.btnPrivacyPolicy.Name = "btnPrivacyPolicy"
+        Me.btnPrivacyPolicy.Size = New System.Drawing.Size(651, 39)
+        Me.btnPrivacyPolicy.TabIndex = 0
+        Me.btnPrivacyPolicy.Text = "Privacy Policy"
+        Me.btnPrivacyPolicy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPrivacyPolicy.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnReportAnIssue
         '
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(0, 39)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(651, 39)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Report an Issue"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnReportAnIssue.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReportAnIssue.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnReportAnIssue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnReportAnIssue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnReportAnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReportAnIssue.Location = New System.Drawing.Point(0, 39)
+        Me.btnReportAnIssue.Name = "btnReportAnIssue"
+        Me.btnReportAnIssue.Size = New System.Drawing.Size(651, 39)
+        Me.btnReportAnIssue.TabIndex = 0
+        Me.btnReportAnIssue.Text = "Report an Issue"
+        Me.btnReportAnIssue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReportAnIssue.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnUserGuide
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(651, 39)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "User Guide"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnUserGuide.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUserGuide.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnUserGuide.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnUserGuide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.btnUserGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUserGuide.Location = New System.Drawing.Point(0, 0)
+        Me.btnUserGuide.Name = "btnUserGuide"
+        Me.btnUserGuide.Size = New System.Drawing.Size(651, 39)
+        Me.btnUserGuide.TabIndex = 0
+        Me.btnUserGuide.Text = "User Guide"
+        Me.btnUserGuide.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUserGuide.UseVisualStyleBackColor = True
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.lblNHISClaimsAbout3)
         Me.Panel5.Controls.Add(Me.PictureBox2)
-        Me.Panel5.Controls.Add(Me.Label1)
+        Me.Panel5.Controls.Add(Me.lblNHISClaimsAbout2)
         Me.Panel5.Location = New System.Drawing.Point(39, 121)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(651, 49)
         Me.Panel5.TabIndex = 5
         '
-        'Label2
+        'lblNHISClaimsAbout3
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(70, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(246, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Academic Release · Visual Studio 2017 · VB.NET"
+        Me.lblNHISClaimsAbout3.AutoSize = True
+        Me.lblNHISClaimsAbout3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISClaimsAbout3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblNHISClaimsAbout3.Location = New System.Drawing.Point(70, 27)
+        Me.lblNHISClaimsAbout3.Name = "lblNHISClaimsAbout3"
+        Me.lblNHISClaimsAbout3.Size = New System.Drawing.Size(246, 13)
+        Me.lblNHISClaimsAbout3.TabIndex = 6
+        Me.lblNHISClaimsAbout3.Text = "Academic Release · Visual Studio 2017 · VB.NET"
         '
         'PictureBox2
         '
@@ -305,21 +305,21 @@ Partial Class frmAbout
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
         '
-        'Label1
+        'lblNHISClaimsAbout2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(70, 7)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 17)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Version 1.0.0"
+        Me.lblNHISClaimsAbout2.AutoSize = True
+        Me.lblNHISClaimsAbout2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISClaimsAbout2.Location = New System.Drawing.Point(70, 7)
+        Me.lblNHISClaimsAbout2.Name = "lblNHISClaimsAbout2"
+        Me.lblNHISClaimsAbout2.Size = New System.Drawing.Size(81, 17)
+        Me.lblNHISClaimsAbout2.TabIndex = 6
+        Me.lblNHISClaimsAbout2.Text = "Version 1.0.0"
         '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.PictureBox1)
-        Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.lblNHISClaimsAbout1)
+        Me.Panel4.Controls.Add(Me.lblNHISClaimsAbout)
         Me.Panel4.Location = New System.Drawing.Point(39, 18)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(651, 87)
@@ -339,26 +339,26 @@ Partial Class frmAbout
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Label5
+        'lblNHISClaimsAbout1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(103, 48)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(254, 17)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "National Health Insurance Scheme · Ghana"
+        Me.lblNHISClaimsAbout1.AutoSize = True
+        Me.lblNHISClaimsAbout1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISClaimsAbout1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.lblNHISClaimsAbout1.Location = New System.Drawing.Point(103, 48)
+        Me.lblNHISClaimsAbout1.Name = "lblNHISClaimsAbout1"
+        Me.lblNHISClaimsAbout1.Size = New System.Drawing.Size(254, 17)
+        Me.lblNHISClaimsAbout1.TabIndex = 3
+        Me.lblNHISClaimsAbout1.Text = "National Health Insurance Scheme · Ghana"
         '
-        'Label4
+        'lblNHISClaimsAbout
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(101, 18)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(336, 30)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "NHIS Claims Management System"
+        Me.lblNHISClaimsAbout.AutoSize = True
+        Me.lblNHISClaimsAbout.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISClaimsAbout.Location = New System.Drawing.Point(101, 18)
+        Me.lblNHISClaimsAbout.Name = "lblNHISClaimsAbout"
+        Me.lblNHISClaimsAbout.Size = New System.Drawing.Size(336, 30)
+        Me.lblNHISClaimsAbout.TabIndex = 3
+        Me.lblNHISClaimsAbout.Text = "NHIS Claims Management System"
         '
         'frmAbout
         '
@@ -393,26 +393,26 @@ Partial Class frmAbout
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblNHISClaimsAbout As Label
+    Friend WithEvents lblNHISClaimsAbout1 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblNHISClaimsAbout3 As Label
+    Friend WithEvents lblNHISClaimsAbout2 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents btnPrivacyPolicy As Button
+    Friend WithEvents btnReportAnIssue As Button
+    Friend WithEvents btnUserGuide As Button
+    Friend WithEvents lblAcademicYear As Label
+    Friend WithEvents lblDepartment As Label
+    Friend WithEvents lblInstitution As Label
+    Friend WithEvents lblDevelopedBy As Label
+    Friend WithEvents llblNHISClaimsAbout5 As Label
+    Friend WithEvents lblNHISClaimsAbout4 As Label
     Friend WithEvents lblAbout As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lbl20262027 As Label
+    Friend WithEvents lblICT As Label
+    Friend WithEvents lblUniversityOfEducationWinneba As Label
+    Friend WithEvents lblPascalEmmanuelEricJuan As Label
 End Class
