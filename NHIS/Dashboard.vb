@@ -46,4 +46,19 @@
         timer.Interval = 16  ' ~60fps
         timer.Start()
     End Sub
+
+    Private Sub dgvClaims_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClaims.CellDoubleClick
+        If e.RowIndex < 0 Then Return
+
+        Dim row = dgvClaims.Rows(e.RowIndex)
+
+        Dim claimID = row.Cells(0).Value?.ToString()
+        Dim provider = row.Cells(1).Value?.ToString()
+        Dim membershipType = row.Cells(2).Value?.ToString()
+        Dim serviceDate = row.Cells(3).Value?.ToString()
+        Dim amount = row.Cells(4).Value?.ToString()
+        Dim status = row.Cells(5).Value?.ToString()
+
+
+    End Sub
 End Class

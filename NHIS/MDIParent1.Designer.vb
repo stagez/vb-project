@@ -168,13 +168,13 @@ Partial Class frmMain
         'RegisterProviderToolStripMenuItem
         '
         Me.RegisterProviderToolStripMenuItem.Name = "RegisterProviderToolStripMenuItem"
-        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
+        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.RegisterProviderToolStripMenuItem.Text = "Register Provider"
         '
         'ViewProvidersToolStripMenuItem
         '
         Me.ViewProvidersToolStripMenuItem.Name = "ViewProvidersToolStripMenuItem"
-        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
+        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ViewProvidersToolStripMenuItem.Text = "View Providers"
         '
         'ClaimsToolStripMenuItem
@@ -188,19 +188,19 @@ Partial Class frmMain
         '
         Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
         Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
-        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(205, 30)
+        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
         Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
         '
         'SubmitToolStripMenuItem
         '
         Me.SubmitToolStripMenuItem.Name = "SubmitToolStripMenuItem"
-        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.SubmitToolStripMenuItem.Text = "View Claims"
         '
         'SearchClaimsToolStripMenuItem
         '
         Me.SearchClaimsToolStripMenuItem.Name = "SearchClaimsToolStripMenuItem"
-        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.SearchClaimsToolStripMenuItem.Text = "Search Claims"
         '
         'ViewToolStripMenuItem
@@ -214,14 +214,14 @@ Partial Class frmMain
         '
         Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
         Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
-        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(222, 30)
-        Me.ApproveClaimsToolStripMenuItem.Text = "Approve Claims"
+        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ApproveClaimsToolStripMenuItem.Text = "Approved Claims"
         '
         'RejectedClaimsToolStripMenuItem
         '
         Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
         Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
-        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(222, 30)
+        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
         '
         'ReportsToolStripMenuItem

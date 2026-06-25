@@ -22,103 +22,151 @@ Partial Class frmViewClaims
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblReviewClaims = New System.Windows.Forms.Label()
-        Me.dgvReviewClaims = New System.Windows.Forms.DataGridView()
-        Me.colClaimNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colProvider = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colMember = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colServiceDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pnlReviewClaims = New System.Windows.Forms.Panel()
-        CType(Me.dgvReviewClaims, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlReviewClaims.SuspendLayout()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.dgvViewClaims = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnRefresh = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.lblViewMembers = New System.Windows.Forms.Label()
+        Me.colClaimID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvViewClaims, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lblReviewClaims
+        'dgvViewClaims
         '
-        Me.lblReviewClaims.AutoSize = True
-        Me.lblReviewClaims.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReviewClaims.Location = New System.Drawing.Point(573, 28)
-        Me.lblReviewClaims.Name = "lblReviewClaims"
-        Me.lblReviewClaims.Size = New System.Drawing.Size(203, 38)
-        Me.lblReviewClaims.TabIndex = 0
-        Me.lblReviewClaims.Text = "Claims Review"
+        Me.dgvViewClaims.AllowUserToAddRows = False
+        Me.dgvViewClaims.AllowUserToDeleteRows = False
+        Me.dgvViewClaims.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvViewClaims.BackgroundColor = System.Drawing.Color.White
+        Me.dgvViewClaims.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvViewClaims.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvViewClaims.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvViewClaims.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.DataGridViewTextBoxColumn1, Me.colDate, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.colPhone})
+        Me.dgvViewClaims.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvViewClaims.EnableHeadersVisualStyles = False
+        Me.dgvViewClaims.Location = New System.Drawing.Point(40, 120)
+        Me.dgvViewClaims.Name = "dgvViewClaims"
+        Me.dgvViewClaims.ReadOnly = True
+        Me.dgvViewClaims.RowHeadersVisible = False
+        Me.dgvViewClaims.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvViewClaims.Size = New System.Drawing.Size(1176, 551)
+        Me.dgvViewClaims.TabIndex = 8
         '
-        'dgvReviewClaims
+        'Panel1
         '
-        Me.dgvReviewClaims.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvReviewClaims.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimNumber, Me.colProvider, Me.colMember, Me.colServiceDate, Me.colAmount, Me.colStatus})
-        Me.dgvReviewClaims.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvReviewClaims.Location = New System.Drawing.Point(0, 0)
-        Me.dgvReviewClaims.Name = "dgvReviewClaims"
-        Me.dgvReviewClaims.RowHeadersVisible = False
-        Me.dgvReviewClaims.RowTemplate.Height = 28
-        Me.dgvReviewClaims.Size = New System.Drawing.Size(1256, 571)
-        Me.dgvReviewClaims.TabIndex = 1
+        Me.Panel1.Controls.Add(Me.btnRefresh)
+        Me.Panel1.Controls.Add(Me.txtSearch)
+        Me.Panel1.Controls.Add(Me.lblViewMembers)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(40, 24)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1176, 96)
+        Me.Panel1.TabIndex = 7
         '
-        'colClaimNumber
+        'btnRefresh
         '
-        Me.colClaimNumber.HeaderText = "Claim Number"
-        Me.colClaimNumber.Name = "colClaimNumber"
+        Me.btnRefresh.Location = New System.Drawing.Point(780, 5)
+        Me.btnRefresh.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(124, 38)
+        Me.btnRefresh.TabIndex = 2
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
         '
-        'colProvider
+        'txtSearch
         '
-        Me.colProvider.HeaderText = "Provider"
-        Me.colProvider.Name = "colProvider"
+        Me.txtSearch.Location = New System.Drawing.Point(952, 0)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(224, 26)
+        Me.txtSearch.TabIndex = 1
         '
-        'colMember
+        'lblViewMembers
         '
-        Me.colMember.HeaderText = "Member"
-        Me.colMember.Name = "colMember"
+        Me.lblViewMembers.AutoSize = True
+        Me.lblViewMembers.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblViewMembers.Location = New System.Drawing.Point(17, 2)
+        Me.lblViewMembers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblViewMembers.Name = "lblViewMembers"
+        Me.lblViewMembers.Size = New System.Drawing.Size(212, 38)
+        Me.lblViewMembers.TabIndex = 3
+        Me.lblViewMembers.Text = "View Members"
         '
-        'colServiceDate
+        'colClaimID
         '
-        Me.colServiceDate.HeaderText = "Service Date"
-        Me.colServiceDate.Name = "colServiceDate"
+        Me.colClaimID.HeaderText = "Claim ID"
+        Me.colClaimID.Name = "colClaimID"
+        Me.colClaimID.ReadOnly = True
         '
-        'colAmount
+        'DataGridViewTextBoxColumn1
         '
-        Me.colAmount.HeaderText = "Amount"
-        Me.colAmount.Name = "colAmount"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Provider"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
-        'colStatus
+        'colDate
         '
-        Me.colStatus.HeaderText = "Status"
-        Me.colStatus.Name = "colStatus"
+        Me.colDate.HeaderText = "Membership TYpe"
+        Me.colDate.Name = "colDate"
+        Me.colDate.ReadOnly = True
         '
-        'pnlReviewClaims
+        'DataGridViewTextBoxColumn2
         '
-        Me.pnlReviewClaims.Controls.Add(Me.dgvReviewClaims)
-        Me.pnlReviewClaims.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlReviewClaims.Location = New System.Drawing.Point(0, 124)
-        Me.pnlReviewClaims.Name = "pnlReviewClaims"
-        Me.pnlReviewClaims.Size = New System.Drawing.Size(1256, 571)
-        Me.pnlReviewClaims.TabIndex = 2
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Service Date"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Amount(GHS)"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'colPhone
+        '
+        Me.colPhone.HeaderText = "Status"
+        Me.colPhone.Name = "colPhone"
+        Me.colPhone.ReadOnly = True
         '
         'frmViewClaims
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1256, 695)
-        Me.Controls.Add(Me.pnlReviewClaims)
-        Me.Controls.Add(Me.lblReviewClaims)
+        Me.Controls.Add(Me.dgvViewClaims)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "frmViewClaims"
+        Me.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
         Me.Text = "frmViewClaims"
-        CType(Me.dgvReviewClaims, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlReviewClaims.ResumeLayout(False)
+        CType(Me.dgvViewClaims, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lblReviewClaims As Label
-    Friend WithEvents dgvReviewClaims As DataGridView
-    Friend WithEvents pnlReviewClaims As Panel
-    Friend WithEvents colClaimNumber As DataGridViewTextBoxColumn
-    Friend WithEvents colProvider As DataGridViewTextBoxColumn
-    Friend WithEvents colMember As DataGridViewTextBoxColumn
-    Friend WithEvents colServiceDate As DataGridViewTextBoxColumn
-    Friend WithEvents colAmount As DataGridViewTextBoxColumn
-    Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents dgvViewClaims As DataGridView
+    Friend WithEvents colClaimID As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents colDate As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents colPhone As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnRefresh As Button
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents lblViewMembers As Label
 End Class

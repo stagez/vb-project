@@ -141,9 +141,10 @@ Public Class frmMain
     End Sub
 
     Private Sub ViewProvidersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewProvidersToolStripMenuItem.Click
-        Dim frm As New frmViewProviders
-        frm.MdiParent = Me
-        frm.Show()
+        'Dim frm As New frmViewProviders
+        'frm.MdiParent = Me
+        'frm.Show()
+        LoadForm(New frmViewProviders)
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
@@ -214,5 +215,9 @@ Public Class frmMain
 
     Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
         LoadForm(New frmClaimsSubmission)
+    End Sub
+
+    Private Sub SubmitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitToolStripMenuItem.Click
+        LoadForm(New frmViewClaims)
     End Sub
 End Class

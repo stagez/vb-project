@@ -27,7 +27,7 @@ Partial Class frmViewMembers
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dgvViewMembers = New System.Windows.Forms.DataGridView()
+        Me.dgvMembers = New System.Windows.Forms.DataGridView()
         Me.colClaimID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colProvider = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,7 +36,7 @@ Partial Class frmViewMembers
         Me.colPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colRegio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblViewMembers
@@ -62,7 +62,7 @@ Partial Class frmViewMembers
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(799, 14)
+        Me.txtSearch.Location = New System.Drawing.Point(730, 20)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(224, 26)
@@ -79,13 +79,13 @@ Partial Class frmViewMembers
         Me.Panel1.Size = New System.Drawing.Size(1003, 96)
         Me.Panel1.TabIndex = 5
         '
-        'dgvViewMembers
+        'dgvMembers
         '
-        Me.dgvViewMembers.AllowUserToAddRows = False
-        Me.dgvViewMembers.AllowUserToDeleteRows = False
-        Me.dgvViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgvViewMembers.BackgroundColor = System.Drawing.Color.White
-        Me.dgvViewMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvMembers.AllowUserToAddRows = False
+        Me.dgvMembers.AllowUserToDeleteRows = False
+        Me.dgvMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvMembers.BackgroundColor = System.Drawing.Color.White
+        Me.dgvMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -93,18 +93,18 @@ Partial Class frmViewMembers
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvViewMembers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvViewMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus, Me.colPhone, Me.colRegio})
-        Me.dgvViewMembers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvViewMembers.EnableHeadersVisualStyles = False
-        Me.dgvViewMembers.Location = New System.Drawing.Point(40, 120)
-        Me.dgvViewMembers.Name = "dgvViewMembers"
-        Me.dgvViewMembers.ReadOnly = True
-        Me.dgvViewMembers.RowHeadersVisible = False
-        Me.dgvViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvViewMembers.Size = New System.Drawing.Size(1003, 529)
-        Me.dgvViewMembers.TabIndex = 6
+        Me.dgvMembers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus, Me.colPhone, Me.colRegio})
+        Me.dgvMembers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvMembers.EnableHeadersVisualStyles = False
+        Me.dgvMembers.Location = New System.Drawing.Point(40, 120)
+        Me.dgvMembers.Name = "dgvMembers"
+        Me.dgvMembers.ReadOnly = True
+        Me.dgvMembers.RowHeadersVisible = False
+        Me.dgvMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvMembers.Size = New System.Drawing.Size(1003, 529)
+        Me.dgvMembers.TabIndex = 6
         '
         'colClaimID
         '
@@ -153,7 +153,7 @@ Partial Class frmViewMembers
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1083, 673)
-        Me.Controls.Add(Me.dgvViewMembers)
+        Me.Controls.Add(Me.dgvMembers)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmViewMembers"
@@ -161,7 +161,7 @@ Partial Class frmViewMembers
         Me.Text = "frmViewMembers"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgvViewMembers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMembers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -169,7 +169,7 @@ Partial Class frmViewMembers
     Friend WithEvents btnRefresh As Button
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents dgvViewMembers As DataGridView
+    Friend WithEvents dgvMembers As DataGridView
     Friend WithEvents colClaimID As DataGridViewTextBoxColumn
     Friend WithEvents colProvider As DataGridViewTextBoxColumn
     Friend WithEvents colDate As DataGridViewTextBoxColumn
