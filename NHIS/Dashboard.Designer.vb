@@ -97,7 +97,7 @@ Partial Class frmDashboard
         Me.lblTotalCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblTotalCount.Location = New System.Drawing.Point(22, 44)
         Me.lblTotalCount.Name = "lblTotalCount"
-        Me.lblTotalCount.Size = New System.Drawing.Size(63, 86)
+        Me.lblTotalCount.Size = New System.Drawing.Size(42, 59)
         Me.lblTotalCount.TabIndex = 2
         Me.lblTotalCount.Text = "-"
         Me.lblTotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -144,7 +144,7 @@ Partial Class frmDashboard
         Me.lblPendingCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblPendingCount.Location = New System.Drawing.Point(22, 44)
         Me.lblPendingCount.Name = "lblPendingCount"
-        Me.lblPendingCount.Size = New System.Drawing.Size(63, 86)
+        Me.lblPendingCount.Size = New System.Drawing.Size(42, 59)
         Me.lblPendingCount.TabIndex = 2
         Me.lblPendingCount.Text = "-"
         Me.lblPendingCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -191,7 +191,7 @@ Partial Class frmDashboard
         Me.lblApprovedCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblApprovedCount.Location = New System.Drawing.Point(22, 44)
         Me.lblApprovedCount.Name = "lblApprovedCount"
-        Me.lblApprovedCount.Size = New System.Drawing.Size(63, 86)
+        Me.lblApprovedCount.Size = New System.Drawing.Size(42, 59)
         Me.lblApprovedCount.TabIndex = 2
         Me.lblApprovedCount.Text = "-"
         Me.lblApprovedCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -238,7 +238,7 @@ Partial Class frmDashboard
         Me.lblRejectedCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblRejectedCount.Location = New System.Drawing.Point(22, 44)
         Me.lblRejectedCount.Name = "lblRejectedCount"
-        Me.lblRejectedCount.Size = New System.Drawing.Size(63, 86)
+        Me.lblRejectedCount.Size = New System.Drawing.Size(42, 59)
         Me.lblRejectedCount.TabIndex = 2
         Me.lblRejectedCount.Text = "-"
         Me.lblRejectedCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -272,7 +272,7 @@ Partial Class frmDashboard
         Me.lblRecentTitle.Location = New System.Drawing.Point(40, 154)
         Me.lblRecentTitle.Name = "lblRecentTitle"
         Me.lblRecentTitle.Padding = New System.Windows.Forms.Padding(0, 20, 0, 10)
-        Me.lblRecentTitle.Size = New System.Drawing.Size(214, 71)
+        Me.lblRecentTitle.Size = New System.Drawing.Size(145, 58)
         Me.lblRecentTitle.TabIndex = 1
         Me.lblRecentTitle.Text = "Recent Claims"
         Me.lblRecentTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -296,12 +296,12 @@ Partial Class frmDashboard
         Me.dgvClaims.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus})
         Me.dgvClaims.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvClaims.EnableHeadersVisualStyles = False
-        Me.dgvClaims.Location = New System.Drawing.Point(40, 225)
+        Me.dgvClaims.Location = New System.Drawing.Point(40, 212)
         Me.dgvClaims.Name = "dgvClaims"
         Me.dgvClaims.ReadOnly = True
         Me.dgvClaims.RowHeadersVisible = False
         Me.dgvClaims.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClaims.Size = New System.Drawing.Size(853, 270)
+        Me.dgvClaims.Size = New System.Drawing.Size(853, 283)
         Me.dgvClaims.TabIndex = 2
         '
         'colClaimID
@@ -336,7 +336,7 @@ Partial Class frmDashboard
         '
         'frmDashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(933, 519)

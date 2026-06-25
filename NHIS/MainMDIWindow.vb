@@ -118,11 +118,20 @@ Public Class frmMain
     End Sub
 
     Private Sub RegisterProviderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProviderToolStripMenuItem.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
+        'For Each f As Form In Me.MdiChildren
+        '    f.Close()
+        'Next
 
         LoadForm(New frmRegisterProvider())
+        'pnlContent.Visible = False
+        'Dim frm As New frmRegisterProvider()
+        'frm.TopLevel = False
+        'frm.FormBorderStyle = FormBorderStyle.None
+        'frm.Dock = DockStyle.Fill
+        'frm.MdiParent = Me
+
+        'Me.Controls.Add(frm)
+        'frm.Show()
     End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click

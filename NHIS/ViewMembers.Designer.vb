@@ -43,29 +43,26 @@ Partial Class ViewMembers
         '
         Me.lblViewMembers.AutoSize = True
         Me.lblViewMembers.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblViewMembers.Location = New System.Drawing.Point(17, 2)
-        Me.lblViewMembers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblViewMembers.Location = New System.Drawing.Point(11, 1)
         Me.lblViewMembers.Name = "lblViewMembers"
-        Me.lblViewMembers.Size = New System.Drawing.Size(212, 38)
+        Me.lblViewMembers.Size = New System.Drawing.Size(143, 25)
         Me.lblViewMembers.TabIndex = 3
         Me.lblViewMembers.Text = "View Members"
         '
         'btnRefresh
         '
-        Me.btnRefresh.Location = New System.Drawing.Point(587, 8)
-        Me.btnRefresh.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnRefresh.Location = New System.Drawing.Point(391, 5)
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(124, 38)
+        Me.btnRefresh.Size = New System.Drawing.Size(83, 25)
         Me.btnRefresh.TabIndex = 2
         Me.btnRefresh.Text = "Refresh"
         Me.btnRefresh.UseVisualStyleBackColor = True
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(730, 20)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtSearch.Location = New System.Drawing.Point(480, 7)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(224, 26)
+        Me.txtSearch.Size = New System.Drawing.Size(151, 22)
         Me.txtSearch.TabIndex = 1
         '
         'Panel1
@@ -74,9 +71,10 @@ Partial Class ViewMembers
         Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Controls.Add(Me.lblViewMembers)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(40, 24)
+        Me.Panel1.Location = New System.Drawing.Point(27, 16)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1003, 96)
+        Me.Panel1.Size = New System.Drawing.Size(668, 62)
         Me.Panel1.TabIndex = 5
         '
         'dgvMembers
@@ -88,7 +86,7 @@ Partial Class ViewMembers
         Me.dgvMembers.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(89, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -98,12 +96,13 @@ Partial Class ViewMembers
         Me.dgvMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClaimID, Me.colProvider, Me.colDate, Me.colAmount, Me.colStatus, Me.colPhone, Me.colRegio})
         Me.dgvMembers.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMembers.EnableHeadersVisualStyles = False
-        Me.dgvMembers.Location = New System.Drawing.Point(40, 120)
+        Me.dgvMembers.Location = New System.Drawing.Point(27, 78)
+        Me.dgvMembers.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvMembers.Name = "dgvMembers"
         Me.dgvMembers.ReadOnly = True
         Me.dgvMembers.RowHeadersVisible = False
         Me.dgvMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvMembers.Size = New System.Drawing.Size(1003, 529)
+        Me.dgvMembers.Size = New System.Drawing.Size(668, 343)
         Me.dgvMembers.TabIndex = 6
         '
         'colClaimID
@@ -148,16 +147,16 @@ Partial Class ViewMembers
         Me.colRegio.Name = "colRegio"
         Me.colRegio.ReadOnly = True
         '
-        'frmViewMembers
+        'ViewMembers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1083, 673)
+        Me.ClientSize = New System.Drawing.Size(722, 437)
         Me.Controls.Add(Me.dgvMembers)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "frmViewMembers"
-        Me.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Name = "ViewMembers"
+        Me.Padding = New System.Windows.Forms.Padding(27, 16, 27, 16)
         Me.Text = "frmViewMembers"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

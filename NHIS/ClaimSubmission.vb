@@ -28,11 +28,11 @@
         End If
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub btnClear_Click(sender As Object, e As EventArgs)
         ClearForm(Me)
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(sender As Object, e As EventArgs)
         If isFormComplete(Me) Then
             MessageBox.Show("Claims submitted successfully!", "Submit Claim", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
@@ -45,11 +45,9 @@
         End If
     End Sub
 
-    Private Sub dtpDateOfBirth_Leave(sender As Object, e As EventArgs) Handles dtpDateOfBirth.Leave
-        If Not isValidDOB(dtpDateOfBirth.Text) Then
-            ShakeControl(dtpDateOfBirth)
-            dtpDateOfBirth.Focus()
-        End If
+    Private Sub dtpDateOfBirth_Leave(sender As Object, e As EventArgs)
+
+
     End Sub
 
     Private Sub txtProviderID_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
@@ -73,5 +71,11 @@
         End If
     End Sub
 
+    Private Sub ClaimSubmission_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Prevent future dates entirely
+        dtpDOB.MaxDate = DateTime.Today
 
+        ' Set a logical past limit (e.g., max 120 years old)
+        dtpDOB.MinDate = DateTime.Today.AddYears(-120)
+    End Sub
 End Class

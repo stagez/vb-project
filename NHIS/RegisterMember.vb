@@ -1,6 +1,12 @@
 ﻿Public Class RegisterMember
     Private Sub frmRegisterMember_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        dtpDOB.MaxDate = DateTime.Today
+
+
+        dtpDOB.MinDate = DateTime.Today.AddYears(-120)
+
+        dtpExpiryDate.Value = DateTime.Today.AddYears(5) ' Set the expiry date to 5 years from today
     End Sub
 
     Private Sub txtPatientID_Leave(sender As Object, e As EventArgs)
@@ -87,28 +93,28 @@
     End Sub
 
     Private Sub txtNationality_Leave(sender As Object, e As EventArgs) Handles txtNationality.Leave
-        If Not isValidPhone(txtNationality.Text) Then
+        If Not isRequired(txtNationality.Text) Then
             ShakeControl(txtNationality)
             txtNationality.Focus()
         End If
     End Sub
 
     Private Sub txtNHISNumber_Leave(sender As Object, e As EventArgs) Handles txtNHISNumber.Leave
-        If Not isValidPhone(txtNHISNumber.Text) Then
+        If Not isRequired(txtNHISNumber.Text) Then
             ShakeControl(txtNHISNumber)
             txtNHISNumber.Focus()
         End If
     End Sub
 
     Private Sub txtPatientID_Leave_1(sender As Object, e As EventArgs) Handles txtPatientID.Leave
-        If Not isValidPhone(txtPatientID.Text) Then
+        If Not isRequired(txtPatientID.Text) Then
             ShakeControl(txtPatientID)
             txtPatientID.Focus()
         End If
     End Sub
 
     Private Sub txtFullName_Leave(sender As Object, e As EventArgs) Handles txtFullName.Leave
-        If Not isValidPhone(txtFullName.Text) Then
+        If Not isValidName(txtFullName.Text) Then
             ShakeControl(txtFullName)
             txtFullName.Focus()
         End If
