@@ -1,4 +1,4 @@
-﻿Public Class frmRegisterMember
+﻿Public Class RegisterMember
     Private Sub frmRegisterMember_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -143,10 +143,13 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If isFormComplete(Me) Then
+            MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
+        txtPatientID.Focus()
     End Sub
 End Class

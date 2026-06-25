@@ -1,4 +1,4 @@
-﻿Public Class frmClaimsSubmission
+﻿Public Class ClaimSubmission
     Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -32,12 +32,10 @@
         ClearForm(Me)
     End Sub
 
-    Private Sub frmClaimSubmission_Paint(sender As Object, e As PaintEventArgs) Handles frmClaimSubmission.Paint
-
-    End Sub
-
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        MessageBox.Show("Claims submitted successfully!", "Submit Claim", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If isFormComplete(Me) Then
+            MessageBox.Show("Claims submitted successfully!", "Submit Claim", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Private Sub txtPatientFullName_Leave(sender As Object, e As EventArgs) Handles txtPatientFullName.Leave

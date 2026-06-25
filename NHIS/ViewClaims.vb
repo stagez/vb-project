@@ -1,4 +1,4 @@
-﻿Public Class frmViewClaims
+﻿Public Class ViewClaims
     Private Sub frmViewClaims_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgvViewClaims.RowTemplate.Height = 45
 

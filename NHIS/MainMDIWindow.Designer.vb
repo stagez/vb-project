@@ -127,7 +127,7 @@ Partial Class frmMain
         '
         Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'AddToolStripMenuItem
@@ -135,7 +135,7 @@ Partial Class frmMain
         Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem})
         Me.AddToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_48
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'NewToolStripMenuItem
@@ -148,14 +148,14 @@ Partial Class frmMain
         '
         Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ProviderToolStripMenuItem
@@ -168,13 +168,13 @@ Partial Class frmMain
         'RegisterProviderToolStripMenuItem
         '
         Me.RegisterProviderToolStripMenuItem.Name = "RegisterProviderToolStripMenuItem"
-        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
         Me.RegisterProviderToolStripMenuItem.Text = "Register Provider"
         '
         'ViewProvidersToolStripMenuItem
         '
         Me.ViewProvidersToolStripMenuItem.Name = "ViewProvidersToolStripMenuItem"
-        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
         Me.ViewProvidersToolStripMenuItem.Text = "View Providers"
         '
         'ClaimsToolStripMenuItem
@@ -188,19 +188,19 @@ Partial Class frmMain
         '
         Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
         Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
-        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(252, 30)
+        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(205, 30)
         Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
         '
         'SubmitToolStripMenuItem
         '
         Me.SubmitToolStripMenuItem.Name = "SubmitToolStripMenuItem"
-        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.SubmitToolStripMenuItem.Text = "View Claims"
         '
         'SearchClaimsToolStripMenuItem
         '
         Me.SearchClaimsToolStripMenuItem.Name = "SearchClaimsToolStripMenuItem"
-        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
         Me.SearchClaimsToolStripMenuItem.Text = "Search Claims"
         '
         'ViewToolStripMenuItem
@@ -214,14 +214,14 @@ Partial Class frmMain
         '
         Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
         Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
-        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(233, 30)
         Me.ApproveClaimsToolStripMenuItem.Text = "Approved Claims"
         '
         'RejectedClaimsToolStripMenuItem
         '
         Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
         Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
-        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(233, 30)
         Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
         '
         'ReportsToolStripMenuItem
@@ -405,7 +405,8 @@ Partial Class frmMain
         Me.tsPrint.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsPrint.Name = "tsPrint"
         Me.tsPrint.Size = New System.Drawing.Size(28, 28)
-        Me.tsPrint.Text = "Save"
+        Me.tsPrint.Text = "Print"
+        Me.tsPrint.ToolTipText = "Print"
         '
         'tsLogOut
         '

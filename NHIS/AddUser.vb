@@ -1,4 +1,4 @@
-﻿Public Class frmAddUser
+﻿Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbAvatar.Region = New Region(New Drawing2D.GraphicsPath())
@@ -99,15 +99,19 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        MessageBox.Show(
+        If isFormComplete(Me) Then
+            MessageBox.Show(
             "Saved Successfully!",
             "Saved",
             MessageBoxButtons.OK,
             MessageBoxIcon.Information
         )
+        End If
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
+        txtName.Focus()
     End Sub
 End Class

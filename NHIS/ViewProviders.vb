@@ -1,4 +1,4 @@
-﻿Public Class frmViewProviders
+﻿Public Class ViewProviders
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub

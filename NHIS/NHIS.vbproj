@@ -86,52 +86,52 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAbout.Designer.vb">
-      <DependentUpon>frmAbout.vb</DependentUpon>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAbout.vb">
+    <Compile Include="About.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddUser.Designer.vb">
-      <DependentUpon>frmAddUser.vb</DependentUpon>
+    <Compile Include="AddUser.Designer.vb">
+      <DependentUpon>AddUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAddUser.vb">
+    <Compile Include="AddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmApproveClaims.Designer.vb">
-      <DependentUpon>frmApproveClaims.vb</DependentUpon>
+    <Compile Include="ApproveClaim.Designer.vb">
+      <DependentUpon>ApproveClaim.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmApproveClaims.vb">
+    <Compile Include="ApproveClaim.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClaimsSubmission.Designer.vb">
-      <DependentUpon>frmClaimsSubmission.vb</DependentUpon>
+    <Compile Include="ClaimSubmission.Designer.vb">
+      <DependentUpon>ClaimSubmission.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmClaimsSubmission.vb">
+    <Compile Include="ClaimSubmission.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegisterMember.Designer.vb">
-      <DependentUpon>frmRegisterMember.vb</DependentUpon>
+    <Compile Include="RegisterMember.Designer.vb">
+      <DependentUpon>RegisterMember.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterMember.vb">
+    <Compile Include="RegisterMember.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewClaims.Designer.vb">
-      <DependentUpon>frmViewClaims.vb</DependentUpon>
+    <Compile Include="ViewClaims.Designer.vb">
+      <DependentUpon>ViewClaims.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmViewClaims.vb">
+    <Compile Include="ViewClaims.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewMembers.Designer.vb">
-      <DependentUpon>frmViewMembers.vb</DependentUpon>
+    <Compile Include="ViewMembers.Designer.vb">
+      <DependentUpon>ViewMembers.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmViewMembers.vb">
+    <Compile Include="ViewMembers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewProviders.Designer.vb">
-      <DependentUpon>frmViewProviders.vb</DependentUpon>
+    <Compile Include="ViewProviders.Designer.vb">
+      <DependentUpon>ViewProviders.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmViewProviders.vb">
+    <Compile Include="ViewProviders.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HelperMethods.vb" />
@@ -142,10 +142,10 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIParent1.Designer.vb">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
+    <Compile Include="MainMDIWindow.Designer.vb">
+      <DependentUpon>MainMDIWindow.vb</DependentUpon>
     </Compile>
-    <Compile Include="MDIParent1.vb">
+    <Compile Include="MainMDIWindow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -170,47 +170,46 @@
     <Compile Include="Register Provider.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen1.vb">
+    <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Theme1.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.resx">
-      <DependentUpon>frmAbout.vb</DependentUpon>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddUser.resx">
-      <DependentUpon>frmAddUser.vb</DependentUpon>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmApproveClaims.resx">
-      <DependentUpon>frmApproveClaims.vb</DependentUpon>
+    <EmbeddedResource Include="ApproveClaim.resx">
+      <DependentUpon>ApproveClaim.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClaimsSubmission.resx">
-      <DependentUpon>frmClaimsSubmission.vb</DependentUpon>
+    <EmbeddedResource Include="ClaimSubmission.resx">
+      <DependentUpon>ClaimSubmission.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterMember.resx">
-      <DependentUpon>frmRegisterMember.vb</DependentUpon>
+    <EmbeddedResource Include="RegisterMember.resx">
+      <DependentUpon>RegisterMember.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewClaims.resx">
-      <DependentUpon>frmViewClaims.vb</DependentUpon>
+    <EmbeddedResource Include="ViewClaims.resx">
+      <DependentUpon>ViewClaims.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewMembers.resx">
-      <DependentUpon>frmViewMembers.vb</DependentUpon>
+    <EmbeddedResource Include="ViewMembers.resx">
+      <DependentUpon>ViewMembers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewProviders.resx">
-      <DependentUpon>frmViewProviders.vb</DependentUpon>
+    <EmbeddedResource Include="ViewProviders.resx">
+      <DependentUpon>ViewProviders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIParent1.resx">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
+    <EmbeddedResource Include="MainMDIWindow.resx">
+      <DependentUpon>MainMDIWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -221,8 +220,8 @@
     <EmbeddedResource Include="Register Provider.resx">
       <DependentUpon>Register Provider.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

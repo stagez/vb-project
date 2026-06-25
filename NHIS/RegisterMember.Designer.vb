@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRegisterMember
+Partial Class RegisterMember
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -688,7 +688,7 @@ Partial Class frmRegisterMember
         Me.lblPatientID.TabIndex = 0
         Me.lblPatientID.Text = "Patient ID"
         '
-        'frmRegisterMember
+        'RegisterMember
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -698,7 +698,7 @@ Partial Class frmRegisterMember
         Me.Controls.Add(Me.pnlMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "frmRegisterMember"
+        Me.Name = "RegisterMember"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmRegisterMember"

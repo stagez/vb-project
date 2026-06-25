@@ -1,4 +1,4 @@
-﻿Public Class frmViewMembers
+﻿Public Class ViewMembers
     Private Sub dgvViewMembers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMembers.CellContentClick
 
     End Sub

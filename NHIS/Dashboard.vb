@@ -54,10 +54,12 @@
 
         Dim claimID = row.Cells(0).Value?.ToString()
         Dim provider = row.Cells(1).Value?.ToString()
-        Dim membershipType = row.Cells(2).Value?.ToString()
-        Dim serviceDate = row.Cells(3).Value?.ToString()
-        Dim amount = row.Cells(4).Value?.ToString()
-        Dim status = row.Cells(5).Value?.ToString()
+        Dim serviceDate = row.Cells(2).Value?.ToString()
+        Dim amount = row.Cells(3).Value?.ToString()
+        Dim status = row.Cells(4).Value?.ToString()
+
+        Dim frm As New ApproveClaim(claimID, provider, serviceDate, amount, status)
+        frm.ShowDialog()
 
 
     End Sub

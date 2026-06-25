@@ -1,4 +1,4 @@
-﻿Public NotInheritable Class SplashScreen1
+﻿Public NotInheritable Class SplashScreen
 
     Private Sub SplashScreen1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ' Set up your timer settings

@@ -144,7 +144,7 @@ Public Class frmMain
         'Dim frm As New frmViewProviders
         'frm.MdiParent = Me
         'frm.Show()
-        LoadForm(New frmViewProviders)
+        LoadForm(New ViewProviders)
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
@@ -156,15 +156,15 @@ Public Class frmMain
     End Sub
 
     Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
-        LoadForm(New frmClaimsSubmission)
+        LoadForm(New ClaimSubmission)
     End Sub
 
     Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click
-        LoadForm(New frmViewClaims())
+        LoadForm(New ViewClaims())
     End Sub
 
     Private Sub tsProviders_Click(sender As Object, e As EventArgs) Handles tsProviders.Click
-        LoadForm(New frmViewProviders())
+        LoadForm(New ViewProviders())
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -197,11 +197,11 @@ Public Class frmMain
     End Sub
 
     Private Sub AddUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddUserToolStripMenuItem.Click
-        LoadForm(New frmAddUser())
+        LoadForm(New AddUser())
     End Sub
 
     Private Sub AboutSystemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutSystemToolStripMenuItem.Click
-        Dim f As New frmAbout()
+        Dim f As New About()
         f.ShowDialog()
     End Sub
 
@@ -210,14 +210,36 @@ Public Class frmMain
         'Dim frm As New frmRegisterMember
         'frm.MdiParent = Me
         'frm.Show()
-        LoadForm(New frmRegisterMember)
+        LoadForm(New RegisterMember)
     End Sub
 
     Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
-        LoadForm(New frmClaimsSubmission)
+        LoadForm(New ClaimSubmission)
     End Sub
 
     Private Sub SubmitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitToolStripMenuItem.Click
-        LoadForm(New frmViewClaims)
+        LoadForm(New ViewClaims)
+    End Sub
+
+    Private Sub tsLogOut_Click(sender As Object, e As EventArgs) Handles tsLogOut.Click
+        Dim result = MessageBox.Show(
+            "Are you sure you want to logout?",
+            "Confirm Logout",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        )
+
+        If result = DialogResult.Yes Then
+            frmLogin.Show()
+            Me.Hide()
+        End If
+    End Sub
+
+    Private Sub tsSave_Click(sender As Object, e As EventArgs) Handles tsSave.Click
+        'Try
+        '    btnSave.Click()
+        'Catch ex As Exception
+
+        'End Try
     End Sub
 End Class
