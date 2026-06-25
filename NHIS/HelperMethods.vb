@@ -1,5 +1,7 @@
 ﻿Module HelperMethods
     Public Async Sub ShakeControl(ctrl As Control)
+        If ctrl Is Nothing Then Exit Sub
+
         Dim originalLeft = ctrl.Left
         Dim originalBack = ctrl.BackColor
 
