@@ -759,6 +759,7 @@ Partial Class frmRegisterProvider
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "frmRegisterProvider"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Register Provider"

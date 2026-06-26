@@ -786,6 +786,7 @@ Partial Class frmNewClaim
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tcClaimSubmission)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.KeyPreview = True
         Me.Name = "frmNewClaim"
         Me.Text = "Submit Claim"
         Me.tcClaimSubmission.ResumeLayout(False)

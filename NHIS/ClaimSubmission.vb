@@ -66,4 +66,11 @@
         Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
         main.LoadForm(New frmDashboard())
     End Sub
+
+    Private Sub frmNewClaim_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
+            main.LoadForm(New frmDashboard())
+        End If
+    End Sub
 End Class

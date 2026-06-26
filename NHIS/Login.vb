@@ -19,8 +19,8 @@
         If String.IsNullOrWhiteSpace(txtUsername.Text) Or String.IsNullOrWhiteSpace(txtPassword.Text) Then
             lblWrongCredentials.Text = "Please enter both username and password."
             lblWrongCredentials.Visible = True
-            ShakeControl(txtUsername)
-            ShakeControl(txtPassword)
+            Highlight(txtUsername)
+            Highlight(txtPassword)
             Return
         Else
             ' Simulate credential check (replace with real authentication logic)
@@ -29,11 +29,12 @@
                 txtPassword.Clear()
                 txtUsername.Clear()
                 Me.Hide()
+                txtUsername.Focus()
             Else
                 lblWrongCredentials.Text = "Invalid username or password."
                 lblWrongCredentials.Visible = True
-                ShakeControl(txtUsername)
-                ShakeControl(txtPassword)
+                Highlight(txtUsername)
+                Highlight(txtPassword)
             End If
 
 
@@ -44,14 +45,12 @@
     Private Sub txtPassword_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave
         If Not isRequired(txtPassword.Text) Then
             ShakeControl(txtPassword)
-            txtPassword.Focus()
         End If
     End Sub
 
     Private Sub txtUsername_Leave(sender As Object, e As EventArgs) Handles txtUsername.Leave
         If Not isRequired(txtUsername.Text) Then
             ShakeControl(txtUsername)
-            txtUsername.Focus()
         End If
     End Sub
 End Class
