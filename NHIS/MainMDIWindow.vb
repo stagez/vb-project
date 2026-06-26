@@ -3,9 +3,6 @@
 Public Class frmMain
     Private Async Sub ShakeControl(ctrl As Control)
         Dim originalLeft = ctrl.Left
-        Dim originalBack = ctrl.BackColor
-
-        ctrl.BackColor = Color.FromArgb(255, 220, 220) ' light red tint
 
         Dim moves = {-6, 6, -5, 5, -3, 3, -1, 1}
         For Each offset In moves
@@ -15,11 +12,11 @@ Public Class frmMain
 
         ctrl.Left = originalLeft
         Await Task.Delay(300)
-        ctrl.BackColor = originalBack
     End Sub
 
     Private Sub LoadForm(frm As Form)
         pnlContent.Controls.Clear()
+        pnlContent.Visible = True
         frm.TopLevel = False
         frm.FormBorderStyle = FormBorderStyle.None
         frm.Dock = DockStyle.Fill
@@ -118,20 +115,17 @@ Public Class frmMain
     End Sub
 
     Private Sub RegisterProviderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProviderToolStripMenuItem.Click
-        'For Each f As Form In Me.MdiChildren
-        '    f.Close()
-        'Next
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
 
-        LoadForm(New frmRegisterProvider())
-        'pnlContent.Visible = False
-        'Dim frm As New frmRegisterProvider()
-        'frm.TopLevel = False
-        'frm.FormBorderStyle = FormBorderStyle.None
-        'frm.Dock = DockStyle.Fill
-        'frm.MdiParent = Me
+        pnlContent.Visible = False
+        Dim frm As New frmRegisterProvider()
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.Dock = DockStyle.Fill
+        frm.MdiParent = Me
+        frm.Show()
 
-        'Me.Controls.Add(frm)
-        'frm.Show()
     End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
@@ -150,29 +144,51 @@ Public Class frmMain
     End Sub
 
     Private Sub ViewProvidersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewProvidersToolStripMenuItem.Click
-        'Dim frm As New frmViewProviders
-        'frm.MdiParent = Me
-        'frm.Show()
-        LoadForm(New ViewProviders)
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
+        LoadForm(New ViewProviders())
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
         LoadForm(New frmDashboard())
+
     End Sub
 
     Private Sub tsHome_Click(sender As Object, e As EventArgs) Handles tsHome.Click
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
         LoadForm(New frmDashboard())
     End Sub
 
     Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
-        LoadForm(New ClaimSubmission)
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
+        Dim frm As New frmNewClaim()
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.Dock = DockStyle.Fill
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 
     Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
+
         LoadForm(New ViewClaims())
     End Sub
 
     Private Sub tsProviders_Click(sender As Object, e As EventArgs) Handles tsProviders.Click
+        For Each f As Form In Me.MdiChildren
+            f.Close()
+        Next
+
         LoadForm(New ViewProviders())
     End Sub
 
@@ -206,6 +222,9 @@ Public Class frmMain
     End Sub
 
     Private Sub AddUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddUserToolStripMenuItem.Click
+        For Each f In Me.MdiChildren
+            f.Close()
+        Next
         LoadForm(New AddUser())
     End Sub
 
@@ -215,19 +234,25 @@ Public Class frmMain
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        'pnlContent.Visible = False
-        'Dim frm As New frmRegisterMember
-        'frm.MdiParent = Me
-        'frm.Show()
+        For Each f In Me.MdiChildren
+            f.Close()
+        Next
         LoadForm(New RegisterMember)
     End Sub
 
     Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
-        LoadForm(New ClaimSubmission)
+        For Each f In Me.MdiChildren
+            f.Close()
+        Next
+        LoadForm(New frmNewClaim)
     End Sub
 
     Private Sub SubmitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitToolStripMenuItem.Click
-        LoadForm(New ViewClaims)
+        Dim frm As New frmNewClaim()
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.Dock = DockStyle.Fill
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 
     Private Sub tsLogOut_Click(sender As Object, e As EventArgs) Handles tsLogOut.Click

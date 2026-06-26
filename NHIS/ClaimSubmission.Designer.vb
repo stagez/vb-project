@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ClaimSubmission
+Partial Class frmNewClaim
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -775,7 +775,7 @@ Partial Class ClaimSubmission
         Me.btnSave.Text = "Submit Claim"
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'ClaimSubmission
+        'frmNewClaim
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -786,7 +786,7 @@ Partial Class ClaimSubmission
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tcClaimSubmission)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "ClaimSubmission"
+        Me.Name = "frmNewClaim"
         Me.Text = "Submit Claim"
         Me.tcClaimSubmission.ResumeLayout(False)
         Me.tpPatientProvider.ResumeLayout(False)

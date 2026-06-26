@@ -1,4 +1,4 @@
-﻿Public Class ClaimSubmission
+﻿Public Class frmNewClaim
     Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -77,5 +77,9 @@
 
         ' Set a logical past limit (e.g., max 120 years old)
         dtpDOB.MinDate = DateTime.Today.AddYears(-120)
+
+        If Not isFormComplete(Me) Then
+            btnSave.Enabled = False
+        End If
     End Sub
 End Class

@@ -6,22 +6,7 @@
     {"emmanuel", "emma"},
     {"eric", "eric"}
 }
-    Private Async Sub ShakeControl(ctrl As Control)
-        Dim originalLeft = ctrl.Left
-        Dim originalBack = ctrl.BackColor
 
-        ctrl.BackColor = Color.FromArgb(255, 220, 220) ' light red tint
-
-        Dim moves = {-6, 6, -5, 5, -3, 3, -1, 1}
-        For Each offset In moves
-            ctrl.Left = originalLeft + offset
-            Await Task.Delay(30)
-        Next
-
-        ctrl.Left = originalLeft
-        Await Task.Delay(300)
-        ctrl.BackColor = originalBack
-    End Sub
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
         txtUsername.Focus()

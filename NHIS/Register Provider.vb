@@ -111,4 +111,9 @@
         End If
     End Sub
 
+    Private Sub frmRegisterProvider_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not isFormComplete(Me) Then
+            btnSave.Enabled = False
+        End If
+    End Sub
 End Class
