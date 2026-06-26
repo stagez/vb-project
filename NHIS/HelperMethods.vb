@@ -1,10 +1,7 @@
 ﻿Module HelperMethods
-    Public Sub HighlightIfEmpty(ctrl As TextBox)
-        If String.IsNullOrWhiteSpace(ctrl.Text) Then
-            ctrl.BackColor = Color.MistyRose
-        Else
-            ctrl.BackColor = Color.White
-        End If
+    Public Sub Highlight(ctrl As TextBox)
+        ctrl.BackColor = Color.MistyRose
+        ShakeControl(ctrl)
     End Sub
     Public Async Sub ShakeControl(ctrl As Control)
         If ctrl Is Nothing Then Exit Sub

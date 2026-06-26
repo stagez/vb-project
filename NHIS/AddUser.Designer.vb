@@ -23,6 +23,7 @@ Partial Class AddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlOuter = New System.Windows.Forms.Panel()
+        Me.lblPasswordMatch = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -46,7 +47,6 @@ Partial Class AddUser
         Me.btnUpload = New System.Windows.Forms.Button()
         Me.pbAvatar = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblPasswordMatch = New System.Windows.Forms.Label()
         Me.pnlOuter.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.pbAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,12 +68,23 @@ Partial Class AddUser
         Me.pnlOuter.Controls.Add(Me.Label1)
         Me.pnlOuter.Cursor = System.Windows.Forms.Cursors.Default
         Me.pnlOuter.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pnlOuter.Location = New System.Drawing.Point(141, 31)
-        Me.pnlOuter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pnlOuter.Location = New System.Drawing.Point(94, 20)
         Me.pnlOuter.Name = "pnlOuter"
-        Me.pnlOuter.Padding = New System.Windows.Forms.Padding(42, 43, 42, 43)
-        Me.pnlOuter.Size = New System.Drawing.Size(926, 694)
+        Me.pnlOuter.Padding = New System.Windows.Forms.Padding(28)
+        Me.pnlOuter.Size = New System.Drawing.Size(617, 451)
         Me.pnlOuter.TabIndex = 0
+        '
+        'lblPasswordMatch
+        '
+        Me.lblPasswordMatch.AutoSize = True
+        Me.lblPasswordMatch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblPasswordMatch.Location = New System.Drawing.Point(322, 374)
+        Me.lblPasswordMatch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPasswordMatch.Name = "lblPasswordMatch"
+        Me.lblPasswordMatch.Size = New System.Drawing.Size(143, 15)
+        Me.lblPasswordMatch.TabIndex = 9
+        Me.lblPasswordMatch.Text = "Password does not match"
+        Me.lblPasswordMatch.Visible = False
         '
         'btnCancel
         '
@@ -81,10 +92,9 @@ Partial Class AddUser
         Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(766, 615)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnCancel.Location = New System.Drawing.Point(511, 400)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 49)
+        Me.btnCancel.Size = New System.Drawing.Size(75, 32)
         Me.btnCancel.TabIndex = 8
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -95,10 +105,9 @@ Partial Class AddUser
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(627, 615)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnClear.Location = New System.Drawing.Point(418, 400)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(112, 49)
+        Me.btnClear.Size = New System.Drawing.Size(75, 32)
         Me.btnClear.TabIndex = 8
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -111,10 +120,9 @@ Partial Class AddUser
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(488, 615)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnSave.Location = New System.Drawing.Point(325, 400)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(112, 49)
+        Me.btnSave.Size = New System.Drawing.Size(75, 32)
         Me.btnSave.TabIndex = 8
         Me.btnSave.Text = "Save User"
         Me.btnSave.UseVisualStyleBackColor = False
@@ -124,10 +132,9 @@ Partial Class AddUser
         Me.lblProfileSmall.AutoSize = True
         Me.lblProfileSmall.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProfileSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.lblProfileSmall.Location = New System.Drawing.Point(51, 366)
-        Me.lblProfileSmall.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblProfileSmall.Location = New System.Drawing.Point(34, 238)
         Me.lblProfileSmall.Name = "lblProfileSmall"
-        Me.lblProfileSmall.Size = New System.Drawing.Size(163, 21)
+        Me.lblProfileSmall.Size = New System.Drawing.Size(115, 13)
         Me.lblProfileSmall.TabIndex = 6
         Me.lblProfileSmall.Text = "JPG or PNG, max 2MB"
         '
@@ -135,10 +142,9 @@ Partial Class AddUser
         '
         Me.lblProfileLabel.AutoSize = True
         Me.lblProfileLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProfileLabel.Location = New System.Drawing.Point(78, 343)
-        Me.lblProfileLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblProfileLabel.Location = New System.Drawing.Point(52, 223)
         Me.lblProfileLabel.Name = "lblProfileLabel"
-        Me.lblProfileLabel.Size = New System.Drawing.Size(124, 25)
+        Me.lblProfileLabel.Size = New System.Drawing.Size(80, 15)
         Me.lblProfileLabel.TabIndex = 5
         Me.lblProfileLabel.Text = "Profile Photo"
         '
@@ -161,45 +167,47 @@ Partial Class AddUser
         Me.TableLayoutPanel1.Controls.Add(Me.txtRepeatPassword, 0, 9)
         Me.TableLayoutPanel1.Controls.Add(Me.pnlStrength, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassword, 0, 5)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(294, 105)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(196, 68)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 10
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 163.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(586, 468)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(391, 304)
         Me.TableLayoutPanel1.TabIndex = 4
         '
         'lblStrength
         '
         Me.lblStrength.AutoSize = True
         Me.lblStrength.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStrength.Location = New System.Drawing.Point(4, 327)
-        Me.lblStrength.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblStrength.Location = New System.Drawing.Point(3, 212)
         Me.lblStrength.Name = "lblStrength"
-        Me.lblStrength.Size = New System.Drawing.Size(0, 23)
+        Me.lblStrength.Size = New System.Drawing.Size(0, 13)
         Me.lblStrength.TabIndex = 8
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(3, 148)
+        Me.txtEmail.Location = New System.Drawing.Point(2, 96)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(248, 31)
+        Me.txtEmail.Size = New System.Drawing.Size(167, 23)
         Me.txtEmail.TabIndex = 8
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Location = New System.Drawing.Point(3, 233)
+        Me.lblPassword.Location = New System.Drawing.Point(2, 151)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(87, 25)
+        Me.lblPassword.Size = New System.Drawing.Size(57, 15)
         Me.lblPassword.TabIndex = 4
         Me.lblPassword.Text = "Password"
         '
@@ -207,52 +215,58 @@ Partial Class AddUser
         '
         Me.lblName.AutoSize = True
         Me.lblName.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lblName.Location = New System.Drawing.Point(3, 0)
+        Me.lblName.Location = New System.Drawing.Point(2, 0)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(59, 25)
+        Me.lblName.Size = New System.Drawing.Size(39, 15)
         Me.lblName.TabIndex = 5
         Me.lblName.Text = "Name"
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(3, 31)
+        Me.txtName.Location = New System.Drawing.Point(2, 20)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(248, 31)
+        Me.txtName.Size = New System.Drawing.Size(167, 23)
         Me.txtName.TabIndex = 7
         '
         'lblRole
         '
         Me.lblRole.AutoSize = True
-        Me.lblRole.Location = New System.Drawing.Point(302, 0)
+        Me.lblRole.Location = New System.Drawing.Point(201, 0)
+        Me.lblRole.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRole.Name = "lblRole"
-        Me.lblRole.Size = New System.Drawing.Size(46, 25)
+        Me.lblRole.Size = New System.Drawing.Size(30, 15)
         Me.lblRole.TabIndex = 9
         Me.lblRole.Text = "Role"
         '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(3, 116)
+        Me.lblEmail.Location = New System.Drawing.Point(2, 75)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(54, 25)
+        Me.lblEmail.Size = New System.Drawing.Size(36, 15)
         Me.lblEmail.TabIndex = 1
         Me.lblEmail.Text = "Email"
         '
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(302, 116)
+        Me.lblPhone.Location = New System.Drawing.Point(201, 75)
+        Me.lblPhone.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(62, 25)
+        Me.lblPhone.Size = New System.Drawing.Size(41, 15)
         Me.lblPhone.TabIndex = 0
         Me.lblPhone.Text = "Phone"
         '
         'lblRepeatPassword
         '
         Me.lblRepeatPassword.AutoSize = True
-        Me.lblRepeatPassword.Location = New System.Drawing.Point(3, 370)
+        Me.lblRepeatPassword.Location = New System.Drawing.Point(2, 240)
+        Me.lblRepeatPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRepeatPassword.Name = "lblRepeatPassword"
-        Me.lblRepeatPassword.Size = New System.Drawing.Size(87, 25)
+        Me.lblRepeatPassword.Size = New System.Drawing.Size(57, 15)
         Me.lblRepeatPassword.TabIndex = 10
         Me.lblRepeatPassword.Text = "Password"
         '
@@ -261,39 +275,42 @@ Partial Class AddUser
         Me.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboRole.FormattingEnabled = True
         Me.cboRole.Items.AddRange(New Object() {"Administrator", "Claims Officer", "Provider"})
-        Me.cboRole.Location = New System.Drawing.Point(302, 31)
+        Me.cboRole.Location = New System.Drawing.Point(201, 20)
+        Me.cboRole.Margin = New System.Windows.Forms.Padding(2)
         Me.cboRole.Name = "cboRole"
-        Me.cboRole.Size = New System.Drawing.Size(199, 33)
+        Me.cboRole.Size = New System.Drawing.Size(134, 23)
         Me.cboRole.TabIndex = 10
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(302, 148)
+        Me.txtPhone.Location = New System.Drawing.Point(201, 96)
+        Me.txtPhone.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(199, 31)
+        Me.txtPhone.Size = New System.Drawing.Size(134, 23)
         Me.txtPhone.TabIndex = 7
         '
         'txtRepeatPassword
         '
-        Me.txtRepeatPassword.Location = New System.Drawing.Point(3, 401)
+        Me.txtRepeatPassword.Location = New System.Drawing.Point(2, 260)
+        Me.txtRepeatPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRepeatPassword.Name = "txtRepeatPassword"
-        Me.txtRepeatPassword.Size = New System.Drawing.Size(248, 31)
+        Me.txtRepeatPassword.Size = New System.Drawing.Size(167, 23)
         Me.txtRepeatPassword.TabIndex = 11
         Me.txtRepeatPassword.UseSystemPasswordChar = True
         '
         'pnlStrength
         '
-        Me.pnlStrength.Location = New System.Drawing.Point(4, 301)
-        Me.pnlStrength.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pnlStrength.Location = New System.Drawing.Point(3, 195)
         Me.pnlStrength.Name = "pnlStrength"
-        Me.pnlStrength.Size = New System.Drawing.Size(212, 6)
+        Me.pnlStrength.Size = New System.Drawing.Size(141, 4)
         Me.pnlStrength.TabIndex = 8
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(3, 268)
+        Me.txtPassword.Location = New System.Drawing.Point(2, 174)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(248, 31)
+        Me.txtPassword.Size = New System.Drawing.Size(167, 23)
         Me.txtPassword.TabIndex = 7
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -301,9 +318,10 @@ Partial Class AddUser
         '
         Me.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUpload.Location = New System.Drawing.Point(75, 402)
+        Me.btnUpload.Location = New System.Drawing.Point(50, 261)
+        Me.btnUpload.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUpload.Name = "btnUpload"
-        Me.btnUpload.Size = New System.Drawing.Size(123, 38)
+        Me.btnUpload.Size = New System.Drawing.Size(82, 25)
         Me.btnUpload.TabIndex = 3
         Me.btnUpload.Text = "Upload Picture"
         Me.btnUpload.UseVisualStyleBackColor = True
@@ -311,9 +329,10 @@ Partial Class AddUser
         'pbAvatar
         '
         Me.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbAvatar.Location = New System.Drawing.Point(56, 142)
+        Me.pbAvatar.Location = New System.Drawing.Point(37, 92)
+        Me.pbAvatar.Margin = New System.Windows.Forms.Padding(2)
         Me.pbAvatar.Name = "pbAvatar"
-        Me.pbAvatar.Size = New System.Drawing.Size(164, 168)
+        Me.pbAvatar.Size = New System.Drawing.Size(110, 110)
         Me.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbAvatar.TabIndex = 2
         Me.pbAvatar.TabStop = False
@@ -323,33 +342,20 @@ Partial Class AddUser
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(388, 72)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(259, 47)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 25)
+        Me.Label1.Size = New System.Drawing.Size(116, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ACCOUNT SETTINGS"
         '
-        'lblPasswordMatch
-        '
-        Me.lblPasswordMatch.AutoSize = True
-        Me.lblPasswordMatch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblPasswordMatch.Location = New System.Drawing.Point(483, 576)
-        Me.lblPasswordMatch.Name = "lblPasswordMatch"
-        Me.lblPasswordMatch.Size = New System.Drawing.Size(217, 25)
-        Me.lblPasswordMatch.TabIndex = 9
-        Me.lblPasswordMatch.Text = "Password does not match"
-        Me.lblPasswordMatch.Visible = False
-        '
         'AddUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1208, 777)
+        Me.ClientSize = New System.Drawing.Size(805, 505)
         Me.Controls.Add(Me.pnlOuter)
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "AddUser"
         Me.Text = "frmAddUser"
         Me.pnlOuter.ResumeLayout(False)

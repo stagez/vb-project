@@ -15,35 +15,32 @@
 
     Private Sub txtPatientID_Leave(sender As Object, e As EventArgs)
         If Not isRequired(txtPatientID.Text) Then
-            ShakeControl(txtPatientID)
-            txtPatientID.Focus()
+            Highlight(txtPatientID)
         End If
     End Sub
 
     Private Sub txtContactName_Leave(sender As Object, e As EventArgs)
         If Not isValidName(txtContactName.Text) Then
-            ShakeControl(txtContactName)
-            txtContactName.Focus()
+            Highlight(txtContactName)
         End If
     End Sub
 
     Private Sub txtDistrict_Leave(sender As Object, e As EventArgs)
         If Not isRequired(txtDistrict.Text) Then
-            ShakeControl(txtDistrict)
-            txtDistrict.Focus()
+            Highlight(txtDistrict)
         End If
     End Sub
 
     Private Sub txtEPhoneNumber_Leave(sender As Object, e As EventArgs)
         If Not isValidPhone(txtEPhoneNumber1.Text) Then
-            ShakeControl(txtEPhoneNumber1)
+            Highlight(txtEPhoneNumber1)
 
         End If
     End Sub
 
     Private Sub txtRegion_Leave(sender As Object, e As EventArgs)
         If Not isRequired(txtRegion.Text) Then
-            ShakeControl(txtRegion)
+            Highlight(txtRegion)
         End If
     End Sub
 
@@ -59,58 +56,56 @@
 
     Private Sub txtContactName_Leave_1(sender As Object, e As EventArgs) Handles txtContactName.Leave
         If Not isValidName(txtContactName.Text) Then
-            ShakeControl(txtContactName)
+            Highlight(txtContactName)
         End If
     End Sub
 
 
     Private Sub txtCity_Leave(sender As Object, e As EventArgs) Handles txtCity.Leave
         If Not isRequired(txtCity.Text) Then
-            ShakeControl(txtCity)
-
+            Highlight(txtCity)
         End If
     End Sub
 
     Private Sub txtDistrict_Leave_1(sender As Object, e As EventArgs) Handles txtDistrict.Leave
         If Not isRequired(txtDistrict.Text) Then
-            ShakeControl(txtDistrict)
+            Highlight(txtDistrict)
         End If
     End Sub
 
     Private Sub txtPhoneNumber_Leave(sender As Object, e As EventArgs) Handles txtPhoneNumber.Leave
         If Not isValidPhone(txtPhoneNumber.Text) Then
-            ShakeControl(txtPhoneNumber)
+            Highlight(txtPhoneNumber)
         End If
     End Sub
 
     Private Sub txtNationality_Leave(sender As Object, e As EventArgs) Handles txtNationality.Leave
         If Not isRequired(txtNationality.Text) Then
-            ShakeControl(txtNationality)
+            Highlight(txtNationality)
         End If
     End Sub
 
     Private Sub txtNHISNumber_Leave(sender As Object, e As EventArgs) Handles txtNHISNumber.Leave
         If Not isRequired(txtNHISNumber.Text) Then
-            ShakeControl(txtNHISNumber)
-            txtNHISNumber.Focus()
+            Highlight(txtNHISNumber)
         End If
     End Sub
 
     Private Sub txtPatientID_Leave_1(sender As Object, e As EventArgs) Handles txtPatientID.Leave
         If Not isRequired(txtPatientID.Text) Then
-            ShakeControl(txtPatientID)
+            Highlight(txtPatientID)
         End If
     End Sub
 
     Private Sub txtFullName_Leave(sender As Object, e As EventArgs) Handles txtFullName.Leave
         If Not isValidName(txtFullName.Text) Then
-            txtFullName.Focus()
+            Highlight(txtFullName)
         End If
     End Sub
 
     Private Sub txtEPhoneNumber1_Leave(sender As Object, e As EventArgs) Handles txtEPhoneNumber1.Leave
         If Not isValidPhone(txtEPhoneNumber1.Text) Then
-            ShakeControl(txtEPhoneNumber1)
+            Highlight(txtPhoneNumber)
 
         End If
     End Sub
@@ -142,5 +137,10 @@
     Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
         txtPatientID.Focus()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
+        main.LoadForm(New frmDashboard())
     End Sub
 End Class

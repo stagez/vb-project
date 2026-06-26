@@ -1,12 +1,4 @@
 ﻿Public Class frmNewClaim
-    Private Sub Label8_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub txtNHISNumber_Leave(sender As Object, e As EventArgs) Handles txtNHISNumber.Leave
         If Not isRequired(txtNHISNumber.Text) Then
             ShakeControl(txtNHISNumber)
@@ -16,15 +8,13 @@
 
     Private Sub txtPatientName_Leave(sender As Object, e As EventArgs) Handles txtPatientName.Leave
         If Not isValidName(txtPatientName.Text) Then
-            ShakeControl(txtPatientName)
-            txtPatientName.Focus()
+            Highlight(txtPatientFullName)
         End If
     End Sub
 
     Private Sub cboProcedureType_Leave(sender As Object, e As EventArgs) Handles cboProcedureType.Leave
         If Not isRequired(cboProcedureType.Text) Then
             ShakeControl(cboProcedureType)
-            cboProcedureType.Focus()
         End If
     End Sub
 
@@ -45,41 +35,35 @@
         End If
     End Sub
 
-    Private Sub dtpDateOfBirth_Leave(sender As Object, e As EventArgs)
-
-
-    End Sub
-
     Private Sub txtProviderID_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
         If Not isRequired(txtProviderID.Text) Then
-            ShakeControl(txtProviderID)
-            txtProviderID.Focus()
+            Highlight(txtProviderID)
         End If
     End Sub
 
     Private Sub txtProviderName_Leave(sender As Object, e As EventArgs) Handles txtProviderName.Leave
         If Not isRequired(txtProviderName.Text) Then
-            ShakeControl(txtProviderName)
-            txtProviderName.Focus()
+            Highlight(txtProviderID)
         End If
     End Sub
 
     Private Sub txtRegion2_Leave(sender As Object, e As EventArgs) Handles txtRegion2.Leave
         If Not isRequired(txtRegion2.Text) Then
-            ShakeControl(txtRegion2)
-            txtRegion2.Focus()
+            Highlight(txtRegion2)
         End If
     End Sub
 
     Private Sub ClaimSubmission_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Prevent future dates entirely
         dtpDOB.MaxDate = DateTime.Today
-
-        ' Set a logical past limit (e.g., max 120 years old)
         dtpDOB.MinDate = DateTime.Today.AddYears(-120)
 
         If Not isFormComplete(Me) Then
             btnSave.Enabled = False
         End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
+        main.LoadForm(New frmDashboard())
     End Sub
 End Class

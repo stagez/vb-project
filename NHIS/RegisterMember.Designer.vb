@@ -137,7 +137,7 @@ Partial Class RegisterMember
         Me.Panel9.Controls.Add(Me.lblContactName)
         Me.Panel9.Location = New System.Drawing.Point(137, 605)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel9.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel9.Size = New System.Drawing.Size(692, 150)
         Me.Panel9.TabIndex = 17
         '
@@ -261,7 +261,7 @@ Partial Class RegisterMember
         Me.Panel5.Controls.Add(Me.lblPhoneNumber)
         Me.Panel5.Location = New System.Drawing.Point(137, 433)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(692, 150)
         Me.Panel5.TabIndex = 17
         '
@@ -278,7 +278,7 @@ Partial Class RegisterMember
         Me.lblCityTown.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblCityTown.Location = New System.Drawing.Point(322, 121)
         Me.lblCityTown.Name = "lblCityTown"
-        Me.lblCityTown.Size = New System.Drawing.Size(57, 13)
+        Me.lblCityTown.Size = New System.Drawing.Size(58, 13)
         Me.lblCityTown.TabIndex = 8
         Me.lblCityTown.Text = "City/Town"
         '
@@ -391,7 +391,7 @@ Partial Class RegisterMember
         Me.Panel1.Controls.Add(Me.lblNHIS)
         Me.Panel1.Location = New System.Drawing.Point(135, 264)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel1.Size = New System.Drawing.Size(692, 150)
         Me.Panel1.TabIndex = 17
         '
@@ -488,7 +488,7 @@ Partial Class RegisterMember
         Me.lblMembershipType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblMembershipType.Location = New System.Drawing.Point(32, 121)
         Me.lblMembershipType.Name = "lblMembershipType"
-        Me.lblMembershipType.Size = New System.Drawing.Size(96, 13)
+        Me.lblMembershipType.Size = New System.Drawing.Size(97, 13)
         Me.lblMembershipType.TabIndex = 1
         Me.lblMembershipType.Text = "Membership Type"
         '
@@ -518,7 +518,7 @@ Partial Class RegisterMember
         Me.Panel2.Controls.Add(Me.lblPatientID)
         Me.Panel2.Location = New System.Drawing.Point(135, 99)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel2.Size = New System.Drawing.Size(692, 150)
         Me.Panel2.TabIndex = 17
         '
@@ -614,7 +614,7 @@ Partial Class RegisterMember
         Me.lblDOB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblDOB.Location = New System.Drawing.Point(32, 121)
         Me.lblDOB.Name = "lblDOB"
-        Me.lblDOB.Size = New System.Drawing.Size(73, 13)
+        Me.lblDOB.Size = New System.Drawing.Size(72, 13)
         Me.lblDOB.TabIndex = 1
         Me.lblDOB.Text = "Date of Birth"
         '

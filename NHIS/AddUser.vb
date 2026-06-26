@@ -1,12 +1,13 @@
 ﻿Imports System.Text.RegularExpressions
 
+
 Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        pbAvatar.Region = New Region(New Drawing2D.GraphicsPath())
-        Dim path As New Drawing2D.GraphicsPath()
-        path.AddEllipse(0, 0, pbAvatar.Width, pbAvatar.Height)
-        pbAvatar.Region = New Region(path)
+        If Not isFormComplete(Me) Then
+            btnSave.Enabled = False
+        End If
+
     End Sub
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
@@ -38,21 +39,18 @@ Public Class AddUser
         ' 3. Update the UI based on the score
         Select Case score
             Case 0, 1, 2
-                ' WEAK (Red)
                 pnlStrength.Width = 60
                 pnlStrength.BackColor = Color.FromArgb(192, 80, 77)
                 lblStrength.Text = "Weak"
                 lblStrength.ForeColor = Color.FromArgb(192, 80, 77)
 
             Case 3, 4
-                ' FAIR (Amber)
                 pnlStrength.Width = 120
                 pnlStrength.BackColor = Color.FromArgb(230, 162, 60)
                 lblStrength.Text = "Fair"
                 lblStrength.ForeColor = Color.FromArgb(230, 162, 60)
 
             Case 5, 6
-                ' STRONG (Green)
                 pnlStrength.Width = 180
                 pnlStrength.BackColor = Color.FromArgb(74, 160, 100)
                 lblStrength.Text = "Strong"
@@ -96,21 +94,18 @@ Public Class AddUser
     Private Sub txtEmail_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
         If Not isValidEmail(txtEmail.Text) Then
             ShakeControl(txtEmail)
-            txtEmail.Focus()
         End If
     End Sub
 
     Private Sub txtName_Leave(sender As Object, e As EventArgs) Handles txtName.Leave
         If Not isValidName(txtName.Text) Then
             ShakeControl(txtName)
-            txtName.Focus()
         End If
     End Sub
 
     Private Sub txtPassword_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave
         If Not isRequired(txtPassword.Text) Then
             ShakeControl(txtPassword)
-            txtPassword.Focus()
 
         End If
     End Sub
@@ -118,14 +113,12 @@ Public Class AddUser
     Private Sub txtRepeatPassword_Leave(sender As Object, e As EventArgs) Handles txtRepeatPassword.Leave
         If Not isRequired(txtRepeatPassword.Text) Then
             ShakeControl(txtRepeatPassword)
-            txtRepeatPassword.Focus()
         End If
     End Sub
 
     Private Sub txtPhone_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
         If Not isValidPhone(txtPhone.Text) Then
             ShakeControl(txtPhone)
-            txtPhone.Focus()
         End If
     End Sub
 
@@ -151,11 +144,7 @@ Public Class AddUser
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Dim frm As New frmDashboard()
-        frm.MdiParent = frmMain
-        frm.FormBorderStyle = FormBorderStyle.None
-        frm.ControlBox = False
-        frm.Text = ""
-        frm.Show()
+        Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
+        main.LoadForm(New frmDashboard())
     End Sub
 End Class

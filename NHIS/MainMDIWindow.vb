@@ -14,7 +14,7 @@ Public Class frmMain
         Await Task.Delay(300)
     End Sub
 
-    Private Sub LoadForm(frm As Form)
+    Public Sub LoadForm(frm As Form)
         pnlContent.Controls.Clear()
         pnlContent.Visible = True
         frm.TopLevel = False
@@ -115,16 +115,7 @@ Public Class frmMain
     End Sub
 
     Private Sub RegisterProviderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterProviderToolStripMenuItem.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
-
-        pnlContent.Visible = False
-        Dim frm As New frmRegisterProvider()
-        frm.FormBorderStyle = FormBorderStyle.None
-        frm.Dock = DockStyle.Fill
-        frm.MdiParent = Me
-        frm.Show()
+        LoadForm(New frmRegisterProvider())
 
     End Sub
 
@@ -144,51 +135,27 @@ Public Class frmMain
     End Sub
 
     Private Sub ViewProvidersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewProvidersToolStripMenuItem.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New ViewProviders())
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New frmDashboard())
 
     End Sub
 
     Private Sub tsHome_Click(sender As Object, e As EventArgs) Handles tsHome.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New frmDashboard())
     End Sub
 
     Private Sub tsNewClaim_Click(sender As Object, e As EventArgs) Handles tsNewClaim.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
-        Dim frm As New frmNewClaim()
-        frm.FormBorderStyle = FormBorderStyle.None
-        frm.Dock = DockStyle.Fill
-        frm.MdiParent = Me
-        frm.Show()
+        LoadForm(New frmNewClaim())
     End Sub
 
     Private Sub tsViewClaims_Click(sender As Object, e As EventArgs) Handles tsViewClaims.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
-
         LoadForm(New ViewClaims())
     End Sub
 
     Private Sub tsProviders_Click(sender As Object, e As EventArgs) Handles tsProviders.Click
-        For Each f As Form In Me.MdiChildren
-            f.Close()
-        Next
-
         LoadForm(New ViewProviders())
     End Sub
 
@@ -222,9 +189,6 @@ Public Class frmMain
     End Sub
 
     Private Sub AddUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddUserToolStripMenuItem.Click
-        For Each f In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New AddUser())
     End Sub
 
@@ -234,25 +198,15 @@ Public Class frmMain
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        For Each f In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New RegisterMember)
     End Sub
 
     Private Sub ClaimsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClaimsToolStripMenuItem1.Click
-        For Each f In Me.MdiChildren
-            f.Close()
-        Next
         LoadForm(New frmNewClaim)
     End Sub
 
     Private Sub SubmitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitToolStripMenuItem.Click
-        Dim frm As New frmNewClaim()
-        frm.FormBorderStyle = FormBorderStyle.None
-        frm.Dock = DockStyle.Fill
-        frm.MdiParent = Me
-        frm.Show()
+        LoadForm(New frmNewClaim())
     End Sub
 
     Private Sub tsLogOut_Click(sender As Object, e As EventArgs) Handles tsLogOut.Click
@@ -267,13 +221,5 @@ Public Class frmMain
             frmLogin.Show()
             Me.Hide()
         End If
-    End Sub
-
-    Private Sub tsSave_Click(sender As Object, e As EventArgs) Handles tsSave.Click
-        'Try
-        '    btnSave.Click()
-        'Catch ex As Exception
-
-        'End Try
     End Sub
 End Class
