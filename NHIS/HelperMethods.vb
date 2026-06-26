@@ -10,7 +10,6 @@
         If ctrl Is Nothing Then Exit Sub
 
         Dim originalLeft = ctrl.Left
-        Dim originalBack = ctrl.BackColor
 
         Dim moves = {-6, 6, -5, 5, -3, 3, -1, 1}
         For Each offset In moves
@@ -20,17 +19,11 @@
 
         ctrl.Left = originalLeft
         Await Task.Delay(300)
-        ctrl.BackColor = originalBack
     End Sub
 
     Public Function isValidName(name As String) As Boolean
         If String.IsNullOrWhiteSpace(name) Then Return False
         Return System.Text.RegularExpressions.Regex.IsMatch(name.Trim(), "^[a-zA-Z\s\-']+$")
-    End Function
-
-    Public Function isWholeNumber(value As String) As Boolean
-        Dim result As Integer
-        Return Integer.TryParse(value.Trim(), result)
     End Function
 
     Public Function isValidEmail(email As String) As Boolean

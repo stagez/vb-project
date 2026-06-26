@@ -811,7 +811,7 @@ Partial Class frmRegisterProvider
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1178, 1106)
+        Me.ClientSize = New System.Drawing.Size(1178, 1026)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblRegisterProvider)
         Me.Controls.Add(Me.btnClear)
