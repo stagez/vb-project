@@ -51,13 +51,6 @@
         End If
     End Sub
 
-    Private Sub dtpDOB_Leave(sender As Object, e As EventArgs)
-        If Not isValidDOB(dtpDOB.Value) Then
-            ShakeControl(dtpDOB)
-            dtpDOB.Focus()
-        End If
-    End Sub
-
     Private Sub btnClear_Click(sender As Object, e As EventArgs)
         ClearForm(Me)
     End Sub
