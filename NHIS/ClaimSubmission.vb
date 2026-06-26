@@ -1,4 +1,4 @@
-﻿Public Class ClaimSubmission
+﻿Public Class frmNewClaim
     Private Sub Label8_Click(sender As Object, e As EventArgs)
 
     End Sub
