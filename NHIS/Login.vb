@@ -1,4 +1,11 @@
 ﻿Public Class frmLogin
+    Private ReadOnly _users As New Dictionary(Of String, String) From {
+    {"admin", "admin"},
+    {"pascal", "stage"},
+    {"gomez", "juan"},
+    {"emmanuel", "emma"},
+    {"eric", "eric"}
+}
     Private Async Sub ShakeControl(ctrl As Control)
         Dim originalLeft = ctrl.Left
         Dim originalBack = ctrl.BackColor
@@ -32,7 +39,7 @@
             Return
         Else
             ' Simulate credential check (replace with real authentication logic)
-            If txtUsername.Text = "admin" And txtPassword.Text = "admin" Then
+            If _users.ContainsKey(txtUsername.Text) AndAlso _users(txtUsername.Text) = txtPassword.Text Then
                 frmMain.Show()
                 txtPassword.Clear()
                 txtUsername.Clear()

@@ -1,4 +1,6 @@
-﻿Public Class AddUser
+﻿Imports System.Text.RegularExpressions
+
+Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pbAvatar.Region = New Region(New Drawing2D.GraphicsPath())
@@ -8,25 +10,54 @@
     End Sub
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        Dim length = txtPassword.Text.Length
+        Dim password As String = txtPassword.Text
+        Dim length As Integer = password.Length
+
+        ' 1. Handle the blank/empty state first
         If length = 0 Then
             pnlStrength.Width = 0
-        ElseIf length < 6 Then
-            pnlStrength.Width = 80
-            pnlStrength.BackColor = Color.FromArgb(192, 80, 77)   ' red - weak
-            lblStrength.Text = "Weak"
-            lblStrength.ForeColor = Color.FromArgb(192, 80, 77)
-        ElseIf length < 10 Then
-            pnlStrength.Width = 160
-            pnlStrength.BackColor = Color.FromArgb(230, 162, 60)  ' amber - fair
-            lblStrength.Text = "Fair"
-            lblStrength.ForeColor = Color.FromArgb(230, 162, 60)
-        Else
-            pnlStrength.Width = 240
-            pnlStrength.BackColor = Color.FromArgb(74, 160, 100)  ' green - strong
-            lblStrength.Text = "Strong"
-            lblStrength.ForeColor = Color.FromArgb(74, 160, 100)
+            lblStrength.Text = ""
+            Exit Sub
         End If
+
+        ' 2. Calculate Complexity Score
+        Dim score As Integer = 0
+
+        ' Length Milestones
+        If length >= 8 Then score += 1
+        If length >= 12 Then score += 1
+
+        ' Character Types Checks (Regex)
+        If Regex.IsMatch(password, "[a-z]") Then score += 1 ' Lowercase
+        If Regex.IsMatch(password, "[A-Z]") Then score += 1 ' Uppercase
+        If Regex.IsMatch(password, "[0-9]") Then score += 1 ' Numbers
+        ' Special Characters
+        If Regex.IsMatch(password, "[!@#$%^&*(),.??""{}|<>_+\-=\[\]\\]") Then score += 1
+
+
+        ' 3. Update the UI based on the score
+        Select Case score
+            Case 0, 1, 2
+                ' WEAK (Red)
+                pnlStrength.Width = 60
+                pnlStrength.BackColor = Color.FromArgb(192, 80, 77)
+                lblStrength.Text = "Weak"
+                lblStrength.ForeColor = Color.FromArgb(192, 80, 77)
+
+            Case 3, 4
+                ' FAIR (Amber)
+                pnlStrength.Width = 120
+                pnlStrength.BackColor = Color.FromArgb(230, 162, 60)
+                lblStrength.Text = "Fair"
+                lblStrength.ForeColor = Color.FromArgb(230, 162, 60)
+
+            Case 5, 6
+                ' STRONG (Green)
+                pnlStrength.Width = 180
+                pnlStrength.BackColor = Color.FromArgb(74, 160, 100)
+                lblStrength.Text = "Strong"
+                lblStrength.ForeColor = Color.FromArgb(74, 160, 100)
+        End Select
     End Sub
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
@@ -99,13 +130,17 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If isFormComplete(Me) Then
-            MessageBox.Show(
-            "Saved Successfully!",
-            "Saved",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information
-        )
+        If txtPassword.Text = txtRepeatPassword.Text Then
+            If isFormComplete(Me) Then
+                MessageBox.Show(
+                "Saved Successfully!",
+                "Saved",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            )
+            End If
+        Else
+            lblPasswordMatch.Visible = True
         End If
 
     End Sub
@@ -113,5 +148,14 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
         txtName.Focus()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Dim frm As New frmDashboard()
+        frm.MdiParent = frmMain
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.ControlBox = False
+        frm.Text = ""
+        frm.Show()
     End Sub
 End Class

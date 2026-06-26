@@ -1,11 +1,16 @@
 ﻿Module HelperMethods
+    Public Sub HighlightIfEmpty(ctrl As TextBox)
+        If String.IsNullOrWhiteSpace(ctrl.Text) Then
+            ctrl.BackColor = Color.MistyRose
+        Else
+            ctrl.BackColor = Color.White
+        End If
+    End Sub
     Public Async Sub ShakeControl(ctrl As Control)
         If ctrl Is Nothing Then Exit Sub
 
         Dim originalLeft = ctrl.Left
         Dim originalBack = ctrl.BackColor
-
-        ctrl.BackColor = Color.FromArgb(255, 220, 220) ' light red tint
 
         Dim moves = {-6, 6, -5, 5, -3, 3, -1, 1}
         For Each offset In moves
@@ -33,26 +38,10 @@
         Return System.Text.RegularExpressions.Regex.IsMatch(email.Trim(), "^[^@\s]+@[^@\s]+\.[^@\s]+$")
     End Function
 
-    Public Function GetAge(dob As String) As Integer
-        Dim result As Date
-        If Not Date.TryParse(dob, result) Then Return -1
-        Dim age As Integer = Date.Today.Year - result.Year
-        If result > Date.Today.AddYears(-age) Then age -= 1
-        Return age
-    End Function
-
-    Public Function isValidDOB(dob As String, Optional minAge As Integer = 0, Optional maxAge As Integer = 120) As Integer
-        Dim result As Date
-        If Not Date.TryParse(dob, result) Then Return -1
-        Dim age As Integer = Date.Today.Year - result.Year
-        If result > Date.Today.AddYears(-age) Then age -= 1
-        Return age
-    End Function
-
     Public Function isValidPhone(phone As String) As Boolean
         If String.IsNullOrWhiteSpace(phone) Then Return False
         Dim cleaned = System.Text.RegularExpressions.Regex.Replace(phone.Trim(), "[\s\-\(\)]", "")
-        Return System.Text.RegularExpressions.Regex.IsMatch(cleaned, "^\+?\d{7,15}$")
+        Return System.Text.RegularExpressions.Regex.IsMatch(cleaned, "^0\d{9}$")
     End Function
 
     Public Function isRequired(value As String) As Boolean
