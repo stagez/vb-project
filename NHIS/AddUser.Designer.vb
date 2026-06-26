@@ -68,7 +68,7 @@ Partial Class AddUser
         Me.pnlOuter.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlOuter.Location = New System.Drawing.Point(94, 20)
         Me.pnlOuter.Name = "pnlOuter"
-        Me.pnlOuter.Padding = New System.Windows.Forms.Padding(28, 28, 28, 28)
+        Me.pnlOuter.Padding = New System.Windows.Forms.Padding(28)
         Me.pnlOuter.Size = New System.Drawing.Size(617, 451)
         Me.pnlOuter.TabIndex = 0
         '
@@ -120,7 +120,7 @@ Partial Class AddUser
         Me.lblProfileSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
         Me.lblProfileSmall.Location = New System.Drawing.Point(34, 238)
         Me.lblProfileSmall.Name = "lblProfileSmall"
-        Me.lblProfileSmall.Size = New System.Drawing.Size(116, 13)
+        Me.lblProfileSmall.Size = New System.Drawing.Size(115, 13)
         Me.lblProfileSmall.TabIndex = 6
         Me.lblProfileSmall.Text = "JPG or PNG, max 2MB"
         '
@@ -154,7 +154,7 @@ Partial Class AddUser
         Me.TableLayoutPanel1.Controls.Add(Me.pnlStrength, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassword, 0, 5)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(196, 68)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 10
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18.0!))
@@ -182,7 +182,7 @@ Partial Class AddUser
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(2, 96)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(167, 23)
         Me.txtEmail.TabIndex = 8
@@ -211,7 +211,7 @@ Partial Class AddUser
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(2, 20)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(167, 23)
         Me.txtName.TabIndex = 7
@@ -262,7 +262,7 @@ Partial Class AddUser
         Me.cboRole.FormattingEnabled = True
         Me.cboRole.Items.AddRange(New Object() {"Administrator", "Claims Officer", "Provider"})
         Me.cboRole.Location = New System.Drawing.Point(201, 20)
-        Me.cboRole.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboRole.Margin = New System.Windows.Forms.Padding(2)
         Me.cboRole.Name = "cboRole"
         Me.cboRole.Size = New System.Drawing.Size(134, 23)
         Me.cboRole.TabIndex = 10
@@ -270,7 +270,7 @@ Partial Class AddUser
         'txtPhone
         '
         Me.txtPhone.Location = New System.Drawing.Point(201, 96)
-        Me.txtPhone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPhone.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(134, 23)
         Me.txtPhone.TabIndex = 7
@@ -278,7 +278,7 @@ Partial Class AddUser
         'txtRepeatPassword
         '
         Me.txtRepeatPassword.Location = New System.Drawing.Point(2, 260)
-        Me.txtRepeatPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRepeatPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRepeatPassword.Name = "txtRepeatPassword"
         Me.txtRepeatPassword.Size = New System.Drawing.Size(167, 23)
         Me.txtRepeatPassword.TabIndex = 11
@@ -294,7 +294,7 @@ Partial Class AddUser
         'txtPassword
         '
         Me.txtPassword.Location = New System.Drawing.Point(2, 174)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(167, 23)
         Me.txtPassword.TabIndex = 7
@@ -305,7 +305,7 @@ Partial Class AddUser
         Me.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpload.Location = New System.Drawing.Point(50, 261)
-        Me.btnUpload.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUpload.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUpload.Name = "btnUpload"
         Me.btnUpload.Size = New System.Drawing.Size(82, 25)
         Me.btnUpload.TabIndex = 3
@@ -316,7 +316,7 @@ Partial Class AddUser
         '
         Me.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbAvatar.Location = New System.Drawing.Point(37, 92)
-        Me.pbAvatar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pbAvatar.Margin = New System.Windows.Forms.Padding(2)
         Me.pbAvatar.Name = "pbAvatar"
         Me.pbAvatar.Size = New System.Drawing.Size(110, 110)
         Me.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -330,7 +330,7 @@ Partial Class AddUser
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(259, 47)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 15)
+        Me.Label1.Size = New System.Drawing.Size(116, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ACCOUNT SETTINGS"
         '

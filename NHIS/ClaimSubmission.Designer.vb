@@ -120,7 +120,7 @@ Partial Class ClaimSubmission
         Me.tpPatientProvider.Controls.Add(Me.Panel5)
         Me.tpPatientProvider.Location = New System.Drawing.Point(4, 24)
         Me.tpPatientProvider.Name = "tpPatientProvider"
-        Me.tpPatientProvider.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tpPatientProvider.Padding = New System.Windows.Forms.Padding(3)
         Me.tpPatientProvider.Size = New System.Drawing.Size(599, 467)
         Me.tpPatientProvider.TabIndex = 1
         Me.tpPatientProvider.Text = "Patient & Provider"
@@ -145,7 +145,7 @@ Partial Class ClaimSubmission
         Me.Panel10.Controls.Add(Me.Label22)
         Me.Panel10.Location = New System.Drawing.Point(9, 204)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel10.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel10.Size = New System.Drawing.Size(584, 177)
         Me.Panel10.TabIndex = 3
         '
@@ -196,7 +196,7 @@ Partial Class ClaimSubmission
         Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblProviderType.Location = New System.Drawing.Point(26, 114)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(79, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
@@ -307,7 +307,7 @@ Partial Class ClaimSubmission
         Me.Panel5.Controls.Add(Me.Label7)
         Me.Panel5.Location = New System.Drawing.Point(9, 6)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(587, 192)
         Me.Panel5.TabIndex = 2
         '
@@ -420,7 +420,7 @@ Partial Class ClaimSubmission
         Me.tpServiceDetails.Controls.Add(Me.pnlClaimDetails)
         Me.tpServiceDetails.Location = New System.Drawing.Point(4, 24)
         Me.tpServiceDetails.Name = "tpServiceDetails"
-        Me.tpServiceDetails.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tpServiceDetails.Padding = New System.Windows.Forms.Padding(3)
         Me.tpServiceDetails.Size = New System.Drawing.Size(599, 467)
         Me.tpServiceDetails.TabIndex = 2
         Me.tpServiceDetails.Text = "Service Details"
@@ -445,7 +445,7 @@ Partial Class ClaimSubmission
         Me.pnlClaimDetails.Controls.Add(Me.Label19)
         Me.pnlClaimDetails.Location = New System.Drawing.Point(6, 5)
         Me.pnlClaimDetails.Name = "pnlClaimDetails"
-        Me.pnlClaimDetails.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.pnlClaimDetails.Padding = New System.Windows.Forms.Padding(16)
         Me.pnlClaimDetails.Size = New System.Drawing.Size(587, 278)
         Me.pnlClaimDetails.TabIndex = 0
         '
@@ -494,7 +494,7 @@ Partial Class ClaimSubmission
         Me.lblProcedureServiceType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblProcedureServiceType.Location = New System.Drawing.Point(19, 199)
         Me.lblProcedureServiceType.Name = "lblProcedureServiceType"
-        Me.lblProcedureServiceType.Size = New System.Drawing.Size(131, 15)
+        Me.lblProcedureServiceType.Size = New System.Drawing.Size(130, 15)
         Me.lblProcedureServiceType.TabIndex = 21
         Me.lblProcedureServiceType.Text = "Procedure/Service Type"
         '
@@ -598,7 +598,7 @@ Partial Class ClaimSubmission
         Me.tpFinancial.Controls.Add(Me.Panel3)
         Me.tpFinancial.Location = New System.Drawing.Point(4, 24)
         Me.tpFinancial.Name = "tpFinancial"
-        Me.tpFinancial.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tpFinancial.Padding = New System.Windows.Forms.Padding(3)
         Me.tpFinancial.Size = New System.Drawing.Size(599, 467)
         Me.tpFinancial.TabIndex = 3
         Me.tpFinancial.Text = "Financial"
@@ -613,7 +613,7 @@ Partial Class ClaimSubmission
         Me.Panel18.Controls.Add(Me.lblRemarks)
         Me.Panel18.Location = New System.Drawing.Point(6, 155)
         Me.Panel18.Name = "Panel18"
-        Me.Panel18.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel18.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel18.Size = New System.Drawing.Size(587, 190)
         Me.Panel18.TabIndex = 22
         '
@@ -676,7 +676,7 @@ Partial Class ClaimSubmission
         Me.Panel3.Controls.Add(Me.lblAmount)
         Me.Panel3.Location = New System.Drawing.Point(7, 6)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(16, 16, 16, 16)
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel3.Size = New System.Drawing.Size(587, 143)
         Me.Panel3.TabIndex = 1
         '

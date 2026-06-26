@@ -103,7 +103,7 @@ Partial Class frmRegisterProvider
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(36, 44)
+        Me.TabControl1.Location = New System.Drawing.Point(36, 39)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(713, 689)
@@ -374,7 +374,7 @@ Partial Class frmRegisterProvider
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(32, 134)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 15)
+        Me.Label5.Size = New System.Drawing.Size(61, 15)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "City/Town"
         '
@@ -451,7 +451,7 @@ Partial Class frmRegisterProvider
         Me.lblProviderType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblProviderType.Location = New System.Drawing.Point(322, 76)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(79, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
@@ -694,7 +694,7 @@ Partial Class frmRegisterProvider
         Me.lblRegisterProvider.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblRegisterProvider.AutoSize = True
         Me.lblRegisterProvider.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegisterProvider.Location = New System.Drawing.Point(294, 9)
+        Me.lblRegisterProvider.Location = New System.Drawing.Point(294, 4)
         Me.lblRegisterProvider.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblRegisterProvider.Name = "lblRegisterProvider"
         Me.lblRegisterProvider.Size = New System.Drawing.Size(196, 25)
@@ -709,7 +709,7 @@ Partial Class frmRegisterProvider
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(670, 739)
+        Me.btnCancel.Location = New System.Drawing.Point(670, 734)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 32)
         Me.btnCancel.TabIndex = 18
@@ -723,7 +723,7 @@ Partial Class frmRegisterProvider
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(576, 739)
+        Me.btnClear.Location = New System.Drawing.Point(576, 734)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(75, 32)
         Me.btnClear.TabIndex = 16
@@ -739,7 +739,7 @@ Partial Class frmRegisterProvider
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(466, 737)
+        Me.btnSave.Location = New System.Drawing.Point(466, 732)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(92, 32)
         Me.btnSave.TabIndex = 17
@@ -752,7 +752,7 @@ Partial Class frmRegisterProvider
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(785, 799)
+        Me.ClientSize = New System.Drawing.Size(785, 788)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblRegisterProvider)
         Me.Controls.Add(Me.btnClear)

@@ -186,7 +186,7 @@ Partial Class ApproveClaim
         Me.lblProviderType.Location = New System.Drawing.Point(359, 81)
         Me.lblProviderType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblProviderType.Name = "lblProviderType"
-        Me.lblProviderType.Size = New System.Drawing.Size(79, 15)
+        Me.lblProviderType.Size = New System.Drawing.Size(78, 15)
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
@@ -375,7 +375,7 @@ Partial Class ApproveClaim
         Me.lblMembershipType.Location = New System.Drawing.Point(28, 82)
         Me.lblMembershipType.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMembershipType.Name = "lblMembershipType"
-        Me.lblMembershipType.Size = New System.Drawing.Size(102, 15)
+        Me.lblMembershipType.Size = New System.Drawing.Size(101, 15)
         Me.lblMembershipType.TabIndex = 21
         Me.lblMembershipType.Text = "Membership Type"
         '
