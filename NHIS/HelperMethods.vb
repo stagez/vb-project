@@ -1,4 +1,49 @@
-﻿Module HelperMethods
+﻿Imports System.Security.Cryptography
+Imports System.Text
+
+Module HelperMethods
+
+    Public Function HashedPassword(password As String) As String
+        Dim salt(15) As Byte
+        Using rng As New RNGCryptoServiceProvider()
+            rng.GetBytes(salt)
+        End Using
+
+        Using pbkdf2 As New Rfc2898DeriveBytes(password, salt, 100000)
+            Dim hash As Byte() = pbkdf2.GetBytes(32)
+
+            Dim hashBytes(47) As Byte
+            Array.Copy(salt, 0, hashBytes, 0, 16)
+            Array.Copy(hash, 0, hashBytes, 16, 32)
+
+            Return Convert.ToBase64String(hashBytes)
+
+        End Using
+    End Function
+
+    Public Function VerifyPassword(enteredPassword As String, storedHash As String) As Boolean
+        Dim hashbBytes As Byte() = Convert.FromBase64String(storedHash)
+
+        Dim salt(15) As Byte
+        Array.Copy(hashbBytes, 0, salt, 0, 16)
+
+        Using pbkdf2 As New Rfc2898DeriveBytes(enteredPassword, salt, 100000)
+            Dim hash As Byte() = pbkdf2.GetBytes(32)
+
+            For i As Integer = 0 To 31
+                If hashbBytes(i + 32) Then
+                    Return False
+                End If
+            Next
+            Return True
+        End Using
+
+
+    End Function
+
+
+
+
     Public Sub Highlight(ctrl As TextBox)
         ctrl.BackColor = Color.MistyRose
         ShakeControl(ctrl)

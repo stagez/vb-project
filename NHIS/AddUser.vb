@@ -1,12 +1,15 @@
 ﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
+Imports System.Security.Cryptography
+Imports System.Text
 
 
 Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not isFormComplete(Me) Then
-            btnSave.Enabled = False
-        End If
+        'If Not isFormComplete(Me) Then
+        '    btnSave.Enabled = False
+        'End If
 
     End Sub
 
@@ -125,12 +128,26 @@ Public Class AddUser
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If txtPassword.Text = txtRepeatPassword.Text Then
             If isFormComplete(Me) Then
-                MessageBox.Show(
-                "Saved Successfully!",
-                "Saved",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            )
+                Dim hashed As String = HashedPassword(txtPassword.Text)
+                Using conn As New MySqlConnection(My.Settings.dbConStr)
+                    Dim query As String = "INSERT INTO users(full_name, email, phone, role, password) VALUES (@name, @email, @phone, @role, @password)"
+                    Dim cmd As New MySqlCommand(query, conn)
+
+                    cmd.Parameters.AddWithValue("@name", txtName.Text)
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+                    cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
+                    cmd.Parameters.AddWithValue("@role", cboRole.SelectedItem)
+                    cmd.Parameters.AddWithValue("@password", hashed)
+
+                    Try
+                        conn.Open()
+                        Dim rowsAffected As String = cmd.ExecuteNonQuery()
+                        MessageBox.Show("User added successfully")
+                    Catch ex As Exception
+                        MessageBox.Show("Could not add user" & ex.Message)
+
+                    End Try
+                End Using
             End If
         Else
             lblPasswordMatch.Visible = True
