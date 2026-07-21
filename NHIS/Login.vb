@@ -21,43 +21,44 @@ Public Class frmLogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        Using conn As New MySqlConnection(My.Settings.dbConStr)
-            Dim query As String = "SELECT * FROM users WHERE full_name ='" & txtUsername.Text & "'"
-            Dim cmd As New MySqlCommand(query, conn)
+      Using conn As New MySqlConnection(My.Settings.dbConStr)
+          Dim query As String = "SELECT id, name, email, phone, role, password FROM users WHERE name = @name"
+          Dim cmd As New MySqlCommand(query, conn)
+          cmd.Parameters.AddWithValue("@name", txtUsername.Text)
 
-            'cmd.Parameters.AddWithValue("@name", txtName.Text)
-            'cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-            'cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
-            'cmd.Parameters.AddWithValue("@role", cboRole.SelectedText)
-            'cmd.Parameters.AddWithValue("@password", hashed)
+          Try
+              conn.Open()
+              Dim dR As MySqlDataReader = cmd.ExecuteReader()
 
-            Try
-                conn.Open()
-                Dim dR As MySqlDataReader
-                dR = cmd.ExecuteReader
-                If dR.HasRows Then
-                    While dR.Read
-                        role = dR(4)
-                        hashedPassword = dR(5)
-                        If hashedPassword IsNot Nothing AndAlso VerifyPassword(txtPassword.Text, hashedPassword) Then
-                            If role = "Administrator" Then
-                                MsgBox("Login successful" + vbCr + "You have admin access")
-                                Me.Hide()
-                                frmMain.Show()
-                            End If
+              If dR.HasRows Then
+                  dR.Read()
+                  Dim storedRole As String = dR("role").ToString()
+                  Dim storedHash As String = dR("password").ToString()
 
+                  dR.Close() ' close reader before showing UI / using conn further
 
-                        End If
-                    End While
-                End If
+                  If VerifyPassword(txtPassword.Text, storedHash) Then
+                      If storedRole = "Administrator" Then
+                          MsgBox("Login successful" & vbCrLf & "You have admin access")
+                          Me.Hide()
+                      frmMain.Show()
+                  Else
+                      MsgBox("Login successful" & vbCrLf & "Standard user access")
+                      Me.Hide()
+                      frmMain.Show() ' or a different form for non-admins
+                  End If
+              Else
+                  MessageBox.Show("Invalid username or password.")
+              End If
+          Else
+              dR.Close()
+              MessageBox.Show("Invalid username or password.")
+          End If
 
-                MessageBox.Show("User added successfully")
-            Catch ex As Exception
-                MessageBox.Show("Could not add user" & ex.Message)
-
-            End Try
-        End Using
-
+      Catch ex As Exception
+          MessageBox.Show("Login error: " & ex.Message)
+      End Try
+  End Using
 
         If String.IsNullOrWhiteSpace(txtUsername.Text) Or String.IsNullOrWhiteSpace(txtPassword.Text) Then
             lblWrongCredentials.Text = "Please enter both username and password."
