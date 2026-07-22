@@ -21,71 +21,56 @@ Public Class frmLogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-      Using conn As New MySqlConnection(My.Settings.dbConStr)
-          Dim query As String = "SELECT id, name, email, phone, role, password FROM users WHERE name = @name"
-          Dim cmd As New MySqlCommand(query, conn)
-          cmd.Parameters.AddWithValue("@name", txtUsername.Text)
-
-          Try
-              conn.Open()
-              Dim dR As MySqlDataReader = cmd.ExecuteReader()
-
-              If dR.HasRows Then
-                  dR.Read()
-                  Dim storedRole As String = dR("role").ToString()
-                  Dim storedHash As String = dR("password").ToString()
-
-                  dR.Close() ' close reader before showing UI / using conn further
-
-                  If VerifyPassword(txtPassword.Text, storedHash) Then
-                      If storedRole = "Administrator" Then
-                          MsgBox("Login successful" & vbCrLf & "You have admin access")
-                          Me.Hide()
-                      frmMain.Show()
-                  Else
-                      MsgBox("Login successful" & vbCrLf & "Standard user access")
-                      Me.Hide()
-                      frmMain.Show() ' or a different form for non-admins
-                  End If
-              Else
-                  MessageBox.Show("Invalid username or password.")
-              End If
-          Else
-              dR.Close()
-              MessageBox.Show("Invalid username or password.")
-          End If
-
-      Catch ex As Exception
-          MessageBox.Show("Login error: " & ex.Message)
-      End Try
-  End Using
-
-        If String.IsNullOrWhiteSpace(txtUsername.Text) Or String.IsNullOrWhiteSpace(txtPassword.Text) Then
+        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse String.IsNullOrWhiteSpace(txtPassword.Text) Then
             lblWrongCredentials.Text = "Please enter both username and password."
             lblWrongCredentials.Visible = True
             Highlight(txtUsername)
             Highlight(txtPassword)
             Return
-        Else
-            ' Simulate credential check (replace with real authentication logic)
-            If _users.ContainsKey(txtUsername.Text) AndAlso _users(txtUsername.Text) = txtPassword.Text Then
-                frmMain.Show()
-                txtPassword.Clear()
-                txtUsername.Clear()
-                Me.Hide()
-                txtUsername.Focus()
-            Else
-                lblWrongCredentials.Text = "Invalid username or password."
-                lblWrongCredentials.Visible = True
-                Highlight(txtUsername)
-                Highlight(txtPassword)
-            End If
-
-
-
-
         End If
 
+        ' 2. Database Authentication
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Dim query As String = "SELECT role, password FROM users WHERE full_name = @name"
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@name", txtUsername.Text.Trim())
+
+            Try
+                conn.Open()
+                Using dR As MySqlDataReader = cmd.ExecuteReader()
+                    If dR.Read() Then
+                        ' Read values safely
+                        Dim storedRole As String = dR("role").ToString()
+                        Dim storedHash As String = dR("password").ToString()
+
+                        ' Verify password
+                        If VerifyPassword(txtPassword.Text, storedHash) Then
+                            MessageBox.Show("Login successful!" & vbCrLf & "Role: " & storedRole)
+
+                            txtPassword.Clear()
+                            txtUsername.Clear()
+                            lblWrongCredentials.Visible = False
+
+                            Me.Hide()
+                            frmMain.Show()
+                        Else
+                            lblWrongCredentials.Text = "Invalid username or password."
+                            lblWrongCredentials.Visible = True
+                            Highlight(txtUsername)
+                            Highlight(txtPassword)
+                        End If
+                    Else
+                        lblWrongCredentials.Text = "Invalid username or password."
+                        lblWrongCredentials.Visible = True
+                        Highlight(txtUsername)
+                        Highlight(txtPassword)
+                    End If
+                End Using
+
+            Catch ex As Exception
+                MessageBox.Show("Login error: " & ex.Message)
+            End Try
+        End Using
     End Sub
 
     Private Sub txtPassword_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave

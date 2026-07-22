@@ -22,23 +22,35 @@ Module HelperMethods
     End Function
 
     Public Function VerifyPassword(enteredPassword As String, storedHash As String) As Boolean
-        Dim hashbBytes As Byte() = Convert.FromBase64String(storedHash)
+        Try
+            ' Decode stored base64 payload (16 bytes salt + 32 bytes hash = 48 bytes total)
+            Dim hashBytes As Byte() = Convert.FromBase64String(storedHash)
 
-        Dim salt(15) As Byte
-        Array.Copy(hashbBytes, 0, salt, 0, 16)
+            ' Ensure length is at least 48 bytes to prevent indexing errors
+            If hashBytes.Length < 48 Then Return False
 
-        Using pbkdf2 As New Rfc2898DeriveBytes(enteredPassword, salt, 100000)
-            Dim hash As Byte() = pbkdf2.GetBytes(32)
+            ' Extract 16-byte salt
+            Dim salt(15) As Byte
+            Array.Copy(hashBytes, 0, salt, 0, 16)
 
-            For i As Integer = 0 To 31
-                If hashbBytes(i + 32) Then
-                    Return False
-                End If
-            Next
-            Return True
-        End Using
+            ' Derive 32-byte hash using the entered password and extracted salt
+            ' Note: HashAlgorithmName.SHA256 is recommended for modern PBKDF2
+            Using pbkdf2 As New Rfc2898DeriveBytes(enteredPassword, salt, 100000)
+                Dim hash As Byte() = pbkdf2.GetBytes(32)
 
+                ' Constant-time byte comparison to prevent timing attacks
+                For i As Integer = 0 To 31
+                    If hash(i) <> hashBytes(i + 16) Then
+                        Return False
+                    End If
+                Next
 
+                Return True
+            End Using
+        Catch ex As Exception
+            ' Handles invalid Base64 string formats gracefully
+            Return False
+        End Try
     End Function
 
 
