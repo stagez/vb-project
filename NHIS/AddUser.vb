@@ -129,7 +129,7 @@ Public Class AddUser
         If txtPassword.Text = txtRepeatPassword.Text Then
             If isFormComplete(Me) Then
                 Dim hashed As String = HashedPassword(txtPassword.Text)
-                Using conn As New MySqlConnection(My.Settings.dbConStr)
+                Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
                     Dim query As String = "INSERT INTO users(full_name, email, phone, role, password) VALUES (@name, @email, @phone, @role, @password)"
                     Dim cmd As New MySqlCommand(query, conn)
 
