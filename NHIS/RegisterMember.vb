@@ -161,4 +161,8 @@
     Private Sub RegisterMember_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Me.AutoScrollPosition = New Point(0, 0)
     End Sub
+
+    Private Sub pnlMainContainer_Paint(sender As Object, e As PaintEventArgs) Handles pnlMainContainer.Paint
+
+    End Sub
 End Class

@@ -21,6 +21,7 @@ Public Class frmLogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
+
         If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse String.IsNullOrWhiteSpace(txtPassword.Text) Then
             lblWrongCredentials.Text = "Please enter both username and password."
             lblWrongCredentials.Visible = True
@@ -29,6 +30,8 @@ Public Class frmLogin
             Return
         End If
 
+        Me.Cursor = Cursors.WaitCursor
+        Application.DoEvents()
         ' 2. Database Authentication
         Using conn As New MySqlConnection(My.Settings.dbConStr)
             Dim query As String = "SELECT role, password FROM users WHERE full_name = @name"
@@ -69,6 +72,8 @@ Public Class frmLogin
 
             Catch ex As Exception
                 MessageBox.Show("Login error: " & ex.Message)
+            Finally
+                Me.Cursor = Cursors.Default
             End Try
         End Using
     End Sub

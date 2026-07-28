@@ -91,11 +91,11 @@ Partial Class RegisterMember
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(80, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(814, 890)
+        Me.btnCancel.Location = New System.Drawing.Point(798, 860)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 32)
+        Me.btnCancel.Size = New System.Drawing.Size(92, 40)
         Me.btnCancel.TabIndex = 19
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -104,10 +104,10 @@ Partial Class RegisterMember
         '
         Me.lblRegisterMember.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblRegisterMember.AutoSize = True
-        Me.lblRegisterMember.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegisterMember.Font = New System.Drawing.Font("Segoe UI", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRegisterMember.Location = New System.Drawing.Point(291, 11)
         Me.lblRegisterMember.Name = "lblRegisterMember"
-        Me.lblRegisterMember.Size = New System.Drawing.Size(349, 54)
+        Me.lblRegisterMember.Size = New System.Drawing.Size(294, 46)
         Me.lblRegisterMember.TabIndex = 18
         Me.lblRegisterMember.Text = "Register Member"
         '
@@ -117,10 +117,10 @@ Partial Class RegisterMember
         Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(706, 889)
+        Me.btnClear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(690, 859)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 32)
+        Me.btnClear.Size = New System.Drawing.Size(92, 40)
         Me.btnClear.TabIndex = 10
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -137,7 +137,7 @@ Partial Class RegisterMember
         Me.Panel9.Controls.Add(Me.lblPhone)
         Me.Panel9.Controls.Add(Me.txtEPhoneNumber1)
         Me.Panel9.Controls.Add(Me.lblContactName)
-        Me.Panel9.Location = New System.Drawing.Point(30, 682)
+        Me.Panel9.Location = New System.Drawing.Point(31, 662)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel9.Size = New System.Drawing.Size(859, 192)
@@ -150,7 +150,7 @@ Partial Class RegisterMember
         Me.cboRelationship1.Items.AddRange(New Object() {"Father", "Mother", "Siblings", "Others"})
         Me.cboRelationship1.Location = New System.Drawing.Point(587, 67)
         Me.cboRelationship1.Name = "cboRelationship1"
-        Me.cboRelationship1.Size = New System.Drawing.Size(121, 31)
+        Me.cboRelationship1.Size = New System.Drawing.Size(165, 21)
         Me.cboRelationship1.TabIndex = 16
         '
         'Panel10
@@ -158,7 +158,7 @@ Partial Class RegisterMember
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel10.Controls.Add(Me.Panel11)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel10.Location = New System.Drawing.Point(16, 39)
+        Me.Panel10.Location = New System.Drawing.Point(16, 37)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(827, 1)
         Me.Panel10.TabIndex = 7
@@ -176,57 +176,60 @@ Partial Class RegisterMember
         '
         Me.lblEmergency.AutoSize = True
         Me.lblEmergency.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblEmergency.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmergency.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmergency.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblEmergency.Location = New System.Drawing.Point(16, 16)
         Me.lblEmergency.Name = "lblEmergency"
-        Me.lblEmergency.Size = New System.Drawing.Size(165, 23)
+        Me.lblEmergency.Size = New System.Drawing.Size(152, 21)
         Me.lblEmergency.TabIndex = 6
         Me.lblEmergency.Text = "Emergency Contact"
         '
         'lblRelatinship
         '
         Me.lblRelatinship.AutoSize = True
+        Me.lblRelatinship.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRelatinship.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblRelatinship.Location = New System.Drawing.Point(433, 72)
         Me.lblRelatinship.Name = "lblRelatinship"
-        Me.lblRelatinship.Size = New System.Drawing.Size(103, 23)
+        Me.lblRelatinship.Size = New System.Drawing.Size(82, 17)
         Me.lblRelatinship.TabIndex = 4
         Me.lblRelatinship.Text = "Relationship"
         '
         'txtContactName
         '
-        Me.txtContactName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContactName.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtContactName.Location = New System.Drawing.Point(149, 69)
         Me.txtContactName.Name = "txtContactName"
-        Me.txtContactName.Size = New System.Drawing.Size(100, 29)
+        Me.txtContactName.Size = New System.Drawing.Size(159, 27)
         Me.txtContactName.TabIndex = 13
         '
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
+        Me.lblPhone.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPhone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblPhone.Location = New System.Drawing.Point(32, 121)
+        Me.lblPhone.Location = New System.Drawing.Point(33, 151)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(127, 23)
+        Me.lblPhone.Size = New System.Drawing.Size(101, 17)
         Me.lblPhone.TabIndex = 1
         Me.lblPhone.Text = "Phone Number"
         '
         'txtEPhoneNumber1
         '
-        Me.txtEPhoneNumber1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEPhoneNumber1.Location = New System.Drawing.Point(148, 116)
+        Me.txtEPhoneNumber1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEPhoneNumber1.Location = New System.Drawing.Point(149, 146)
         Me.txtEPhoneNumber1.Name = "txtEPhoneNumber1"
-        Me.txtEPhoneNumber1.Size = New System.Drawing.Size(100, 29)
+        Me.txtEPhoneNumber1.Size = New System.Drawing.Size(159, 27)
         Me.txtEPhoneNumber1.TabIndex = 15
         '
         'lblContactName
         '
         Me.lblContactName.AutoSize = True
+        Me.lblContactName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblContactName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblContactName.Location = New System.Drawing.Point(28, 77)
         Me.lblContactName.Name = "lblContactName"
-        Me.lblContactName.Size = New System.Drawing.Size(121, 23)
+        Me.lblContactName.Size = New System.Drawing.Size(95, 17)
         Me.lblContactName.TabIndex = 0
         Me.lblContactName.Text = "Contact Name"
         '
@@ -237,11 +240,11 @@ Partial Class RegisterMember
         Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegister.FlatAppearance.BorderSize = 0
         Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegister.ForeColor = System.Drawing.Color.White
-        Me.btnRegister.Location = New System.Drawing.Point(610, 889)
+        Me.btnRegister.Location = New System.Drawing.Point(594, 859)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(75, 32)
+        Me.btnRegister.Size = New System.Drawing.Size(92, 40)
         Me.btnRegister.TabIndex = 11
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = False
@@ -261,7 +264,7 @@ Partial Class RegisterMember
         Me.Panel5.Controls.Add(Me.txtPhoneNumber)
         Me.Panel5.Controls.Add(Me.lblDistrict)
         Me.Panel5.Controls.Add(Me.lblPhoneNumber)
-        Me.Panel5.Location = New System.Drawing.Point(31, 484)
+        Me.Panel5.Location = New System.Drawing.Point(31, 464)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Padding = New System.Windows.Forms.Padding(16)
         Me.Panel5.Size = New System.Drawing.Size(859, 192)
@@ -271,16 +274,17 @@ Partial Class RegisterMember
         '
         Me.DateTimePicker4.Location = New System.Drawing.Point(473, -99)
         Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(122, 29)
+        Me.DateTimePicker4.Size = New System.Drawing.Size(122, 22)
         Me.DateTimePicker4.TabIndex = 9
         '
         'lblCityTown
         '
         Me.lblCityTown.AutoSize = True
+        Me.lblCityTown.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCityTown.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblCityTown.Location = New System.Drawing.Point(422, 123)
+        Me.lblCityTown.Location = New System.Drawing.Point(420, 142)
         Me.lblCityTown.Name = "lblCityTown"
-        Me.lblCityTown.Size = New System.Drawing.Size(85, 23)
+        Me.lblCityTown.Size = New System.Drawing.Size(68, 17)
         Me.lblCityTown.TabIndex = 8
         Me.lblCityTown.Text = "City/Town"
         '
@@ -289,7 +293,7 @@ Partial Class RegisterMember
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Panel7)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(16, 39)
+        Me.Panel6.Location = New System.Drawing.Point(16, 37)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(827, 1)
         Me.Panel6.TabIndex = 7
@@ -307,73 +311,76 @@ Partial Class RegisterMember
         '
         Me.lblContactLocation.AutoSize = True
         Me.lblContactLocation.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblContactLocation.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContactLocation.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblContactLocation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblContactLocation.Location = New System.Drawing.Point(16, 16)
         Me.lblContactLocation.Name = "lblContactLocation"
-        Me.lblContactLocation.Size = New System.Drawing.Size(150, 23)
+        Me.lblContactLocation.Size = New System.Drawing.Size(143, 21)
         Me.lblContactLocation.TabIndex = 6
         Me.lblContactLocation.Text = "Contact & Location"
         '
         'lblRegion
         '
         Me.lblRegion.AutoSize = True
+        Me.lblRegion.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRegion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblRegion.Location = New System.Drawing.Point(422, 78)
         Me.lblRegion.Name = "lblRegion"
-        Me.lblRegion.Size = New System.Drawing.Size(63, 23)
+        Me.lblRegion.Size = New System.Drawing.Size(50, 17)
         Me.lblRegion.TabIndex = 4
         Me.lblRegion.Text = "Region"
         '
         'txtCity
         '
-        Me.txtCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCity.Location = New System.Drawing.Point(573, 123)
+        Me.txtCity.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCity.Location = New System.Drawing.Point(575, 132)
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(121, 29)
+        Me.txtCity.Size = New System.Drawing.Size(175, 27)
         Me.txtCity.TabIndex = 12
         '
         'txtRegion
         '
-        Me.txtRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRegion.Location = New System.Drawing.Point(576, 69)
+        Me.txtRegion.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRegion.Location = New System.Drawing.Point(576, 68)
         Me.txtRegion.Name = "txtRegion"
-        Me.txtRegion.Size = New System.Drawing.Size(121, 29)
+        Me.txtRegion.Size = New System.Drawing.Size(175, 27)
         Me.txtRegion.TabIndex = 10
         '
         'txtDistrict
         '
-        Me.txtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDistrict.Location = New System.Drawing.Point(147, 116)
+        Me.txtDistrict.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDistrict.Location = New System.Drawing.Point(148, 132)
         Me.txtDistrict.Name = "txtDistrict"
-        Me.txtDistrict.Size = New System.Drawing.Size(100, 29)
+        Me.txtDistrict.Size = New System.Drawing.Size(160, 27)
         Me.txtDistrict.TabIndex = 11
         '
         'txtPhoneNumber
         '
-        Me.txtPhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhoneNumber.Location = New System.Drawing.Point(149, 69)
+        Me.txtPhoneNumber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhoneNumber.Location = New System.Drawing.Point(149, 68)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
-        Me.txtPhoneNumber.Size = New System.Drawing.Size(100, 29)
+        Me.txtPhoneNumber.Size = New System.Drawing.Size(160, 27)
         Me.txtPhoneNumber.TabIndex = 9
         '
         'lblDistrict
         '
         Me.lblDistrict.AutoSize = True
+        Me.lblDistrict.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDistrict.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblDistrict.Location = New System.Drawing.Point(32, 121)
+        Me.lblDistrict.Location = New System.Drawing.Point(30, 142)
         Me.lblDistrict.Name = "lblDistrict"
-        Me.lblDistrict.Size = New System.Drawing.Size(63, 23)
+        Me.lblDistrict.Size = New System.Drawing.Size(50, 17)
         Me.lblDistrict.TabIndex = 1
         Me.lblDistrict.Text = "District"
         '
         'lblPhoneNumber
         '
         Me.lblPhoneNumber.AutoSize = True
+        Me.lblPhoneNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblPhoneNumber.Location = New System.Drawing.Point(28, 77)
+        Me.lblPhoneNumber.Location = New System.Drawing.Point(28, 78)
         Me.lblPhoneNumber.Name = "lblPhoneNumber"
-        Me.lblPhoneNumber.Size = New System.Drawing.Size(127, 23)
+        Me.lblPhoneNumber.Size = New System.Drawing.Size(101, 17)
         Me.lblPhoneNumber.TabIndex = 0
         Me.lblPhoneNumber.Text = "Phone Number"
         '
@@ -400,20 +407,22 @@ Partial Class RegisterMember
         'dtpExpiryDate
         '
         Me.dtpExpiryDate.Enabled = False
+        Me.dtpExpiryDate.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpExpiryDate.Location = New System.Drawing.Point(575, 69)
         Me.dtpExpiryDate.Name = "dtpExpiryDate"
-        Me.dtpExpiryDate.Size = New System.Drawing.Size(122, 29)
+        Me.dtpExpiryDate.Size = New System.Drawing.Size(176, 27)
         Me.dtpExpiryDate.TabIndex = 6
         Me.dtpExpiryDate.Value = New Date(2026, 6, 25, 0, 0, 0, 0)
         '
         'lblNationality
         '
         Me.lblNationality.AutoSize = True
+        Me.lblNationality.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNationality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblNationality.Location = New System.Drawing.Point(423, 114)
+        Me.lblNationality.Location = New System.Drawing.Point(423, 131)
         Me.lblNationality.Name = "lblNationality"
-        Me.lblNationality.Size = New System.Drawing.Size(93, 23)
+        Me.lblNationality.Size = New System.Drawing.Size(74, 17)
         Me.lblNationality.TabIndex = 8
         Me.lblNationality.Text = "Nationality"
         '
@@ -422,7 +431,7 @@ Partial Class RegisterMember
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(16, 39)
+        Me.Panel3.Location = New System.Drawing.Point(16, 37)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(827, 1)
         Me.Panel3.TabIndex = 7
@@ -440,21 +449,22 @@ Partial Class RegisterMember
         '
         Me.lblNHISDetails.AutoSize = True
         Me.lblNHISDetails.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblNHISDetails.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNHISDetails.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNHISDetails.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.lblNHISDetails.Location = New System.Drawing.Point(16, 16)
         Me.lblNHISDetails.Name = "lblNHISDetails"
-        Me.lblNHISDetails.Size = New System.Drawing.Size(111, 23)
+        Me.lblNHISDetails.Size = New System.Drawing.Size(101, 21)
         Me.lblNHISDetails.TabIndex = 6
         Me.lblNHISDetails.Text = "NHIS Details"
         '
         'lblCardExpiryDate
         '
         Me.lblCardExpiryDate.AutoSize = True
+        Me.lblCardExpiryDate.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCardExpiryDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblCardExpiryDate.Location = New System.Drawing.Point(423, 69)
+        Me.lblCardExpiryDate.Location = New System.Drawing.Point(423, 79)
         Me.lblCardExpiryDate.Name = "lblCardExpiryDate"
-        Me.lblCardExpiryDate.Size = New System.Drawing.Size(137, 23)
+        Me.lblCardExpiryDate.Size = New System.Drawing.Size(110, 17)
         Me.lblCardExpiryDate.TabIndex = 4
         Me.lblCardExpiryDate.Text = "Card Expiry Date"
         '
@@ -465,42 +475,44 @@ Partial Class RegisterMember
         Me.cboMembershipType.Items.AddRange(New Object() {"Fee-paying", "Exempt"})
         Me.cboMembershipType.Location = New System.Drawing.Point(151, 121)
         Me.cboMembershipType.Name = "cboMembershipType"
-        Me.cboMembershipType.Size = New System.Drawing.Size(121, 32)
+        Me.cboMembershipType.Size = New System.Drawing.Size(158, 24)
         Me.cboMembershipType.TabIndex = 7
         '
         'txtNationality
         '
-        Me.txtNationality.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNationality.Location = New System.Drawing.Point(577, 109)
+        Me.txtNationality.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNationality.Location = New System.Drawing.Point(577, 121)
         Me.txtNationality.Name = "txtNationality"
-        Me.txtNationality.Size = New System.Drawing.Size(121, 29)
+        Me.txtNationality.Size = New System.Drawing.Size(175, 27)
         Me.txtNationality.TabIndex = 8
         '
         'txtNHISNumber
         '
-        Me.txtNHISNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNHISNumber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNHISNumber.Location = New System.Drawing.Point(149, 69)
         Me.txtNHISNumber.Name = "txtNHISNumber"
-        Me.txtNHISNumber.Size = New System.Drawing.Size(100, 29)
+        Me.txtNHISNumber.Size = New System.Drawing.Size(160, 27)
         Me.txtNHISNumber.TabIndex = 5
         '
         'lblMembershipType
         '
         Me.lblMembershipType.AutoSize = True
+        Me.lblMembershipType.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMembershipType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblMembershipType.Location = New System.Drawing.Point(32, 121)
+        Me.lblMembershipType.Location = New System.Drawing.Point(32, 128)
         Me.lblMembershipType.Name = "lblMembershipType"
-        Me.lblMembershipType.Size = New System.Drawing.Size(145, 23)
+        Me.lblMembershipType.Size = New System.Drawing.Size(116, 17)
         Me.lblMembershipType.TabIndex = 1
         Me.lblMembershipType.Text = "Membership Type"
         '
         'lblNHIS
         '
         Me.lblNHIS.AutoSize = True
+        Me.lblNHIS.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNHIS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblNHIS.Location = New System.Drawing.Point(28, 77)
+        Me.lblNHIS.Location = New System.Drawing.Point(28, 79)
         Me.lblNHIS.Name = "lblNHIS"
-        Me.lblNHIS.Size = New System.Drawing.Size(117, 23)
+        Me.lblNHIS.Size = New System.Drawing.Size(93, 17)
         Me.lblNHIS.TabIndex = 0
         Me.lblNHIS.Text = "NHIS Number"
         '
@@ -528,16 +540,17 @@ Partial Class RegisterMember
         '
         Me.dtpDOB.Location = New System.Drawing.Point(149, 121)
         Me.dtpDOB.Name = "dtpDOB"
-        Me.dtpDOB.Size = New System.Drawing.Size(122, 29)
+        Me.dtpDOB.Size = New System.Drawing.Size(160, 22)
         Me.dtpDOB.TabIndex = 3
         '
         'lblGender
         '
         Me.lblGender.AutoSize = True
+        Me.lblGender.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblGender.Location = New System.Drawing.Point(422, 126)
         Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(66, 23)
+        Me.lblGender.Size = New System.Drawing.Size(52, 17)
         Me.lblGender.TabIndex = 8
         Me.lblGender.Text = "Gender"
         '
@@ -546,7 +559,7 @@ Partial Class RegisterMember
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel8.Controls.Add(Me.Panel12)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(16, 39)
+        Me.Panel8.Location = New System.Drawing.Point(16, 37)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(827, 1)
         Me.Panel8.TabIndex = 7
@@ -564,11 +577,11 @@ Partial Class RegisterMember
         '
         Me.Label7.AutoSize = True
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(16, 16)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(136, 23)
+        Me.Label7.Size = New System.Drawing.Size(124, 21)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Personal Details"
         '
@@ -578,55 +591,58 @@ Partial Class RegisterMember
         Me.cboGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cboGender.Location = New System.Drawing.Point(576, 112)
+        Me.cboGender.Location = New System.Drawing.Point(576, 122)
         Me.cboGender.Name = "cboGender"
-        Me.cboGender.Size = New System.Drawing.Size(121, 32)
+        Me.cboGender.Size = New System.Drawing.Size(175, 24)
         Me.cboGender.TabIndex = 4
         '
         'lblFullName
         '
         Me.lblFullName.AutoSize = True
+        Me.lblFullName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFullName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblFullName.Location = New System.Drawing.Point(422, 81)
         Me.lblFullName.Name = "lblFullName"
-        Me.lblFullName.Size = New System.Drawing.Size(87, 23)
+        Me.lblFullName.Size = New System.Drawing.Size(69, 17)
         Me.lblFullName.TabIndex = 4
         Me.lblFullName.Text = "Full Name"
         '
         'txtFullName
         '
-        Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullName.Location = New System.Drawing.Point(576, 72)
+        Me.txtFullName.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.Location = New System.Drawing.Point(576, 76)
         Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.Size = New System.Drawing.Size(121, 29)
+        Me.txtFullName.Size = New System.Drawing.Size(175, 27)
         Me.txtFullName.TabIndex = 2
         '
         'txtPatientID
         '
         Me.txtPatientID.Enabled = False
-        Me.txtPatientID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPatientID.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatientID.Location = New System.Drawing.Point(148, 68)
         Me.txtPatientID.Name = "txtPatientID"
-        Me.txtPatientID.Size = New System.Drawing.Size(100, 29)
+        Me.txtPatientID.Size = New System.Drawing.Size(161, 27)
         Me.txtPatientID.TabIndex = 1
         '
         'lblDOB
         '
         Me.lblDOB.AutoSize = True
+        Me.lblDOB.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDOB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.lblDOB.Location = New System.Drawing.Point(32, 121)
+        Me.lblDOB.Location = New System.Drawing.Point(32, 124)
         Me.lblDOB.Name = "lblDOB"
-        Me.lblDOB.Size = New System.Drawing.Size(107, 23)
+        Me.lblDOB.Size = New System.Drawing.Size(85, 17)
         Me.lblDOB.TabIndex = 1
         Me.lblDOB.Text = "Date of Birth"
         '
         'lblPatientID
         '
         Me.lblPatientID.AutoSize = True
+        Me.lblPatientID.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPatientID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.lblPatientID.Location = New System.Drawing.Point(28, 77)
         Me.lblPatientID.Name = "lblPatientID"
-        Me.lblPatientID.Size = New System.Drawing.Size(85, 23)
+        Me.lblPatientID.Size = New System.Drawing.Size(68, 17)
         Me.lblPatientID.TabIndex = 0
         Me.lblPatientID.Text = "Patient ID"
         '
@@ -647,10 +663,10 @@ Partial Class RegisterMember
         '
         'RegisterMember
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(960, 963)
+        Me.ClientSize = New System.Drawing.Size(960, 904)
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlMainContainer)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

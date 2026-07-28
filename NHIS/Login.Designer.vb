@@ -151,12 +151,13 @@ Partial Class frmLogin
         '
         'lblPassword
         '
-        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.Location = New System.Drawing.Point(3, 60)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(64, 17)
+        Me.lblPassword.Size = New System.Drawing.Size(84, 30)
         Me.lblPassword.TabIndex = 1
         Me.lblPassword.Text = "Password"
+        Me.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnLogin
         '
@@ -174,28 +175,31 @@ Partial Class frmLogin
         'txtUsername
         '
         Me.txtUsername.Dock = System.Windows.Forms.DockStyle.Top
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.Location = New System.Drawing.Point(93, 3)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(198, 25)
+        Me.txtUsername.Size = New System.Drawing.Size(198, 27)
         Me.txtUsername.TabIndex = 3
         '
         'txtPassword
         '
         Me.txtPassword.Dock = System.Windows.Forms.DockStyle.Top
+        Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(93, 63)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(198, 25)
+        Me.txtPassword.Size = New System.Drawing.Size(198, 27)
         Me.txtPassword.TabIndex = 4
         Me.txtPassword.UseSystemPasswordChar = True
         '
         'lblUsername
         '
-        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.Location = New System.Drawing.Point(3, 0)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(67, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(84, 30)
         Me.lblUsername.TabIndex = 0
         Me.lblUsername.Text = "Username"
+        Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmLogin
         '
