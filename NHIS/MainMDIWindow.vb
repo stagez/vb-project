@@ -14,20 +14,43 @@ Public Class frmMain
         Await Task.Delay(300)
     End Sub
 
+    'Public Sub LoadForm(frm As Form)
+    '    pnlContent.Controls.Clear()
+    '    pnlContent.Visible = True
+    '    frm.TopLevel = False
+    '    frm.FormBorderStyle = FormBorderStyle.None
+    '    frm.Dock = DockStyle.Fill
+    '    pnlContent.Controls.Add(frm)
+    '    CentreForm(frm, pnlContent)
+    '    frm.Show()
+    'End Sub
+
     Public Sub LoadForm(frm As Form)
         pnlContent.Controls.Clear()
         pnlContent.Visible = True
+
         frm.TopLevel = False
         frm.FormBorderStyle = FormBorderStyle.None
+
+        ' Force the Form to fill pnlContent so its own internal AutoScroll takes over!
         frm.Dock = DockStyle.Fill
+        frm.AutoScroll = True
+
         pnlContent.Controls.Add(frm)
-        CentreForm(frm, pnlContent)
         frm.Show()
     End Sub
 
-    Private Sub CentreForm(frm As Form, container As Panel)
-        frm.Left = (container.Width - frm.Width) \ 2
-        frm.Top = (container.Height - frm.Height) \ 2
+    'Private Sub CentreForm(frm As Form, container As Panel)
+    '    frm.Left = (container.Width - frm.Width) \ 2
+    '    frm.Top = (container.Height - frm.Height) \ 2
+    'End Sub
+
+    Public Sub CentreForm(child As Form, parent As Panel)
+        ' Math.Max ensures the location NEVER drops below 0, preventing negative offsets
+        Dim x As Integer = Math.Max(0, (parent.DisplayRectangle.Width - child.Width) \ 2)
+        Dim y As Integer = Math.Max(0, (parent.DisplayRectangle.Height - child.Height) \ 2)
+
+        child.Location = New Point(x, y)
     End Sub
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)

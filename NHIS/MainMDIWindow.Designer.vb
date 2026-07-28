@@ -96,6 +96,7 @@ Partial Class frmMain
         '
         'pnlContent
         '
+        Me.pnlContent.AutoScroll = True
         Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContent.Location = New System.Drawing.Point(0, 66)
         Me.pnlContent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -127,7 +128,7 @@ Partial Class frmMain
         '
         Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'AddToolStripMenuItem
@@ -135,7 +136,7 @@ Partial Class frmMain
         Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem})
         Me.AddToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_48
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'NewToolStripMenuItem
@@ -148,14 +149,14 @@ Partial Class frmMain
         '
         Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ProviderToolStripMenuItem

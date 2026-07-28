@@ -30,7 +30,7 @@ Public Class frmLogin
         End If
 
         ' 2. Database Authentication
-        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
             Dim query As String = "SELECT role, password FROM users WHERE full_name = @name"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@name", txtUsername.Text.Trim())

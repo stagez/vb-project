@@ -150,4 +150,15 @@
             main.LoadForm(New frmDashboard())
         End If
     End Sub
+
+    Private Sub RegisterMember_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim x As Integer = Math.Max(0, (Me.ClientSize.Width - pnlMainContainer.Width) \ 2)
+        Dim y As Integer = Math.Max(0, (Me.ClientSize.Height - pnlMainContainer.Height) \ 2)
+
+        pnlMainContainer.Location = New Point(x, y)
+    End Sub
+
+    Private Sub RegisterMember_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Me.AutoScrollPosition = New Point(0, 0)
+    End Sub
 End Class
