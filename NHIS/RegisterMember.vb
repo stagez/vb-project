@@ -1,4 +1,8 @@
-﻿Public Class RegisterMember
+﻿Imports MySql.Data.MySqlClient
+
+
+Public Class RegisterMember
+
     Private Sub frmRegisterMember_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dtpDOB.MaxDate = DateTime.Today
@@ -8,9 +12,9 @@
 
         dtpExpiryDate.Value = DateTime.Today.AddYears(5) ' Set the expiry date to 5 years from today
 
-        If Not isFormComplete(Me) Then
-            btnRegister.Enabled = False
-        End If
+        ' Not isFormComplete(Me) Then
+        '    btnRegister.Enabled = False
+        'End If
     End Sub
 
     Private Sub txtPatientID_Leave(sender As Object, e As EventArgs)
@@ -129,9 +133,41 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        If isFormComplete(Me) Then
-            MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
+            Dim query As String = "INSERT INTO Member(full_name, date_of_birth, gender,
+                        nhis_membership_type, card_expity_date,
+                        nationality, phone, region, district, city)
+                        VALUES (@fn, @dob, @gender, @nhis, @card_exp,
+                        @nationality, @phone, @region, @district, @city)"
+
+            Dim cmd As New MySqlCommand(query, conn)
+
+            cmd.Parameters.AddWithValue("@fn", txtFullName.Text)
+            cmd.Parameters.AddWithValue("@dob", dtpDOB.Text)
+            cmd.Parameters.AddWithValue("@gender", cboGender.SelectedItem)
+            cmd.Parameters.AddWithValue("@nhis", txtNHISNumber.Text)
+            cmd.Parameters.AddWithValue("@card_exp", dtpExpiryDate.Text)
+            cmd.Parameters.AddWithValue("@nationality", txtNationality.Text)
+            cmd.Parameters.AddWithValue("@phone", txtPhoneNumber.Text)
+            cmd.Parameters.AddWithValue("@region", txtRegion.Text)
+            cmd.Parameters.AddWithValue("@district", txtDistrict.Text)
+
+
+            Try
+                conn.Open()
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Member Added")
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End Using
+
+
+
+
+
+
+        MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click

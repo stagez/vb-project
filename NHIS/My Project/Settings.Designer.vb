@@ -67,7 +67,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=192.168.244.226;user id=admin;password=admin1234;database=nhis")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=192.168.153.226;user id=admin;password=admin1234;database=nhis")>  _
         Public ReadOnly Property dbConStrRemote() As String
             Get
                 Return CType(Me("dbConStrRemote"),String)

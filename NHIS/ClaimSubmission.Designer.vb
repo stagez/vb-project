@@ -25,7 +25,8 @@ Partial Class frmNewClaim
         Me.tcClaimSubmission = New System.Windows.Forms.TabControl()
         Me.tpPatientProvider = New System.Windows.Forms.TabPage()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.cboProviderType = New System.Windows.Forms.ComboBox()
+        Me.cboProviderID = New System.Windows.Forms.ComboBox()
+        Me.txtProviderType = New System.Windows.Forms.TextBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -34,7 +35,6 @@ Partial Class frmNewClaim
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.txtRegion2 = New System.Windows.Forms.TextBox()
         Me.txtProviderName = New System.Windows.Forms.TextBox()
-        Me.txtProviderID = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -129,7 +129,8 @@ Partial Class frmNewClaim
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.White
-        Me.Panel10.Controls.Add(Me.cboProviderType)
+        Me.Panel10.Controls.Add(Me.cboProviderID)
+        Me.Panel10.Controls.Add(Me.txtProviderType)
         Me.Panel10.Controls.Add(Me.Panel11)
         Me.Panel10.Controls.Add(Me.Label14)
         Me.Panel10.Controls.Add(Me.lblProviderType)
@@ -137,7 +138,6 @@ Partial Class frmNewClaim
         Me.Panel10.Controls.Add(Me.TextBox5)
         Me.Panel10.Controls.Add(Me.txtRegion2)
         Me.Panel10.Controls.Add(Me.txtProviderName)
-        Me.Panel10.Controls.Add(Me.txtProviderID)
         Me.Panel10.Controls.Add(Me.Label15)
         Me.Panel10.Controls.Add(Me.Label17)
         Me.Panel10.Controls.Add(Me.Label18)
@@ -149,15 +149,20 @@ Partial Class frmNewClaim
         Me.Panel10.Size = New System.Drawing.Size(915, 266)
         Me.Panel10.TabIndex = 3
         '
-        'cboProviderType
+        'cboProviderID
         '
-        Me.cboProviderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboProviderType.FormattingEnabled = True
-        Me.cboProviderType.Items.AddRange(New Object() {"Hospital", "Clinic", "Pharmacy"})
-        Me.cboProviderType.Location = New System.Drawing.Point(29, 135)
-        Me.cboProviderType.Name = "cboProviderType"
-        Me.cboProviderType.Size = New System.Drawing.Size(217, 23)
-        Me.cboProviderType.TabIndex = 2
+        Me.cboProviderID.FormattingEnabled = True
+        Me.cboProviderID.Location = New System.Drawing.Point(27, 74)
+        Me.cboProviderID.Name = "cboProviderID"
+        Me.cboProviderID.Size = New System.Drawing.Size(218, 23)
+        Me.cboProviderID.TabIndex = 9
+        '
+        'txtProviderType
+        '
+        Me.txtProviderType.Location = New System.Drawing.Point(29, 138)
+        Me.txtProviderType.Name = "txtProviderType"
+        Me.txtProviderType.Size = New System.Drawing.Size(219, 23)
+        Me.txtProviderType.TabIndex = 8
         '
         'Panel11
         '
@@ -221,6 +226,7 @@ Partial Class frmNewClaim
         '
         'txtRegion2
         '
+        Me.txtRegion2.Enabled = False
         Me.txtRegion2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRegion2.Location = New System.Drawing.Point(563, 118)
         Me.txtRegion2.Name = "txtRegion2"
@@ -229,19 +235,12 @@ Partial Class frmNewClaim
         '
         'txtProviderName
         '
+        Me.txtProviderName.Enabled = False
         Me.txtProviderName.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProviderName.Location = New System.Drawing.Point(563, 54)
         Me.txtProviderName.Name = "txtProviderName"
         Me.txtProviderName.Size = New System.Drawing.Size(230, 28)
         Me.txtProviderName.TabIndex = 1
-        '
-        'txtProviderID
-        '
-        Me.txtProviderID.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProviderID.Location = New System.Drawing.Point(29, 72)
-        Me.txtProviderID.Name = "txtProviderID"
-        Me.txtProviderID.Size = New System.Drawing.Size(216, 28)
-        Me.txtProviderID.TabIndex = 0
         '
         'Label15
         '
@@ -319,6 +318,7 @@ Partial Class frmNewClaim
         '
         'dtpDOB
         '
+        Me.dtpDOB.Enabled = False
         Me.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDOB.Location = New System.Drawing.Point(21, 152)
         Me.dtpDOB.Name = "dtpDOB"
@@ -328,6 +328,7 @@ Partial Class frmNewClaim
         'cboGender
         '
         Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboGender.Enabled = False
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(566, 156)
@@ -359,6 +360,7 @@ Partial Class frmNewClaim
         '
         'txtNHISNumber
         '
+        Me.txtNHISNumber.Enabled = False
         Me.txtNHISNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNHISNumber.Location = New System.Drawing.Point(565, 78)
         Me.txtNHISNumber.Name = "txtNHISNumber"
@@ -431,7 +433,7 @@ Partial Class frmNewClaim
         Me.tpServiceDetails.Location = New System.Drawing.Point(4, 24)
         Me.tpServiceDetails.Name = "tpServiceDetails"
         Me.tpServiceDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpServiceDetails.Size = New System.Drawing.Size(933, 629)
+        Me.tpServiceDetails.Size = New System.Drawing.Size(933, 499)
         Me.tpServiceDetails.TabIndex = 2
         Me.tpServiceDetails.Text = "Service Details"
         Me.tpServiceDetails.UseVisualStyleBackColor = True
@@ -593,7 +595,7 @@ Partial Class frmNewClaim
         Me.tpFinancial.Location = New System.Drawing.Point(4, 24)
         Me.tpFinancial.Name = "tpFinancial"
         Me.tpFinancial.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpFinancial.Size = New System.Drawing.Size(933, 629)
+        Me.tpFinancial.Size = New System.Drawing.Size(933, 499)
         Me.tpFinancial.TabIndex = 3
         Me.tpFinancial.Text = "Financial"
         Me.tpFinancial.UseVisualStyleBackColor = True
@@ -851,7 +853,6 @@ Partial Class frmNewClaim
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents cboProviderType As ComboBox
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label14 As Label
@@ -860,7 +861,6 @@ Partial Class frmNewClaim
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents txtRegion2 As TextBox
     Friend WithEvents txtProviderName As TextBox
-    Friend WithEvents txtProviderID As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
@@ -880,4 +880,6 @@ Partial Class frmNewClaim
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents pnlMainContainer As Panel
+    Friend WithEvents cboProviderID As ComboBox
+    Friend WithEvents txtProviderType As TextBox
 End Class

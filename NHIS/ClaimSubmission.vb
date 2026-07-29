@@ -35,18 +35,6 @@
         End If
     End Sub
 
-    Private Sub txtProviderID_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
-        If Not isRequired(txtProviderID.Text) Then
-            Highlight(txtProviderID)
-        End If
-    End Sub
-
-    Private Sub txtProviderName_Leave(sender As Object, e As EventArgs) Handles txtProviderName.Leave
-        If Not isRequired(txtProviderName.Text) Then
-            Highlight(txtProviderID)
-        End If
-    End Sub
-
     Private Sub txtRegion2_Leave(sender As Object, e As EventArgs) Handles txtRegion2.Leave
         If Not isRequired(txtRegion2.Text) Then
             Highlight(txtRegion2)

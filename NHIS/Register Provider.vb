@@ -1,4 +1,5 @@
-﻿Public Class frmRegisterProvider
+﻿Imports MySql.Data.MySqlClient
+Public Class frmRegisterProvider
     Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles txtProviderID.Leave
         If Not isRequired(txtProviderID.Text) Then
             Highlight(txtProviderID)
@@ -96,9 +97,9 @@
     End Sub
 
     Private Sub frmRegisterProvider_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not isFormComplete(Me) Then
-            btnSave.Enabled = False
-        End If
+        'If Not isFormComplete(Me) Then
+        '    btnSave.Enabled = False
+        'End If
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs)
@@ -118,5 +119,38 @@
         Dim y As Integer = Math.Max(0, (Me.ClientSize.Height - pnlMainContainer.Height) \ 2)
 
         pnlMainContainer.Location = New Point(x, y)
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
+            Dim query As String = "INSERT INTO Provider(name, type, region, district, GPS, city, email, phone,
+                                            license_number, NHIS_accreditation) VALUES(@name, @type, @region,
+                                            @district, @GPS, @city, @email, @phone, @license_number, @NHIS)"
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@name", txtProviderName.Text)
+            cmd.Parameters.AddWithValue("@type", cboProviderType.SelectedItem)
+            cmd.Parameters.AddWithValue("@region", cboRegion.SelectedItem)
+            cmd.Parameters.AddWithValue("@district", txtDistrict.Text)
+            cmd.Parameters.AddWithValue("@GPS", txtGPSAddress.Text)
+            cmd.Parameters.AddWithValue("@city", txtCityTown.Text)
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@license_number", txtLincense.Text)
+            cmd.Parameters.AddWithValue("@NHIS", txtNHISAccreditation.Text)
+
+            Try
+                conn.Open()
+                Dim hasRows As Integer = cmd.ExecuteNonQuery()
+                Me.Cursor = Cursors.WaitCursor
+                If hasRows Then
+                    MessageBox.Show("Provider added successfully")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Something bad happend " & ex.Message)
+            Finally
+                Me.Cursor = DefaultCursor
+            End Try
+
+        End Using
     End Sub
 End Class
