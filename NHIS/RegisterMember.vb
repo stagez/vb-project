@@ -129,9 +129,44 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        If isFormComplete(Me) Then
-            MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If Not isFormComplete(Me) Then
+            MessageBox.Show("Please complete the form.", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
         End If
+
+        Try
+            Using conn As New MySql.Data.MySqlClient.MySqlConnection(My.Settings.dbConStr)
+                Dim query As String = "INSERT INTO members (patient_id, nhis_number, full_name, dob, gender, nationality, membership_type, expiry_date, phone, region, district, city, emergency_contact_name, emergency_contact_phone, relationship) VALUES (@patient_id, @nhis_number, @full_name, @dob, @gender, @nationality, @membership_type, @expiry_date, @phone, @region, @district, @city, @em_contact, @em_phone, @relationship)"
+                Dim cmd As New MySql.Data.MySqlClient.MySqlCommand(query, conn)
+
+                cmd.Parameters.AddWithValue("@patient_id", txtPatientID.Text)
+                cmd.Parameters.AddWithValue("@nhis_number", txtNHISNumber.Text)
+                cmd.Parameters.AddWithValue("@full_name", txtFullName.Text)
+                cmd.Parameters.AddWithValue("@dob", dtpDOB.Value.Date)
+                cmd.Parameters.AddWithValue("@gender", cboGender.Text)
+                cmd.Parameters.AddWithValue("@nationality", txtNationality.Text)
+                cmd.Parameters.AddWithValue("@membership_type", cboMembershipType.Text)
+                cmd.Parameters.AddWithValue("@expiry_date", dtpExpiryDate.Value.Date)
+                cmd.Parameters.AddWithValue("@phone", txtPhoneNumber.Text)
+                cmd.Parameters.AddWithValue("@region", txtRegion.Text)
+                cmd.Parameters.AddWithValue("@district", txtDistrict.Text)
+                cmd.Parameters.AddWithValue("@city", txtCity.Text)
+                cmd.Parameters.AddWithValue("@em_contact", txtContactName.Text)
+                cmd.Parameters.AddWithValue("@em_phone", txtEPhoneNumber1.Text)
+                cmd.Parameters.AddWithValue("@relationship", cboRelationship1.Text)
+
+                conn.Open()
+                Dim affected = cmd.ExecuteNonQuery()
+                If affected > 0 Then
+                    MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ClearForm(Me)
+                Else
+                    MessageBox.Show("Could not register member.", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error registering member: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
