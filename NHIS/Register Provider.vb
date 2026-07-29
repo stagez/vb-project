@@ -96,9 +96,8 @@
     End Sub
 
     Private Sub frmRegisterProvider_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Not isFormComplete(Me) Then
-            btnSave.Enabled = False
-        End If
+        ' Wire up live validation for the Save button
+        WireValidation(Me, btnSave)
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs)

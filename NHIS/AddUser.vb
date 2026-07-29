@@ -7,9 +7,8 @@ Imports System.Text
 Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'If Not isFormComplete(Me) Then
-        '    btnSave.Enabled = False
-        'End If
+        ' Wire up live validation for the Save button
+        WireValidation(Me, btnSave)
 
     End Sub
 

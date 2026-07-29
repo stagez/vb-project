@@ -8,9 +8,8 @@
 
         dtpExpiryDate.Value = DateTime.Today.AddYears(5) ' Set the expiry date to 5 years from today
 
-        If Not isFormComplete(Me) Then
-            btnRegister.Enabled = False
-        End If
+        ' Wire up live validation to enable/disable the Register button
+        WireValidation(Me, btnRegister)
     End Sub
 
     Private Sub txtPatientID_Leave(sender As Object, e As EventArgs)

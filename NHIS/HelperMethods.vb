@@ -109,8 +109,16 @@ Module HelperMethods
 
     Public Function isFormComplete(container As Control) As Boolean
         For Each ctrl As Control In container.Controls
+            ' Skip controls that are not visible or not enabled
+            If Not ctrl.Visible OrElse Not ctrl.Enabled Then Continue For
+
+            ' Allow marking controls as optional using Tag="optional"
+            If ctrl.Tag IsNot Nothing AndAlso ctrl.Tag.ToString().ToLower() = "optional" Then Continue For
+
             If TypeOf ctrl Is TextBox Then
-                If Not isRequired(DirectCast(ctrl, TextBox).Text) Then Return False
+                Dim t = DirectCast(ctrl, TextBox)
+                If t.ReadOnly Then Continue For
+                If Not isRequired(t.Text) Then Return False
             ElseIf TypeOf ctrl Is ComboBox Then
                 If Not isValidCombo(DirectCast(ctrl, ComboBox)) Then Return False
             ElseIf TypeOf ctrl Is DateTimePicker Then
@@ -121,6 +129,41 @@ Module HelperMethods
         Next
         Return True
     End Function
+
+    Public Sub WireValidation(container As Control, toggleButton As Button)
+        If container Is Nothing OrElse toggleButton Is Nothing Then Exit Sub
+
+        For Each ctrl As Control In container.Controls
+            If ctrl Is Nothing Then Continue For
+
+            ' Skip invisible or disabled controls
+            If Not ctrl.Visible OrElse Not ctrl.Enabled Then
+                If ctrl.Controls.Count > 0 Then WireValidation(ctrl, toggleButton)
+                Continue For
+            End If
+
+            ' Attach event handlers for common input controls
+            If TypeOf ctrl Is TextBox Then
+                AddHandler DirectCast(ctrl, TextBox).TextChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+            ElseIf TypeOf ctrl Is ComboBox Then
+                Dim c = DirectCast(ctrl, ComboBox)
+                AddHandler c.SelectedIndexChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+                AddHandler c.TextChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+            ElseIf TypeOf ctrl Is DateTimePicker Then
+                AddHandler DirectCast(ctrl, DateTimePicker).ValueChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+            ElseIf TypeOf ctrl Is CheckBox Then
+                AddHandler DirectCast(ctrl, CheckBox).CheckedChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+            ElseIf TypeOf ctrl Is RadioButton Then
+                AddHandler DirectCast(ctrl, RadioButton).CheckedChanged, Sub(s, e) toggleButton.Enabled = isFormComplete(container)
+            End If
+
+            ' Recurse into child controls
+            If ctrl.Controls.Count > 0 Then WireValidation(ctrl, toggleButton)
+        Next
+
+        ' Initialize button state
+        toggleButton.Enabled = isFormComplete(container)
+    End Sub
 
     Public Sub ClearForm(container As Control)
         For Each ctrl As Control In container.Controls

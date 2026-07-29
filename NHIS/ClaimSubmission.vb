@@ -89,9 +89,8 @@
         dtpDOB.MaxDate = DateTime.Today
         dtpDOB.MinDate = DateTime.Today.AddYears(-120)
 
-        If Not isFormComplete(Me) Then
-            btnSave.Enabled = False
-        End If
+        ' Wire up live validation to enable/disable the Submit button
+        WireValidation(Me, btnSave)
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
