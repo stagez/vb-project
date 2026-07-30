@@ -133,41 +133,32 @@ Public Class RegisterMember
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
-            Dim query As String = "INSERT INTO Member(full_name, date_of_birth, gender,
-                        nhis_membership_type, card_expity_date,
-                        nationality, phone, region, district, city)
-                        VALUES (@fn, @dob, @gender, @nhis, @card_exp,
-                        @nationality, @phone, @region, @district, @city)"
 
-            Dim cmd As New MySqlCommand(query, conn)
-
-            cmd.Parameters.AddWithValue("@fn", txtFullName.Text)
-            cmd.Parameters.AddWithValue("@dob", dtpDOB.Text)
-            cmd.Parameters.AddWithValue("@gender", cboGender.SelectedItem)
-            cmd.Parameters.AddWithValue("@nhis", txtNHISNumber.Text)
-            cmd.Parameters.AddWithValue("@card_exp", dtpExpiryDate.Text)
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Dim query As String = "INSERT INTO member (full_name, date_of_birth, gender, nhis_number, membership_type, card_expiry_date, nationality, phone, region, district, city) " &
+                       "VALUES (@full_name, @date_of_birth, @gender, @nhis_number, @membership_type, @card_expiry_date, @nationality, @phone, @region, @district, @city)"
+            Dim cmd As New MySql.Data.MySqlClient.MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@full_name", txtFullName.Text)
+            cmd.Parameters.AddWithValue("@date_of_birth", dtpDOB.Value.Date.ToString("yyyy-MM-dd"))
+            cmd.Parameters.AddWithValue("@gender", cboGender.Text)
+            cmd.Parameters.AddWithValue("@nhis_number", txtNHISNumber.Text)
+            cmd.Parameters.AddWithValue("@membership_type", cboMembershipType.Text)
+            cmd.Parameters.AddWithValue("@card_expiry_date", dtpExpiryDate.Value.Date.ToString("yyyy-MM-dd"))
             cmd.Parameters.AddWithValue("@nationality", txtNationality.Text)
             cmd.Parameters.AddWithValue("@phone", txtPhoneNumber.Text)
             cmd.Parameters.AddWithValue("@region", txtRegion.Text)
             cmd.Parameters.AddWithValue("@district", txtDistrict.Text)
+            cmd.Parameters.AddWithValue("@city", txtCity.Text)
 
 
             Try
                 conn.Open()
                 cmd.ExecuteNonQuery()
-                MessageBox.Show("Member Added")
+                MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
         End Using
-
-
-
-
-
-
-        MessageBox.Show("Member registered successfully", "Register member", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub btnClear_Click_1(sender As Object, e As EventArgs) Handles btnClear.Click
