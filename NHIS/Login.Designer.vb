@@ -63,7 +63,7 @@ Partial Class frmLogin
         Me.lblWrongCredentials.ForeColor = System.Drawing.Color.Red
         Me.lblWrongCredentials.Location = New System.Drawing.Point(117, 428)
         Me.lblWrongCredentials.Name = "lblWrongCredentials"
-        Me.lblWrongCredentials.Size = New System.Drawing.Size(175, 17)
+        Me.lblWrongCredentials.Size = New System.Drawing.Size(259, 28)
         Me.lblWrongCredentials.TabIndex = 2
         Me.lblWrongCredentials.Text = "Wrong credentials. Try again"
         Me.lblWrongCredentials.Visible = False
@@ -85,7 +85,7 @@ Partial Class frmLogin
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(9, 112)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 17)
+        Me.Label4.Size = New System.Drawing.Size(215, 28)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Sign in to your account"
         '
@@ -95,7 +95,7 @@ Partial Class frmLogin
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(4, 78)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 30)
+        Me.Label3.Size = New System.Drawing.Size(113, 45)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Log in"
         '
@@ -105,7 +105,7 @@ Partial Class frmLogin
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(58, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(236, 20)
+        Me.Label2.Size = New System.Drawing.Size(364, 31)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "National Health Insurance Scheme"
         '
@@ -115,7 +115,7 @@ Partial Class frmLogin
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(58, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(164, 21)
+        Me.Label1.Size = New System.Drawing.Size(247, 32)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "NHIS CLAIMS PORTAL"
         '
@@ -175,10 +175,10 @@ Partial Class frmLogin
         'txtUsername
         '
         Me.txtUsername.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.Location = New System.Drawing.Point(93, 3)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(198, 27)
+        Me.txtUsername.Size = New System.Drawing.Size(198, 39)
         Me.txtUsername.TabIndex = 3
         '
         'txtPassword
@@ -187,7 +187,7 @@ Partial Class frmLogin
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(93, 63)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(198, 27)
+        Me.txtPassword.Size = New System.Drawing.Size(198, 37)
         Me.txtPassword.TabIndex = 4
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -204,7 +204,7 @@ Partial Class frmLogin
         'frmLogin
         '
         Me.AcceptButton = Me.btnLogin
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 28.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.NHIS.My.Resources.Resources.total_shape_yn8KzjHGtak_unsplash
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom

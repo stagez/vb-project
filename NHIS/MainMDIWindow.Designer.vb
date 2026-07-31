@@ -81,18 +81,17 @@ Partial Class frmMain
         '
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ssStatus})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 913)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 921)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Padding = New System.Windows.Forms.Padding(2, 0, 21, 0)
-        Me.StatusStrip.Size = New System.Drawing.Size(1539, 30)
+        Me.StatusStrip.Size = New System.Drawing.Size(1539, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
         'ssStatus
         '
         Me.ssStatus.Name = "ssStatus"
-        Me.ssStatus.Size = New System.Drawing.Size(162, 25)
-        Me.ssStatus.Text = "Admin - Logged in"
+        Me.ssStatus.Size = New System.Drawing.Size(0, 17)
         '
         'pnlContent
         '
@@ -102,7 +101,7 @@ Partial Class frmMain
         Me.pnlContent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlContent.Name = "pnlContent"
         Me.pnlContent.Padding = New System.Windows.Forms.Padding(60, 37, 60, 37)
-        Me.pnlContent.Size = New System.Drawing.Size(1539, 847)
+        Me.pnlContent.Size = New System.Drawing.Size(1539, 855)
         Me.pnlContent.TabIndex = 12
         Me.ToolTip.SetToolTip(Me.pnlContent, "Reports")
         '

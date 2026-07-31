@@ -1,15 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmLogin
-    Dim role As String
-    Dim hashedPassword As String
-    Private ReadOnly _users As New Dictionary(Of String, String) From {
-    {"admin", "admin"},
-    {"pascal", "stage"},
-    {"gomez", "juan"},
-    {"emmanuel", "emma"},
-    {"eric", "eric"}
-}
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.DoubleBuffered = True
@@ -49,11 +40,15 @@ Public Class frmLogin
                         If VerifyPassword(txtPassword.Text, storedHash) Then
                             MessageBox.Show("Login successful!" & vbCrLf & "Role: " & storedRole)
 
+                            Dim name = txtUsername.Text
+
+
                             txtPassword.Clear()
                             txtUsername.Clear()
                             lblWrongCredentials.Visible = False
 
                             Me.Hide()
+                            frmMain.ssStatus.Text = $"{name}: {storedRole}"
                             frmMain.Show()
                         Else
                             lblWrongCredentials.Text = "Invalid username or password."
