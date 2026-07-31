@@ -75,7 +75,7 @@ Partial Class frmNewClaim
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.lblRemarks = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.txtPatientName = New System.Windows.Forms.TextBox()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.lblAmount = New System.Windows.Forms.Label()
@@ -666,7 +666,7 @@ Partial Class frmNewClaim
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.txtPatientName)
+        Me.Panel3.Controls.Add(Me.txtAmount)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.lblAmount)
         Me.Panel3.Location = New System.Drawing.Point(7, 6)
@@ -675,13 +675,13 @@ Partial Class frmNewClaim
         Me.Panel3.Size = New System.Drawing.Size(920, 193)
         Me.Panel3.TabIndex = 1
         '
-        'txtPatientName
+        'txtAmount
         '
-        Me.txtPatientName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPatientName.Location = New System.Drawing.Point(18, 39)
-        Me.txtPatientName.Name = "txtPatientName"
-        Me.txtPatientName.Size = New System.Drawing.Size(295, 39)
-        Me.txtPatientName.TabIndex = 19
+        Me.txtAmount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAmount.Location = New System.Drawing.Point(18, 39)
+        Me.txtAmount.Name = "txtAmount"
+        Me.txtAmount.Size = New System.Drawing.Size(295, 39)
+        Me.txtAmount.TabIndex = 19
         '
         'Panel4
         '
@@ -832,7 +832,7 @@ Partial Class frmNewClaim
     Friend WithEvents Label19 As Label
     Friend WithEvents tpFinancial As TabPage
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents txtPatientName As TextBox
+    Friend WithEvents txtAmount As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents lblAmount As Label

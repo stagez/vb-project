@@ -10,8 +10,8 @@ Public Class frmNewClaim
         End If
     End Sub
 
-    Private Sub txtPatientName_Leave(sender As Object, e As EventArgs) Handles txtPatientName.Leave
-        If Not isValidName(txtPatientName.Text) Then
+    Private Sub txtPatientName_Leave(sender As Object, e As EventArgs) Handles txtAmount.Leave
+        If Not isValidName(txtAmount.Text) Then
             Highlight(txtPatientFullName)
         End If
     End Sub
@@ -27,16 +27,27 @@ Public Class frmNewClaim
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        ' 1. Validate numeric inputs before touching the database
+        Dim amount As Decimal
+        If Not Decimal.TryParse(txtAmount.Text.Trim(), amount) Then
+            MessageBox.Show("Please enter a valid numeric amount.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtAmount.Focus()
+            Exit Sub
+        End If
+
         Try
-            Using conn As New MySql.Data.MySqlClient.MySqlConnection(My.Settings.dbConStr)
-                Dim query As String = "INSERT INTO claims (claim_id, provider_id, nhis_number, patient_name, service_date, procedure_type, diagnosis_code, diagnosis_desc, ward_department, additional_notes, status) VALUES (@claim_id,@provider_id,@provider_name,@nhis_number,@patient_name,@service_date,@procedure_type,@diagnosis_code,@diagnosis_desc,@ward,@notes,@status)"
+            Using conn As New MySqlConnection(My.Settings.dbConStr)
+                Dim query As String = "INSERT INTO claim2 " &
+                    "(provider_id, nhis_number, patient_name, service_date, amount, procedure_type, diagnosis_code, diagnosis_desc, ward_department, additional_note, status) " &
+                    "VALUES (@provider_id, @nhis_number, @patient_name, @service_date, @amount, @procedure_type, @diagnosis_code, @diagnosis_desc, @ward, @notes, @status)"
+
                 Dim cmd As New MySql.Data.MySqlClient.MySqlCommand(query, conn)
 
-                cmd.Parameters.AddWithValue("@claim_id", Guid.NewGuid().ToString())
-                cmd.Parameters.AddWithValue("@provider_id", cboProviderID.SelectedItem)
+                cmd.Parameters.AddWithValue("@provider_id", cboProviderID.Text)
                 cmd.Parameters.AddWithValue("@nhis_number", txtNHISNumber.Text)
                 cmd.Parameters.AddWithValue("@patient_name", txtPatientFullName.Text)
                 cmd.Parameters.AddWithValue("@service_date", dtpDateSubmitted.Value.Date)
+                cmd.Parameters.AddWithValue("@amount", amount)
                 cmd.Parameters.AddWithValue("@procedure_type", cboProcedureType.Text)
                 cmd.Parameters.AddWithValue("@diagnosis_code", txtDiagnosisCode.Text)
                 cmd.Parameters.AddWithValue("@diagnosis_desc", txtDiagnosisDescription.Text)
@@ -45,7 +56,8 @@ Public Class frmNewClaim
                 cmd.Parameters.AddWithValue("@status", "Pending")
 
                 conn.Open()
-                Dim affected = cmd.ExecuteNonQuery()
+                Dim affected As Integer = cmd.ExecuteNonQuery()
+
                 If affected > 0 Then
                     MessageBox.Show("Claim submitted successfully!", "Submit Claim", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     ClearForm(Me)
@@ -54,9 +66,8 @@ Public Class frmNewClaim
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error submitting claim: " & ex.Message)
+            MessageBox.Show("Error submitting claim: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
     End Sub
 
     Private Sub txtPatientFullName_Leave(sender As Object, e As EventArgs) Handles txtPatientFullName.Leave
