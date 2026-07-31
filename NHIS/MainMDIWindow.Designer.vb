@@ -81,10 +81,9 @@ Partial Class frmMain
         '
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ssStatus})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 921)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 551)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(2, 0, 21, 0)
-        Me.StatusStrip.Size = New System.Drawing.Size(1539, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(1026, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -97,11 +96,10 @@ Partial Class frmMain
         '
         Me.pnlContent.AutoScroll = True
         Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlContent.Location = New System.Drawing.Point(0, 66)
-        Me.pnlContent.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.pnlContent.Location = New System.Drawing.Point(0, 55)
         Me.pnlContent.Name = "pnlContent"
-        Me.pnlContent.Padding = New System.Windows.Forms.Padding(60, 37, 60, 37)
-        Me.pnlContent.Size = New System.Drawing.Size(1539, 855)
+        Me.pnlContent.Padding = New System.Windows.Forms.Padding(40, 24, 40, 24)
+        Me.pnlContent.Size = New System.Drawing.Size(1026, 496)
         Me.pnlContent.TabIndex = 12
         Me.ToolTip.SetToolTip(Me.pnlContent, "Reports")
         '
@@ -111,8 +109,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ProviderToolStripMenuItem, Me.ClaimsToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.UserManagementToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1539, 35)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1026, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -120,14 +117,14 @@ Partial Class frmMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DashboardToolStripMenuItem, Me.AddToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(50, 29)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'DashboardToolStripMenuItem
         '
         Me.DashboardToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_dashboard_48
         Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'AddToolStripMenuItem
@@ -135,169 +132,169 @@ Partial Class frmMain
         Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem})
         Me.AddToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_48
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(203, 30)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.NewToolStripMenuItem.Text = "New Member"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_logout_48
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_exit_48
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ProviderToolStripMenuItem
         '
         Me.ProviderToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegisterProviderToolStripMenuItem, Me.ViewProvidersToolStripMenuItem})
         Me.ProviderToolStripMenuItem.Name = "ProviderToolStripMenuItem"
-        Me.ProviderToolStripMenuItem.Size = New System.Drawing.Size(90, 29)
+        Me.ProviderToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.ProviderToolStripMenuItem.Text = "Provider"
         '
         'RegisterProviderToolStripMenuItem
         '
         Me.RegisterProviderToolStripMenuItem.Name = "RegisterProviderToolStripMenuItem"
-        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
+        Me.RegisterProviderToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.RegisterProviderToolStripMenuItem.Text = "Register Provider"
         '
         'ViewProvidersToolStripMenuItem
         '
         Me.ViewProvidersToolStripMenuItem.Name = "ViewProvidersToolStripMenuItem"
-        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(230, 30)
+        Me.ViewProvidersToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.ViewProvidersToolStripMenuItem.Text = "View Providers"
         '
         'ClaimsToolStripMenuItem
         '
         Me.ClaimsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClaimsToolStripMenuItem1, Me.SubmitToolStripMenuItem, Me.SearchClaimsToolStripMenuItem})
         Me.ClaimsToolStripMenuItem.Name = "ClaimsToolStripMenuItem"
-        Me.ClaimsToolStripMenuItem.Size = New System.Drawing.Size(178, 29)
+        Me.ClaimsToolStripMenuItem.Size = New System.Drawing.Size(124, 20)
         Me.ClaimsToolStripMenuItem.Text = "Claim Management"
         '
         'ClaimsToolStripMenuItem1
         '
         Me.ClaimsToolStripMenuItem1.Image = Global.NHIS.My.Resources.Resources.icons8_submit_48
         Me.ClaimsToolStripMenuItem1.Name = "ClaimsToolStripMenuItem1"
-        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(205, 30)
+        Me.ClaimsToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
         Me.ClaimsToolStripMenuItem1.Text = "Submit Claim"
         '
         'SubmitToolStripMenuItem
         '
         Me.SubmitToolStripMenuItem.Name = "SubmitToolStripMenuItem"
-        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.SubmitToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SubmitToolStripMenuItem.Text = "View Claims"
         '
         'SearchClaimsToolStripMenuItem
         '
         Me.SearchClaimsToolStripMenuItem.Name = "SearchClaimsToolStripMenuItem"
-        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(205, 30)
+        Me.SearchClaimsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SearchClaimsToolStripMenuItem.Text = "Search Claims"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApproveClaimsToolStripMenuItem, Me.RejectedClaimsToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(97, 29)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ViewToolStripMenuItem.Text = "Approval"
         '
         'ApproveClaimsToolStripMenuItem
         '
         Me.ApproveClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_check_mark_48
         Me.ApproveClaimsToolStripMenuItem.Name = "ApproveClaimsToolStripMenuItem"
-        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(233, 30)
+        Me.ApproveClaimsToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.ApproveClaimsToolStripMenuItem.Text = "Approved Claims"
         '
         'RejectedClaimsToolStripMenuItem
         '
         Me.RejectedClaimsToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_reject_48__1_
         Me.RejectedClaimsToolStripMenuItem.Name = "RejectedClaimsToolStripMenuItem"
-        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(233, 30)
+        Me.RejectedClaimsToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.RejectedClaimsToolStripMenuItem.Text = "Rejected Claims"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DailyReportToolStripMenuItem, Me.MonthlyReportToolStripMenuItem, Me.ApprovedClaimsReportToolStripMenuItem, Me.RejectedClaimsReportToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(85, 29)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'DailyReportToolStripMenuItem
         '
         Me.DailyReportToolStripMenuItem.Name = "DailyReportToolStripMenuItem"
-        Me.DailyReportToolStripMenuItem.Size = New System.Drawing.Size(291, 30)
+        Me.DailyReportToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.DailyReportToolStripMenuItem.Text = "Daily Report"
         '
         'MonthlyReportToolStripMenuItem
         '
         Me.MonthlyReportToolStripMenuItem.Name = "MonthlyReportToolStripMenuItem"
-        Me.MonthlyReportToolStripMenuItem.Size = New System.Drawing.Size(291, 30)
+        Me.MonthlyReportToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.MonthlyReportToolStripMenuItem.Text = "Monthly Report"
         '
         'ApprovedClaimsReportToolStripMenuItem
         '
         Me.ApprovedClaimsReportToolStripMenuItem.Name = "ApprovedClaimsReportToolStripMenuItem"
-        Me.ApprovedClaimsReportToolStripMenuItem.Size = New System.Drawing.Size(291, 30)
+        Me.ApprovedClaimsReportToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.ApprovedClaimsReportToolStripMenuItem.Text = "Approved Claims Report"
         '
         'RejectedClaimsReportToolStripMenuItem
         '
         Me.RejectedClaimsReportToolStripMenuItem.Name = "RejectedClaimsReportToolStripMenuItem"
-        Me.RejectedClaimsReportToolStripMenuItem.Size = New System.Drawing.Size(291, 30)
+        Me.RejectedClaimsReportToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.RejectedClaimsReportToolStripMenuItem.Text = "Rejected Claims Report"
         '
         'UserManagementToolStripMenuItem
         '
         Me.UserManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddUserToolStripMenuItem, Me.ManageUsersToolStripMenuItem})
         Me.UserManagementToolStripMenuItem.Name = "UserManagementToolStripMenuItem"
-        Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(169, 29)
+        Me.UserManagementToolStripMenuItem.Size = New System.Drawing.Size(116, 20)
         Me.UserManagementToolStripMenuItem.Text = "User Management"
+        Me.UserManagementToolStripMenuItem.Visible = False
         '
         'AddUserToolStripMenuItem
         '
         Me.AddUserToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_add_user_48
         Me.AddUserToolStripMenuItem.Name = "AddUserToolStripMenuItem"
-        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+        Me.AddUserToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.AddUserToolStripMenuItem.Text = "Add User"
         '
         'ManageUsersToolStripMenuItem
         '
         Me.ManageUsersToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_manage_48
         Me.ManageUsersToolStripMenuItem.Name = "ManageUsersToolStripMenuItem"
-        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+        Me.ManageUsersToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.ManageUsersToolStripMenuItem.Text = "Manage Users"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutSystemToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(61, 29)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutSystemToolStripMenuItem
         '
         Me.AboutSystemToolStripMenuItem.Image = Global.NHIS.My.Resources.Resources.icons8_about_48
         Me.AboutSystemToolStripMenuItem.Name = "AboutSystemToolStripMenuItem"
-        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(208, 30)
+        Me.AboutSystemToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AboutSystemToolStripMenuItem.Text = "About System"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsHome, Me.ToolStripSeparator1, Me.tsNewClaim, Me.tsViewClaims, Me.tsProviders, Me.ToolStripSeparator2, Me.tsApprove, Me.tsReject, Me.ToolStripSeparator3, Me.tsSave, Me.ToolStripSeparator4, Me.tsReports, Me.ToolStripSeparator5, Me.tsPrint, Me.tsLogOut})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 35)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1539, 31)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1026, 31)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -419,9 +416,9 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1539, 943)
+        Me.ClientSize = New System.Drawing.Size(1026, 573)
         Me.Controls.Add(Me.pnlContent)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip)
@@ -429,7 +426,6 @@ Partial Class frmMain
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.KeyPreview = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NHIS"

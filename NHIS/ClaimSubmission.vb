@@ -36,7 +36,7 @@ Public Class frmNewClaim
         End If
 
         Try
-            Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
                 Dim query As String = "INSERT INTO claim2 " &
                     "(provider_id, nhis_number, patient_name, service_date, amount, procedure_type, diagnosis_code, diagnosis_desc, ward_department, additional_note, status) " &
                     "VALUES (@provider_id, @nhis_number, @patient_name, @service_date, @amount, @procedure_type, @diagnosis_code, @diagnosis_desc, @ward, @notes, @status)"
@@ -89,7 +89,7 @@ Public Class frmNewClaim
 
         Dim query As String = "SELECT id, name FROM provider ORDER BY id"
 
-        Using conn As New MySqlConnection(My.Settings.dbConStr)
+        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
             Using cmd As New MySqlCommand(query, conn)
                 Try
                     conn.Open()
@@ -132,7 +132,7 @@ Public Class frmNewClaim
         Dim providerId As String = cboProviderID.SelectedValue.ToString()
         Dim query As String = "SELECT name, type, district, region, phone FROM provider WHERE id = @id"
 
-        Using conn As New MySqlConnection(My.Settings.dbConStr)
+        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
             Using cmd As New MySqlCommand(query, conn)
                 cmd.Parameters.AddWithValue("@id", providerId)
                 Try

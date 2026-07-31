@@ -148,6 +148,12 @@ Public Class AddUser
 
                     End Try
                 End Using
+            Else
+                MessageBox.Show("Please complete all highlighted fields before submitting.",
+                        "Validation Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning)
+                Exit Sub
             End If
         Else
             lblPasswordMatch.Visible = True

@@ -24,7 +24,7 @@ Public Class frmDashboard
         Dim rejectedCount As Integer = 0
 
         Try
-            Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
                 conn.Open()
 
                 ' 1. Fetch metrics from claim2 table

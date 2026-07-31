@@ -109,16 +109,27 @@ Module HelperMethods
 
     Public Function isFormComplete(container As Control) As Boolean
         For Each ctrl As Control In container.Controls
+            ' Ignore hidden or disabled elements
+            If Not ctrl.Visible OrElse Not ctrl.Enabled Then Continue For
+
             If TypeOf ctrl Is TextBox Then
-                If Not isRequired(DirectCast(ctrl, TextBox).Text) Then Return False
+                Dim txt = DirectCast(ctrl, TextBox)
+                If Not txt.ReadOnly AndAlso String.IsNullOrWhiteSpace(txt.Text) Then Return False
+
+            ElseIf TypeOf ctrl Is RichTextBox Then
+                If String.IsNullOrWhiteSpace(DirectCast(ctrl, RichTextBox).Text) Then Return False
+
             ElseIf TypeOf ctrl Is ComboBox Then
                 If Not isValidCombo(DirectCast(ctrl, ComboBox)) Then Return False
+
             ElseIf TypeOf ctrl Is DateTimePicker Then
                 If Not isValidDate(DirectCast(ctrl, DateTimePicker)) Then Return False
-            ElseIf ctrl.Controls.Count > 0 Then
+
+            ElseIf ctrl.HasChildren Then
                 If Not isFormComplete(ctrl) Then Return False
             End If
         Next
+
         Return True
     End Function
 

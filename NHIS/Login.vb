@@ -22,8 +22,7 @@ Public Class frmLogin
 
         Me.Cursor = Cursors.WaitCursor
         Application.DoEvents()
-        ' 2. Database Authentication
-        Using conn As New MySqlConnection(My.Settings.dbConStr)
+        Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
             Dim query As String = "SELECT role, password FROM users WHERE full_name = @name"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@name", txtUsername.Text.Trim())
@@ -48,8 +47,15 @@ Public Class frmLogin
                             lblWrongCredentials.Visible = False
 
                             Me.Hide()
-                            frmMain.ssStatus.Text = $"{name}: {storedRole}"
-                            frmMain.Show()
+                            If storedRole = "Administrator" Then
+                                frmMain.UserManagementToolStripMenuItem.Visible = True
+                                frmMain.ssStatus.Text = $"{name}: {storedRole}"
+                                frmMain.Show()
+                            Else
+                                frmMain.UserManagementToolStripMenuItem.Visible = False
+                                frmMain.ssStatus.Text = $"{name}: {storedRole}"
+                                frmMain.Show()
+                            End If
                         Else
                             lblWrongCredentials.Text = "Invalid username or password."
                             lblWrongCredentials.Visible = True
