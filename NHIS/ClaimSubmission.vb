@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmNewClaim
+    Private providersTable As New DataTable()
+
     Private Sub txtNHISNumber_Leave(sender As Object, e As EventArgs) Handles txtNHISNumber.Leave
         If Not isRequired(txtNHISNumber.Text) Then
             ShakeControl(txtNHISNumber)
@@ -24,7 +26,7 @@ Public Class frmNewClaim
         ClearForm(Me)
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs)
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             Using conn As New MySql.Data.MySqlClient.MySqlConnection(My.Settings.dbConStr)
                 Dim query As String = "INSERT INTO claims (claim_id, provider_id, nhis_number, patient_name, service_date, procedure_type, diagnosis_code, diagnosis_desc, ward_department, additional_notes, status) VALUES (@claim_id,@provider_id,@provider_name,@nhis_number,@patient_name,@service_date,@procedure_type,@diagnosis_code,@diagnosis_desc,@ward,@notes,@status)"
@@ -74,9 +76,26 @@ Public Class frmNewClaim
         dtpDOB.MaxDate = DateTime.Today
         dtpDOB.MinDate = DateTime.Today.AddYears(-120)
 
-        If Not isFormComplete(Me) Then
-            btnSave.Enabled = False
-        End If
+        Dim query As String = "SELECT id, name FROM provider ORDER BY id"
+
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using cmd As New MySqlCommand(query, conn)
+                Try
+                    conn.Open()
+                    Dim dt As New DataTable()
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dt)
+                    End Using
+
+                    cboProviderID.DataSource = dt
+                    cboProviderID.DisplayMember = "name"   ' what shows in the box
+                    cboProviderID.ValueMember = "id"     ' what you retrieve as .SelectedValue
+                    cboProviderID.SelectedIndex = -1              ' no default selection
+                Catch ex As MySqlException
+                    MessageBox.Show("Error loading providers: " & ex.Message)
+                End Try
+            End Using
+        End Using
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -94,5 +113,32 @@ Public Class frmNewClaim
     Private Sub frmNewClaim_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         Dim x As Integer = Math.Max(0, (Me.ClientSize.Width - pnlMainContainer.Width) \ 2)
         Dim y As Integer = Math.Max(0, (Me.ClientSize.Height - pnlMainContainer.Height) \ 2)
+    End Sub
+
+    Private Sub cboProviderID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProviderID.SelectedIndexChanged
+        If cboProviderID.SelectedIndex = -1 Then Return
+
+        Dim providerId As String = cboProviderID.SelectedValue.ToString()
+        Dim query As String = "SELECT name, type, district, region, phone FROM provider WHERE id = @id"
+
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using cmd As New MySqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@id", providerId)
+                Try
+                    conn.Open()
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            txtProviderName.Text = reader("name").ToString()
+                            txtRegion2.Text = reader("region").ToString()
+                            txtProviderPhone.Text = reader("phone").ToString()
+                            txtDistrict.Text = reader("district").ToString()
+                            txtProviderType.Text = reader("type").ToString()
+                        End If
+                    End Using
+                Catch ex As MySqlException
+                    MessageBox.Show("Error loading provider details: " & ex.Message)
+                End Try
+            End Using
+        End Using
     End Sub
 End Class

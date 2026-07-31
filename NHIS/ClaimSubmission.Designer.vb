@@ -31,8 +31,8 @@ Partial Class frmNewClaim
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblProviderType = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtDistrict = New System.Windows.Forms.TextBox()
+        Me.txtProviderPhone = New System.Windows.Forms.TextBox()
         Me.txtRegion2 = New System.Windows.Forms.TextBox()
         Me.txtProviderName = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -134,8 +134,8 @@ Partial Class frmNewClaim
         Me.Panel10.Controls.Add(Me.Panel11)
         Me.Panel10.Controls.Add(Me.Label14)
         Me.Panel10.Controls.Add(Me.lblProviderType)
-        Me.Panel10.Controls.Add(Me.TextBox6)
-        Me.Panel10.Controls.Add(Me.TextBox5)
+        Me.Panel10.Controls.Add(Me.txtDistrict)
+        Me.Panel10.Controls.Add(Me.txtProviderPhone)
         Me.Panel10.Controls.Add(Me.txtRegion2)
         Me.Panel10.Controls.Add(Me.txtProviderName)
         Me.Panel10.Controls.Add(Me.Label15)
@@ -151,6 +151,7 @@ Partial Class frmNewClaim
         '
         'cboProviderID
         '
+        Me.cboProviderID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboProviderID.FormattingEnabled = True
         Me.cboProviderID.Location = New System.Drawing.Point(27, 74)
         Me.cboProviderID.Name = "cboProviderID"
@@ -159,6 +160,7 @@ Partial Class frmNewClaim
         '
         'txtProviderType
         '
+        Me.txtProviderType.Enabled = False
         Me.txtProviderType.Location = New System.Drawing.Point(29, 138)
         Me.txtProviderType.Name = "txtProviderType"
         Me.txtProviderType.Size = New System.Drawing.Size(219, 31)
@@ -206,23 +208,23 @@ Partial Class frmNewClaim
         Me.lblProviderType.TabIndex = 4
         Me.lblProviderType.Text = "Provider Type"
         '
-        'TextBox6
+        'txtDistrict
         '
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(29, 203)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(216, 38)
-        Me.TextBox6.TabIndex = 4
+        Me.txtDistrict.Enabled = False
+        Me.txtDistrict.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDistrict.Location = New System.Drawing.Point(29, 203)
+        Me.txtDistrict.Name = "txtDistrict"
+        Me.txtDistrict.Size = New System.Drawing.Size(216, 38)
+        Me.txtDistrict.TabIndex = 4
         '
-        'TextBox5
+        'txtProviderPhone
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(562, 203)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(230, 38)
-        Me.TextBox5.TabIndex = 5
+        Me.txtProviderPhone.Enabled = False
+        Me.txtProviderPhone.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProviderPhone.Location = New System.Drawing.Point(562, 203)
+        Me.txtProviderPhone.Name = "txtProviderPhone"
+        Me.txtProviderPhone.Size = New System.Drawing.Size(230, 38)
+        Me.txtProviderPhone.TabIndex = 5
         '
         'txtRegion2
         '
@@ -318,17 +320,16 @@ Partial Class frmNewClaim
         '
         'dtpDOB
         '
-        Me.dtpDOB.Enabled = False
+        Me.dtpDOB.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDOB.Location = New System.Drawing.Point(21, 152)
         Me.dtpDOB.Name = "dtpDOB"
-        Me.dtpDOB.Size = New System.Drawing.Size(227, 31)
+        Me.dtpDOB.Size = New System.Drawing.Size(227, 39)
         Me.dtpDOB.TabIndex = 2
         '
         'cboGender
         '
         Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboGender.Enabled = False
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(566, 156)
@@ -360,11 +361,10 @@ Partial Class frmNewClaim
         '
         'txtNHISNumber
         '
-        Me.txtNHISNumber.Enabled = False
-        Me.txtNHISNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNHISNumber.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNHISNumber.Location = New System.Drawing.Point(565, 78)
         Me.txtNHISNumber.Name = "txtNHISNumber"
-        Me.txtNHISNumber.Size = New System.Drawing.Size(230, 38)
+        Me.txtNHISNumber.Size = New System.Drawing.Size(230, 39)
         Me.txtNHISNumber.TabIndex = 1
         '
         'Label5
@@ -380,10 +380,10 @@ Partial Class frmNewClaim
         '
         'txtPatientFullName
         '
-        Me.txtPatientFullName.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPatientFullName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatientFullName.Location = New System.Drawing.Point(22, 75)
         Me.txtPatientFullName.Name = "txtPatientFullName"
-        Me.txtPatientFullName.Size = New System.Drawing.Size(229, 38)
+        Me.txtPatientFullName.Size = New System.Drawing.Size(229, 39)
         Me.txtPatientFullName.TabIndex = 0
         '
         'Label6
@@ -471,7 +471,6 @@ Partial Class frmNewClaim
         '
         'dtpDateSubmitted
         '
-        Me.dtpDateSubmitted.Enabled = False
         Me.dtpDateSubmitted.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDateSubmitted.Location = New System.Drawing.Point(18, 100)
         Me.dtpDateSubmitted.Name = "dtpDateSubmitted"
@@ -521,7 +520,6 @@ Partial Class frmNewClaim
         '
         'txtDiagnosisDescription
         '
-        Me.txtDiagnosisDescription.Enabled = False
         Me.txtDiagnosisDescription.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDiagnosisDescription.Location = New System.Drawing.Point(573, 195)
         Me.txtDiagnosisDescription.Name = "txtDiagnosisDescription"
@@ -679,7 +677,6 @@ Partial Class frmNewClaim
         '
         'txtPatientName
         '
-        Me.txtPatientName.Enabled = False
         Me.txtPatientName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatientName.Location = New System.Drawing.Point(18, 39)
         Me.txtPatientName.Name = "txtPatientName"
@@ -857,8 +854,8 @@ Partial Class frmNewClaim
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents lblProviderType As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtDistrict As TextBox
+    Friend WithEvents txtProviderPhone As TextBox
     Friend WithEvents txtRegion2 As TextBox
     Friend WithEvents txtProviderName As TextBox
     Friend WithEvents Label15 As Label
