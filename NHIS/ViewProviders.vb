@@ -1,24 +1,42 @@
-﻿Public Class ViewProviders
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+﻿Imports MySql.Data.MySqlClient
 
-    End Sub
+Public Class ViewProviders
 
     Private Sub frmViewProviders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' UI Styling
         dgvViewProviders.RowTemplate.Height = 45
-
-
         dgvViewProviders.GridColor = Color.FromArgb(230, 235, 230)
         dgvViewProviders.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-
         dgvViewProviders.DefaultCellStyle.Padding = New Padding(8, 0, 0, 0)
         dgvViewProviders.ColumnHeadersDefaultCellStyle.Padding = New Padding(8, 0, 0, 0)
 
+        ' Load dynamic data from database
+        LoadProviders()
+    End Sub
+    Private Sub LoadProviders()
+        dgvViewProviders.Rows.Clear()
 
-        dgvViewProviders.Rows.Add("P001", "Korle Bu Teaching Hospital", "Teaching Hospital", "030 276 1100", "Accra, Greater Accra")
-        dgvViewProviders.Rows.Add("P002", "Reach Hospital", "Private Hospital", "030 277 5500", "Accra, Greater Accra")
-        dgvViewProviders.Rows.Add("P003", "Tamale Teaching Hospital", "Teaching Hospital", "037 202 2566", "Tamale, Northern")
-        dgvViewProviders.Rows.Add("P004", "UEW Student Hospital", "Clinic", "033 209 3000", "Winneba, Central")
-        dgvViewProviders.Rows.Add("P005", "Trust Hospital", "Private Hospital", "030 278 1000", "Accra, Greater Accra")
-        dgvViewProviders.Rows.Add("P006", "Nyaho Medical Centre", "Private Hospital", "030 277 7777", "Accra, Greater Accra")
+        Dim query As String = "SELECT id, name, type, phone, CONCAT(city, ', ', region) AS location FROM provider ORDER BY id"
+
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using cmd As New MySqlCommand(query, conn)
+                Try
+                    conn.Open()
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            Dim providerId As String = "P" & reader("id").ToString().PadLeft(3, "0"c) ' e.g., P001
+                            Dim name As String = reader("name").ToString()
+                            Dim type As String = reader("type").ToString()
+                            Dim phone As String = reader("phone").ToString()
+                            Dim location As String = reader("location").ToString()
+
+                            dgvViewProviders.Rows.Add(providerId, name, type, phone, location)
+                        End While
+                    End Using
+                Catch ex As Exception
+                    MessageBox.Show("Error loading providers: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End Using
+        End Using
     End Sub
 End Class

@@ -3,14 +3,43 @@ Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
 
-
 Public Class AddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'If Not isFormComplete(Me) Then
-        '    btnSave.Enabled = False
-        'End If
+        ' Disable Save button initially on startup
+        btnSave.Enabled = False
+    End Sub
 
+    ' Centralized method to check all inputs
+    Private Sub ValidateForm()
+        Dim isNameValid As Boolean = isValidName(txtName.Text)
+        Dim isEmailValid As Boolean = isValidEmail(txtEmail.Text)
+        Dim isPhoneValid As Boolean = isValidPhone(txtPhone.Text)
+        Dim isRoleSelected As Boolean = cboRole.SelectedItem IsNot Nothing
+        Dim isPasswordValid As Boolean = isRequired(txtPassword.Text)
+        Dim doPasswordsMatch As Boolean = (txtPassword.Text = txtRepeatPassword.Text) AndAlso Not String.IsNullOrEmpty(txtPassword.Text)
+
+        ' Update the error message for password matching in real-time
+        lblPasswordMatch.Visible = Not doPasswordsMatch AndAlso Not String.IsNullOrEmpty(txtRepeatPassword.Text)
+
+        ' Enable button ONLY when all criteria are met
+        btnSave.Enabled = isNameValid AndAlso
+                          isEmailValid AndAlso
+                          isPhoneValid AndAlso
+                          isRoleSelected AndAlso
+                          isPasswordValid AndAlso
+                          doPasswordsMatch
+    End Sub
+
+    ' Single event handler listening to changes across all inputs
+    Private Sub InputFields_Changed(sender As Object, e As EventArgs) Handles _
+        txtName.TextChanged,
+        txtEmail.TextChanged,
+        txtPhone.TextChanged,
+        cboRole.SelectedIndexChanged,
+        txtRepeatPassword.TextChanged
+
+        ValidateForm()
     End Sub
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
@@ -21,6 +50,7 @@ Public Class AddUser
         If length = 0 Then
             pnlStrength.Width = 0
             lblStrength.Text = ""
+            ValidateForm()
             Exit Sub
         End If
 
@@ -37,7 +67,6 @@ Public Class AddUser
         If Regex.IsMatch(password, "[0-9]") Then score += 1 ' Numbers
         ' Special Characters
         If Regex.IsMatch(password, "[!@#$%^&*(),.??""{}|<>_+\-=\[\]\\]") Then score += 1
-
 
         ' 3. Update the UI based on the score
         Select Case score
@@ -59,6 +88,9 @@ Public Class AddUser
                 lblStrength.Text = "Strong"
                 lblStrength.ForeColor = Color.FromArgb(74, 160, 100)
         End Select
+
+        ' Re-check overall form validation when password updates
+        ValidateForm()
     End Sub
 
     Private Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
@@ -95,74 +127,64 @@ Public Class AddUser
     End Sub
 
     Private Sub txtEmail_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
-        If Not isValidEmail(txtEmail.Text) Then
+        If Not isValidEmail(txtEmail.Text) AndAlso txtEmail.Text.Length > 0 Then
             ShakeControl(txtEmail)
         End If
     End Sub
 
     Private Sub txtName_Leave(sender As Object, e As EventArgs) Handles txtName.Leave
-        If Not isValidName(txtName.Text) Then
+        If Not isValidName(txtName.Text) AndAlso txtName.Text.Length > 0 Then
             ShakeControl(txtName)
         End If
     End Sub
 
     Private Sub txtPassword_Leave(sender As Object, e As EventArgs) Handles txtPassword.Leave
-        If Not isRequired(txtPassword.Text) Then
+        If Not isRequired(txtPassword.Text) AndAlso txtPassword.Text.Length > 0 Then
             ShakeControl(txtPassword)
-
         End If
     End Sub
 
     Private Sub txtRepeatPassword_Leave(sender As Object, e As EventArgs) Handles txtRepeatPassword.Leave
-        If Not isRequired(txtRepeatPassword.Text) Then
+        If Not isRequired(txtRepeatPassword.Text) AndAlso txtRepeatPassword.Text.Length > 0 Then
             ShakeControl(txtRepeatPassword)
         End If
     End Sub
 
     Private Sub txtPhone_Leave(sender As Object, e As EventArgs) Handles txtPhone.Leave
-        If Not isValidPhone(txtPhone.Text) Then
+        If Not isValidPhone(txtPhone.Text) AndAlso txtPhone.Text.Length > 0 Then
             ShakeControl(txtPhone)
         End If
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txtPassword.Text = txtRepeatPassword.Text Then
-            If isFormComplete(Me) Then
-                Dim hashed As String = HashedPassword(txtPassword.Text)
-                Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
-                    Dim query As String = "INSERT INTO users(full_name, email, phone, role, password) VALUES (@name, @email, @phone, @role, @password)"
-                    Dim cmd As New MySqlCommand(query, conn)
+        Dim hashed As String = HashedPassword(txtPassword.Text)
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Dim query As String = "INSERT INTO users(full_name, email, phone, role, password) VALUES (@name, @email, @phone, @role, @password)"
+            Dim cmd As New MySqlCommand(query, conn)
 
-                    cmd.Parameters.AddWithValue("@name", txtName.Text)
-                    cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-                    cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
-                    cmd.Parameters.AddWithValue("@role", cboRole.SelectedItem)
-                    cmd.Parameters.AddWithValue("@password", hashed)
+            cmd.Parameters.AddWithValue("@name", txtName.Text)
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@role", cboRole.SelectedItem)
+            cmd.Parameters.AddWithValue("@password", hashed)
 
-                    Try
-                        conn.Open()
-                        Dim rowsAffected As String = cmd.ExecuteNonQuery()
-                        MessageBox.Show("User added successfully")
-                    Catch ex As Exception
-                        MessageBox.Show("Could not add user" & ex.Message)
+            Try
+                conn.Open()
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("User added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    End Try
-                End Using
-            Else
-                MessageBox.Show("Please complete all highlighted fields before submitting.",
-                        "Validation Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-        Else
-            lblPasswordMatch.Visible = True
-        End If
-
+                ' Clear form and re-disable save button after successful insertion
+                ClearForm(Me)
+                ValidateForm()
+            Catch ex As Exception
+                MessageBox.Show("Could not add user: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End Using
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearForm(Me)
+        ValidateForm() ' Re-evaluate validation to disable btnSave
         txtName.Focus()
     End Sub
 

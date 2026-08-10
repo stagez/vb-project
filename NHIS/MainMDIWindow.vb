@@ -245,4 +245,18 @@ Public Class frmMain
             Me.Hide()
         End If
     End Sub
+    Private Sub OpenFilteredClaims(status As String)
+        Dim main As frmMain = CType(Application.OpenForms("frmMain"), frmMain)
+        If main IsNot Nothing Then
+            main.LoadForm(New ViewClaims(status))
+        End If
+    End Sub
+
+    Private Sub ApproveClaimsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApproveClaimsToolStripMenuItem.Click
+        OpenFilteredClaims("Approved")
+    End Sub
+
+    Private Sub RejectedClaimsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RejectedClaimsToolStripMenuItem.Click
+        OpenFilteredClaims("Rejected")
+    End Sub
 End Class

@@ -45,7 +45,7 @@ Partial Class ViewMembers
         Me.lblViewMembers.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblViewMembers.Location = New System.Drawing.Point(11, 1)
         Me.lblViewMembers.Name = "lblViewMembers"
-        Me.lblViewMembers.Size = New System.Drawing.Size(143, 25)
+        Me.lblViewMembers.Size = New System.Drawing.Size(212, 38)
         Me.lblViewMembers.TabIndex = 3
         Me.lblViewMembers.Text = "View Members"
         '
@@ -62,7 +62,7 @@ Partial Class ViewMembers
         '
         Me.txtSearch.Location = New System.Drawing.Point(480, 7)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(151, 22)
+        Me.txtSearch.Size = New System.Drawing.Size(151, 29)
         Me.txtSearch.TabIndex = 1
         '
         'Panel1
@@ -149,7 +149,7 @@ Partial Class ViewMembers
         '
         'ViewMembers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(722, 437)
         Me.Controls.Add(Me.dgvMembers)

@@ -24,7 +24,7 @@ Public Class frmDashboard
         Dim rejectedCount As Integer = 0
 
         Try
-            Using conn As New MySqlConnection(My.Settings.dbConStrRemote)
+            Using conn As New MySqlConnection(My.Settings.dbConStr)
                 conn.Open()
 
                 ' 1. Fetch metrics from claim2 table
@@ -113,7 +113,10 @@ Public Class frmDashboard
         Dim amount = row.Cells(3).Value?.ToString()
         Dim status = row.Cells(4).Value?.ToString()
 
-        Dim frm As New ApproveClaim(claimID, provider, serviceDate, amount, status)
+        ' Convert claimID to Integer before passing it
+        Dim claimIdInt As Integer = Convert.ToInt32(claimID)
+
+        Dim frm As New ApproveClaim(claimIdInt)
         If frm.ShowDialog() = DialogResult.OK Then
             ' Refresh dashboard grid and counts when a claim is updated/approved
             LoadDashboardData()

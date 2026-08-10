@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClaimReportDataSet" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClaimReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ClaimReportDataSet" msprop:Generator_UserDSName="ClaimReportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClaimsTable" msprop:Generator_TableClassName="ClaimsTableDataTable" msprop:Generator_TableVarName="tableClaimsTable" msprop:Generator_TablePropName="ClaimsTable" msprop:Generator_RowDeletingName="ClaimsTableRowDeleting" msprop:Generator_RowChangingName="ClaimsTableRowChanging" msprop:Generator_RowEvHandlerName="ClaimsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ClaimsTableRowDeleted" msprop:Generator_UserTableName="ClaimsTable" msprop:Generator_RowChangedName="ClaimsTableRowChanged" msprop:Generator_RowEvArgName="ClaimsTableRowChangeEvent" msprop:Generator_RowClassName="ClaimsTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClaimID" msprop:Generator_ColumnVarNameInTable="columnClaimID" msprop:Generator_ColumnPropNameInRow="ClaimID" msprop:Generator_ColumnPropNameInTable="ClaimIDColumn" msprop:Generator_UserColumnName="ClaimID" type="xs:string" minOccurs="0" />
+              <xs:element name="PatientName" msprop:Generator_ColumnVarNameInTable="columnPatientName" msprop:Generator_ColumnPropNameInRow="PatientName" msprop:Generator_ColumnPropNameInTable="PatientNameColumn" msprop:Generator_UserColumnName="PatientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceDate" msprop:Generator_ColumnVarNameInTable="columnServiceDate" msprop:Generator_ColumnPropNameInRow="ServiceDate" msprop:Generator_ColumnPropNameInTable="ServiceDateColumn" msprop:Generator_UserColumnName="ServiceDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

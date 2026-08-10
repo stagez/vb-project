@@ -1,23 +1,46 @@
-﻿Public Class ViewMembers
-    Private Sub dgvViewMembers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMembers.CellContentClick
+﻿Imports MySql.Data.MySqlClient
 
-    End Sub
+Public Class ViewMembers
 
     Private Sub frmViewMembers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' UI Styling
         dgvMembers.RowTemplate.Height = 45
-
         dgvMembers.GridColor = Color.FromArgb(230, 235, 230)
         dgvMembers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-
         dgvMembers.DefaultCellStyle.Padding = New Padding(8, 0, 0, 0)
         dgvMembers.ColumnHeadersDefaultCellStyle.Padding = New Padding(8, 0, 0, 0)
 
-        dgvMembers.Rows.Add("PAT-001", "Kofi Asante", "NHIS-2024-00123", "SSNIT Contributor", "Male", "024 567 8901", "Greater Accra")
-        dgvMembers.Rows.Add("PAT-002", "Abena Owusu", "NHIS-2024-00456", "Indigent", "Female", "054 321 7890", "Central")
-        dgvMembers.Rows.Add("PAT-003", "Kwame Mensah", "NHIS-2024-00789", "Under 18", "Male", "020 111 2233", "Ashanti")
-        dgvMembers.Rows.Add("PAT-004", "Akosua Adjei", "NHIS-2024-01012", "Pregnant Woman", "Female", "026 445 6677", "Western")
-        dgvMembers.Rows.Add("PAT-005", "Yaw Darko", "NHIS-2024-01345", "SSNIT Pensioner", "Male", "050 998 8776", "Northern")
-        dgvMembers.Rows.Add("PAT-006", "Ama Boateng", "NHIS-2024-01678", "SSNIT Contributor", "Female", "027 334 5566", "Eastern")
-        dgvMembers.Rows.Add("PAT-007", "Kojo Frimpong", "NHIS-2024-01901", "Under 18", "Male", "023 667 4433", "Central")
+        ' Load dynamic data from MySQL database
+        LoadMembers()
+    End Sub
+
+    Private Sub LoadMembers()
+        dgvMembers.Rows.Clear()
+
+        Dim query As String = "SELECT id, full_name, nhis_number, membership_type, gender, phone, region FROM member ORDER BY id"
+
+        Using conn As New MySqlConnection(My.Settings.dbConStr)
+            Using cmd As New MySqlCommand(query, conn)
+                Try
+                    conn.Open()
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            ' Format ID as PAT-001, PAT-002, etc.
+                            Dim patientId As String = "PAT-" & reader("id").ToString().PadLeft(3, "0"c)
+                            Dim fullName As String = reader("full_name").ToString()
+                            Dim nhisNum As String = reader("nhis_number").ToString()
+                            Dim membershipType As String = reader("membership_type").ToString()
+                            Dim gender As String = reader("gender").ToString()
+                            Dim phone As String = reader("phone").ToString()
+                            Dim region As String = reader("region").ToString()
+
+                            dgvMembers.Rows.Add(patientId, fullName, nhisNum, membershipType, gender, phone, region)
+                        End While
+                    End Using
+                Catch ex As Exception
+                    MessageBox.Show("Error loading members: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End Using
+        End Using
     End Sub
 End Class
