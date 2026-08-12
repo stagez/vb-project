@@ -31,10 +31,10 @@ Partial Class ViewClaims
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnGenerate = New System.Windows.Forms.Button()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.lblViewMembers = New System.Windows.Forms.Label()
-        Me.btnGenerate = New System.Windows.Forms.Button()
         CType(Me.dgvViewClaims, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -114,6 +114,15 @@ Partial Class ViewClaims
         Me.Panel1.Size = New System.Drawing.Size(1176, 96)
         Me.Panel1.TabIndex = 7
         '
+        'btnGenerate
+        '
+        Me.btnGenerate.Location = New System.Drawing.Point(444, 20)
+        Me.btnGenerate.Name = "btnGenerate"
+        Me.btnGenerate.Size = New System.Drawing.Size(150, 40)
+        Me.btnGenerate.TabIndex = 4
+        Me.btnGenerate.Text = "Generate Report"
+        Me.btnGenerate.UseVisualStyleBackColor = True
+        '
         'btnRefresh
         '
         Me.btnRefresh.Location = New System.Drawing.Point(780, 5)
@@ -139,18 +148,9 @@ Partial Class ViewClaims
         Me.lblViewMembers.Location = New System.Drawing.Point(17, 2)
         Me.lblViewMembers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblViewMembers.Name = "lblViewMembers"
-        Me.lblViewMembers.Size = New System.Drawing.Size(212, 38)
+        Me.lblViewMembers.Size = New System.Drawing.Size(175, 38)
         Me.lblViewMembers.TabIndex = 3
-        Me.lblViewMembers.Text = "View Members"
-        '
-        'btnGenerate
-        '
-        Me.btnGenerate.Location = New System.Drawing.Point(444, 20)
-        Me.btnGenerate.Name = "btnGenerate"
-        Me.btnGenerate.Size = New System.Drawing.Size(150, 40)
-        Me.btnGenerate.TabIndex = 4
-        Me.btnGenerate.Text = "Generate Report"
-        Me.btnGenerate.UseVisualStyleBackColor = True
+        Me.lblViewMembers.Text = "View Claims"
         '
         'ViewClaims
         '

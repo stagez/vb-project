@@ -229,7 +229,7 @@ Public Class frmMain
     End Sub
 
     Private Sub SubmitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitToolStripMenuItem.Click
-        LoadForm(New frmNewClaim())
+        LoadForm(New ViewClaims())
     End Sub
 
     Private Sub tsLogOut_Click(sender As Object, e As EventArgs) Handles tsLogOut.Click
@@ -258,5 +258,27 @@ Public Class frmMain
 
     Private Sub RejectedClaimsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RejectedClaimsToolStripMenuItem.Click
         OpenFilteredClaims("Rejected")
+    End Sub
+
+    Private Sub DailyReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DailyReportToolStripMenuItem.Click
+        Dim report As New ClaimsReport(Date.Today, Date.Today)
+        report.ShowDialog()
+    End Sub
+
+    Private Sub MonthlyReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonthlyReportToolStripMenuItem.Click
+        Dim firstOfMonth As Date = New Date(Date.Today.Year, Date.Today.Month, 1)
+        Dim lastOfMonth As Date = firstOfMonth.AddMonths(1).AddDays(-1)
+        Dim report As New ClaimsReport(firstOfMonth, lastOfMonth)
+        report.ShowDialog()
+    End Sub
+
+    Private Sub ApprovedClaimsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApprovedClaimsReportToolStripMenuItem.Click
+        Dim report As New ClaimsReport(statusFilter:="Approved")
+        report.ShowDialog()
+    End Sub
+
+    Private Sub RejectedClaimsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RejectedClaimsReportToolStripMenuItem.Click
+        Dim report As New ClaimsReport(statusFilter:="Rejected")
+        report.ShowDialog()
     End Sub
 End Class

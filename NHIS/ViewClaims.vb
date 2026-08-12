@@ -61,4 +61,8 @@ Public Class ViewClaims
         End Using
     End Sub
 
+    Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
+        Dim frm As New ClaimsReport()
+        frm.ShowDialog()
+    End Sub
 End Class
